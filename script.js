@@ -27,6 +27,9 @@ const container3 = document.getElementById('container3');
 const projectImageSlider2Images = document.querySelector('.projectImageSlider2Images');
 
 
+document.body.style.overflowX = 'hidden';
+
+
 
 function addInteractiveAnimation(className) {
   const element = document.querySelector(`.${className}`);
