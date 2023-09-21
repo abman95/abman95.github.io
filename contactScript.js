@@ -1,3 +1,5 @@
+document.body.style.overflowX = 'hidden';
+
 function addInteractiveAnimation(className) {
     const element = document.querySelector(`.${className}`);
     let rect;
