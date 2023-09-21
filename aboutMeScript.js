@@ -21,7 +21,7 @@ const container5 = document.getElementById("container5");
 const footer = document.querySelector("#footer");
 
 
-
+document.body.style.overflowX = 'hidden';
 
 
 function containerGlow(className) {
