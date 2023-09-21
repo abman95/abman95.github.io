@@ -1,0 +1,569 @@
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url(fonts/Roboto/Roboto-Bold.ttf);
+  }
+
+  @font-face {
+    font-family: 'Roboto-Medium';
+    src: url(fonts/Roboto/Roboto-Medium.ttf);
+  }
+
+  @font-face {
+    font-family: 'Roboto-Regular';
+    src: url(fonts/Roboto/Roboto-Regular.ttf);
+  }
+  @font-face {
+    font-family: 'Roboto-Light';
+    src: url(fonts/Roboto/Roboto-Light.ttf);
+  }
+
+  @font-face {
+    font-family: 'Roboto-Thin';
+    src: url(fonts/Roboto/Roboto-Thin.ttf);
+  }
+
+
+
+
+
+
+:root::-webkit-scrollbar {
+    display: none;
+    width: 10px;
+  }
+  
+  /*
+  :root::-webkit-scrollbar-thumb {
+    background-color: #999;
+    border-radius: 5px;
+  }
+  
+  :root::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  
+  :root::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+  }
+*/
+
+
+
+
+
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 100;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+#container1 {
+    overflow: hidden;
+    background-size: cover;
+    background-image: url(Pictures/abdullahSögütBackgroundImage.jpg);
+    width: 100dvw;
+    height: 100dvh;
+}
+
+
+.aboutMeRight {
+    height: 100%;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: flex-end;
+    width: max-content;
+}
+
+
+.marqueeAbdullahSoegut {
+    animation: opacityAppearance 2s linear;
+}  
+
+.marqueecontentAbdullahSoegut {
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    font-size: 15vw;
+    font-family: Roboto-Bold;
+    color: white;
+    display: flex;
+    list-style: none;
+    white-space: nowrap;
+}
+
+.marqueecontentAbdullahSoegut li {
+
+    animation: scrolling 15s linear infinite;
+}
+
+@keyframes scrolling {
+0% {
+    transform: translateX(-100vw);
+}
+100% {
+    transform: translateX(-216.7dvw);
+}
+}
+
+@keyframes opacityAppearance {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+
+
+
+
+
+
+
+    
+
+
+    .aboutMeLeft {
+        width: 100dvw;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    
+    .locatedInContainer {
+        cursor: pointer;
+        width: 19vw;
+
+    }
+    
+    .locatedInContainerBackground {
+        margin-left: -40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+        border: 1.5px solid rgba(0, 0, 0, 0);
+        border-radius: 6vh;
+        height: 12vh;
+        background-color: #a79e9752;
+        z-index: 20;
+    }
+    
+    .locatedInCountryText {
+        user-select: none;
+        font: 1vw Roboto-Regular;
+        color: white;
+        width: 2vw;
+    }
+    
+    .locatedInCountryBackground {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: -30%;
+        margin-left: 30%;
+        background-image: url(Pictures/abdullahSögütBackgroundImage.jpg);
+        width: 4.5vw;
+        height: 9vh;
+        border-radius: 10vh;
+        box-shadow: 0 0px 1px rgba(0, 0, 0, 0.1);
+        border: 1.5px solid rgba(0, 0, 0, 0);
+        background-position: 20%;
+    }
+    
+    .locatedInCountry {
+        filter: invert(1);
+        background-image: url(Bilder/menue.png);
+        width: 2.25vw;
+        height: 4.5vh;
+        background-size: cover;
+    }
+
+
+
+
+    .jobDegreeTextContainer {
+        width: 23vw;
+    }
+    /*
+    .jobDegreeTextContainerBackground {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+        border: 1.5px solid rgba(0, 0, 0, 0);
+        width: inherit;
+        height: 100px;
+        background-color: #a79e9752;
+    }
+    */
+    .jobDegreeText {
+        overflow-wrap: break-word;
+        user-select: none;
+        font-family: Roboto-Thin;
+        font-size: 5.5vh;
+        color: white;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#container2 {
+    background: white;
+    height: 70vh;
+    width: 100vw;
+    left: 5%;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    z-index: 10;
+}
+
+.projectOneLeft {
+    margin-left: 10%;
+    flex-basis: 70%;
+}
+
+.projectOneRight {
+    margin-right: 10%;
+    flex-basis: 30%;
+}
+
+.projectOneName {
+    overflow-x: hidden;
+    font-family: Roboto-Bold;
+    color: white;
+    font-size: 35px;
+    opacity: 1;
+    transition: opacity 1s ease-out;
+}
+
+.projectOneName.show {
+    opacity: 1;
+}
+
+
+
+
+
+.projectOneDescription {
+    width: 50%;
+    position: absolute;
+    margin-top: -12%;
+    font-family: Roboto-Regular;
+    color: black;
+    font-size: 5vh;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.projectOneDescription.show {
+    opacity: 1;
+}
+
+
+.projectOneDescription.show::after {
+    content: '|';
+    display: inline-block;
+    animation: blinkCursor1 0.7s infinite alternate;
+    color: red;
+}
+
+@keyframes blinkCursor1 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+.aboutMeButtonHeader {
+    font-family: Roboto-Regular;
+    color: black;
+    font-size: 2vh;
+    width: 17vw;
+    white-space: wrap;
+    margin-top: 15%;
+}
+
+
+.aboutMeButton {
+    cursor: pointer;
+    font-family: Roboto-Thin;
+    font-size: 3.5vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+    position: absolute;
+    margin-top: 3%;
+    width: 17vw;
+    height: 34vh;
+    border-radius: 34vw;
+    background-image: url(Pictures/abdullahSögütBackgroundImage4.jpg);
+    background-size: cover;
+    background-position-x: center;
+  }
+  
+.aboutMeButtonBorder {
+    width: 17vw;
+    height: 34vh;
+    z-index: 100;
+}
+
+
+
+
+.hrHeader {
+    font: 2vh Roboto-Thin;
+    color: black;
+    left: 15%;
+    position: relative;
+}
+
+
+
+#container3 {
+    height: 300vh;
+    width: 100vw;
+    background-color: white;
+    position: relative;
+}
+
+.projectSlider {
+    top: 40%;
+    position: sticky;
+    font: 13vh Roboto-Regular;
+    color: black;
+	text-align: center;
+    transform-origin: 50% 56%;
+    transition: all ease 0.2s;
+}
+
+
+
+
+
+
+
+#container4 {
+
+    background-color: wheat;
+}
+
+.projectImageSlider1Header {
+    z-index: 99999;
+    font: 14vh Roboto-Bold;
+    color: wheat;
+    margin-bottom: -30%;
+    margin-top: 0px;
+}
+
+.projectImageSlider1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    opacity: 0;
+    bottom: 4%;
+    transition: all ease 1s;
+    width: 100vw;
+}
+
+.projectImageSlider1.show {
+    opacity: 1;
+}
+
+.projectImageSlider1Images {
+    width: 900px;
+    height: auto;
+
+}
+
+
+
+
+.projectImageSlider1ButtonContainerBackground {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12vh;
+    background-color: wheat;
+    position: absolute;
+    left: 5vw;
+    top: 5vh;
+    height: 12vh;
+    width: 6vw;
+    z-index: 999998;
+}
+
+.projectImageSlider1ButtonContainer {
+    background-image: url(Bilder/menue.png);
+    background-size: cover;
+    height: 5vh;
+    width: 2.5vw;
+    z-index: 999999;
+}
+
+
+.projectImageSlider1ButtonListing {
+    overflow: hidden;
+    list-style: none;
+    position: absolute;
+    flex-direction: column;
+    left: 5vw;
+    top: 10vh;
+    transition: transform 0.5s ease, height 0.5s ease, width 0.5s ease;
+    display: none;
+    height : 40.1606vh; /* Zeigt die Liste an, wenn aktiviert */
+    width : 6dvw;
+    padding-top: 9vh;
+    padding-bottom : 0;
+    padding-left: 0;
+    padding-right: 0;
+    gap : 4.5vh;
+    border-radius : 0.3255vw;
+    box-shadow : 0 0px 0.0651vw rgba(245, 222, 179, 1);
+    border : 0.0.03255201vw solid wheat;
+    font : 0.97656vw Roboto-Regular;
+    color : wheat;
+  }
+  
+  .projectImageSlider1ButtonListing.active {
+    height : 40.1606vh; /* Zeigt die Liste an, wenn aktiviert */
+    width : 6dvw;
+    padding-top: 9vh;
+    padding-bottom : 0;
+    padding-left: 0;
+    padding-right: 0;
+    gap : 4.5vh;
+    border-radius : 0.3255vw;
+    box-shadow : 0 0px 0.0651vw rgba(245, 222, 179, 1);
+    border : 0.0.03255201vw solid wheat;
+    font : 0.97656vw Roboto-Regular;
+    color : wheat;
+    transition: transform 0.5s ease, height 0.5s ease, width 0.5s ease;
+    z-index: 999999;
+}
+
+
+
+  
+
+  .projectImageSlider1ButtonListing li{ 
+    text-align: center;
+  }
+
+
+
+.mp3, 
+.typing, 
+.toDo, 
+.timer,
+.clock,
+.keyGen {
+    cursor: pointer;
+}
+
+
+
+.projectImageSlider2 {
+    transition: all ease 1s;
+    margin-top: 28%;
+    display: flex;
+    transform: translate(75vw, 0%);
+  
+    z-index: 99998;
+}
+
+
+.projectImageSlider2Images {
+    transform-origin: bottom;
+    transition: all ease .5s;
+    width: 50vw;
+    height: 70vh;
+    object-fit: cover;
+    object-position: 0% 50%;
+}
+
+.projectImageSlider2Images:nth-child(2),
+.projectImageSlider2Images:nth-child(3),
+.projectImageSlider2Images:nth-child(4) {
+    transform: scale(0.5);
+    opacity: 0.5;
+}
+
+
+.prevButton {
+    transition: all ease .5s;
+    font: 2vw Roboto-Thin;
+    cursor: auto;
+    z-index: 99999;
+    position: absolute;
+    bottom: -10%;
+    left: 44%;
+    width: 3.5vw;
+    height: 7vh;
+    border-radius: 3.5vw;
+    background-color: rgba(198, 198, 198, 0.247);
+    border-style: none;
+}
+
+.nextButton {
+    transition: all ease .5s;
+    font: 2vw Roboto-Thin;
+    cursor: pointer;
+    z-index: 99999;
+    position: absolute;
+    bottom: -10%;
+    left: 49%;
+    width: 3.5vw;
+    height: 7vh;
+    border-radius: 3.5vw;
+    background-color: wheat;
+    border-style: none;
+    }
