@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @font-face {
     font-family: 'Roboto-Bold';
     src: url(fonts/Roboto/Roboto-Bold.ttf);
@@ -177,4 +178,185 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 1.1vh;
+=======
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url(fonts/Roboto/Roboto-Bold.ttf);
+  }
+
+  @font-face {
+    font-family: 'Roboto-Medium';
+    src: url(fonts/Roboto/Roboto-Medium.ttf);
+  }
+
+  @font-face {
+    font-family: 'Roboto-Regular';
+    src: url(fonts/Roboto/Roboto-Regular.ttf);
+  }
+  @font-face {
+    font-family: 'Roboto-Light';
+    src: url(fonts/Roboto/Roboto-Light.ttf);
+  }
+
+  @font-face {
+    font-family: 'Roboto-Thin';
+    src: url(fonts/Roboto/Roboto-Thin.ttf);
+  }
+
+
+
+  body {
+    font-family: Roboto-Regular;
+}
+
+.hr {
+    margin: 3vw 0 3vw 0;
+    width: 45vw;
+}
+
+#container1 {
+    overflow: hidden;
+    height: 210dvh;
+    width: 100dvw;
+    background-color:black}
+
+.contactHeader {
+    margin-top: 7vw;
+    margin-left: 15vw;
+    color: #fff;
+    font: 5.859375vw Roboto-Regular;
+}
+
+.contact-form {
+    position: absolute;
+    left: 15vw;
+    width: 30vw;
+    color: white;
+}
+
+label {
+    font: 3.2552vw Roboto-Thin;
+    display: block;
+    margin-bottom: 1.3387vh;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    font: 1.953vw Roboto-Thin;
+    color: white;
+    background-color: transparent;
+    width: 45vw;
+    margin-bottom: 2.6774vh;
+    border: none;
+    resize: none;
+    outline: none;
+}
+
+.submitButton {
+    bottom: -5vw;
+    right: -12vw;
+    position: absolute;
+    cursor: pointer;
+    font: 1.628vw Roboto-Thin;
+    color: white;
+    width: 16.276vw;
+    height: 33.4672vh;
+    border-radius: 33.4672vh;
+    background-color: rgb(21, 21, 21);
+    border: none;
+    transition: all ease 1s;
+}
+
+.submitButton:hover {
+    background-color: #131313;
+}
+
+
+
+
+
+.contactInformationContainer {
+  top: 30vh;
+  left: 67.5vw;
+  position: absolute;
+  background-image: url(Pictures/abdullahSögütBackgroundImage4.jpg);
+  width: 13.021vw;
+  height: 26.774vh;
+  border-radius: 26.774vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.contactPictureHeader {
+  top: 56vh;
+  left: 67.5vw;
+  position: absolute;
+  font: 1.6276vw Roboto-Thin;
+  color: white;
+}
+
+.contactInformationHeader1 {
+  top: 67vh;
+  left: 67.5vw;
+  position: absolute;
+  font: 1.6276vw Roboto-Thin;
+  color: white;
+}
+
+.contactInformationListing1 {
+  top: 74vh;
+  left: 67.5vw;
+  position: absolute;
+  font: 0.9766vw Roboto-Thin;
+  color: white;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1vh;
+}
+
+
+.contactInformationHeader2 {
+  top: 94vh;
+  left: 67.5vw;
+  position: absolute;
+  font: 1.6276vw Roboto-Thin;
+  color: white;
+}
+
+.contactInformationListing2 {
+  top: 101vh;
+  left: 67.5vw;
+  position: absolute;
+  font: 0.9766vw Roboto-Thin;
+  color: white;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1vh;
+}
+
+.contactInformationHeader3 {
+  top: 138vh;
+  left: 67.5vw;
+  position: absolute;
+  font: 1.6276vw Roboto-Thin;
+  color: white;
+}
+
+.contactInformationListing3 {
+  top: 145vh;
+  left: 67.5vw;
+  position: absolute;
+  font: 0.9766vw Roboto-Thin;
+  color: white;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1vh;
+>>>>>>> 07af7c48b085646b2f0ed085b26cf22094ad3feb
 }
