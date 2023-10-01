@@ -151,18 +151,41 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 10vh;
-  background-color: wheat;
+  background-image: linear-gradient(black 0%, wheat 0%);
   position: fixed;
   right: 2vw;
   top: 5vh;
   height: 10vh;
   width: 5vw;
   z-index: 999998;
-}
+  }
 
+/*
 .headerFixedBackground:hover {
-  background-color: rgba(158, 158, 158, 0.866);
+  animation: backgroundColorAnimation ease 0.1s forwards;  Add "forwards" to keep the final state
 }
+*/
+/*
+@keyframes backgroundColorAnimation {
+  0% {
+    background-image: linear-gradient(rgb(255, 0, 0) 0%, wheat 0%);
+  }
+  25% {
+    background-image: linear-gradient(rgb(255, 0, 0) 25%, wheat 0%);
+  }
+  50% {
+    background-image: linear-gradient(rgb(255, 0, 0) 50%, wheat 0%);
+  }
+  75% {
+    background-image: linear-gradient(rgb(255, 0, 0) 75%, wheat 0%);
+  }
+  100% {
+    background-image: linear-gradient(rgb(255, 0, 0) 100%, wheat 0%);
+  }
+}
+*/
+
+
 
 .headerFixed {
   background-image: url(Bilder/menue.png);
@@ -171,7 +194,6 @@ body {
   width: 2vw;
   z-index: 999999;
 }
-
 
 
 dialog::-webkit-scrollbar {

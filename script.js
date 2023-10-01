@@ -2,6 +2,7 @@ const header = document.querySelector('.header');
 const headerFixedBackground = document.querySelector('.headerFixedBackground');
 const dialogCloseButton = document.querySelector('.dialogCloseButton');
 const headerFixedMenu = document.querySelector('.headerFixedMenu');
+const headerFixed = document.querySelector('.headerFixed');
 const dialogHeaderListing = document.querySelector('#dialogHeaderListing');
 
 
@@ -31,20 +32,20 @@ document.body.style.overflowX = 'hidden';
 
 
 
-let isScaled = false; // Variable zur Verfolgung des Skalierungszustands
+let isScaled = false;
 
 document.addEventListener('scroll', function() {
   const headerRect = header.getBoundingClientRect();
 
   if (headerRect.bottom <= -50) {
-    if (!isScaled) { // Prüfen, ob noch nicht skaliert wurde
+    if (!isScaled) {
       headerFixedBackground.style.display = 'flex';
       headerFixedBackground.style.scale = '1.2';
       headerFixedBackground.style.transition = 'scale .4s ease-out';
       setTimeout(() => {
         headerFixedBackground.style.scale = '1';
         headerFixedBackground.style.transition = 'scale .1s ease-in';
-        isScaled = true; // Markieren Sie, dass die Skalierung erfolgt ist
+        isScaled = true;
       }, 400);
     }
   } else if (headerRect.bottom >= 0) {
@@ -58,10 +59,12 @@ document.addEventListener('scroll', function() {
 
 
 
+
 headerFixedBackground.addEventListener('click', function() {
   headerFixedMenu.showModal();
   document.body.style.overflow = 'hidden';
 });
+
 
 
 dialogCloseButton.addEventListener("click", function outsideClickHandler(event) {
@@ -73,6 +76,7 @@ dialogCloseButton.addEventListener("click", function outsideClickHandler(event) 
     document.body.style.overflowX = 'hidden';
   }, 300);
 });
+
 
 
 headerFixedMenu.addEventListener("click", function outsideClickHandler(event) {
@@ -93,11 +97,50 @@ headerFixedMenu.addEventListener("click", function outsideClickHandler(event) {
     }
     }
   );
+  
 
 
 
-
-
+  let headerFixedBackgroundAnimation = 0;
+  let animationTimeout;
+  
+  headerFixedBackground.addEventListener('mouseover', () => {
+    startAnimation();
+  });
+  
+  headerFixedBackground.addEventListener('mouseout', () => {
+    endAnimation();
+  });
+  
+  function startAnimation() {
+    clearTimeout(animationTimeout);
+    animate();
+  }
+  
+  function endAnimation() {
+    clearTimeout(animationTimeout);
+    reverseAnimate();
+  }
+  
+  function animate() {
+    if (headerFixedBackgroundAnimation <= 120) {
+      headerFixed.style.transition = "filter ease .5s";
+      headerFixed.style.filter = "invert(1)";
+      headerFixedBackground.style.backgroundImage = `linear-gradient(#1a1a1a ${headerFixedBackgroundAnimation}%, wheat 0%)`;
+      headerFixedBackgroundAnimation = headerFixedBackgroundAnimation + 2;
+      animationTimeout = setTimeout(animate, 1);
+    }
+  }
+  
+  function reverseAnimate() {
+    if (headerFixedBackgroundAnimation >= -20) {
+      headerFixed.style.transition = "filter ease .5s";
+      headerFixed.style.filter = "invert(0)";
+      headerFixedBackground.style.backgroundImage = `linear-gradient(to top, #1a1a1a ${headerFixedBackgroundAnimation}%, wheat 0%)`;
+      headerFixedBackgroundAnimation = headerFixedBackgroundAnimation - 2;
+      animationTimeout = setTimeout(reverseAnimate, 1);
+    }
+  }
 
 
 
@@ -105,102 +148,61 @@ headerFixedMenu.addEventListener("click", function outsideClickHandler(event) {
 
   function dialogPageTextAnimation(className) {
     const element = document.querySelector(`.${className}`);
-    const dialogHomeText = "HOME";
-    const dialogAboutMeText = "ABOUT ME";
-    const dialogContactText = "CONTACT";
-    const dialogHomeTextOriginal = "home";
-    const dialogAboutMeTextOriginal = "about me";
-    const dialogContactTextOriginal = "contact";
-    let i = 0;
-    let text = "";
-    let animationDirection = "forward"; // Forward for mousemove, backward for mouseout
-    let isAnimating = false; // Flag to track if animation is in progress
-    let isAnimatingQuit = false;
+    const dialogTexts = {
+      dialogHome: ["HOME", "home"],
+      dialogAboutMe: ["ABOUT ME", "about me"],
+      dialogContact: ["CONTACT", "contact"]
+    };
+    let index = 0;
+    let text;
+    let animationDirection = "forward";
+    let animationTextTimeout;
   
-    element.addEventListener('mousemove', function(e) {
-      if (!isAnimating) { // Check if animation is not in progress
-        animationDirection = "forward";
-        animateText(getTargetText());
-        isAnimatingQuit = true;
-      }
-    });
-  
-    element.addEventListener('mouseout', function(e) {
-      if (!isAnimating) { // Check if animation is not in progress
-        animationDirection = "backward";
-        animateTextOriginal(getTargetText());
-        isAnimatingQuit = false;
-      }
+    element.addEventListener('mousemove', function() {
+      animationDirection = "forward";
+      clearTimeout(animationTextTimeout);
+      animateText(dialogTexts[className][0]);
     });
 
-    element.addEventListener('mouseleave', function(e) {
-      if (!isAnimating) { // Check if animation is not in progress
-        animationDirection = "backward";
-        animateTextOriginal(getTargetText());
-        isAnimatingQuit = false;
-      }
+    element.addEventListener('mouseenter', function() {
+      animationDirection = "forward";
+      clearTimeout(animationTextTimeout);
+      animateText(dialogTexts[className][0]);
     });
   
-    function getTargetText() {
-      switch (className) {
-        case "dialogHome":
-          return (animationDirection === "forward") ? dialogHomeText : dialogHomeTextOriginal;
-        case "dialogAboutMe":
-          return (animationDirection === "forward") ? dialogAboutMeText : dialogAboutMeTextOriginal;
-        case "dialogContact":
-          return (animationDirection === "forward") ? dialogContactText : dialogContactTextOriginal;
-        default:
-          return "";
-      }
-    }
+    element.addEventListener('mouseout', function() {
+      animationDirection = "backward";
+      clearTimeout(animationTextTimeout);
+      animateText(dialogTexts[className][1]);
+    });
+
+    element.addEventListener('mouseleave', function() {
+      animationDirection = "backward";
+      clearTimeout(animationTextTimeout);
+      animateText(dialogTexts[className][1]);
+    });
   
     function animateText(targetText) {
       if (text !== targetText) {
         text = targetText;
-        i = 0;
+        index = 0;
         element.textContent = "";
-        isAnimating = true; // Set the flag to indicate animation is in progress
       }
-  
-      if (i < text.length) {
-        element.textContent += text[i];
-        i++;
-        setTimeout(function() {
-          if (isAnimatingQuit === true) {
+      if (index < text.length) {
+        element.textContent += text[index];
+        index++;
+        animationTextTimeout = setTimeout(() => {
           animateText(targetText);
-        } else {
-          return
-        }
-        }, 60);
-      } else {
-        isAnimating = false; // Reset the flag when animation is complete
-      }
-    }
-
-
-    function animateTextOriginal(targetText) {
-      if (text !== targetText) {
-        text = targetText;
-        i = 0;
-        element.textContent = "";
-        isAnimating = true; // Set the flag to indicate animation is in progress
-      }
-  
-      if (i < text.length) {
-        element.textContent += text[i];
-        i++;
-        setTimeout(function() {
-          animateTextOriginal(targetText);
-        }, 60);
-      } else {
-        isAnimating = false; // Reset the flag when animation is complete
+        }, 100);
       }
     }
   }
   
-  dialogPageTextAnimation('dialogHome');
-  dialogPageTextAnimation('dialogAboutMe');
-  dialogPageTextAnimation('dialogContact');
+  // Verwende die Funktion für deine Elemente
+  dialogPageTextAnimation("dialogHome");
+  dialogPageTextAnimation("dialogAboutMe");
+  dialogPageTextAnimation("dialogContact");
+  
   
   
   
