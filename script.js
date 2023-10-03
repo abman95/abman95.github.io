@@ -265,6 +265,7 @@ function addInteractiveAnimationOnLocatedInGermany(className) {
   let startMouseX;
   let startElementX;
   let animationTimeout;
+  let dontPullMeDialogCount = 0;
 
   element.addEventListener('mousedown', function(e) {
     isMouseDown = true;
@@ -287,11 +288,56 @@ function addInteractiveAnimationOnLocatedInGermany(className) {
 
   document.addEventListener('mouseup', function() {
     if (isMouseDown) {
-      isMouseDown = false;
 
+      const dontPullMeDialog = document.querySelector('.dontPullMeDialog');
+      const dialogHeadline = document.querySelector('.dialogHeadline');
+      const dontPullMeDialogCloseButton = document.querySelector('.dontPullMeDialogCloseButton');
+
+      isMouseDown = false;
+      dontPullMeDialogCount++;
       element.style.transition = 'transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55)';
       element.style.transform = 'translate(0, 0)';
 
+        if (dontPullMeDialogCount === 1) {
+          dontPullMeDialog.showModal();
+      } else if (dontPullMeDialogCount === 2) {
+          dialogHeadline.textContent = "Seriously Stop!";
+          dontPullMeDialogCloseButton.textContent = "Okay";
+          dontPullMeDialog.showModal();
+      } else if (dontPullMeDialogCount === 3) {
+          dialogHeadline.textContent = "So you wanna play huh!? Cause King Kong ain't got s##t on me!";
+          dontPullMeDialogCloseButton.textContent = "I'm Sorry";
+          dontPullMeDialog.showModal();
+      } else if (dontPullMeDialogCount === 4) {
+        dialogHeadline.textContent = "You asked for it!";
+        dontPullMeDialogCloseButton.textContent = "...";
+        dontPullMeDialog.showModal();
+        setTimeout(()=> {
+          dontPullMeDialog.close();
+
+
+          const pdfFilePath = 'CV/CV - Abdullah Sögüt.pdf';
+
+          const link = document.createElement('a');
+
+          link.href = pdfFilePath;
+          link.target = '_blank';
+          link.download = 'Abdullah_Sogut_CV.pdf';
+          link.click();
+        },2000);
+      } else if (dontPullMeDialogCount === 5) {
+        dialogHeadline.textContent = `Now tell me "YOU ARE HIRED!"!`;
+        dontPullMeDialogCloseButton.textContent = "calling...";
+        dontPullMeDialog.showModal();
+        setTimeout(()=> {
+
+          const callingAbdullah = document.createElement('a');
+
+          callingAbdullah.href = "tel:01731905742";
+          callingAbdullah.click();
+          dontPullMeDialogCloseButton.textContent = "close...";
+        },2000);
+      }
       animationTimeout = setTimeout(() => {
         element.style.transition = '';
       }, 300);
@@ -303,6 +349,18 @@ addInteractiveAnimationOnLocatedInGermany('locatedInContainerBackground');
 
 
 
+
+
+dontPullMeDialog.addEventListener("click", function outsideClickHandler(event) {
+  var rect = dontPullMeDialog.getBoundingClientRect();
+  var xAchse = event.clientX;
+  var yAchse = event.clientY;
+
+  if (xAchse < rect.left || xAchse >= rect.right || yAchse < rect.top || yAchse >= rect.bottom) {
+      dontPullMeDialog.close();
+  }
+  }
+);
 
 
 

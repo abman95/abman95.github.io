@@ -71,6 +71,58 @@
 
 
 
+.dontPullMeDialog {
+    border-radius: .2vw;
+    box-shadow: 0 0 1vw 0 rgba(0, 0, 0, 0.555);
+    border-style: none;
+    width: 40%;
+    height: fit-content;      
+    background-color: rgb(190, 186, 186);
+    z-index: 9999;
+}
+
+.dontPullMeDialogContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.dialogHeadline {
+    color: black;
+    font: 3vw Roboto-Bold;
+}
+
+.dontPullMeDialogCloseButton {
+    border-radius: .2vw;
+    cursor: pointer;
+    border: .01vw solid rgba(0, 0, 0, 0.137);
+    background-color: transparent;
+    color: black;
+    font: 1vw Roboto-Regular;
+    box-shadow: 0 0 .2vw 0 rgba(0, 0, 0, 0.555);
+    width: 10vw;
+    height: 10vh;
+    transition: transform ease .5s;
+    margin-bottom: 3vh;
+}
+
+.dontPullMeDialogCloseButton:focus {
+    outline: none;
+  }
+
+.dontPullMeDialogCloseButton:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -163,10 +215,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
-        border: 1.5px solid rgba(0, 0, 0, 0);
-        border-radius: 6vh;
-        height: 12vh;
+        box-shadow: 0 0px .2vw rgba(0, 0, 0, 0.1);
+        border: .1vw solid rgba(0, 0, 0, 0);
+        border-radius: 3vw;
+        height: 6vw;
         background-color: #a79e9752;
         z-index: 20;
     }
@@ -186,10 +238,10 @@
         margin-left: 35%;
         background-image: url(Pictures/abdullahSögütBackgroundImage.jpg);
         width: 4.5vw;
-        height: 9vh;
-        border-radius: 10vh;
-        box-shadow: 0 0px 1px rgba(0, 0, 0, 0.1);
-        border: 1.5px solid rgba(0, 0, 0, 0);
+        height: 4.5vw;
+        border-radius: 4.5vw;
+        box-shadow: 0 0 .01vw rgba(0, 0, 0, 0.1);
+        border: .01vw solid rgba(0, 0, 0, 0);
         background-position: 20%;
     }
     
@@ -351,8 +403,8 @@
     position: absolute;
     margin-top: 3%;
     width: 17vw;
-    height: 34vh;
-    border-radius: 34vw;
+    height: 17vw;
+    border-radius: 17vw;
     background-image: url(Pictures/abdullahSögütBackgroundImage4.jpg);
     background-size: cover;
     background-position-x: center;
@@ -360,7 +412,7 @@
   
 .aboutMeButtonBorder {
     width: 17vw;
-    height: 34vh;
+    height: 17vw;
     z-index: 100;
 }
 
@@ -409,7 +461,7 @@
     font: 14vh Roboto-Bold;
     color: wheat;
     margin-bottom: -30%;
-    margin-top: 0px;
+    margin-top: 0vw;
 }
 
 .projectImageSlider1 {
@@ -428,7 +480,7 @@
 }
 
 .projectImageSlider1Images {
-    width: 900px;
+    width: 58.59vw;
     height: auto;
 
 }
@@ -441,12 +493,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 12vh;
+    border-radius: 6vw;
     background-color: wheat;
     position: absolute;
     left: 5vw;
     top: 5vh;
-    height: 12vh;
+    height: 6vw;
     width: 6vw;
     z-index: 999998;
 }
@@ -454,7 +506,7 @@
 .projectImageSlider1ButtonContainer {
     background-image: url(Bilder/menue.png);
     background-size: cover;
-    height: 5vh;
+    height: 2.5vw;
     width: 2.5vw;
     z-index: 999999;
 }
@@ -557,7 +609,7 @@
     bottom: -10%;
     left: 44%;
     width: 3.5vw;
-    height: 7vh;
+    height: 3.5vw;
     border-radius: 3.5vw;
     background-color: rgba(198, 198, 198, 0.247);
     border-style: none;
@@ -572,7 +624,7 @@
     bottom: -10%;
     left: 49%;
     width: 3.5vw;
-    height: 7vh;
+    height: 3.5vw;
     border-radius: 3.5vw;
     background-color: wheat;
     border-style: none;
