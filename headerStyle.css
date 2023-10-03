@@ -40,7 +40,9 @@
   display: none;
   width: 10px;
 }
-
+* {
+  scrollbar-width: none;
+}
 /*
 :root::-webkit-scrollbar-thumb {
   background-color: #999;
