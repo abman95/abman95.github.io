@@ -676,6 +676,7 @@ function handleIntersection(entries) {
     const projectImageSlider2Images1 = document.querySelector('#projectImageSlider2Images1');
     const projectImageSlider2Images2 = document.querySelector('#projectImageSlider2Images2');
     const projectImageSlider2Images3 = document.querySelector('#projectImageSlider2Images3');
+    const projectImageSlider2ImagesAfterPseudoDiv = document.querySelector('#projectImageSlider2ImagesAfterPseudoDiv');
 
 
     let translateXInVw;
@@ -698,7 +699,8 @@ function handleIntersection(entries) {
         
         projectImageSlider2Images1.style.opacity = `0`;
         projectImageSlider2Images2.style.opacity = `0`;
-        projectImageSlider2Images3.style.opacity = `0`;
+        // projectImageSlider2Images3.style.opacity = `0`;
+        projectImageSlider2ImagesAfterPseudoDiv.style.opacity = `0`;
         projectImageSlider1Header.style.opacity = `0`;
         setTimeout(() => {
           resolve();
@@ -722,21 +724,24 @@ function handleIntersection(entries) {
         if (translateXInVw === 50) {
           projectImageSlider2Images1.style.opacity = `1`;
           projectImageSlider2Images2.style.opacity = `1`;
-          projectImageSlider2Images3.style.opacity = `1`;
+          // projectImageSlider2Images3.style.opacity = `1`;
+          projectImageSlider2ImagesAfterPseudoDiv.style.opacity = `1`;
         }
         if (translateXInVw === 0) {
           projectImageSlider2Images2.style.opacity = `1`;
-          projectImageSlider2Images3.style.opacity = `1`;
+          // projectImageSlider2Images3.style.opacity = `1`;
+          projectImageSlider2ImagesAfterPseudoDiv.style.opacity = `1`;
         }
         else if (translateXInVw === -50) {
-          projectImageSlider2Images3.style.opacity = `1`;
+          // projectImageSlider2Images3.style.opacity = `1`;
+          projectImageSlider2ImagesAfterPseudoDiv.style.opacity = `1`;
         }
         projectImageSlider1Header.style.opacity = `1`;
       });
     });
 
-
-    projectImageSlider2Images3.addEventListener('click', function() {
+    // projectImageSlider2Images3.addEventListener('click', function() {
+    projectImageSlider2ImagesAfterPseudoDiv.addEventListener('click', function() {
       if (!document.projectImageSlider2Images3) {
         projectImageSlider2Images3.style.transition = "none";
 
