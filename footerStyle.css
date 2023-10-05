@@ -191,7 +191,7 @@ hr {
 }
 
 .clockHeader {
-    margin: 7% 0 -1% 3.75%; /* 1,5-fache Größe */
+    margin: 7% 0 -1% 3.75%;
     color: rgb(153, 153, 153);
     font-size: 1.5vh;
     font-family: Roboto-Bold;
@@ -203,18 +203,18 @@ hr {
 
 #digitalTime {
     position: absolute;
-    margin: 2.5% 0 -1% 3.75%; /* 1,5-fache Größe */
+    margin: 2.5% 0 -1% 3.75%;
     color: white;
-    font-size: 1.5vh; /* 1,5-fache Größe */
+    font-size: 1.5vh;
     font-family: Roboto-Bold;
     text-align: start;
     white-space: nowrap;
-    width: 3vw; /* 1,5-fache Größe */
+    width: 3vw;
 }
 
 
 .footerLinksHeader {
-    margin: 0% 0 -1% 80.75%; /* 1,5-fache Größe */
+    margin: 0% 0 -1% 80.75%;
     color: rgb(153, 153, 153);
     font-size: 1.5vh;
     font-family: Roboto-Bold;
@@ -228,10 +228,10 @@ hr {
     font-size: 1.5vh;
     font-family: Roboto-Regular;
     color: white;
-    margin: 2.5% 0 0% 78.25%; /* 1,5-fache Größe */
+    margin: 2.5% 0 0% 78.25%;
     cursor: pointer;
     list-style: none;
-    display: flex; /* Flex-Container */
+    display: flex;
     gap: 2vw;
 }
 

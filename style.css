@@ -98,7 +98,7 @@
     border-radius: .2vw;
     cursor: pointer;
     border: .01vw solid rgba(0, 0, 0, 0.137);
-    background-color: transparent;
+    background-image: linear-gradient(#1a1a1a 0%, rgba(59, 59, 59, 0.163)0%);
     color: black;
     font: 1vw Roboto-Regular;
     box-shadow: 0 0 .2vw 0 rgba(0, 0, 0, 0.555);
@@ -113,7 +113,7 @@
   }
 
 .dontPullMeDialogCloseButton:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 
@@ -265,7 +265,7 @@
 
 
     .jobDegreeTextContainer {
-        width: 23vw;
+        width: 30vw;
     }
     /*
     .jobDegreeTextContainerBackground {
@@ -281,6 +281,8 @@
     }
     */
     .jobDegreeText {
+        margin-right: 5%;
+        text-align: end;
         overflow-wrap: break-word;
         user-select: none;
         font-family: Roboto-Thin;
@@ -460,7 +462,7 @@
     z-index: 99999;
     font: 14vh Roboto-Bold;
     color: wheat;
-    margin-bottom: -30%;
+    margin-bottom: -27%;
     margin-top: 0vw;
 }
 
@@ -577,7 +579,7 @@
     transition: all ease 1s;
     margin-top: 28%;
     display: flex;
-    transform: translate(75vw, 0%);
+    transform: translate(50vw, 0%);
   
     z-index: 99998;
 }
@@ -589,7 +591,7 @@
     width: 50vw;
     height: 70vh;
     object-fit: cover;
-    object-position: 0% 50%;
+
 }
 
 .projectImageSlider2Images:nth-child(2),
@@ -599,34 +601,56 @@
     opacity: 0.5;
 }
 
+.projectImageSlider2Images:nth-child(2) {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.projectImageSlider2Images:nth-child(2) h2 {
+    font: 3vw Roboto-Regular;
+}
+
+.projectImageSlider2Images:nth-child(2) p {
+    margin-top: -2%;
+    font: 2.3vw Roboto-Thin;
+}
+
 
 .prevButton {
+    color: rgba(198, 198, 198, 0.247);
     transition: all ease .5s;
-    font: 2vw Roboto-Thin;
+    font: 4vw Roboto-Regular;
     cursor: auto;
-    z-index: 99999;
+    z-index: 99999999;
     position: absolute;
-    bottom: -10%;
-    left: 44%;
+    bottom: 35%;
+    left: 18%;
     width: 3.5vw;
     height: 3.5vw;
     border-radius: 3.5vw;
-    background-color: rgba(198, 198, 198, 0.247);
+    /* background-color: rgba(198, 198, 198, 0.247); */
+    background: none;
     border-style: none;
 }
 
 .nextButton {
+    color: wheat;
     transition: all ease .5s;
-    font: 2vw Roboto-Thin;
+    font: 4vw Roboto-Regular;
     cursor: pointer;
     z-index: 99999;
     position: absolute;
-    bottom: -10%;
-    left: 49%;
+    bottom: 35%;
+    right: 18%;
     width: 3.5vw;
     height: 3.5vw;
     border-radius: 3.5vw;
-    background-color: wheat;
+    /* background-color: wheat; */
+    background: none;
     border-style: none;
     }
 

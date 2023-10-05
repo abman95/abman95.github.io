@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+        <h1>KEY GENERATOR</h1>
+        <br>
+        <div class="select-container">
+        <select name="KEY Länge" size="0" id="keyLenght" placeholder="Bitte auswählen" class="select-box">
+            <option value="" disabled selected>KEY Länge Wählen</option>
+            <option>KEY Länge von 10</option>
+            <option>KEY Länge von 11</option>
+            <option>KEY Länge von 12</option>
+        </select>
+    </div>
+        <br>
+        <br>
+        <input type="text" value="" placeholder="Dein KEY" id="keyOutput">
+        <button onclick="copyKey()" id="kopiereKey">KEY KOPIEREN</button>
+        <br>
+        <br>
+        <button onclick="generateButton()" id="genButton">GENERATE KEY</button>
+    </div>
+        <script src="script.js"></script>
+    </body>
+</html>

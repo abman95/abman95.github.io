@@ -101,46 +101,68 @@ headerFixedMenu.addEventListener("click", function outsideClickHandler(event) {
 
 
 
-  let headerFixedBackgroundAnimation = 0;
-  let animationTimeout;
-  
-  headerFixedBackground.addEventListener('mouseover', () => {
-    startAnimation();
-  });
-  
-  headerFixedBackground.addEventListener('mouseout', () => {
-    endAnimation();
-  });
-  
-  function startAnimation() {
-    clearTimeout(animationTimeout);
-    animate();
-  }
-  
-  function endAnimation() {
-    clearTimeout(animationTimeout);
-    reverseAnimate();
-  }
-  
-  function animate() {
-    if (headerFixedBackgroundAnimation <= 120) {
-      headerFixed.style.transition = "filter ease .5s";
-      headerFixed.style.filter = "invert(1)";
-      headerFixedBackground.style.backgroundImage = `linear-gradient(#1a1a1a ${headerFixedBackgroundAnimation}%, wheat 0%)`;
-      headerFixedBackgroundAnimation = headerFixedBackgroundAnimation + 2;
-      animationTimeout = setTimeout(animate, 1);
+
+
+  function elementBackgroundColorChange(className) {
+    const element = document.querySelector(`.${className}`);
+    const classNameName = className;
+    let elementAnimation = 0;
+    let animationTimeout;
+
+    element.addEventListener('mouseover', () => {
+      startAnimation();
+    });
+    
+    element.addEventListener('mouseout', () => {
+      endAnimation();
+    });
+    
+    function startAnimation() {
+      clearTimeout(animationTimeout);
+      animate();
     }
-  }
-  
-  function reverseAnimate() {
-    if (headerFixedBackgroundAnimation >= -20) {
-      headerFixed.style.transition = "filter ease .5s";
-      headerFixed.style.filter = "invert(0)";
-      headerFixedBackground.style.backgroundImage = `linear-gradient(to top, #1a1a1a ${headerFixedBackgroundAnimation}%, wheat 0%)`;
-      headerFixedBackgroundAnimation = headerFixedBackgroundAnimation - 2;
-      animationTimeout = setTimeout(reverseAnimate, 1);
+    
+    function endAnimation() {
+      clearTimeout(animationTimeout);
+      reverseAnimate();
     }
-  }
+    
+    function animate() {
+      if (elementAnimation <= 120) {
+        if (classNameName === "headerFixedBackground"){
+        headerFixed.style.transition = "filter ease .5s";
+        headerFixed.style.filter = "invert(1)";
+        element.style.backgroundImage = `linear-gradient(#1a1a1a ${elementAnimation}%, wheat 0%)`;
+        } else if (classNameName === "dontPullMeDialogCloseButton"){
+          element.style.backgroundImage = `linear-gradient(#1a1a1a ${elementAnimation}%, rgba(59, 59, 59, 0.163)0%`;
+          element.style.transition = "color ease .5s";
+          element.style.color = "white";
+        }
+        elementAnimation = elementAnimation + 2;
+        animationTimeout = setTimeout(animate, 1);
+      }
+    }
+    
+    function reverseAnimate() {
+      if (elementAnimation >= -20) {
+        if (classNameName === "headerFixedBackground"){
+        headerFixed.style.transition = "filter ease .5s";
+        headerFixed.style.filter = "invert(0)";
+        element.style.backgroundImage = `linear-gradient(to top, #1a1a1a ${elementAnimation}%, wheat 0%)`;
+        } else if (classNameName === "dontPullMeDialogCloseButton"){
+          element.style.backgroundImage = `linear-gradient(to top, #1a1a1a ${elementAnimation}%, rgba(59, 59, 59, 0.163)0%`;
+          element.style.transition = "color ease .5s";
+          element.style.color = "black";
+        }
+        elementAnimation = elementAnimation - 2;
+        animationTimeout = setTimeout(reverseAnimate, 1);
+      }
+    }
+  };
+  
+  elementBackgroundColorChange("headerFixedBackground");
+  elementBackgroundColorChange("dontPullMeDialogCloseButton");
+
 
 
 
@@ -538,59 +560,54 @@ function handleIntersection(entries) {
     const prevButton = document.querySelector(".prevButton");
     const nextButton = document.querySelector(".nextButton");
 
-    let translateCount = 75;
+    let translateCount = 50;
 
-    
         function nextImage() {
-          if(translateCount > -26) {
-            nextButton.style.transform = "scale(1.1)";
+          if(translateCount > -1) {
+            nextButton.style.transform = "scale(1.3)";
             setTimeout(()=> {
               nextButton.style.transform = "scale(1)";
             }, 200)
-          translateCount-= 50;
-          sliders.style.transform = `translate(${translateCount}vw, 0%)`;
-          if (translateCount === 25) {
-            prevButton.style.cursor = "pointer";
-            prevButton.style.backgroundColor = "wheat";
-            sliders.children[1].style.opacity = `1`;
-            sliders.children[1].style.transform = `scale(1)`;
-            sliders.children[0].style.opacity = `0`;
-          } else if (translateCount === -25) {
-            sliders.children[2].style.opacity = `1`;
-            sliders.children[2].style.transform = `scale(1)`;
-            sliders.children[1].style.opacity = `0`;
-          } else if (translateCount === -75) {
-            sliders.children[3].style.opacity = `1`;
-            sliders.children[3].style.transform = `scale(1)`;
-            sliders.children[2].style.opacity = `0`;
-            nextButton.style.backgroundColor = "rgba(198, 198, 198, 0.247)";
-            nextButton.style.cursor = "auto";
-          } 
+              translateCount-= 50;
+              sliders.style.transform = `translate(${translateCount}vw, 0%)`;
+              if (translateCount === 0) {
+                prevButton.style.cursor = "pointer";
+                // prevButton.style.backgroundColor = "wheat";
+                prevButton.style.color = "wheat";
+                sliders.children[1].style.opacity = `1`;
+                sliders.children[1].style.transform = `scale(1)`;
+                sliders.children[0].style.opacity = `0`;
+              } else if (translateCount === -50) {
+                sliders.children[2].style.opacity = `1`;
+                sliders.children[2].style.transform = `scale(1)`;
+                sliders.children[1].style.opacity = `0`;
+                // nextButton.style.backgroundColor = "rgba(198, 198, 198, 0.247)";
+                nextButton.style.color = "rgba(198, 198, 198, 0.247)";
+                nextButton.style.cursor = "auto";
+              }
         }
       }
         function prevImage() {
-          if(translateCount < 75) {
-            prevButton.style.transform = "scale(1.1)";
+          if(translateCount < 50) {
+            prevButton.style.transform = "scale(1.3)";
             setTimeout(()=> {
               prevButton.style.transform = "scale(1)";
             }, 200)
           translateCount+=50;
           sliders.style.transform = `translate(${translateCount}vw, 0%)`;
-          if (translateCount === 75) {
+          if (translateCount === 50) {
             prevButton.style.cursor = "auto";
-            prevButton.style.backgroundColor = "rgba(198, 198, 198, 0.247)";
+            // prevButton.style.backgroundColor = "rgba(198, 198, 198, 0.247)";
+            prevButton.style.color = "rgba(198, 198, 198, 0.247)";
             sliders.children[1].style.opacity = `.5`;
             sliders.children[1].style.transform = `scale(.5)`;
             sliders.children[0].style.opacity = `1`;
-          } else if (translateCount === 25) {
+          } else if (translateCount === 0) {
             sliders.children[2].style.opacity = `.5`;
             sliders.children[2].style.transform = `scale(.5)`;
             sliders.children[1].style.opacity = `1`;
-          } else if (translateCount === -25) {
-            sliders.children[3].style.opacity = `.5`;
-            sliders.children[3].style.transform = `scale(.5)`;
-            sliders.children[2].style.opacity = `1`;
-            nextButton.style.backgroundColor = "wheat";
+            // nextButton.style.backgroundColor = "wheat";
+            nextButton.style.color = "wheat";
             nextButton.style.cursor = "pointer";
           }
         }
@@ -602,54 +619,153 @@ function handleIntersection(entries) {
 
     
 
+    let projectPath;
+  function projectListSelector(className) {
+    const element = document.querySelector(`.${className}`);
+    const nameOfClass = className;
 
-    function projectListSelector(className) {
-      const element = document.querySelector(`.${className}`);
-      const nameOfClass = className;
-      const projectImageSlider2Images1 = document.querySelector('#projectImageSlider2Images1');
-      const projectImageSlider2Images2 = document.querySelector('#projectImageSlider2Images2');
-      const projectImageSlider2Images3 = document.querySelector('#projectImageSlider2Images3');
-      const projectImageSlider2Images4 = document.querySelector('#projectImageSlider2Images4');
-    
-      element.addEventListener('click', function() {
-        new Promise(resolve => {
-          projectImageSlider2Images1.style.opacity = `0`;
-          projectImageSlider2Images2.style.opacity = `0`;
-          projectImageSlider2Images3.style.opacity = `0`;
-          projectImageSlider2Images4.style.opacity = `0`;
+    projectPath = `ProjectsData/mp3/index.html`;
+
+    const projectText = getProjectText(nameOfClass);
+    const projectHeader = getProjectHeader(nameOfClass);
+
+
+    function getProjectHeader(className) {
+      switch (className) {
+        case "mp3":
+          return "MP3 Player";
+        case "typing":
+          return "Typing Speed App";
+        case "toDo":
+          return "To Do App";
+        case "timer":
+          return "Timer";
+        case "clock":
+          return "Clock";
+        case "keyGen":
+          return "Key Generator";
+        default:
+          return "";  
+      }
+    }
+
+
+    function getProjectText(className) {
+      switch (className) {
+        case "mp3":
+          return "My biggest project, which I worked on after 3 1/2 months of intensive learning in JavaScript, CSS, and HTML, is my MP3 player. This MP3 player is a powerful and user-friendly application. It allows you to play MP3 files, fast-forward and rewind, enable auto-play and enjoy shuffle playback. With its media library list, you can easily switch between your songs in the playlist, upload them, and enjoy.";
+        case "typing":
+          return "My Typing Speed App, developed after 2 1/2 months of learning JavaScript, CSS, and HTML, lets you test and improve your typing skills. It provides accurate speed and accuracy metrics, helping you become a faster and more precise typist.";
+        case "toDo":
+          return "My ToDo App is a simple and efficient task manager. Designed after 2 months of learning JavaScript, CSS, and HTML, it helps you organize your tasks, set priorities, and stay productive with ease.";
+        case "timer":
+          return "My Timer App, created after 1 1/2 months of mastering JavaScript, CSS, and HTML, offers precise timing capabilities. Use it for various purposes, from cooking to workouts, with reliability and accuracy.";
+        case "clock":
+          return "My Clock App is a straightforward timekeeping tool, crafted after 1 months of JavaScript, CSS, and HTML learning. It displays the time accurately, keeping you informed at a glance.";
+        case "keyGen":
+          return "My KeyGenerator Tool, born after 3 months of studying JavaScript, CSS, and HTML, generates secure and random keys for various purposes. Enhance your security with ease using this efficient utility.";
+        default:
+          return "";  
+      }
+    }
+
+    const projectImageSlider2 = document.querySelector('.projectImageSlider2');
+    const projectImageSlider1Header = document.querySelector('.projectImageSlider1Header');
+    const projectImageSlider2ImagesProjectDescription = document.querySelector('.projectImageSlider2ImagesProjectDescription');
+
+    const projectImageSlider2Images1 = document.querySelector('#projectImageSlider2Images1');
+    const projectImageSlider2Images2 = document.querySelector('#projectImageSlider2Images2');
+    const projectImageSlider2Images3 = document.querySelector('#projectImageSlider2Images3');
+
+
+    let translateXInVw;
+
+
+
+  
+    element.addEventListener('click', function() {
+      new Promise(resolve => {
+        projectPath = `ProjectsData/${nameOfClass}/index.html`;
+        console.log(projectPath);
+
+        computedStyle = window.getComputedStyle(projectImageSlider2);
+        transformValue = computedStyle.getPropertyValue('transform');      
+        const transformMatrix = new DOMMatrix(transformValue);
+        const translateX = transformMatrix.m41;
+        const translateY = transformMatrix.m42;
+        const viewportWidth = window.innerWidth;
+        translateXInVw = (translateX / viewportWidth) * 100;
+        
+        projectImageSlider2Images1.style.opacity = `0`;
+        projectImageSlider2Images2.style.opacity = `0`;
+        projectImageSlider2Images3.style.opacity = `0`;
+        projectImageSlider1Header.style.opacity = `0`;
+        setTimeout(() => {
+          resolve();
+        }, 500);
+      }).then(() => {
+        projectImageSlider2Images1.style.transition = `all ease .5s`;
+        projectImageSlider2Images2.style.transition = `all ease .5s`;
+        projectImageSlider2Images3.style.transition = `all ease .5s`;
+        projectImageSlider1Header.style.transition = `all ease .5s`;
+        projectImageSlider2Images1.src = `Pictures/Projects/${nameOfClass}/${nameOfClass}Picture.png`;
+        projectImageSlider1Header.textContent = `${projectHeader}`;
+        projectImageSlider2ImagesProjectDescription.textContent = `${projectText}`;
+        projectImageSlider2Images3.src = `Pictures/Projects/${nameOfClass}/${nameOfClass}Picture1.png`;
+        return new Promise(resolve => {
           setTimeout(() => {
             resolve();
           }, 500);
-        }).then(() => {
-          projectImageSlider2Images1.style.transition = `all ease 1s`;
-          projectImageSlider2Images2.style.transition = `all ease 1s`;
-          projectImageSlider2Images3.style.transition = `all ease 1s`;
-          projectImageSlider2Images4.style.transition = `all ease 1s`;
-          projectImageSlider2Images1.src = `Pictures/Projects/${nameOfClass}/${nameOfClass}Picture.png`;
-          projectImageSlider2Images2.src = `Pictures/Projects/${nameOfClass}/${nameOfClass}Picture1.png`;
-          projectImageSlider2Images3.src = `Pictures/Projects/${nameOfClass}/${nameOfClass}Picture2.png`;
-          projectImageSlider2Images4.src = `Pictures/Projects/${nameOfClass}/${nameOfClass}Picture3.png`;
-          return new Promise(resolve => {
-            setTimeout(() => {
-              resolve();
-            }, 500);
-          });
-        }).then(() => {
+        });
+      }).then(() => {
+        console.log(translateXInVw);
+        if (translateXInVw === 50) {
           projectImageSlider2Images1.style.opacity = `1`;
           projectImageSlider2Images2.style.opacity = `1`;
           projectImageSlider2Images3.style.opacity = `1`;
-          projectImageSlider2Images4.style.opacity = `1`;
-        });
+        }
+        if (translateXInVw === 0) {
+          projectImageSlider2Images2.style.opacity = `1`;
+          projectImageSlider2Images3.style.opacity = `1`;
+        }
+        else if (translateXInVw === -50) {
+          projectImageSlider2Images3.style.opacity = `1`;
+        }
+        projectImageSlider1Header.style.opacity = `1`;
       });
+    });
+
+
+    projectImageSlider2Images3.addEventListener('click', function() {
+      if (!document.projectImageSlider2Images3) {
+        projectImageSlider2Images3.style.transition = "none";
+
+        projectImageSlider2Images3.requestFullscreen().then(() => {
+            setTimeout(() => {
+
+
+              // Create a temporary link element
+              const link = document.createElement('a');
+              link.href = projectPath;
+              link.target = '_blank';
+              link.click();
+            }, 500); // Delay to ensure transition is applied
+        });
+    } else {
+        // If already in full-screen mode, exit it
+        document.exitFullscreen();
     }
-    
-    
-    projectListSelector("mp3");
-    projectListSelector("typing");
-    projectListSelector("toDo");
-    projectListSelector("timer");
-    projectListSelector("clock");
-    projectListSelector("keyGen");
+    });
+
+  }
+  
+  
+  projectListSelector("mp3");
+  projectListSelector("typing");
+  projectListSelector("toDo");
+  projectListSelector("timer");
+  projectListSelector("clock");
+  projectListSelector("keyGen");
     
 
   

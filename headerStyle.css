@@ -245,8 +245,8 @@ dialog::-webkit-scrollbar-track {
   cursor: pointer;
   position: fixed;
   display: flex;
-  width: 25px;
-  margin: -60px 0px 0px 35px;
+  width: 1.63vw;
+  margin: -3.91vw 0 0 2.28vw;
   transition: all ease 1s;
   z-index: 99999;
 }
@@ -296,13 +296,13 @@ dialog::backdrop {
 }
 
 .dialogCloseButton {
-  width: 40px;
-  height: 40px;
+  width: 2.6vw;
+  height: 2.6vw;
   position: fixed;
   top: 5%;
   right: 5%;
   transition: all ease 1s;
-  filter: invert(0.2);
+  filter: invert(1);
 }
 
 
@@ -316,21 +316,21 @@ dialog::backdrop {
 #dialogHeader {
 /* Top und Sticky machen HeaderElemente Sticky */
   display: flex;
-  width: 1010px;
-  height: 100px;
+  width: 65.76vw;
+  height: 13.39vh;
   z-index: 10;
 }
 
 #dialogHeadline {
-  text-shadow:  0 0px 10px rgba(0, 0, 0, 0.1);;
+  text-shadow:  0 0 0.65vw rgba(0, 0, 0, 0.1);;
   color: white;
   font: 1vw Roboto-Thin;
   margin-left: 10.5%;
-  margin-top: 8%;
+  margin-top: 10%;
 }
 
 .dialogHeaderHr {
-  margin-top: 5%;
+  margin-top: 9%;
   width: 60%;
   border: rgba(255, 255, 255, 0.537) solid .1vh;
   box-sizing: border-box;
@@ -367,7 +367,7 @@ dialog::backdrop {
 .dialogAboutMe,
 .dialogContact {
   list-style: none;
-  border-bottom: 2px solid transparent;
+  border-bottom: 0.13vw solid transparent;
   transition: border-bottom 0.5s ease;
 }
 
@@ -375,7 +375,7 @@ dialog::backdrop {
 .dialogAboutMe:hover,
 .dialogContact:hover {
 list-style: none;
-border-bottom: 2px solid rgb(255, 255, 255);
+border-bottom: 0.13vw solid rgb(255, 255, 255);
 }
 
 
@@ -394,7 +394,7 @@ border-bottom: 2px solid rgb(255, 255, 255);
 
 
 .dialogMotivationalText {
-  margin-top: -5%;
+  margin-top: -3%;
   justify-content: center;
   align-items: center;
   display: flex;
