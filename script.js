@@ -323,15 +323,11 @@ function addInteractiveAnimationOnLocatedInGermany(className) {
         if (dontPullMeDialogCount === 1) {
           dontPullMeDialog.showModal();
       } else if (dontPullMeDialogCount === 2) {
-          dialogHeadline.textContent = "Seriously Stop!";
+          dialogHeadline.textContent = "Seriously Stop.";
           dontPullMeDialogCloseButton.textContent = "Okay";
           dontPullMeDialog.showModal();
       } else if (dontPullMeDialogCount === 3) {
-          dialogHeadline.textContent = "So you wanna play huh!? Cause King Kong ain't got s##t on me!";
-          dontPullMeDialogCloseButton.textContent = "I'm Sorry";
-          dontPullMeDialog.showModal();
-      } else if (dontPullMeDialogCount === 4) {
-        dialogHeadline.textContent = "You asked for it!";
+        dialogHeadline.textContent = "You asked for it";
         dontPullMeDialogCloseButton.textContent = "...";
         dontPullMeDialog.showModal();
         setTimeout(()=> {
@@ -347,7 +343,7 @@ function addInteractiveAnimationOnLocatedInGermany(className) {
           link.download = 'Abdullah_Sogut_CV.pdf';
           link.click();
         },2000);
-      } else if (dontPullMeDialogCount === 5) {
+      } else if (dontPullMeDialogCount === 4) {
         dialogHeadline.textContent = `Now tell me "YOU ARE HIRED!"!`;
         dontPullMeDialogCloseButton.textContent = "calling...";
         dontPullMeDialog.showModal();
