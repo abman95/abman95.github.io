@@ -1,4 +1,4 @@
-/* @media only screen and (min-width:1281px) { */
+@media screen and (min-width: 400px) {
 
 @font-face {
   font-family: 'Roboto-Bold';
@@ -410,4 +410,5 @@ border-bottom: 0.13vw solid rgb(255, 255, 255);
 
 .dialogMotivationalText p:hover {
 font-size: 2.3vh;
+}
 }

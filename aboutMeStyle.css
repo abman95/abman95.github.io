@@ -1,3 +1,5 @@
+@media screen and (min-width: 400px) {
+
 @font-face {
     font-family: 'Roboto-Bold';
     src: url(fonts/Roboto/Roboto-Bold.ttf);
@@ -642,4 +644,5 @@ transform: perspective(1200px) translateX(0px) translateY(270.944px) scale(1) ro
     width: 100vw;
     display: flex;
     background-color: black;
+}
 }
