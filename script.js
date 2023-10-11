@@ -589,17 +589,33 @@ function handleIntersection(entries) {
   
 
 
-    
+  let projectPath = localStorage.getItem("projectPath");
 
-    let projectPath;
   function projectListSelector(className) {
     const element = document.querySelector(`.${className}`);
     const nameOfClass = className;
 
-    projectPath = `mp3Index.html`;
+
+    const projectImageSlider2 = document.querySelector('.projectImageSlider2');
+    const projectImageSlider1Header = document.querySelector('.projectImageSlider1Header');
+    const projectImageSlider2ImagesProjectDescription = document.querySelector('.projectImageSlider2ImagesProjectDescription');
+
+    const projectImageSlider2Images1 = document.querySelector('#projectImageSlider2Images1');
+    const projectImageSlider2Images2 = document.querySelector('#projectImageSlider2Images2');
+    const projectImageSlider2Images3 = document.querySelector('#projectImageSlider2Images3');
+    const projectImageSlider2ImagesAfterPseudoDiv = document.querySelector('#projectImageSlider2ImagesAfterPseudoDiv');
+
+
+    if (!(window.location.hash === '#projectImageSlider1Header')) {
+      projectPath = `mp3Index.html`;
+    }
+    
+
+
 
     const projectText = getProjectText(nameOfClass);
     const projectHeader = getProjectHeader(nameOfClass);
+
 
 
     function getProjectHeader(className) {
@@ -641,14 +657,7 @@ function handleIntersection(entries) {
       }
     }
 
-    const projectImageSlider2 = document.querySelector('.projectImageSlider2');
-    const projectImageSlider1Header = document.querySelector('.projectImageSlider1Header');
-    const projectImageSlider2ImagesProjectDescription = document.querySelector('.projectImageSlider2ImagesProjectDescription');
 
-    const projectImageSlider2Images1 = document.querySelector('#projectImageSlider2Images1');
-    const projectImageSlider2Images2 = document.querySelector('#projectImageSlider2Images2');
-    const projectImageSlider2Images3 = document.querySelector('#projectImageSlider2Images3');
-    const projectImageSlider2ImagesAfterPseudoDiv = document.querySelector('#projectImageSlider2ImagesAfterPseudoDiv');
 
 
     let translateXInVw;
@@ -657,6 +666,7 @@ function handleIntersection(entries) {
     element.addEventListener('click', function() {
       new Promise(resolve => {
         projectPath = `${nameOfClass}Index.html`;
+        localStorage.setItem("projectPath", projectPath);
         console.log(projectPath);
 
         computedStyle = window.getComputedStyle(projectImageSlider2);
@@ -714,7 +724,6 @@ function handleIntersection(entries) {
     projectImageSlider2ImagesAfterPseudoDiv.addEventListener('click', function() {
 
 
-
       const link = document.createElement('a');
       link.href = projectPath;
       // link.target = '_blank';
@@ -764,58 +773,119 @@ function handleIntersection(entries) {
     const prevButton = document.querySelector(".prevButton");
     const nextButton = document.querySelector(".nextButton");
 
+
     let translateCount = 50;
 
-        function nextImage() {
-          if(translateCount > -1) {
-            nextButton.style.transform = "scale(1.3)";
-            setTimeout(()=> {
-              nextButton.style.transform = "scale(1)";
-            }, 200)
-              translateCount-= 50;
-              sliders.style.transform = `translate(${translateCount}vw, 0%)`;
-              if (translateCount === 0) {
-                prevButton.style.cursor = "pointer";
-                // prevButton.style.backgroundColor = "wheat";
-                prevButton.style.color = "wheat";
-                sliders.children[1].style.opacity = `1`;
-                sliders.children[1].style.transform = `scale(1)`;
-                sliders.children[0].style.opacity = `0`;
-              } else if (translateCount === -50) {
-                sliders.children[2].style.opacity = `1`;
-                sliders.children[2].style.transform = `scale(1)`;
-                sliders.children[1].style.opacity = `0`;
-                // nextButton.style.backgroundColor = "rgba(198, 198, 198, 0.247)";
-                nextButton.style.color = "rgba(198, 198, 198, 0.247)";
-                nextButton.style.cursor = "auto";
-              }
+    setTimeout(()=>{
+    computedStyle = window.getComputedStyle(projectImageSlider2);
+    transformValue = computedStyle.getPropertyValue('transform');      
+    let transformMatrix = new DOMMatrix(transformValue);
+    let translateX = transformMatrix.m41;
+    let translateY = transformMatrix.m42;
+    let viewportWidth = window.innerWidth;
+    translateXInVw = (translateX / viewportWidth) * 100;
+    console.log(translateXInVw);
+
+    if (translateXInVw < 0 && translateXInVw > -51 && window.location.hash === '#projectImageSlider1Header') {
+      translateCount = -50;
+      prevButton.style.cursor = "auto";
+      prevButton.style.color = "wheat";
+      nextButton.style.color = "rgba(198, 198, 198, 0.247)";
+      sliders.children[1].style.opacity = `0`;
+      sliders.children[1].style.transform = `scale(1)`;
+      sliders.children[0].style.opacity = `1`;
+  }
+  },1000)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  function nextImage() {
+    computedStyle = window.getComputedStyle(projectImageSlider2);
+    transformValue = computedStyle.getPropertyValue('transform');      
+    transformMatrix = new DOMMatrix(transformValue);
+    translateX = transformMatrix.m41;
+    translateY = transformMatrix.m42;
+    viewportWidth = window.innerWidth;
+    translateXInVw = (translateX / viewportWidth) * 100;
+
+
+
+    console.log(translateXInVw);
+
+    if (translateXInVw > 45 && translateXInVw < 51 || translateXInVw > -5 && translateXInVw < 5) {
+      nextButton.style.transform = "scale(1.3)";
+      setTimeout(()=> {
+        nextButton.style.transform = "scale(1)";
+      }, 200)
+        translateCount-= 50;
+        sliders.style.transform = `translate(${translateCount}vw, 0%)`;
+        if (translateXInVw > 45 && translateXInVw < 51) {
+          prevButton.style.cursor = "pointer";
+          // prevButton.style.backgroundColor = "wheat";
+          prevButton.style.color = "wheat";
+          sliders.children[1].style.opacity = `1`;
+          sliders.children[1].style.transform = `scale(1)`;
+          sliders.children[0].style.opacity = `0`;
+        } else if (translateXInVw > -5 && translateXInVw < 5) {
+          sliders.children[2].style.opacity = `1`;
+          sliders.children[2].style.transform = `scale(1)`;
+          sliders.children[1].style.opacity = `0`;
+          // nextButton.style.backgroundColor = "rgba(198, 198, 198, 0.247)";
+          nextButton.style.color = "rgba(198, 198, 198, 0.247)";
+          nextButton.style.cursor = "auto";
         }
-      }
-        function prevImage() {
-          if(translateCount < 50) {
-            prevButton.style.transform = "scale(1.3)";
-            setTimeout(()=> {
-              prevButton.style.transform = "scale(1)";
-            }, 200)
-          translateCount+=50;
-          sliders.style.transform = `translate(${translateCount}vw, 0%)`;
-          if (translateCount === 50) {
-            prevButton.style.cursor = "auto";
-            // prevButton.style.backgroundColor = "rgba(198, 198, 198, 0.247)";
-            prevButton.style.color = "rgba(198, 198, 198, 0.247)";
-            sliders.children[1].style.opacity = `.5`;
-            sliders.children[1].style.transform = `scale(.5)`;
-            sliders.children[0].style.opacity = `1`;
-          } else if (translateCount === 0) {
-            sliders.children[2].style.opacity = `.5`;
-            sliders.children[2].style.transform = `scale(.5)`;
-            sliders.children[1].style.opacity = `1`;
-            // nextButton.style.backgroundColor = "wheat";
-            nextButton.style.color = "wheat";
-            nextButton.style.cursor = "pointer";
-          }
-        }
+  }
+}
+
+  function prevImage() {
+    computedStyle = window.getComputedStyle(projectImageSlider2);
+    transformValue = computedStyle.getPropertyValue('transform');      
+    transformMatrix = new DOMMatrix(transformValue);
+    translateX = transformMatrix.m41;
+    translateY = transformMatrix.m42;
+    viewportWidth = window.innerWidth;
+    translateXInVw = (translateX / viewportWidth) * 100;
+
+    console.log(translateXInVw);
+    if (translateXInVw < -45 && translateXInVw > -51 || translateXInVw > -5 && translateXInVw < 5) {
+      prevButton.style.transform = "scale(1.3)";
+      setTimeout(()=> {
+        prevButton.style.transform = "scale(1)";
+      }, 200)
+    translateCount+=50;
+    sliders.style.transform = `translate(${translateCount}vw, 0%)`;
+    if (translateXInVw > -5 && translateXInVw < 5) {
+      prevButton.style.cursor = "auto";
+      // prevButton.style.backgroundColor = "rgba(198, 198, 198, 0.247)";
+      prevButton.style.color = "rgba(198, 198, 198, 0.247)";
+      sliders.children[1].style.opacity = `.5`;
+      sliders.children[1].style.transform = `scale(.5)`;
+      sliders.children[0].style.opacity = `1`;
+    } else if (translateXInVw < -45 && translateXInVw > -51) {
+      sliders.children[2].style.opacity = `.5`;
+      sliders.children[2].style.transform = `scale(.5)`;
+      sliders.children[1].style.opacity = `1`;
+      // nextButton.style.backgroundColor = "wheat";
+      nextButton.style.color = "wheat";
+      nextButton.style.cursor = "pointer";
     }
+  }
+}
         prevButton.addEventListener("click", prevImage);
 
         nextButton.addEventListener("click", nextImage);

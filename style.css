@@ -819,7 +819,6 @@
   
   
   #dialogHeaderListingProjects {
-
     margin-left: 10%;
     display: flex;
     flex-direction: column;
@@ -850,6 +849,7 @@
 .timer,
 .clock,
 .keyGen {
+  width: 100%;
     cursor: pointer;
     list-style: none;
     border-bottom: 0.13vw solid transparent;
@@ -862,6 +862,5 @@
 .timer:hover,
 .clock:hover,
 .keyGen:hover {
-  list-style: none;
-  border-bottom: 0.13vw solid rgb(255, 255, 255);
+  list-style: disc;
   }

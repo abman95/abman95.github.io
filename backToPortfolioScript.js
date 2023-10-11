@@ -1,28 +1,31 @@
+let projectNameReturnPortfolioSite = localStorage.getItem("projectNameReturnPortfolioSite");
+
+if (!projectNameReturnPortfolioSite) {
+  projectNameReturnPortfolioSite = null;
+}
+
 const returnPortfolioSite = document.querySelector('.returnPortfolioSite');
-
-let projectNameReturnPortfolioSite;
-
 
 returnPortfolioSite.addEventListener('click', () => {
   if (window.location.href.endsWith('/mp3Index.html')) {
     projectNameReturnPortfolioSite = "mp3";
-} else if (window.location.href.endsWith('/typingIndex.html')) {
+  } else if (window.location.href.endsWith('/typingIndex.html')) {
     projectNameReturnPortfolioSite = "typing";
-} else if (window.location.href.endsWith('/toDoIndex.html')) {
+  } else if (window.location.href.endsWith('/toDoIndex.html')) {
     projectNameReturnPortfolioSite = "toDo";
-} else if (window.location.href.endsWith('/timerIndex.html')) {
+  } else if (window.location.href.endsWith('/timerIndex.html')) {
     projectNameReturnPortfolioSite = "timer";
-} else if (window.location.href.endsWith('/clockIndex.html')) {
+  } else if (window.location.href.endsWith('/clockIndex.html')) {
     projectNameReturnPortfolioSite = "clock";
-} else if (window.location.href.endsWith('/keyGenIndex.html')) {
+  } else if (window.location.href.endsWith('/keyGenIndex.html')) {
     projectNameReturnPortfolioSite = "keyGen";
-}
-    
+  }
 
-    const createLink = document.createElement('a');
-    createLink.href = 'homepage.html#projectImageSlider1Header';
-    createLink.click();
-    projectClicker(projectNameReturnPortfolioSite);
+  localStorage.setItem("projectNameReturnPortfolioSite", projectNameReturnPortfolioSite);
+
+  const createLink = document.createElement('a');
+  createLink.href = 'homepage.html#projectImageSlider1Header';
+  createLink.click();
 });
 
 
@@ -31,9 +34,9 @@ returnPortfolioSite.addEventListener('click', () => {
 
 
 
-    const projectClicker = function (projectNameReturnPortfolioSite) {
+function projectClicker (projectNameReturnPortfolioSite) {
         const clickedProject = document.querySelector(`.${projectNameReturnPortfolioSite}`);
-        if (clickedProject) {
+                if (clickedProject) {
             const nameOfClass = projectNameReturnPortfolioSite;
         
             const projectHeader = getProjectHeader(nameOfClass);
@@ -119,13 +122,11 @@ returnPortfolioSite.addEventListener('click', () => {
           
 
                   document.addEventListener('DOMContentLoaded', () => {
-                    // Check if the URL contains the fragment identifier
                     if (window.location.hash === '#projectImageSlider1Header') {
-                        // projectClicker(projectNameReturnPortfolioSite);
+                       projectClicker(projectNameReturnPortfolioSite);
                 
                         const projectImageSlider2 = document.querySelector('.projectImageSlider2');
                         if (projectImageSlider2) {
-                            // Perform transformation here
                             projectImageSlider2.style.transform = 'translate(-50vw, 0%)';
                         }
                     }
@@ -136,3 +137,5 @@ returnPortfolioSite.addEventListener('click', () => {
                 document.addEventListener('DOMContentLoaded', () => {
                 console.log(projectNameReturnPortfolioSite);
             });
+
+
