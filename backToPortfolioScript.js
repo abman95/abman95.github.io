@@ -4,19 +4,19 @@ let projectNameReturnPortfolioSite;
 
 
 returnPortfolioSite.addEventListener('click', () => {
-    if (window.location.hash === '#mp3Index') {
-        projectNameReturnPortfolioSite = "mp3";
-    } else if (window.location.hash === '#typingIndex') {
-        projectNameReturnPortfolioSite = "typing";
-    } else if (window.location.hash === '#toDoIndex') {
-        projectNameReturnPortfolioSite = "toDo";
-    } else if (window.location.hash === '#timerIndex') {
-        projectNameReturnPortfolioSite = "timer";
-    } else if (window.location.hash === '#clockIndex') {
-        projectNameReturnPortfolioSite = "clock";
-    } else if (window.location.hash === '#keyGenIndex') {
-        projectNameReturnPortfolioSite = "keyGen";
-    }
+  if (window.location.href.endsWith('/mp3Index.html')) {
+    projectNameReturnPortfolioSite = "mp3";
+} else if (window.location.href.endsWith('/typingIndex.html')) {
+    projectNameReturnPortfolioSite = "typing";
+} else if (window.location.href.endsWith('/toDoIndex.html')) {
+    projectNameReturnPortfolioSite = "toDo";
+} else if (window.location.href.endsWith('/timerIndex.html')) {
+    projectNameReturnPortfolioSite = "timer";
+} else if (window.location.href.endsWith('/clockIndex.html')) {
+    projectNameReturnPortfolioSite = "clock";
+} else if (window.location.href.endsWith('/keyGenIndex.html')) {
+    projectNameReturnPortfolioSite = "keyGen";
+}
     
 
     const createLink = document.createElement('a');
