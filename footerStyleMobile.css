@@ -109,8 +109,8 @@
     height: 100vh;
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
     border: 1.5px solid rgba(0, 0, 0, 0);
-   /* align-items: center;  /* Vertikal zentrierte Ausrichtung */
-   /* justify-content: center; /* Horizontal zentrierte Ausrichtung */
+   /* align-items: center;*/
+   /* justify-content: center; */
     z-index: 999999;
     background-color: #1a1a1a;
 }

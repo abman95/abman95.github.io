@@ -11,15 +11,9 @@
 
 
 
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="theme-color" content="#ffffff">
     </head>
     <body>
-
+    <div class="returnPortfolioSite">&lsaquo; back</div>
     
     <!-- <video muted loop id="video-background">
             <source src="Bilder/pageLoadingVideo.mp4" type="video/mp4">
@@ -190,9 +184,14 @@
             <div class="projectSlider">Projects:</div>
             <div class="projectImageSlider1">
                 <div class="projectImageSlider1ButtonContainerBackground">
+                    <p class="projectImageSlider1ButtonContainerBackgroundText">Projects</p>
                     <div class="projectImageSlider1ButtonContainer">
+
                     </div>
                 </div>
+
+
+<!-- 
                     <ul class="projectImageSlider1ButtonListing">
                         <li class="mp3">MP3</li>
                         <li class="typing">Typing</li>
@@ -200,11 +199,47 @@
                         <li class="timer">Timer</li>
                         <li class="clock">Clock</li>
                         <li class="keyGen">KeyGen</li>
-                    </ul>
-                <p class="projectImageSlider1Header">MP3 Player</p>
+                    </ul> -->
+
+
+                    <dialog id="projectImageSlider1ButtonListingNew" class="projectImageSlider1ButtonListingNew">
+                        <form method ="dialog">
+                          <div id="dialogHeaderProjects">
+                          <h1 id="dialogHeadlineProjects">Projects</h1>
+                          <img src="Pictures/Projects/dialogCloseButton.svg" id="dialogCloseButtonProjects" class="dialogCloseButtonProjects">
+                        </div>
+                        <hr class="dialogHeaderHrProjects">
+                          <div id="dialogHeaderListingProjects">
+                            <ul class="projectImageSlider1ButtonListingProjects">
+                                <li class="mp3">MP3</li>
+                                <li class="typing">Typing</li>
+                                <li class="toDo">ToDo</li>
+                                <li class="timer">Timer</li>
+                                <li class="clock">Clock</li>
+                                <li class="keyGen">KeyGen</li>
+                            </ul>
+                          </div>
+                          <hr class="dialogHeaderHrProjects">
+                        </form>
+                      </dialog>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <p class="projectImageSlider1Header" id="projectImageSlider1Header">MP3 Player</p>
                 <button class="prevButton">&lsaquo;</button>
                 <button class="nextButton">&rsaquo;</button>
-                <div class="projectImageSlider2" data-mouse-down-at="90vw" data-previous-down-at-percentage="90vw">
+                <div class="projectImageSlider2" data-mouse-down-at="90vw" data-previous-down-at-percentage="90vw" id="projectImageSlider2">
                     <img src="Pictures/Projects/mp3/mp3Picture.png" class="projectImageSlider2Images" draggable="false" id="projectImageSlider2Images1">
                     <div class="projectImageSlider2Images" draggable="false" id="projectImageSlider2Images2">
                         <h2 class="projectImageSlider2ImagesProjectHeader"></h2>
@@ -247,5 +282,6 @@
         </div>
     </footer>
         <script src="script.js"></script>
+        <script src="backToPortfolioScript.js"></script>
     </body>
 </html>

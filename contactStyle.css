@@ -98,8 +98,8 @@ textarea {
 
 
 .contactInformationContainer {
-  top: 30vh;
-  left: 67.5vw;
+  top: 30%;
+  left: 67.5%;
   position: absolute;
   background-image: url(Pictures/abdullahSögütBackgroundImage4.jpg);
   width: 13.021vw;
@@ -110,24 +110,24 @@ textarea {
 }
 
 .contactPictureHeader {
-  top: 56vh;
-  left: 67.5vw;
+  top: 56%;
+  left: 67.5%;
   position: absolute;
   font: 1.6276vw Roboto-Thin;
   color: white;
 }
 
 .contactInformationHeader1 {
-  top: 67vh;
-  left: 67.5vw;
+  top: 67%;
+  left: 67.5%;
   position: absolute;
   font: 1.6276vw Roboto-Thin;
   color: white;
 }
 
 .contactInformationListing1 {
-  top: 74vh;
-  left: 67.5vw;
+  top: 74%;
+  left: 67.5%;
   position: absolute;
   font: 0.9766vw Roboto-Thin;
   color: white;
@@ -140,16 +140,16 @@ textarea {
 
 
 .contactInformationHeader2 {
-  top: 94vh;
-  left: 67.5vw;
+  top: 94%;
+  left: 67.5%;
   position: absolute;
   font: 1.6276vw Roboto-Thin;
   color: white;
 }
 
 .contactInformationListing2 {
-  top: 101vh;
-  left: 67.5vw;
+  top: 101%;
+  left: 67.5%;
   position: absolute;
   font: 0.9766vw Roboto-Thin;
   color: white;
@@ -161,16 +161,16 @@ textarea {
 }
 
 .contactInformationHeader3 {
-  top: 138vh;
-  left: 67.5vw;
+  top: 138%;
+  left: 67.5%;
   position: absolute;
   font: 1.6276vw Roboto-Thin;
   color: white;
 }
 
 .contactInformationListing3 {
-  top: 145vh;
-  left: 67.5vw;
+  top: 145%;
+  left: 67.5%;
   position: absolute;
   font: 0.9766vw Roboto-Thin;
   color: white;

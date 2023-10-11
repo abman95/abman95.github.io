@@ -73,24 +73,25 @@
                  </ul>
              </div>
                 <h1 class="contactHeader">Get in Touch for<br>further<br>information</h1>
-            <div class="contact-form">
-                <form action="mailto:abdullah.soeguet@outlook.de" method="POST">
-                    <hr class="hr">
-                    <label for="name">Name:
-                    <input type="text" id="name" name="name" placeholder="Please write your name" required>
-                </label>
-                <hr class="hr">
-                    <label for="email">E-Mail:
-                    <input type="email" id="email" name="email" placeholder="Please write your E-Mail address" required >
-                </label>
-                <hr class="hr">
-                    <label for="message">Message:
-                    <textarea id="message" name="message" rows="4" placeholder="Please write your message" required></textarea>
-                </label>
-                <hr class="hr">
-                <a href="mailto:abdullah.soeguet@outlook.de"><button class="submitButton" type="submit">Send</button></a>
-                </form>
-            </div>
+                <div class="contact-form">
+                    <form action="send_email.php" method="POST">
+                        <hr class="hr">
+                        <label for="name">Name:
+                            <input type="text" id="name" name="name" placeholder="Please write your name" required>
+                        </label>
+                        <hr class="hr">
+                        <label for="email">E-Mail:
+                            <input type="email" id="email" name="email" placeholder="Please write your E-Mail address" required>
+                        </label>
+                        <hr class="hr">
+                        <label for="message">Message:
+                            <textarea id="message" name="message" rows="4" placeholder="Please write your message" required></textarea>
+                        </label>
+                        <hr class="hr">
+                        <button class="submitButton" type="submit">Send</button>
+                    </form>
+                </div>
+                
 
             <div class="contactInformationContainer"></div>
                 <h1 class="contactPictureHeader">Abdullah Sögüt</h1>

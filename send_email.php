@@ -4,14 +4,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $message = $_POST["message"];
     
-    $to = "abdullah.soeguet@outlook.de"; // Ihre E-Mail-Adresse hier
-    $subject = "Kontaktanfrage von $name";
-    $headers = "From: $email";
+    $to = "abdullah.soeguet@outlook.de";
+    $subject = "Neue Formulardaten von " . $name;
+    $headers = "From: " . $email;
     
-    mail($to, $subject, $message, $headers);
+    $mailBody = "Name: " . $name . "\n";
+    $mailBody .= "E-Mail: " . $email . "\n";
+    $mailBody .= "Nachricht:\n" . $message;
     
-    // Optional: Weiterleitung oder Bestätigungsseite anzeigen
-    header("Location: confirmation.html"); // Ersetzen Sie 'confirmation.html' durch den Dateinamen Ihrer Bestätigungsseite
-    exit;
+    mail($to, $subject, $mailBody, $headers);
+    
+    header("Location: danke.html");
+    exit();
 }
 ?>
