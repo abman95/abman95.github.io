@@ -223,7 +223,7 @@ function autoPlayButtonActive () {
           },1000)
         } else {
           if (audio.ended){
-          pausePlayButton.setAttribute("src", "Wallpaper/PlayButton2.svg");
+          pausePlayButton.setAttribute("src", "Wallpaper/playButton2.svg");
         }
       }
       } else if (checkAutoPlayButton === true && checkRandomSongButton === true) {
@@ -246,7 +246,7 @@ function autoPlayButtonActive () {
           },1000)
         } else {
           if (audio.ended){
-          pausePlayButton.setAttribute("src", "Wallpaper/PlayButton2.svg");
+          pausePlayButton.setAttribute("src", "Wallpaper/playButton2.svg");
         }
       }
     };
@@ -431,10 +431,10 @@ function mp3FileReader () {
   input.addEventListener("click", (event) => {
     if (audio.paused || audio.played) {
     audio.pause();
-    pausePlayButton.setAttribute("src", "Wallpaper/PlayButton2.svg");
+    pausePlayButton.setAttribute("src", "Wallpaper/playButton2.svg");
     setTimeout(()=> {
       audio.pause();
-      pausePlayButton.setAttribute("src", "Wallpaper/PlayButton2.svg");
+      pausePlayButton.setAttribute("src", "Wallpaper/playButton2.svg");
     }, 1000)
   }
   });
@@ -682,7 +682,7 @@ function mp3FileReader () {
       }
     } else {
       audio.pause();
-      pausePlayButton.setAttribute("src", "Wallpaper/PlayButton2.svg");
+      pausePlayButton.setAttribute("src", "Wallpaper/playButton2.svg");
     }
   });
   
@@ -718,7 +718,7 @@ function pressedButtonsChecker() {
     } else {
       if (audio.ended || audio.currentTime === audio.duration) {
         audio.pause();
-        pausePlayButton.setAttribute("src", "Wallpaper/PlayButton2.svg");
+        pausePlayButton.setAttribute("src", "Wallpaper/playButton2.svg");
         }
     }
   }, 1000);
