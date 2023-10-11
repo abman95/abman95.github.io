@@ -22,6 +22,7 @@ returnPortfolioSite.addEventListener('click', () => {
     const createLink = document.createElement('a');
     createLink.href = 'homepage.html#projectImageSlider1Header';
     createLink.click();
+    projectClicker(projectNameReturnPortfolioSite);
 });
 
 
@@ -120,7 +121,7 @@ returnPortfolioSite.addEventListener('click', () => {
                   document.addEventListener('DOMContentLoaded', () => {
                     // Check if the URL contains the fragment identifier
                     if (window.location.hash === '#projectImageSlider1Header') {
-                        projectClicker(projectNameReturnPortfolioSite);
+                        // projectClicker(projectNameReturnPortfolioSite);
                 
                         const projectImageSlider2 = document.querySelector('.projectImageSlider2');
                         if (projectImageSlider2) {
@@ -133,5 +134,5 @@ returnPortfolioSite.addEventListener('click', () => {
 
 
                 document.addEventListener('DOMContentLoaded', () => {
-                console.log(window.location.hash);
+                console.log(projectNameReturnPortfolioSite);
             });
