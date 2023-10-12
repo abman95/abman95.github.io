@@ -97,7 +97,7 @@ function projectClicker (projectNameReturnPortfolioSite) {
 
            
             
-          
+            if (window.innerWidth <= 400) {
                   computedStyle = window.getComputedStyle(projectImageSlider2);
                   transformValue = computedStyle.getPropertyValue('transform');      
                   const transformMatrix = new DOMMatrix(transformValue);
@@ -108,7 +108,7 @@ function projectClicker (projectNameReturnPortfolioSite) {
 
                   projectImageSlider2Images1.style.opacity = `0`;
                   projectImageSlider2Images2.style.opacity = `0`;
-                  projectImageSlider2.style.transform = 'translate(-50vw, 0%)';
+                  projectImageSlider2.style.transform = 'translate(-80vw, 0%)';
 
                   projectImageSlider2Images1.src = `Pictures/Projects/${nameOfClass}/${nameOfClass}Picture.png`;
                   projectImageSlider1Header.textContent = `${projectHeader}`;
@@ -117,6 +117,27 @@ function projectClicker (projectNameReturnPortfolioSite) {
   
                   projectImageSlider2ImagesAfterPseudoDiv.style.opacity = `1`;
                   projectImageSlider2ImagesAfterPseudoDiv.style.transform = `scale(1)`;
+            } else {
+              computedStyle = window.getComputedStyle(projectImageSlider2);
+              transformValue = computedStyle.getPropertyValue('transform');      
+              const transformMatrix = new DOMMatrix(transformValue);
+              const translateX = transformMatrix.m41;
+              const translateY = transformMatrix.m42;
+              const viewportWidth = window.innerWidth;
+              translateXInVw = (translateX / viewportWidth) * 100;
+
+              projectImageSlider2Images1.style.opacity = `0`;
+              projectImageSlider2Images2.style.opacity = `0`;
+              projectImageSlider2.style.transform = 'translate(-50vw, 0%)';
+
+              projectImageSlider2Images1.src = `Pictures/Projects/${nameOfClass}/${nameOfClass}Picture.png`;
+              projectImageSlider1Header.textContent = `${projectHeader}`;
+              projectImageSlider2ImagesProjectDescription.textContent = `${projectText}`;
+              projectImageSlider2Images3.src = `Pictures/Projects/${nameOfClass}/${nameOfClass}Picture1.png`;
+
+              projectImageSlider2ImagesAfterPseudoDiv.style.opacity = `1`;
+              projectImageSlider2ImagesAfterPseudoDiv.style.transform = `scale(1)`;
+            }
         }
     }
           
@@ -127,7 +148,11 @@ function projectClicker (projectNameReturnPortfolioSite) {
                 
                         const projectImageSlider2 = document.querySelector('.projectImageSlider2');
                         if (projectImageSlider2) {
+                          if (window.innerWidth <= 400) {
+                            projectImageSlider2.style.transform = 'translate(-80vw, 0%)';
+                          } else {
                             projectImageSlider2.style.transform = 'translate(-50vw, 0%)';
+                          }
                         }
                     }
                 });

@@ -59,6 +59,13 @@ document.addEventListener('scroll', function() {
 
 
 
+const mobileMenuButton = document.querySelector('.mobileMenuButton');
+
+mobileMenuButton.addEventListener('click', function() {
+  headerFixedMenu.showModal();
+  document.body.style.overflow = 'hidden';
+});
+
 
 headerFixedBackground.addEventListener('click', function() {
   headerFixedMenu.showModal();
@@ -701,6 +708,24 @@ function handleIntersection(entries) {
         });
       }).then(() => {
         console.log(translateXInVw);
+        if (window.innerWidth <= 400) {
+        if (translateXInVw === 80) {
+          projectImageSlider2Images1.style.opacity = `1`;
+          projectImageSlider2Images2.style.opacity = `1`;
+          // projectImageSlider2Images3.style.opacity = `1`;
+          projectImageSlider2ImagesAfterPseudoDiv.style.opacity = `1`;
+        }
+        if (translateXInVw === 0) {
+          projectImageSlider2Images2.style.opacity = `1`;
+          // projectImageSlider2Images3.style.opacity = `1`;
+          projectImageSlider2ImagesAfterPseudoDiv.style.opacity = `1`;
+        }
+        else if (translateXInVw === -80) {
+          // projectImageSlider2Images3.style.opacity = `1`;
+          projectImageSlider2ImagesAfterPseudoDiv.style.opacity = `1`;
+        }
+        projectImageSlider1Header.style.opacity = `1`;
+      } else {
         if (translateXInVw === 50) {
           projectImageSlider2Images1.style.opacity = `1`;
           projectImageSlider2Images2.style.opacity = `1`;
@@ -717,6 +742,7 @@ function handleIntersection(entries) {
           projectImageSlider2ImagesAfterPseudoDiv.style.opacity = `1`;
         }
         projectImageSlider1Header.style.opacity = `1`;
+      }
       });
     });
 
@@ -775,7 +801,32 @@ function handleIntersection(entries) {
 
 
     let translateCount = 50;
+    let translateCountMobile = 80;
 
+
+    if (window.innerWidth <= 400) {
+      setTimeout(()=>{
+        computedStyle = window.getComputedStyle(projectImageSlider2);
+        transformValue = computedStyle.getPropertyValue('transform');      
+        let transformMatrix = new DOMMatrix(transformValue);
+        let translateX = transformMatrix.m41;
+        let translateY = transformMatrix.m42;
+        let viewportWidth = window.innerWidth;
+        translateXInVw = (translateX / viewportWidth) * 100;
+    
+        if (translateXInVw < 0 && translateXInVw > -81 && window.location.hash === '#projectImageSlider1Header') {
+          translateCountMobile = -80;
+          nextButton.style.cursor = "auto";
+          prevButton.style.cursor = "pointer";
+          prevButton.style.color = "wheat";
+          nextButton.style.color = "rgba(198, 198, 198, 0.247)";
+          sliders.children[1].style.opacity = `0`;
+          sliders.children[1].style.transform = `scale(1)`;
+          sliders.children[0].style.opacity = `1`;
+          
+      }
+      },1000)
+    } else {
     setTimeout(()=>{
     computedStyle = window.getComputedStyle(projectImageSlider2);
     transformValue = computedStyle.getPropertyValue('transform');      
@@ -784,19 +835,20 @@ function handleIntersection(entries) {
     let translateY = transformMatrix.m42;
     let viewportWidth = window.innerWidth;
     translateXInVw = (translateX / viewportWidth) * 100;
-    console.log(translateXInVw);
 
     if (translateXInVw < 0 && translateXInVw > -51 && window.location.hash === '#projectImageSlider1Header') {
       translateCount = -50;
-      prevButton.style.cursor = "auto";
+      nextButton.style.cursor = "auto";
+      prevButton.style.cursor = "pointer";
       prevButton.style.color = "wheat";
       nextButton.style.color = "rgba(198, 198, 198, 0.247)";
       sliders.children[1].style.opacity = `0`;
       sliders.children[1].style.transform = `scale(1)`;
       sliders.children[0].style.opacity = `1`;
+      
   }
   },1000)
-
+}
 
 
 
@@ -825,16 +877,15 @@ function handleIntersection(entries) {
 
 
 
-    console.log(translateXInVw);
-
-    if (translateXInVw > 45 && translateXInVw < 51 || translateXInVw > -5 && translateXInVw < 5) {
+    if (window.innerWidth <= 400) {
+    if (translateXInVw > 75 && translateXInVw < 81 || translateXInVw > -5 && translateXInVw < 5) {
       nextButton.style.transform = "scale(1.3)";
       setTimeout(()=> {
         nextButton.style.transform = "scale(1)";
       }, 200)
-        translateCount-= 50;
-        sliders.style.transform = `translate(${translateCount}vw, 0%)`;
-        if (translateXInVw > 45 && translateXInVw < 51) {
+        translateCountMobile-= 80;
+        sliders.style.transform = `translate(${translateCountMobile}vw, 0%)`;
+        if (translateXInVw > 75 && translateXInVw < 81) {
           prevButton.style.cursor = "pointer";
           // prevButton.style.backgroundColor = "wheat";
           prevButton.style.color = "wheat";
@@ -850,6 +901,31 @@ function handleIntersection(entries) {
           nextButton.style.cursor = "auto";
         }
   }
+    } else {
+      if (translateXInVw > 45 && translateXInVw < 51 || translateXInVw > -5 && translateXInVw < 5) {
+        nextButton.style.transform = "scale(1.3)";
+        setTimeout(()=> {
+          nextButton.style.transform = "scale(1)";
+        }, 200)
+          translateCount-= 50;
+          sliders.style.transform = `translate(${translateCount}vw, 0%)`;
+          if (translateXInVw > 45 && translateXInVw < 51) {
+            prevButton.style.cursor = "pointer";
+            // prevButton.style.backgroundColor = "wheat";
+            prevButton.style.color = "wheat";
+            sliders.children[1].style.opacity = `1`;
+            sliders.children[1].style.transform = `scale(1)`;
+            sliders.children[0].style.opacity = `0`;
+          } else if (translateXInVw > -5 && translateXInVw < 5) {
+            sliders.children[2].style.opacity = `1`;
+            sliders.children[2].style.transform = `scale(1)`;
+            sliders.children[1].style.opacity = `0`;
+            // nextButton.style.backgroundColor = "rgba(198, 198, 198, 0.247)";
+            nextButton.style.color = "rgba(198, 198, 198, 0.247)";
+            nextButton.style.cursor = "auto";
+          }
+    }
+  }
 }
 
   function prevImage() {
@@ -861,14 +937,14 @@ function handleIntersection(entries) {
     viewportWidth = window.innerWidth;
     translateXInVw = (translateX / viewportWidth) * 100;
 
-    console.log(translateXInVw);
-    if (translateXInVw < -45 && translateXInVw > -51 || translateXInVw > -5 && translateXInVw < 5) {
+    if (window.innerWidth <= 400) {
+    if (translateXInVw < -75 && translateXInVw > -81 || translateXInVw > -5 && translateXInVw < 5) {
       prevButton.style.transform = "scale(1.3)";
       setTimeout(()=> {
         prevButton.style.transform = "scale(1)";
       }, 200)
-    translateCount+=50;
-    sliders.style.transform = `translate(${translateCount}vw, 0%)`;
+      translateCountMobile+=80;
+    sliders.style.transform = `translate(${translateCountMobile}vw, 0%)`;
     if (translateXInVw > -5 && translateXInVw < 5) {
       prevButton.style.cursor = "auto";
       // prevButton.style.backgroundColor = "rgba(198, 198, 198, 0.247)";
@@ -876,13 +952,38 @@ function handleIntersection(entries) {
       sliders.children[1].style.opacity = `.5`;
       sliders.children[1].style.transform = `scale(.5)`;
       sliders.children[0].style.opacity = `1`;
-    } else if (translateXInVw < -45 && translateXInVw > -51) {
+    } else if (translateXInVw < -75 && translateXInVw > -81) {
       sliders.children[2].style.opacity = `.5`;
       sliders.children[2].style.transform = `scale(.5)`;
       sliders.children[1].style.opacity = `1`;
       // nextButton.style.backgroundColor = "wheat";
       nextButton.style.color = "wheat";
       nextButton.style.cursor = "pointer";
+    }
+  }
+    } else {
+      if (translateXInVw < -45 && translateXInVw > -51 || translateXInVw > -5 && translateXInVw < 5) {
+        prevButton.style.transform = "scale(1.3)";
+        setTimeout(()=> {
+          prevButton.style.transform = "scale(1)";
+        }, 200)
+      translateCount+=50;
+      sliders.style.transform = `translate(${translateCount}vw, 0%)`;
+      if (translateXInVw > -5 && translateXInVw < 5) {
+        prevButton.style.cursor = "auto";
+        // prevButton.style.backgroundColor = "rgba(198, 198, 198, 0.247)";
+        prevButton.style.color = "rgba(198, 198, 198, 0.247)";
+        sliders.children[1].style.opacity = `.5`;
+        sliders.children[1].style.transform = `scale(.5)`;
+        sliders.children[0].style.opacity = `1`;
+      } else if (translateXInVw < -45 && translateXInVw > -51) {
+        sliders.children[2].style.opacity = `.5`;
+        sliders.children[2].style.transform = `scale(.5)`;
+        sliders.children[1].style.opacity = `1`;
+        // nextButton.style.backgroundColor = "wheat";
+        nextButton.style.color = "wheat";
+        nextButton.style.cursor = "pointer";
+      }
     }
   }
 }

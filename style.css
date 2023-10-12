@@ -661,7 +661,7 @@
     background: none;
     border-style: none;
     }
-}
+
 
 
 
@@ -864,3 +864,5 @@
 .keyGen:hover {
   list-style: disc;
   }
+
+}
