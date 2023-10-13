@@ -33,7 +33,6 @@
 
 
 
-
 :root::-webkit-scrollbar {
     display: none;
     width: 10px;
@@ -60,7 +59,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden;
+
 }
 
 
@@ -221,44 +220,33 @@ body {
     
     .locatedInContainer {
         cursor: pointer;
-        width: 45vw;
-
+        width: 20vw;
+        height: 20vw;
+        margin-left: 5%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column-reverse;
     }
     
     .locatedInContainerBackground {
-        margin-left: -40%;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column-reverse;
         box-shadow: 0 0px .2vw rgba(0, 0, 0, 0.1);
         border: .1vw solid rgba(0, 0, 0, 0);
-        border-radius: 7.5vw;
-        height: 15vw;
-        background-color: #a79e9752;
         z-index: 20;
     }
-    
+  
     .locatedInCountryText {
         user-select: none;
         font: 3vw Roboto-Regular;
         color: white;
-        width: 7vw;
     }
-    
+
     .locatedInCountryBackground {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: -32%;
-        margin-left: 32%;
-        background-image: transparent;
-        width: 11.5vw;
-        height: 11.5vw;
-        border-radius: 11.5vw;
-        box-shadow: 0 0 .01vw rgba(0, 0, 0, 0.1);
-        border: .01vw solid rgba(0, 0, 0, 0);
+      margin-left: 10%;
     }
-    
+
     .locatedInCountry {
         filter: invert(1);
         background-image: url(Pictures/homepageLocatedInIcon/locatedInIcon.png);
@@ -279,7 +267,7 @@ body {
 
 
     .jobDegreeTextContainer {
-        width: 40vw;
+        width: 70vw;
     }
     /*
     .jobDegreeTextContainerBackground {
@@ -321,6 +309,7 @@ body {
 
 
 #container2 {
+    position: relative;
     background: white;
     height: 120vh;
     width: 100vw;
@@ -362,7 +351,7 @@ body {
     height: 100%;
     width: 80%;
     position: absolute;
-    top: 153%;
+    top: 43%;
     left: 10%;
     color: black;
     font: 4vh Roboto-Regular;
@@ -403,7 +392,7 @@ body {
   height: 100%;
   width: 80%;
   position: absolute;
-  top: 145%;
+  top: 36%;
   left: 10%;
   color: black;
   font: 2vh Roboto-Regular;
@@ -419,7 +408,7 @@ body {
     display: flex;
     color: white;
     position: absolute;
-    top: 105%;
+    top: 3%;
     left: 17.5%;
     width: 65vw;
     height: 65vw;
