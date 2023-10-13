@@ -112,10 +112,10 @@ body {
 }
 
 .headerHeading {
-  margin-right: 3%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    margin-right: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     list-style: none;
     gap: 4vw;
@@ -126,6 +126,9 @@ body {
     right: 5%; */
 }
 
+.headerHeading > *:nth-child(-n+1) {
+  display: none;
+}
 
 .mobileMenuButton {
   display: none;

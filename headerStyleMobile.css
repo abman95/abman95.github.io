@@ -1,4 +1,4 @@
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
 
   @font-face {
     font-family: 'Roboto-Bold';
@@ -95,76 +95,58 @@
   
   
   .header{
+      padding: 0;
       /* position: fixed; */
       /* box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
       background-color: rgba(0, 0, 0, 0.1);
       border: 1.5px solid rgba(0, 0, 0, 0); */
-      position: absolute;
-      width: 100vw;
       height: 13vh;
       z-index: 100;
       white-space: nowrap;
-      display: flex;
+      padding: 0;
+      width: 100%;
       justify-content: space-between;
-      align-self: center;
-  }
-  
-  .headerHeading {
-    margin-right: 3%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-      cursor: pointer;
-      list-style: none;
-      gap: 4vw;
-      color: white;
-      font-family: Roboto-Thin;
-      /* position: absolute;
-      top: 5.5%;
-      right: 5%; */
+      align-items: center;
+      display: flex;
   }
 
+
+  /* .headerHeading {
+
+  }
+
+  .headerHeading > *:nth-child(-n+1) {
+  } */
+  
+  .headerHeading > *:nth-child(n+2) {
+    display: none;
+  }
+  
 
 
   .mobileMenuButton {
-      position: absolute;
-      top: 6.8%;
-      right: 8%;
-      text-decoration: none;
+    margin-left: -45%;
+    list-style: disc;
       color: white;
-      z-index: 9999;
+      z-index: 99999;
       transition: all ease 0.3s;
       font: 3vh Roboto-Thin;
       color: white;
   }
 
   .mobileMenuButton:hover {
+    list-style: disc;
     transition: all ease 0.3s;
     filter: invert(0.2);
     transform: scale(1.04);
 }
 
-
-  
-  .headerHeading a {
-    display: none;
-  }
-  
-  .headerHeading li {
-    display: none;
-
-  }
-  
-  .headerHeading li:hover {
-    display: none;
-  }
-  
   .portfolioIcon {
       margin-top: 5%;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 13vh;
+      height: 15vh;
       cursor: pointer;
       transition: all ease 0.5s;
   }

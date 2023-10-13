@@ -708,8 +708,8 @@ function handleIntersection(entries) {
         });
       }).then(() => {
         console.log(translateXInVw);
-        if (window.innerWidth <= 400) {
-        if (translateXInVw === 80) {
+        if (window.innerWidth <= 450) {
+        if (translateXInVw === 90) {
           projectImageSlider2Images1.style.opacity = `1`;
           projectImageSlider2Images2.style.opacity = `1`;
           // projectImageSlider2Images3.style.opacity = `1`;
@@ -720,7 +720,7 @@ function handleIntersection(entries) {
           // projectImageSlider2Images3.style.opacity = `1`;
           projectImageSlider2ImagesAfterPseudoDiv.style.opacity = `1`;
         }
-        else if (translateXInVw === -80) {
+        else if (translateXInVw === -90) {
           // projectImageSlider2Images3.style.opacity = `1`;
           projectImageSlider2ImagesAfterPseudoDiv.style.opacity = `1`;
         }
@@ -801,10 +801,10 @@ function handleIntersection(entries) {
 
 
     let translateCount = 50;
-    let translateCountMobile = 80;
+    let translateCountMobile = 90;
 
 
-    if (window.innerWidth <= 400) {
+    if (window.innerWidth <= 450) {
       setTimeout(()=>{
         computedStyle = window.getComputedStyle(projectImageSlider2);
         transformValue = computedStyle.getPropertyValue('transform');      
@@ -814,8 +814,8 @@ function handleIntersection(entries) {
         let viewportWidth = window.innerWidth;
         translateXInVw = (translateX / viewportWidth) * 100;
     
-        if (translateXInVw < 0 && translateXInVw > -81 && window.location.hash === '#projectImageSlider1Header') {
-          translateCountMobile = -80;
+        if (translateXInVw < 0 && translateXInVw > -91 && window.location.hash === '#projectImageSlider1Header') {
+          translateCountMobile = -90;
           nextButton.style.cursor = "auto";
           prevButton.style.cursor = "pointer";
           prevButton.style.color = "wheat";
@@ -877,15 +877,15 @@ function handleIntersection(entries) {
 
 
 
-    if (window.innerWidth <= 400) {
-    if (translateXInVw > 75 && translateXInVw < 81 || translateXInVw > -5 && translateXInVw < 5) {
+    if (window.innerWidth <= 450) {
+    if (translateXInVw > 85 && translateXInVw < 911 || translateXInVw > -5 && translateXInVw < 5) {
       nextButton.style.transform = "scale(1.3)";
       setTimeout(()=> {
         nextButton.style.transform = "scale(1)";
       }, 200)
-        translateCountMobile-= 80;
+        translateCountMobile-= 90;
         sliders.style.transform = `translate(${translateCountMobile}vw, 0%)`;
-        if (translateXInVw > 75 && translateXInVw < 81) {
+        if (translateXInVw > 85 && translateXInVw < 91) {
           prevButton.style.cursor = "pointer";
           // prevButton.style.backgroundColor = "wheat";
           prevButton.style.color = "wheat";
@@ -937,13 +937,13 @@ function handleIntersection(entries) {
     viewportWidth = window.innerWidth;
     translateXInVw = (translateX / viewportWidth) * 100;
 
-    if (window.innerWidth <= 400) {
-    if (translateXInVw < -75 && translateXInVw > -81 || translateXInVw > -5 && translateXInVw < 5) {
+    if (window.innerWidth <= 450) {
+    if (translateXInVw < -85 && translateXInVw > -91 || translateXInVw > -5 && translateXInVw < 5) {
       prevButton.style.transform = "scale(1.3)";
       setTimeout(()=> {
         prevButton.style.transform = "scale(1)";
       }, 200)
-      translateCountMobile+=80;
+      translateCountMobile+=90;
     sliders.style.transform = `translate(${translateCountMobile}vw, 0%)`;
     if (translateXInVw > -5 && translateXInVw < 5) {
       prevButton.style.cursor = "auto";
@@ -952,7 +952,7 @@ function handleIntersection(entries) {
       sliders.children[1].style.opacity = `.5`;
       sliders.children[1].style.transform = `scale(.5)`;
       sliders.children[0].style.opacity = `1`;
-    } else if (translateXInVw < -75 && translateXInVw > -81) {
+    } else if (translateXInVw < -85 && translateXInVw > -91) {
       sliders.children[2].style.opacity = `.5`;
       sliders.children[2].style.transform = `scale(.5)`;
       sliders.children[1].style.opacity = `1`;

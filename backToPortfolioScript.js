@@ -97,7 +97,7 @@ function projectClicker (projectNameReturnPortfolioSite) {
 
            
             
-            if (window.innerWidth <= 400) {
+            if (window.innerWidth <= 450) {
                   computedStyle = window.getComputedStyle(projectImageSlider2);
                   transformValue = computedStyle.getPropertyValue('transform');      
                   const transformMatrix = new DOMMatrix(transformValue);
@@ -108,7 +108,7 @@ function projectClicker (projectNameReturnPortfolioSite) {
 
                   projectImageSlider2Images1.style.opacity = `0`;
                   projectImageSlider2Images2.style.opacity = `0`;
-                  projectImageSlider2.style.transform = 'translate(-80vw, 0%)';
+                  projectImageSlider2.style.transform = 'translate(-90vw, 0%)';
 
                   projectImageSlider2Images1.src = `Pictures/Projects/${nameOfClass}/${nameOfClass}Picture.png`;
                   projectImageSlider1Header.textContent = `${projectHeader}`;
@@ -148,8 +148,8 @@ function projectClicker (projectNameReturnPortfolioSite) {
                 
                         const projectImageSlider2 = document.querySelector('.projectImageSlider2');
                         if (projectImageSlider2) {
-                          if (window.innerWidth <= 400) {
-                            projectImageSlider2.style.transform = 'translate(-80vw, 0%)';
+                          if (window.innerWidth <= 450) {
+                            projectImageSlider2.style.transform = 'translate(-90vw, 0%)';
                           } else {
                             projectImageSlider2.style.transform = 'translate(-50vw, 0%)';
                           }

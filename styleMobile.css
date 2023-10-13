@@ -1,4 +1,4 @@
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
 
   @font-face {
     font-family: 'Roboto-Bold';
@@ -162,8 +162,8 @@ body {
 }  
 
 .marqueecontentAbdullahSoegut {
-    position: absolute;
-    bottom: -6%;
+    position: relative;
+    bottom: 0%;
     user-select: none;
     margin: 0;
     padding: 0;
@@ -290,6 +290,7 @@ body {
         font-family: Roboto-Thin;
         font-size: 5.5vh;
         color: white;
+        text-shadow: 1vw 1vw 1vw black(255, 0, 0);
     }
 
 
@@ -435,7 +436,7 @@ body {
 
 
 #container3 {
-    height: 300vh;
+    height: 300dvh;
     width: 100vw;
     background-color: white;
     position: relative;
@@ -564,14 +565,14 @@ body {
   margin-top: 28%;
   margin-bottom: -15%;
   display: flex;
-  transform: translate(80vw, 0%);
+  transform: translate(90vw, 0%);
   z-index: 99998;
 }
 
 .projectImageSlider2Images {
   transform-origin: bottom;
   transition: all ease .5s;
-  width: 80vw;
+  width: 90vw;
   height: 70vh;
   object-fit: contain;
 }
@@ -634,7 +635,7 @@ body {
     z-index: 99999999;
     position: absolute;
     bottom: 45%;
-    left: 2%;
+    left: 0%;
     width: 3.5vw;
     height: 3.5vw;
     border-radius: 3.5vw;
