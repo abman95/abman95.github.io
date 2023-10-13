@@ -709,18 +709,18 @@ function handleIntersection(entries) {
       }).then(() => {
         console.log(translateXInVw);
         if (window.innerWidth <= 450) {
-        if (translateXInVw === 90) {
+        if (translateXInVw > 85 && translateXInVw < 95) {
           projectImageSlider2Images1.style.opacity = `1`;
           projectImageSlider2Images2.style.opacity = `1`;
           // projectImageSlider2Images3.style.opacity = `1`;
           projectImageSlider2ImagesAfterPseudoDiv.style.opacity = `1`;
         }
-        if (translateXInVw === 0) {
+        if (translateXInVw > -5 && translateXInVw < 5) {
           projectImageSlider2Images2.style.opacity = `1`;
           // projectImageSlider2Images3.style.opacity = `1`;
           projectImageSlider2ImagesAfterPseudoDiv.style.opacity = `1`;
         }
-        else if (translateXInVw === -90) {
+        else if (translateXInVw > -95 && translateXInVw < -85) {
           // projectImageSlider2Images3.style.opacity = `1`;
           projectImageSlider2ImagesAfterPseudoDiv.style.opacity = `1`;
         }

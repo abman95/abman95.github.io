@@ -675,16 +675,16 @@ body {
     background-color: wheat;
     position: absolute;
     left: 5%;
-    top: 25%;
-    height: 7vw;
-    width: 7vw;
+    top: 20%;
+    height: 14vw;
+    width: 14vw;
     z-index: 999998;
 }
 
 .projectImageSlider1ButtonContainerBackgroundText {
-    font: 1.7vw Roboto-Thin;
+    font: 3vw Roboto-Thin;
     color: black;
-    margin-left: 5%;
+    margin-left: 12%;
 }
 
 .projectImageSlider1ButtonContainer {
@@ -724,6 +724,7 @@ body {
 
 
   .projectImageSlider1ButtonListingNew {
+    padding: 0;
     cursor: auto;
     scrollbar-width: thin;
     scrollbar-color: #999 #f1f1f1;

@@ -116,7 +116,7 @@ body {
 
 .abdullahfooterIconAndfooterHeader {
   width: 90%;
-    height: 35vh;
+    height: 65vw;
     display: flex;
     flex-direction: column;
     margin: 5% 15% 0 15%;
@@ -124,16 +124,16 @@ body {
 
 .abdullahfooterIcon {
     margin: 0px 1.2vw -0.4vw 0;
-    width: 8.6vh;
-    height: 8.6vh;
+    width: 16vw;
+    height: 16vw;
     object-fit: cover;
-    border-radius: 8.6vh;
+    border-radius: 16vw;
 }
 
 .footerHeader {
     text-shadow: 0 0px 1vh rgba(0, 0, 0, 0.1);
     color: white;
-    font: 10vh Roboto-Regular;
+    font: 17vw Roboto-Regular;
 }
 
 
@@ -144,25 +144,25 @@ body {
     display: flex;
     flex-direction: column;
     gap: 8vw;
-    height: 13.6vh;
+    height: 25.6vw;
 }
 
 .phoneNumber {
     cursor: pointer;
     width: 80vw;
-    height: 12vh;
+    height: 21vw;
     box-shadow: 0 0px 0.1vw rgba(199, 199, 199, 0.537);
     border: 0.01vh solid rgba(199, 199, 199, 0.537);
     border-radius: 1vw;
     background-color: transparent;
     color: white;
-    font-size: 2.5vh;
+    font-size: 4vw;
     font-family: Roboto-Regular;
     transition: all ease 1s;
 }
 
 .phoneNumber:hover {
-  font-size: 2.6vh;
+  font-size: 4.1vw;
   box-shadow: 0 0px .5vw rgba(199, 199, 199, 0.537);
 }
 
@@ -173,15 +173,15 @@ body {
     border: 0.01vh solid rgba(199, 199, 199, 0.537);
     border-radius: 1vw;
     width: 80vw;
-    height: 12vh;
+    height: 21vw;
     color: white;
-    font-size: 2.5vh;
+    font-size: 4vw;
     font-family: Roboto-Regular;
     transition: all ease 1s;
 }
 
 .emailAdress:hover {
-  font-size: 2.6vh;
+  font-size: 4.1vw;
   box-shadow: 0 0px .5vw rgba(199, 199, 199, 0.537);
 }
 
