@@ -95,13 +95,13 @@
   
   
   .header{
+      z-index: 9999999;
       padding: 0;
       /* position: fixed; */
       /* box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
       background-color: rgba(0, 0, 0, 0.1);
       border: 1.5px solid rgba(0, 0, 0, 0); */
       height: 13vh;
-      z-index: 100;
       white-space: nowrap;
       padding: 0;
       width: 100%;
@@ -111,24 +111,35 @@
   }
 
 
-  /* .headerHeading {
-
+ .headerHeading {
+  display: flex;
   }
 
+.headerHeading > *:nth-child(n+2) {
+  display: none;
+}
+
+  /*
   .headerHeading > *:nth-child(-n+1) {
-  } */
-  
-  .headerHeading > *:nth-child(n+2) {
-    display: none;
   }
+  
+*/
+
+
+
+.headerHome, 
+.headerAboutMe, 
+.headerContact {
+  display: none;
+}
   
 
 
   .mobileMenuButton {
-    margin-left: -45%;
-    list-style: disc;
+      margin-left: -45%;
+      list-style: disc;
       color: white;
-      z-index: 99999;
+      z-index: 9999999;
       transition: all ease 0.3s;
       font: 3vh Roboto-Thin;
       color: white;

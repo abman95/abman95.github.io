@@ -114,7 +114,7 @@ body {
     font: 4vw Roboto-Regular;
     box-shadow: 0 0 .2vw 0 rgba(0, 0, 0, 0.555);
     width: 25vw;
-    height: 10vh;
+    height: 18vw;
     transition: transform ease .5s;
     margin-bottom: 3vh;
 }
@@ -287,9 +287,9 @@ body {
         overflow-wrap: break-word;
         user-select: none;
         font-family: Roboto-Thin;
-        font-size: 5.5vh;
+        font-size: 9vw;
         color: white;
-        text-shadow: 1vw 1vw 1vw black(255, 0, 0);
+        text-shadow: 5vw 5vw 5vw black;
     }
 
 
@@ -311,7 +311,7 @@ body {
 #container2 {
     position: relative;
     background: white;
-    height: 120vh;
+    height: 210vw;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -353,7 +353,7 @@ body {
     text-align: center;
     width: 80%;
     color: black;
-    font: 4vh Roboto-Regular;
+    font: 7vw Roboto-Regular;
     opacity: 0;
     transition: opacity 1s ease-out;
 }
@@ -394,14 +394,17 @@ body {
   top: 36%;
   left: 10%;
   color: black;
-  font: 2vh Roboto-Regular;
+  font: 3.5vw Roboto-Regular;
 }
 
+.aboutMeButtonLink {
+  text-decoration: none;
+}
 
 .aboutMeButton {
     margin-top: -10%;
     cursor: pointer;
-    font: 4vh Roboto-Thin;
+    font: 7vw Roboto-Thin;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -623,7 +626,7 @@ body {
     z-index: 99999999;
     position: absolute;
     bottom: 15%;
-    left: 40%;
+    left: 30%;
     width: 3.5vw;
     height: 3.5vw;
     border-radius: 3.5vw;
@@ -640,7 +643,7 @@ body {
     z-index: 99999;
     position: absolute;
     bottom: 15%;
-    right: 40%;
+    right: 30%;
     width: 3.5vw;
     height: 3.5vw;
     border-radius: 3.5vw;
