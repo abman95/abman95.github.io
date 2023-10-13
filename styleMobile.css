@@ -163,9 +163,8 @@ body {
 
 .marqueecontentAbdullahSoegut {
     position: relative;
-    bottom: 0%;
     user-select: none;
-    margin: 0;
+    margin-bottom: 1.5%;
     padding: 0;
     font-size: 60vw;
     font-family: Roboto-Bold;
@@ -210,7 +209,7 @@ body {
 
     .aboutMeLeft {
         width: 100vw;
-        height: 100%;
+        height: 135%;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -348,12 +347,11 @@ body {
 
 
 .projectOneDescription {
-    text-align: center;
-    height: 100%;
-    width: 80%;
-    position: absolute;
     top: 43%;
-    left: 10%;
+    left: 8%;
+    position: absolute;
+    text-align: center;
+    width: 80%;
     color: black;
     font: 4vh Roboto-Regular;
     opacity: 0;
@@ -401,16 +399,13 @@ body {
 
 
 .aboutMeButton {
-    height: 100%;
+    margin-top: -10%;
     cursor: pointer;
     font: 4vh Roboto-Thin;
     justify-content: center;
     align-items: center;
     display: flex;
     color: white;
-    position: absolute;
-    top: 3%;
-    left: 17.5%;
     width: 65vw;
     height: 65vw;
     border-radius: 65vw;
@@ -418,13 +413,6 @@ body {
     background-size: cover;
     background-position-x: center;
   }
-  
-.aboutMeButtonBorder {
-    width: 17vw;
-    height: 17vw;
-    z-index: 100;
-}
-
 
 .hrHeader {
     font: 2vh Roboto-Thin;
@@ -634,8 +622,8 @@ body {
     cursor: auto;
     z-index: 99999999;
     position: absolute;
-    bottom: 45%;
-    left: 0%;
+    bottom: 15%;
+    left: 40%;
     width: 3.5vw;
     height: 3.5vw;
     border-radius: 3.5vw;
@@ -651,8 +639,8 @@ body {
     cursor: pointer;
     z-index: 99999;
     position: absolute;
-    bottom: 45%;
-    right: 5%;
+    bottom: 15%;
+    right: 40%;
     width: 3.5vw;
     height: 3.5vw;
     border-radius: 3.5vw;
@@ -709,11 +697,11 @@ body {
 @keyframes projectsDialogOpener {
     from {
       opacity: 1;
-      transform: translateX(-100vw);
+      transform: translateX(-110%);
     }
     to {
       transform: scale(1);
-      transform: translateX(0vw);
+      transform: translateX(0%);
       opacity: 1;
     }
   }
@@ -722,11 +710,11 @@ body {
   @keyframes projectsDialogCloser {
     from {
       opacity: 1;
-      transform: translateX(0vw);
+      transform: translateX(0%);
     }
     to {
           transform: scale(1);
-      transform: translateX(-100vw);
+      transform: translateX(-110%);
       opacity: 1;
     }
   }
@@ -741,7 +729,7 @@ body {
     top: 0;
     left: 0;
     background-color: #1C1D20;
-    width: 100vw;
+    width: 110%;
     height: 100vh;
     transition: all 2.5s;
     user-select: none;
