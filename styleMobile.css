@@ -308,6 +308,7 @@ body {
 
 
 #container2 {
+    overflow: hidden;
     position: relative;
     background: white;
     height: 210vw;
@@ -426,6 +427,7 @@ body {
 
 
 #container3 {
+  overflow: hidden;
     height: 300dvh;
     width: 100vw;
     background-color: white;
@@ -449,6 +451,7 @@ body {
 
 
 #container4 {
+  overflow: hidden;
     background-color: wheat;
 }
 
@@ -699,11 +702,11 @@ body {
 @keyframes projectsDialogOpener {
     from {
       opacity: 1;
-      transform: translateX(-110%);
+      transform: translateX(-100vw);
     }
     to {
       transform: scale(1);
-      transform: translateX(0%);
+      transform: translateX(0vw);
       opacity: 1;
     }
   }
@@ -712,11 +715,11 @@ body {
   @keyframes projectsDialogCloser {
     from {
       opacity: 1;
-      transform: translateX(0%);
+      transform: translateX(0vw);
     }
     to {
           transform: scale(1);
-      transform: translateX(-110%);
+      transform: translateX(-100vw);
       opacity: 1;
     }
   }
@@ -732,7 +735,7 @@ body {
     top: 0;
     left: 0;
     background-color: #1C1D20;
-    width: 110%;
+    width: 100vw;
     height: 100vh;
     transition: all 2.5s;
     user-select: none;
