@@ -153,11 +153,12 @@
 }
 
   .portfolioIcon {
-      margin-top: 5%;
+      margin-top: -15%;
+      margin-left: 15%;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 15vh;
+      height: 9vw;
       cursor: pointer;
       transition: all ease 0.5s;
   }

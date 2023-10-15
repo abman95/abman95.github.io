@@ -218,6 +218,7 @@ body {
 
     
     .locatedInContainer {
+
         cursor: pointer;
         width: 20vw;
         height: 20vw;
@@ -231,8 +232,6 @@ body {
     .locatedInContainerBackground {
         display: flex;
         flex-direction: column-reverse;
-        box-shadow: 0 0px .2vw rgba(0, 0, 0, 0.1);
-        border: .1vw solid rgba(0, 0, 0, 0);
         z-index: 20;
     }
   
@@ -347,7 +346,7 @@ body {
 
 
 .projectOneDescription {
-    top: 43%;
+    top: 44%;
     left: 8%;
     position: absolute;
     text-align: center;

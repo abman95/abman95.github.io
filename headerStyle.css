@@ -1,4 +1,4 @@
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 450px) {
 
 @font-face {
   font-family: 'Roboto-Bold';
@@ -155,11 +155,12 @@ body {
 }
 
 .portfolioIcon {
-    margin-left: 4%;
+    margin-top: 15%;
+    margin-left: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 13vh;
+    height: 2.5vw;
     cursor: pointer;
     transition: all ease 0.5s;
 }
