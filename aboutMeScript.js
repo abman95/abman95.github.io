@@ -68,6 +68,13 @@ document.addEventListener('scroll', function() {
 
 
 
+const mobileMenuButton = document.querySelector('.mobileMenuButton');
+
+mobileMenuButton.addEventListener('click', function() {
+  headerFixedMenu.showModal();
+  document.body.style.overflow = 'hidden';
+});
+
 
 headerFixedBackground.addEventListener('click', function() {
   headerFixedMenu.showModal();
@@ -225,14 +232,9 @@ function containerGlow(className) {
     x = (e.clientX*5)/xPosition;
     y = (e.clientY*5)/yPosition;
 
-    console.log(`MausX ${e.clientX} | ContainerX ${rect.left} | XBERECHNET ${x}`)
-    console.log(`MausY ${e.clientY} | ContainerY ${rect.top} | yBERECHNET ${y}`)
-
     element.style.setProperty("--mouse-x", `${xPosition}px`);
     element.style.setProperty("--mouse-y", `${yPosition}px`);
   });
-  // element.addEventListener('mouseout', function() {
-  // });
 }
 
 
@@ -296,9 +298,6 @@ document.addEventListener('scroll', function() {
   const sixthElementLineRect = sixthElementLine.getBoundingClientRect();
   const seventhElementLineRect = seventhElementLine.getBoundingClientRect();
 
-  console.log(windowHeight); 
-  console.log(secondElementRect.top); 
-  console.log(-1*(firstElementRect.top-(windowHeight/2))); 
 
 
 
@@ -394,13 +393,11 @@ document.addEventListener('scroll', function() {
 aboutMePageIntroductoryHeader6.addEventListener('click', function () {
   const pdfFilePath = 'CV/CV - Abdullah Sögüt.pdf';
 
-  // Create a temporary link element
   const link = document.createElement('a');
   link.href = pdfFilePath;
-  link.target = '_blank'; // Open the PDF in a new tab/window (optional)
-  link.download = 'Abdullah_Sogut_CV.pdf'; // Specify the downloaded file name
+  link.target = '_blank';
+  link.download = 'Abdullah_Sogut_CV.pdf'
 
-  // Trigger a click event on the link to initiate the download
   link.click();
 });
 
@@ -408,12 +405,10 @@ aboutMePageIntroductoryHeader6.addEventListener('click', function () {
 aboutMePageIntroductoryText6.addEventListener('click', function () {
   const gitHubPath = 'https://github.com/abman95';
 
-  // Create a temporary link element
   const link = document.createElement('a');
   link.href = gitHubPath;
-  link.target = '_blank'; // Open the PDF in a new tab/window (optional)
+  link.target = '_blank';
 
-  // Trigger a click event on the link to initiate the download
   link.click();
 });
 
@@ -492,6 +487,29 @@ function degreeSlider(className) {
     element.style.transition = 'transform .7s ease';
     element.style.transform = `translateX(-29.375vw)`;
   });
+
+
+  if (window.innerWidth <= 450) {
+  document.addEventListener("scroll", ()=> {
+    const elementRect = element.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+  
+    console.log(elementRect.top);
+    console.log(elementRect.bottom);
+    console.log(windowHeight/2);
+  
+      if (elementRect.top < windowHeight/2 && elementRect.bottom > windowHeight/2) {
+        elementLogo.style.opacity = `1`;
+        element.style.transform = `translateX(0vw)`;
+        element.style.transition = 'transform .7s ease';
+      } else {
+        elementLogo.style.opacity = `0`;
+        element.style.transition = 'transform .7s ease';
+        element.style.transform = `translateX(-29.375vw)`;
+      }
+  });
+}
+
 }
 
 
@@ -499,7 +517,27 @@ degreeSlider('school');
 degreeSlider('university');
 
 
+// document.addEventListener("scroll", ()=> {
+//   const element = document.querySelector(`.${school}`);
+//   const elementRect = element.getBoundingClientRect();
+//   const windowHeight = window.innerHeight;
 
+//   console.log(elementRect.top);
+
+//     if (elementRect.top < 0 && elementRect.bottom > 0) {
+
+//     }
+// });
+
+// document.addEventListener("scroll", ()=> {
+//   const element = document.querySelector(`.${university}`);
+//   const elementRect = element.getBoundingClientRect();
+//   const windowHeight = window.innerHeight;
+//   console.log(elementRect.top);
+
+//   // if (windowHeight/2 )
+
+// });
 
 
 
@@ -510,12 +548,9 @@ document.addEventListener('scroll', function() {
   const footerRect = footer.getBoundingClientRect();
   const windowHeight = window.innerHeight;
 
-  // Abstand, damit das Bild außerhalb des Footers bleibt
   const distanceFromBottom4 = Math.min(0, (container5Rect.bottom - windowHeight));
   const distanceFromBottom = Math.min(0, (footerRect.top - windowHeight));
-  // console.log(windowHeight);
-  // console.log(distanceFromBottom);
-  // console.log(footerRect.top);
+
   
   fixedImage.style.setProperty('--scroll-padding', 1+distanceFromBottom4*-1 + 'px');
   fixedImage.style.transition = "auto";

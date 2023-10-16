@@ -157,10 +157,3 @@ function projectClicker (projectNameReturnPortfolioSite) {
                     }
                 });
 
-
-
-                document.addEventListener('DOMContentLoaded', () => {
-                console.log(projectNameReturnPortfolioSite);
-            });
-
-
