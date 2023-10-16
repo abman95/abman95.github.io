@@ -25,6 +25,9 @@
   }
 
 
+  html, body {
+    overflow-x:hidden 
+  } 
 
   .returnPortfolioSite {
     display: none;
@@ -553,7 +556,6 @@ body {
 */
 
 .projectImageSlider2 {
-  overflow: hidden;
   transition: all ease 1s;
   margin-top: 28%;
   margin-bottom: -15%;
