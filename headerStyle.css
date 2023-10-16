@@ -179,6 +179,7 @@ body {
 
 
 .headerFixedBackground {
+  overflow-x: hidden;
   cursor: pointer;
   display: flex;
   scale: 0;
