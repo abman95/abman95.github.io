@@ -435,9 +435,7 @@ body {
 }
 
 .projectSlider {
-    top: 40%;
-    position: sticky;
-    font: 13vh Roboto-Regular;
+    font: 22vw Roboto-Regular;
     color: black;
 	  text-align: center;
     transform-origin: 50% 56%;

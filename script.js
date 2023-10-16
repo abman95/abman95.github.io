@@ -145,7 +145,7 @@ headerFixedMenu.addEventListener("click", function outsideClickHandler(event) {
           element.style.transition = "color ease .5s";
           element.style.color = "white";
         }
-        elementAnimation = elementAnimation + 2;
+        elementAnimation = elementAnimation + 3;
         animationTimeout = setTimeout(animate, 1);
       }
     }
@@ -161,7 +161,7 @@ headerFixedMenu.addEventListener("click", function outsideClickHandler(event) {
           element.style.transition = "color ease .5s";
           element.style.color = "black";
         }
-        elementAnimation = elementAnimation - 2;
+        elementAnimation = elementAnimation - 3;
         animationTimeout = setTimeout(reverseAnimate, 1);
       }
     }
@@ -591,6 +591,71 @@ function handleIntersection(entries) {
   sectionElements.forEach(section => {
     observer.observe(section);
   });
+
+
+
+
+
+  
+  document.addEventListener('scroll', function() {
+    const container3Rect = container3.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    const projectSliderRect = projectSlider.getBoundingClientRect();
+  
+    console.log(container3Rect.top);
+
+  
+  
+    if (window.innerWidth <= 450) {
+      container3.style.overflow = `hidden;`
+      projectSlider.style.overflow = `hidden;`
+    if (windowHeight*0.4 >= container3Rect.top) {
+      container3.style.overflow = `hidden;`
+      projectSlider.style.top = `40%`;
+      projectSlider.style.left = `0`;
+      projectSlider.style.right = `0`;
+      projectSlider.style.position = `fixed`;
+    } else if (windowHeight*0.4 <= container3Rect.top) {
+       projectSlider.style.position = `static`;
+     }
+    } else {
+      container3.style.overflow = `hidden;`
+      projectSlider.style.overflow = `hidden;`
+      if (windowHeight*0.4 >= container3Rect.top) {
+        projectSlider.style.top = `40%`;
+        projectSlider.style.left = `0`;
+        projectSlider.style.right = `0`;
+        projectSlider.style.position = `fixed`;
+      } else if (windowHeight*0.4 <= container3Rect.top) {
+         projectSlider.style.position = `static`;
+       }
+    }
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 
   

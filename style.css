@@ -443,11 +443,9 @@
 }
 
 .projectSlider {
-    top: 40%;
-    position: sticky;
-    font: 13vh Roboto-Regular;
+    font: 6.5vw Roboto-Regular;
     color: black;
-	text-align: center;
+	  text-align: center;
     transform-origin: 50% 56%;
     transition: all ease 0.2s;
 }
