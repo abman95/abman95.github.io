@@ -435,6 +435,7 @@ body {
 }
 
 .projectSlider {
+    overflow: hidden;
     font: 22vw Roboto-Regular;
     color: black;
 	  text-align: center;
@@ -552,6 +553,7 @@ body {
 */
 
 .projectImageSlider2 {
+  overflow: hidden;
   transition: all ease 1s;
   margin-top: 28%;
   margin-bottom: -15%;
