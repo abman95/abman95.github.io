@@ -305,7 +305,7 @@
         margin-block-start: 0em;
         margin-block-end: 0em;
         margin-left: 10vw;
-        font: 6.5vw Roboto-Light;
+        font: 6.6vw Roboto-Light;
         color: black;
         width: 70vw;
         transition: all ease 1s;
@@ -604,21 +604,21 @@
         font: 8vw Roboto-Bold;
         color: white;
         margin-bottom: 10%;
+        margin-top: -5%;
     }
     
     .work1Description, .work2Description, .work3Description, .work4Description, .work5Description, .work6Description, .work7Description {
         margin-top: -7%;
         font: 5vw Roboto-Thin;
         color: white;
-        /* padding: 0; Packt den Text nach links */
     }
     
     .work1DescriptionEnumeration, .work2DescriptionEnumeration, .work3DescriptionEnumeration, .work4DescriptionEnumeration, .work5DescriptionEnumeration, .work6DescriptionEnumeration, .work7DescriptionEnumeration {
 
         font: 5vw Roboto-Thin;
         color: white;
-        justify-content: space-between; /* Verteilt Elemente gleichmäßig im Container */
-        padding: 0.716vw; /*Packt den Text nach links*/
+        justify-content: space-between;
+        padding: 0.716vw;
     }
     
     
@@ -653,7 +653,7 @@
     
     
     #container7 {
-        height: 910vw;
+        height: 800vw;
         width: 100vw;
         display: flex;
         background-color: black;
