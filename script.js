@@ -27,7 +27,14 @@ const container3 = document.querySelector('#container3');
 const projectImageSlider2Images = document.querySelector('.projectImageSlider2Images');
 
 
-document.body.style.overflowX = 'hidden';
+
+document.addEventListener("DOMContentLoaded", ()=> {
+  document.body.style.overflowX = 'hidden';
+  document.addEventListener("scroll", ()=> {
+    document.body.style.overflowX = 'hidden';
+  });
+})
+
 
 
 
