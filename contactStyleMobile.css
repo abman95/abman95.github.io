@@ -151,8 +151,29 @@ textarea {
   right: 5%;
   position: absolute;
   font: 5vw Roboto-Thin;
-  color: white !important;
+  outline: none !important;
   text-decoration: none !important;
+  color: white !important;
+
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+
+
+.contactInformationListing1:focus {
+  white-space: nowrap;
+  top: 70%;
+  left: 5%;
+  right: 5%;
+  position: absolute;
+  font: 5vw Roboto-Thin;
+  outline: none !important;
+  text-decoration: none !important;
+  color: white !important;
 
   list-style: none;
   padding: 0;

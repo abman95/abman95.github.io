@@ -608,14 +608,42 @@
       }
     
       
-    .work1Title, .work2Title, .work3Title, .work4Title, .work5Title, .work6Title, .work7Title {
+    .work1Title, 
+    .work2Title, 
+    .work3Title, 
+    .work4Title, 
+    .work5Title, 
+    .work6Title, 
+    .work7Title {
         font: 6vw Roboto-Bold;
         color: white;
         margin-bottom: 10%;
         margin-top: -5%;
     }
     
-    .work1Description, .work2Description, .work3Description, .work4Description, .work5Description, .work6Description, .work7Description {
+    .work1Description, 
+    .work2Description, 
+    .work3Description, 
+    .work4Description, 
+    .work5Description, 
+    .work6Description, 
+    .work7Description {
+        outline: none !important;
+        color: white !important;
+        text-decoration: none !important;
+        margin-top: -7%;
+        font: 5vw Roboto-Thin;
+        color: white;
+    }
+
+    .work1Description:focus, 
+    .work2Description:focus, 
+    .work3Description:focus, 
+    .work4Description:focus, 
+    .work5Description:focus, 
+    .work6Description:focus, 
+    .work7Description:focus {
+        outline: none !important;
         color: white !important;
         text-decoration: none !important;
         margin-top: -7%;
@@ -623,7 +651,14 @@
         color: white;
     }
     
-    .work1DescriptionEnumeration, .work2DescriptionEnumeration, .work3DescriptionEnumeration, .work4DescriptionEnumeration, .work5DescriptionEnumeration, .work6DescriptionEnumeration, .work7DescriptionEnumeration {
+    .work1DescriptionEnumeration, 
+    .work2DescriptionEnumeration, 
+    .work3DescriptionEnumeration, 
+    .work4DescriptionEnumeration, 
+    .work5DescriptionEnumeration, 
+    .work6DescriptionEnumeration, 
+    .work7DescriptionEnumeration {
+        outline: none !important;
         text-decoration: none !important;
         color: white !important;
         font: 5vw Roboto-Thin;
@@ -632,7 +667,22 @@
         padding: 0.716vw;
     }
     
-    
+      
+      .work1DescriptionEnumeration:focus, 
+      .work2DescriptionEnumeration:focus, 
+      .work3DescriptionEnumeration:focus, 
+      .work4DescriptionEnumeration:focus, 
+      .work5DescriptionEnumeration:focus, 
+      .work6DescriptionEnumeration:focus, 
+      .work7DescriptionEnumeration:focus {
+        outline: none !important;
+        text-decoration: none !important;
+        color: white !important;
+        font: 5vw Roboto-Thin;
+        color: white;
+        justify-content: space-between;
+        padding: 0.716vw;
+      }
     
     
     

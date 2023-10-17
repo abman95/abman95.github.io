@@ -54,7 +54,6 @@
 
 
 :root {
-
     width: 100vw;
     height: 100vh;
     height: auto;
@@ -93,10 +92,12 @@
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: 100vw;
 }
 
   html, body {
+    margin: 0;
+    padding: 0;
   width: 100vw;
   overflow-x:hidden;   
 } 
@@ -104,6 +105,7 @@ body {
 
 
   #footer {
+    border: none;
     overflow-x: hidden;
     position: absolute;
     margin: 0;
@@ -111,7 +113,6 @@ body {
     width: 100vw;
     height: 100vh;
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
-    border: 1.5px solid rgba(0, 0, 0, 0);
    /* align-items: center;  /* Vertikal zentrierte Ausrichtung */
    /* justify-content: center; /* Horizontal zentrierte Ausrichtung */
     z-index: 999999;
