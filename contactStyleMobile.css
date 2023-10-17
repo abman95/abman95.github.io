@@ -163,6 +163,16 @@ textarea {
 }
 
 
+.contactInformationListing1 > li:nth-child(2) {
+  list-style: none;
+}
+
+.contactInformationListing1 > li:nth-child(2):focus {
+  outline: none;
+}
+
+
+
 
 .contactInformationListing1:focus {
   white-space: nowrap;
