@@ -26,9 +26,15 @@
     
     
     
-    
-      html, body {
-        overflow-x:hidden;
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+      
+        html, body {
+        width: 100vw;
+        overflow-x:hidden;   
       } 
     
     
@@ -610,14 +616,16 @@
     }
     
     .work1Description, .work2Description, .work3Description, .work4Description, .work5Description, .work6Description, .work7Description {
-        text-decoration: none;
+        color: white !important;
+        text-decoration: none !important;
         margin-top: -7%;
         font: 5vw Roboto-Thin;
         color: white;
     }
     
     .work1DescriptionEnumeration, .work2DescriptionEnumeration, .work3DescriptionEnumeration, .work4DescriptionEnumeration, .work5DescriptionEnumeration, .work6DescriptionEnumeration, .work7DescriptionEnumeration {
-        text-decoration: none;
+        text-decoration: none !important;
+        color: white !important;
         font: 5vw Roboto-Thin;
         color: white;
         justify-content: space-between;

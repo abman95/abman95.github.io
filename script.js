@@ -100,7 +100,7 @@ dialogCloseButton.addEventListener("click", function outsideClickHandler(event) 
         if (elementAnimation){
         headerFixed.style.transition = "filter ease .5s";
         headerFixed.style.filter = "invert(0)";
-        element.style.backgroundImage = `linear-gradient(to top, #1a1a1a ${elementAnimation}%, wheat 0%)`;
+        headerFixedBackground.style.backgroundImage = `linear-gradient(to top, #1a1a1a ${elementAnimation}%, wheat 0%)`;
         }
         elementAnimation = elementAnimation - 3;
         animationTimeout = setTimeout(reverseAnimate, 1);
@@ -137,7 +137,7 @@ headerFixedMenu.addEventListener("click", function outsideClickHandler(event) {
             if (elementAnimation){
             headerFixed.style.transition = "filter ease .5s";
             headerFixed.style.filter = "invert(0)";
-            element.style.backgroundImage = `linear-gradient(to top, #1a1a1a ${elementAnimation}%, wheat 0%)`;
+            headerFixedBackground.style.backgroundImage = `linear-gradient(to top, #1a1a1a ${elementAnimation}%, wheat 0%)`;
             }
             elementAnimation = elementAnimation - 3;
             animationTimeout = setTimeout(reverseAnimate, 1);

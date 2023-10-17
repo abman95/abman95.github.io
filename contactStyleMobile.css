@@ -24,10 +24,16 @@
     src: url(fonts/Roboto/Roboto-Thin.ttf);
   }
 
-  html, body {
-    overflow-x:hidden; 
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  
+    html, body {
+    width: 100vw;
+    overflow-x:hidden;   
   } 
-
 
   body {
     font-family: Roboto-Regular;
@@ -45,7 +51,7 @@
     background-color:black}
 
 .contactHeader {
-    margin-top: 290vw;
+    margin-top: 285vw;
     text-align: center;
     margin-left: 5%;
     margin-right: 5%;
@@ -145,8 +151,8 @@ textarea {
   right: 5%;
   position: absolute;
   font: 5vw Roboto-Thin;
-  color: white;
-
+  color: white !important;
+  text-decoration: none !important;
 
   list-style: none;
   padding: 0;
