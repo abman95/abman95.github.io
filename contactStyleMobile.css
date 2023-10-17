@@ -25,11 +25,9 @@
   }
 
   html, body {
-    overflow-x:hidden;
-    margin: 0;
-    padding: 0;    
+    overflow-x:hidden; 
   } 
-  
+
 
   body {
     font-family: Roboto-Regular;
@@ -47,7 +45,7 @@
     background-color:black}
 
 .contactHeader {
-    margin-top: 295%;
+    margin-top: 290vw;
     text-align: center;
     margin-left: 5%;
     margin-right: 5%;

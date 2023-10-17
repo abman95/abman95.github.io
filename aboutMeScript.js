@@ -99,14 +99,10 @@ dialogCloseButton.addEventListener("click", function outsideClickHandler(event) 
       
     function reverseAnimate() {
       if (elementAnimation >= -20) {
-        if (classNameName === "headerFixedBackground"){
+        if (elementAnimation){
         headerFixed.style.transition = "filter ease .5s";
         headerFixed.style.filter = "invert(0)";
         element.style.backgroundImage = `linear-gradient(to top, #1a1a1a ${elementAnimation}%, wheat 0%)`;
-        } else if (classNameName === "dontPullMeDialogCloseButton"){
-          element.style.backgroundImage = `linear-gradient(to top, #1a1a1a ${elementAnimation}%, rgba(59, 59, 59, 0.163)0%`;
-          element.style.transition = "color ease .5s";
-          element.style.color = "black";
         }
         elementAnimation = elementAnimation - 3;
         animationTimeout = setTimeout(reverseAnimate, 1);
@@ -140,14 +136,10 @@ headerFixedMenu.addEventListener("click", function outsideClickHandler(event) {
           
         function reverseAnimate() {
           if (elementAnimation >= -20) {
-            if (classNameName === "headerFixedBackground"){
+            if (elementAnimation){
             headerFixed.style.transition = "filter ease .5s";
             headerFixed.style.filter = "invert(0)";
             element.style.backgroundImage = `linear-gradient(to top, #1a1a1a ${elementAnimation}%, wheat 0%)`;
-            } else if (classNameName === "dontPullMeDialogCloseButton"){
-              element.style.backgroundImage = `linear-gradient(to top, #1a1a1a ${elementAnimation}%, rgba(59, 59, 59, 0.163)0%`;
-              element.style.transition = "color ease .5s";
-              element.style.color = "black";
             }
             elementAnimation = elementAnimation - 3;
             animationTimeout = setTimeout(reverseAnimate, 1);

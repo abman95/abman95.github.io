@@ -29,8 +29,6 @@
     
       html, body {
         overflow-x:hidden;
-        margin: 0;
-        padding: 0;    
       } 
     
     
@@ -612,6 +610,7 @@
     }
     
     .work1Description, .work2Description, .work3Description, .work4Description, .work5Description, .work6Description, .work7Description {
+        text-decoration: none;
         margin-top: -7%;
         font: 5vw Roboto-Thin;
         color: white;
@@ -649,6 +648,8 @@
     }
 
     #container6 {
+        margin: 0;
+        padding: 0;
         height: 115vw;
         width: 100vw;
         display: flex;
@@ -657,6 +658,8 @@
     
     
     #container7 {
+        margin: 0;
+        padding: 0;
         height: 710vw;
         width: 100vw;
         display: flex;
