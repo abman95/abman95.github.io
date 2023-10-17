@@ -90,6 +90,28 @@ dialogCloseButton.addEventListener("click", function outsideClickHandler(event) 
     headerFixedMenu.classList.remove("closed");
     document.body.style.overflow = 'auto';
     document.body.style.overflowX = 'hidden';
+
+
+    let elementAnimation = 0;
+    let animationTimeout;
+    clearTimeout(animationTimeout);
+    reverseAnimate();
+      
+    function reverseAnimate() {
+      if (elementAnimation >= -20) {
+        if (classNameName === "headerFixedBackground"){
+        headerFixed.style.transition = "filter ease .5s";
+        headerFixed.style.filter = "invert(0)";
+        element.style.backgroundImage = `linear-gradient(to top, #1a1a1a ${elementAnimation}%, wheat 0%)`;
+        } else if (classNameName === "dontPullMeDialogCloseButton"){
+          element.style.backgroundImage = `linear-gradient(to top, #1a1a1a ${elementAnimation}%, rgba(59, 59, 59, 0.163)0%`;
+          element.style.transition = "color ease .5s";
+          element.style.color = "black";
+        }
+        elementAnimation = elementAnimation - 3;
+        animationTimeout = setTimeout(reverseAnimate, 1);
+      }
+    }
   }, 300);
 });
 
@@ -109,6 +131,28 @@ headerFixedMenu.addEventListener("click", function outsideClickHandler(event) {
         headerFixedMenu.classList.remove("closed");
         document.body.style.overflow = 'auto';
         document.body.style.overflowX = 'hidden';
+
+
+        let elementAnimation = 0;
+        let animationTimeout;
+        clearTimeout(animationTimeout);
+        reverseAnimate();
+          
+        function reverseAnimate() {
+          if (elementAnimation >= -20) {
+            if (classNameName === "headerFixedBackground"){
+            headerFixed.style.transition = "filter ease .5s";
+            headerFixed.style.filter = "invert(0)";
+            element.style.backgroundImage = `linear-gradient(to top, #1a1a1a ${elementAnimation}%, wheat 0%)`;
+            } else if (classNameName === "dontPullMeDialogCloseButton"){
+              element.style.backgroundImage = `linear-gradient(to top, #1a1a1a ${elementAnimation}%, rgba(59, 59, 59, 0.163)0%`;
+              element.style.transition = "color ease .5s";
+              element.style.color = "black";
+            }
+            elementAnimation = elementAnimation - 3;
+            animationTimeout = setTimeout(reverseAnimate, 1);
+          }
+        }
       }, 300);
     }
     }
