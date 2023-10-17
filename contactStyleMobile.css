@@ -163,35 +163,12 @@ textarea {
 }
 
 
-.contactInformationListing1 > li:nth-child(2) {
-  list-style: none;
-}
-
-.contactInformationListing1 > li:nth-child(2):focus {
-  outline: none;
-}
-
-
-
-
-.contactInformationListing1:focus {
-  white-space: nowrap;
-  top: 70%;
-  left: 5%;
-  right: 5%;
-  position: absolute;
-  font: 5vw Roboto-Thin;
-  outline: none !important;
-  text-decoration: none !important;
-  color: white !important;
-
-  list-style: none;
+.contactInformationListing1 a {
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 2vw;
-}
-
+  margin-top: -2%;
+  color: white;
+  text-decoration: none;
+  }
 
 .contactInformationHeader2 {
   white-space: nowrap;

@@ -165,8 +165,9 @@
       height: 9vw;
       cursor: pointer;
       transition: all ease 0.5s;
+      z-index: 9999999;
   }
-  
+
   .portfolioIcon:hover {
       filter: invert(0.2);
       transform: scale(1.04);
