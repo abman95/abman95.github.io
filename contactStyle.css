@@ -1,4 +1,4 @@
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 1150px) {
 
 @font-face {
     font-family: 'Roboto-Bold';
@@ -137,6 +137,11 @@ textarea {
   flex-direction: column;
   gap: 1.1vh;
 }
+
+.contactInformationListing1 a {
+  color: white;
+  text-decoration: none;
+  }
 
 
 .contactInformationHeader2 {

@@ -469,7 +469,7 @@ body {
     z-index: 99999;
     font: 17vw Roboto-Bold;
     color: wheat;
-    margin-bottom: -57%;
+    margin-bottom: -28%;
     margin-top: 0vw;
 }
 
@@ -575,9 +575,15 @@ body {
   transform-origin: bottom;
   transition: all ease .5s;
   width: 90vw;
-  height: 130vw;
-  object-fit: contain;
+  height: 110vw;
+  object-fit: cover;
+  padding-bottom: 5%;
 }
+
+.projectImageSlider2Images:nth-child(1) {
+  object-position: 30%;
+}
+
 
 .projectImageSlider2Images:nth-child(2),
 .projectImageSlider2Images:nth-child(3),
@@ -619,12 +625,12 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
-    font: 2vw Roboto-Thin;
+    font: 5vw Roboto-Thin;
     transition: font ease 1s, background-color ease 1s;
   }
 
   #projectImageSlider2ImagesAfterPseudoDiv:hover::before {
-    font: 2.2vw Roboto-Thin;
+    font: 5.2vw Roboto-Thin;
     background-color: rgba(0, 0, 0, 0.614);
   }
 
@@ -636,7 +642,7 @@ body {
     cursor: auto;
     z-index: 99999999;
     position: absolute;
-    bottom: 15%;
+    bottom: -3%;
     left: 30%;
     width: 3.5vw;
     height: 3.5vw;
@@ -653,7 +659,7 @@ body {
     cursor: pointer;
     z-index: 99999;
     position: absolute;
-    bottom: 15%;
+    bottom: -3%;
     right: 30%;
     width: 3.5vw;
     height: 3.5vw;
@@ -781,7 +787,7 @@ body {
     height: 10vw;
     position: fixed;
     top: 5%;
-    right: 5%;
+    right: 15%;
     transition: all ease 1s;
     filter: invert(1);
   }

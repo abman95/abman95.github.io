@@ -154,7 +154,6 @@ textarea {
   outline: none !important;
   text-decoration: none !important;
   color: white !important;
-
   list-style: none;
   padding: 0;
   display: flex;
@@ -213,8 +212,6 @@ textarea {
   position: absolute;
   font: 5vw Roboto-Thin;
   color: white;
-
-
   list-style: none;
   padding: 0;
   display: flex;

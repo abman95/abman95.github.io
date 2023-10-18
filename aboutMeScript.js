@@ -525,7 +525,7 @@ function degreeSlider(className) {
   });
 
 
-  if (window.innerWidth <= 450) {
+  if (window.innerWidth <= 450 || window.innerWidth >= 1250) {
   document.addEventListener("scroll", ()=> {
     const elementRect = element.getBoundingClientRect();
     const windowHeight = window.innerHeight;
@@ -542,6 +542,26 @@ function degreeSlider(className) {
         elementLogo.style.opacity = `0`;
         element.style.transition = 'transform .7s ease';
         element.style.transform = `translateX(-29.375vw)`;
+      }
+  });
+}
+if (window.innerWidth > 450 && window.innerWidth <= 1250) {
+  document.addEventListener("scroll", ()=> {
+    const elementRect = element.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+  
+    console.log(elementRect.top);
+    console.log(elementRect.bottom);
+    console.log(windowHeight/2);
+  
+      if (elementRect.top < windowHeight/2 && elementRect.bottom > windowHeight/2) {
+        elementLogo.style.opacity = `1`;
+        element.style.transform = `translateX(0vw)`;
+        element.style.transition = 'transform .7s ease';
+      } else {
+        elementLogo.style.opacity = `0`;
+        element.style.transition = 'transform .7s ease';
+        element.style.transform = `translateX(-50.375vw)`;
       }
   });
 }
