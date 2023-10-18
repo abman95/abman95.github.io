@@ -647,7 +647,7 @@ function handleIntersection(entries) {
 
   
   
-    if (window.innerWidth <= 1250) {
+    if (window.innerWidth <= 1150) {
       container3.style.overflow = `hidden;`
       projectSlider.style.overflow = `hidden;`
     if (windowHeight*0.4 >= container3Rect.top) {
@@ -813,7 +813,7 @@ function handleIntersection(entries) {
         });
       }).then(() => {
         console.log(translateXInVw);
-        if (window.innerWidth <= 1250) {
+        if (window.innerWidth <= 1150) {
         if (translateXInVw > 85 && translateXInVw < 95) {
           projectImageSlider2Images1.style.opacity = `1`;
           projectImageSlider2Images2.style.opacity = `1`;
@@ -909,7 +909,7 @@ function handleIntersection(entries) {
     let translateCountMobile = 90;
 
 
-    if (window.innerWidth <= 1250) {
+    if (window.innerWidth <= 1150) {
       setTimeout(()=>{
         computedStyle = window.getComputedStyle(projectImageSlider2);
         transformValue = computedStyle.getPropertyValue('transform');      
@@ -982,8 +982,8 @@ function handleIntersection(entries) {
 
 
 
-    if (window.innerWidth <= 1250) {
-    if (translateXInVw > 85 && translateXInVw < 911 || translateXInVw > -5 && translateXInVw < 5) {
+    if (window.innerWidth <= 1150) {
+    if (translateXInVw > 85 && translateXInVw < 91 || translateXInVw > -5 && translateXInVw < 5) {
       nextButton.style.transform = "scale(1.3)";
       setTimeout(()=> {
         nextButton.style.transform = "scale(1)";
@@ -1042,7 +1042,7 @@ function handleIntersection(entries) {
     viewportWidth = window.innerWidth;
     translateXInVw = (translateX / viewportWidth) * 100;
 
-    if (window.innerWidth <= 1250) {
+    if (window.innerWidth <= 1150) {
     if (translateXInVw < -85 && translateXInVw > -91 || translateXInVw > -5 && translateXInVw < 5) {
       prevButton.style.transform = "scale(1.3)";
       setTimeout(()=> {

@@ -55,7 +55,16 @@
   }
 */
 
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
 
+  html, body {
+  width: 100vw;
+  overflow-x:hidden;   
+} 
 
 
 
@@ -641,7 +650,7 @@
     z-index: 99999999;
     position: absolute;
     bottom: -7%;
-    left: 35%;
+    left: 15%;
     width: 13vw;
     height: 13vw;
     border-radius: 13vw;
@@ -658,7 +667,7 @@
     z-index: 99999;
     position: absolute;
     bottom: -7%;
-    right: 35%;
+    right: 15%;
     width: 13vw;
     height: 13vw;
     border-radius: 13vw;
