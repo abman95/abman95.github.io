@@ -363,7 +363,7 @@ languageEnglish.addEventListener('click', function () {
     document.querySelector('.schoolTitle').textContent = "HIGH SCHOOL DIPLOMA";
     document.querySelector('.schoolDuration').innerHTML = "ALEXANDER VON HUMBOLDT HIGH SCHOOL BREMEN<br>2014 – 2015</p>";
   
-    document.querySelector('.workExperienceHeader').style.marginTop = "0";
+    document.querySelector('.workExperienceHeader').style.marginTop = "5vw";
     document.querySelector('.workExperienceHeader').textContent = 'Work Experience:';
 
     document.querySelector('.work1Title').textContent = 'WEB DESIGN & Private Software Engineer';
@@ -1292,7 +1292,7 @@ if(window.innerWidth > 450 && window.innerWidth < 1150) {
     document.querySelector('.schoolDuration').innerHTML = "ALEXANDER VON HUMBOLDT HIGH SCHOOL BREMEN<br>2014 – 2015</p>";
 
     
-    document.querySelector('.workExperienceHeader').style.marginTop = "0";
+    document.querySelector('.workExperienceHeader').style.marginTop = "5vw";
     document.querySelector('.workExperienceHeader').textContent = 'Work Experience:';      
 
     document.querySelector('.work1Title').textContent = 'WEB DESIGN & Private Software Engineer';

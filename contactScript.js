@@ -212,6 +212,7 @@ function addInteractiveAnimation(className) {
   addInteractiveAnimation('headerAboutMe');
   addInteractiveAnimation('headerHome');
   addInteractiveAnimation('headerContact');
+  addInteractiveAnimation('headerLanguageButton');
   addInteractiveAnimation('submitButton');
   addInteractiveAnimation('abdullahfooterIcon');
 

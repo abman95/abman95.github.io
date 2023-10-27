@@ -428,6 +428,7 @@ addInteractiveAnimation('portfolioIcon');
 addInteractiveAnimation('headerAboutMe');
 addInteractiveAnimation('headerHome');
 addInteractiveAnimation('headerContact');
+addInteractiveAnimation('headerLanguageButton');
 addInteractiveAnimation('abdullahfooterIcon');
 
 
