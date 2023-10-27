@@ -78,9 +78,13 @@
     .secondElementContainer,
     .thirdElementContainer,
     .fourthElementContainer,
-    .fifthElementContainer,
-    .sixthElementContainer {
+    .fifthElementContainer {
         height: 120vw;
+        margin: 0% 0 5% 5%;
+    }
+
+    .sixthElementContainer {
+        height: 130vw;
         margin: 0% 0 5% 5%;
     }
     
@@ -228,7 +232,7 @@
         margin: 50% auto 50% auto;
         background-image: linear-gradient(rgb(0, 183, 0) 0px, lightGrey 0%);
         opacity: black;
-        height: 84%;
+        height: 84.5%;
         width: 0.3vw;
         transition: all ease 1s;
         z-index: 998;

@@ -282,6 +282,21 @@ addInteractiveAnimationOnLocatedInGermany('locatedInContainerBackground');
 languageEnglish.addEventListener('click', function () {
     chosenLanguage = "English";
 
+    if (window.innerWidth >= 1150) {
+      document.querySelector('.languageEnglish').textContent = "english";
+      document.querySelector('.languageGerman').textContent = "german";
+      } else {
+        document.querySelector('.languageGerman').textContent = "german";
+      }
+
+    if (window.innerWidth <= 1150) {
+    document.querySelector('.footerButtonsArea').style.marginTop = '30%';
+    document.querySelector('.footerHr').style.marginTop = '25%';
+
+    if(window.innerWidth > 450 && window.innerWidth < 1150) {
+      document.querySelector('.phoneNumber').style.marginTop = "25%";
+    }
+}
     document.querySelector('.footerHeader').innerHTML = '<img src="Pictures/abdullahSögütBackgroundImage1.jpg" class="abdullahfooterIcon">Your Future, my Expertise.';
     document.querySelector('.clockHeader').textContent = "Local Time";
     document.querySelector('.footerHome').innerHTML = '<a href="homepage.html">Home</a>';
@@ -296,8 +311,8 @@ languageEnglish.addEventListener('click', function () {
     document.querySelector('.dialogContact').textContent = "contact";
     document.querySelector('.dialogLanguageButton').textContent = "language";
     document.querySelector('#dialogHeadlineLanguage').textContent = "Select Your Language";
-    document.querySelector('.languageEnglish').textContent = "English";
-    document.querySelector('.languageGerman').textContent = "German";
+
+
     document.querySelector('.headerHome').textContent = "Home";
     document.querySelector('.headerAboutMe').textContent = "About Me";
     document.querySelector('.headerContact').textContent = "Contact";
@@ -320,8 +335,6 @@ languageEnglish.addEventListener('click', function () {
 
     else if (window.location.href.endsWith('/aboutMe.html')) {
     document.querySelector('#dialogHeadlineLanguage').textContent = "Select Your Language";
-    document.querySelector('.languageEnglish').textContent = "English";
-    document.querySelector('.languageGerman').textContent = "German";
     document.querySelector('.headerHome').textContent = "Home";
     document.querySelector('.headerAboutMe').textContent = "About Me";
     document.querySelector('.headerContact').textContent = "Contact";
@@ -343,10 +356,13 @@ languageEnglish.addEventListener('click', function () {
     document.querySelector('.aboutMePageIntroductoryHeader5').textContent = "Conclusion";
     document.querySelector('.aboutMePageIntroductoryText5').textContent = "Therefore laying the foundation to develop projects, many of which I share on my GitHub . Examples include this portfolio site, which was created using only HTML, CSS, and Vanilla JavaScript.";
     document.querySelector('.aboutMePageIntroductoryText6').innerHTML = 'Check Out My GitHub <img src="Pictures/Degrees/gitHubIcon.svg" class="gitHubIcon">';
+    
+    document.querySelector('.degreesHeader').textContent = "Degrees:";
     document.querySelector('.universityDuration').innerHTML = "INDUSTRIAL ENGINEERING – UNIVERSITY BREMEN<br>2015 – 2021"
     document.querySelector('.schoolTitle').textContent = "HIGH SCHOOL DIPLOMA";
     document.querySelector('.schoolDuration').innerHTML = "ALEXANDER VON HUMBOLDT HIGH SCHOOL BREMEN<br>2014 – 2015</p>";
   
+    document.querySelector('.workExperienceHeader').style.marginTop = "0";
     document.querySelector('.workExperienceHeader').textContent = 'Work Experience:';
 
     document.querySelector('.work1Title').textContent = 'WEB DESIGN & Private Software Engineer';
@@ -392,11 +408,13 @@ languageEnglish.addEventListener('click', function () {
     document.querySelector('.work6DescriptionEnumeration2').textContent = 'Handling written correspondence and emails';
     document.querySelector('.work6DescriptionEnumeration3').textContent = 'Data entry and address qualification in the Invitel program';
     document.querySelector('.work6DescriptionEnumeration4').textContent = 'Telephone consulting and sales';
+
+    if(window.innerWidth > 450 && window.innerWidth < 1150) {
+      document.querySelector('#container7').style.height = "350vw";
+    }
     }
     else if (window.location.href.endsWith('/contact.html')) {
       document.querySelector('#dialogHeadlineLanguage').textContent = "Select Your Language";
-      document.querySelector('.languageEnglish').textContent = "English";
-      document.querySelector('.languageGerman').textContent = "German";
       document.querySelector('.headerHome').textContent = "Home";
       document.querySelector('.headerAboutMe').textContent = "About Me";
       document.querySelector('.headerContact').textContent = "Contact";
@@ -407,9 +425,13 @@ languageEnglish.addEventListener('click', function () {
       document.querySelector('.headerLanguageButton').textContent = "Language";
 
       document.querySelector('.contactHeader').innerHTML = 'Get in Touch for<br>further<br>information';
-      document.querySelector('.contactPageNameField').textContent = "Name:";
-      document.querySelector('.contactPageEmailField').textContent = "E-Mail";
-      document.querySelector('.contactPageMessageField').textContent = "Message:";
+
+      document.querySelector('.contactPageNameField').innerHTML ='Name:<input type="text" id="name" name="name" placeholder="Please write your name" required>';
+
+      document.querySelector('.contactPageEmailField').innerHTML = 'E-Mail:<input type="email" id="email" name="email" placeholder="Please write your E-Mail address" required>';
+  
+      document.querySelector('.contactPageMessageField').innerHTML = 'Message:<textarea id="message" name="message" rows="4" placeholder="Please write your message" required></textarea>';
+
       document.querySelector('.submitButton').textContent = "Send";
 
       document.querySelector('.contactInformationHeader1').textContent = "Contact Information:";
@@ -423,6 +445,7 @@ languageEnglish.addEventListener('click', function () {
       document.querySelector('.contactInformationListing3Number3').textContent = "Further education in the field of";
       document.querySelector('.contactInformationListing3Number4').textContent = "General knowledge";
 
+
    }
 
     localStorage.setItem("chosenLanguage", chosenLanguage);
@@ -434,6 +457,22 @@ languageEnglish.addEventListener('click', function () {
 
 languageGerman.addEventListener('click', function () {
     chosenLanguage = "German";
+
+    if (window.innerWidth >= 1150) {
+      document.querySelector('.languageEnglish').textContent = "englisch";
+      document.querySelector('.languageGerman').textContent = "deutsch";
+      } else {
+        document.querySelector('.languageEnglish').textContent = "englisch";
+      }
+
+    if (window.innerWidth <= 1150) {
+    document.querySelector('.footerButtonsArea').style.marginTop = '40%';
+    document.querySelector('.footerHr').style.marginTop = '15%';
+}
+
+if(window.innerWidth > 450 && window.innerWidth < 1150) {
+  document.querySelector('.phoneNumber').style.marginTop = "0%";
+}
     document.querySelector('.footerHeader').innerHTML = '<img src="Pictures/abdullahSögütBackgroundImage1.jpg" class="abdullahfooterIcon">Ihre Zukunft, meine Expertise.';
     document.querySelector('.clockHeader').textContent = "Lokale Zeit";
     document.querySelector('.footerHome').innerHTML = '<a href="homepage.html">Startseite</a>';
@@ -453,15 +492,14 @@ if (window.location.href.endsWith('/homepage.html')) {
     document.querySelector('.dialogContact').textContent = "kontakt";
     document.querySelector('.dialogLanguageButton').textContent = "sprache";
     document.querySelector('#dialogHeadlineLanguage').textContent = "Wähle deine Sprache";
-    document.querySelector('.languageEnglish').textContent = "Englisch";
-    document.querySelector('.languageGerman').textContent = "Deutsch";
+
     document.querySelector('.headerHome').textContent = "Startseite";
     document.querySelector('.headerAboutMe').textContent = "Über Mich";
     document.querySelector('.headerContact').textContent = "Kontakt";
     document.querySelector('.headerLanguageButton').textContent = "Sprache";
     document.querySelector('.locatedInCountryText').textContent = "Ansässig in Deutschland";
     document.querySelector('.aboutMeButtonHeader').textContent = "Vielseitige Expertise mit Fachkenntnissen in Webdesign, Unternehmertum, Marketing, Logistik und Kundenservice, bereit, die Fähigkeiten Ihres Teams zu erweitern.";
-    document.querySelector('.projectOneDescription').textContent = "Ich bin ein erfahrener Webdesigner und privater Softwareentwickler mit Fachkenntnissen in WordPress, HTML, CSS und JavaScript. Mein vielfältiger Hintergrund umfasst Unternehmertum, Marketing, Logistik und Kundenservice, was mich zu einer wertvollen Bereicherung für Ihr Team macht. Entdecken Sie noch heute meine Portfolio!";
+    document.querySelector('.projectOneDescription').textContent = "Ich bin erfahrener Webdesigner und Softwareentwickler mit Expertise in WordPress, HTML, CSS und JavaScript. Mein Hintergrund umfasst Unternehmertum, Marketing, Logistik und Kundenservice, was mich zu einer wertvollen Ergänzung für Ihr Team macht. Entdecken Sie heute mein Portfolio!";
     document.querySelector('.aboutMeButton').textContent = "Über Mich";
     document.querySelector('.hrHeader').textContent = "Projekte";
     document.querySelector('.projectSlider').textContent = "Projekte:";
@@ -475,8 +513,7 @@ if (window.location.href.endsWith('/homepage.html')) {
 
 else if (window.location.href.endsWith('/aboutMe.html')) {
     document.querySelector('#dialogHeadlineLanguage').textContent = "Wähle deine Sprache";
-    document.querySelector('.languageEnglish').textContent = "Englisch";
-    document.querySelector('.languageGerman').textContent = "Deutsch";
+
     document.querySelector('.dialogHome').textContent = "startseite";
     document.querySelector('.dialogAboutMe').textContent = "über mich";
     document.querySelector('.dialogContact').textContent = "kontakt";
@@ -502,10 +539,13 @@ else if (window.location.href.endsWith('/aboutMe.html')) {
     document.querySelector('.aboutMePageIntroductoryHeader5').textContent = "Fazit";
     document.querySelector('.aboutMePageIntroductoryText5').textContent = "Demzufolge habe ich das Fundament für die Umsetzung von Projekten geschaffen, von denen zahlreiche auf meinem GitHub-Repository geteilt werden. Zu den exemplarischen Arbeiten zählt unter anderem diese Portfolio-Website, die vollständig mithilfe von HTML, CSS und reinem Vanilla (reinem) JavaScript entwickelt wurde.";
     document.querySelector('.aboutMePageIntroductoryText6').innerHTML = 'Besuche mein GitHub <img src="Pictures/Degrees/gitHubIcon.svg" class="gitHubIcon">';
+    
+    document.querySelector('.degreesHeader').textContent = "Abschlüsse:";
     document.querySelector('.universityDuration').innerHTML = "WIRTSCHAFTSINGENIEUR – UNIVERSITÄT BREMEN<br>2015 – 2021";
     document.querySelector('.schoolTitle').textContent = "ABITUR - ALLGEMEINE HOCHSCHULREIFE";
     document.querySelector('.schoolDuration').innerHTML = "ALEXANDER VON HUMBOLDT GYMNASIUM BREMEN<br>2014 – 2015</p>";
 
+    document.querySelector('.workExperienceHeader').style.marginTop = "15vw";
     document.querySelector('.workExperienceHeader').textContent = 'Berufserfahrung:';
 
     document.querySelector('.work1Title').textContent = 'WEBDESIGN & Private Software Engineer';
@@ -551,12 +591,15 @@ else if (window.location.href.endsWith('/aboutMe.html')) {
     document.querySelector('.work6DescriptionEnumeration2').textContent = 'Bearbeitung von Schriftverkehr und E-Mails';
     document.querySelector('.work6DescriptionEnumeration3').textContent = 'Datenerfassung und Adressqualifizierung im Programm Invitel';
     document.querySelector('.work6DescriptionEnumeration4').textContent = 'Telefonberatung und Vertrieb';
+
+    if(window.innerWidth > 450 && window.innerWidth < 1150) {
+      document.querySelector('#container7').style.height = "365vw";
+    }
   }
 
   else if (window.location.href.endsWith('/contact.html')) {
     document.querySelector('#dialogHeadlineLanguage').textContent = "Wähle deine Sprache";
-    document.querySelector('.languageEnglish').textContent = "Englisch";
-    document.querySelector('.languageGerman').textContent = "Deutsch";
+
     document.querySelector('.dialogHome').textContent = "startseite";
     document.querySelector('.dialogAboutMe').textContent = "über mich";
     document.querySelector('.dialogContact').textContent = "kontakt";
@@ -567,11 +610,16 @@ else if (window.location.href.endsWith('/aboutMe.html')) {
     document.querySelector('.headerLanguageButton').textContent = "Sprache";
 
     document.querySelector('.contactHeader').innerHTML = 'Kontaktieren Sie<br> mich für weitere<br>Informationen';
-    document.querySelector('.contactPageNameField').textContent = "Name:";
-    document.querySelector('.contactPageEmailField').textContent = "E-Mail";
-    document.querySelector('.contactPageMessageField').textContent = "Nachricht:";
+    
+    document.querySelector('.contactPageNameField').innerHTML ='Name:<input type="text" id="name" name="name" placeholder="Ihr Vor-/Nachname" required>';
+
+    document.querySelector('.contactPageEmailField').innerHTML = 'E-Mail:<input type="email" id="email" name="email" placeholder="Ihre E-Mail-Adresse" required>';
+
+    document.querySelector('.contactPageMessageField').innerHTML = 'Ihre Nachricht:<textarea id="message" name="message" rows="4" placeholder="Ihre Nachricht" required></textarea>';
+
     document.querySelector('.submitButton').textContent = "Senden";
   
+
     document.querySelector('.contactInformationHeader1').textContent = "Kontakt Information:";
   
     document.querySelector('.contactInformationHeader2').textContent = "Qualifikation:";
@@ -582,6 +630,8 @@ else if (window.location.href.endsWith('/aboutMe.html')) {
     document.querySelector('.contactInformationListing3Number2').textContent = "Fitness";
     document.querySelector('.contactInformationListing3Number3').textContent = "Weiterbildung im Bereich";
     document.querySelector('.contactInformationListing3Number4').textContent = "Allgemeinwissen";
+
+
   }
 
     localStorage.setItem("chosenLanguage", chosenLanguage);
@@ -601,7 +651,7 @@ if (window.location.href.endsWith('/homepage.html')) {
 if (chosenLanguage === "English") {
     container1Heading = "I am an experienced Web Designer and Private Software Engineer with expertise in WordPress, HTML, CSS, and JavaScript. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!"
 } else if (chosenLanguage === "German") {
-    container1Heading = "Ich bin ein erfahrener Webdesigner und privater Softwareentwickler mit Fachkenntnissen in WordPress, HTML, CSS und JavaScript. Mein vielfältiger Hintergrund umfasst Unternehmertum, Marketing, Logistik und Kundenservice, was mich zu einer wertvollen Bereicherung für Ihr Team macht. Entdecken Sie noch heute meine Portfolio!"
+    container1Heading = "Ich bin erfahrener Webdesigner und Softwareentwickler mit Expertise in WordPress, HTML, CSS und JavaScript. Mein Hintergrund umfasst Unternehmertum, Marketing, Logistik und Kundenservice, was mich zu einer wertvollen Ergänzung für Ihr Team macht. Entdecken Sie heute mein Portfolio!"
 }
 
 let i = 0;
@@ -986,6 +1036,16 @@ projectListSelector("keyGen");
 
 
 if (chosenLanguage === "German") {
+
+  if (window.innerWidth <= 1150) {
+  document.querySelector('.footerButtonsArea').style.marginTop = '40%';
+  document.querySelector('.footerHr').style.marginTop = '15%';
+  }
+
+  if(window.innerWidth > 450 && window.innerWidth < 1150) {
+    document.querySelector('.phoneNumber').style.marginTop = "0%";
+  }
+
   document.querySelector('.footerHeader').innerHTML = '<img src="Pictures/abdullahSögütBackgroundImage1.jpg" class="abdullahfooterIcon">Ihre Zukunft, meine Expertise.';
   document.querySelector('.clockHeader').textContent = "Lokale Zeit";
   document.querySelector('.footerHome').innerHTML = '<a href="homepage.html">Startseite</a>';
@@ -1004,8 +1064,8 @@ if (chosenLanguage === "German") {
     document.querySelector('.dialogContact').textContent = "kontakt";
     document.querySelector('.dialogLanguageButton').textContent = "sprache";
     document.querySelector('#dialogHeadlineLanguage').textContent = "Wähle deine Sprache";
-    document.querySelector('.languageEnglish').textContent = "Englisch";
-    document.querySelector('.languageGerman').textContent = "Deutsch";
+    document.querySelector('.languageEnglish').textContent = "englisch";
+    document.querySelector('.languageGerman').textContent = "deutsch";
     document.querySelector('.headerHome').textContent = "Startseite";
     document.querySelector('.headerAboutMe').textContent = "Über Mich";
     document.querySelector('.headerContact').textContent = "Kontakt";
@@ -1029,8 +1089,8 @@ if (chosenLanguage === "German") {
     document.querySelector('.dialogAboutMe').textContent = "über mich";
     document.querySelector('.dialogContact').textContent = "kontakt";
     document.querySelector('.dialogLanguageButton').textContent = "sprache";
-    document.querySelector('.languageEnglish').textContent = "Englisch";
-    document.querySelector('.languageGerman').textContent = "Deutsch";
+    document.querySelector('.languageEnglish').textContent = "englisch";
+    document.querySelector('.languageGerman').textContent = "deutsch";
     document.querySelector('.headerHome').textContent = "Startseite";
     document.querySelector('.headerAboutMe').textContent = "Über Mich";
     document.querySelector('.headerContact').textContent = "Kontakt";
@@ -1052,10 +1112,13 @@ if (chosenLanguage === "German") {
     document.querySelector('.aboutMePageIntroductoryHeader5').textContent = "Fazit";
     document.querySelector('.aboutMePageIntroductoryText5').textContent = "Demzufolge habe ich das Fundament für die Umsetzung von Projekten geschaffen, von denen zahlreiche auf meinem GitHub-Repository geteilt werden. Zu den exemplarischen Arbeiten zählt unter anderem diese Portfolio-Website, die vollständig mithilfe von HTML, CSS und reinem Vanilla (reinem) JavaScript entwickelt wurde.";
     document.querySelector('.aboutMePageIntroductoryText6').innerHTML = 'Besuche mein GitHub <img src="Pictures/Degrees/gitHubIcon.svg" class="gitHubIcon">';
+    
+    document.querySelector('.degreesHeader').textContent = "Abschlüsse:";
     document.querySelector('.universityDuration').innerHTML = "WIRTSCHAFTSINGENIEUR – UNIVERSITÄT BREMEN<br>2015 – 2021";
     document.querySelector('.schoolTitle').textContent = "ABITUR - ALLGEMEINE HOCHSCHULREIFE";
     document.querySelector('.schoolDuration').innerHTML = "ALEXANDER VON HUMBOLDT GYMNASIUM BREMEN<br>2014 – 2015</p>";
-
+    
+    document.querySelector('.workExperienceHeader').style.marginTop = "15vw";
     document.querySelector('.workExperienceHeader').textContent = 'Berufserfahrung:';
 
     document.querySelector('.work1Title').textContent = 'WEBDESIGN & Private Software Engineer';
@@ -1101,11 +1164,15 @@ if (chosenLanguage === "German") {
     document.querySelector('.work6DescriptionEnumeration2').textContent = 'Bearbeitung von Schriftverkehr und E-Mails';
     document.querySelector('.work6DescriptionEnumeration3').textContent = 'Datenerfassung und Adressqualifizierung im Programm Invitel';
     document.querySelector('.work6DescriptionEnumeration4').textContent = 'Telefonberatung und Vertrieb';
+
+    if(window.innerWidth > 450 && window.innerWidth < 1150) {
+    document.querySelector('#container7').style.height = "365vw";
+    }
   }
   else if (window.location.href.endsWith('/contact.html')) {
     document.querySelector('#dialogHeadlineLanguage').textContent = "Wähle deine Sprache";
-    document.querySelector('.languageEnglish').textContent = "Englisch";
-    document.querySelector('.languageGerman').textContent = "Deutsch";
+    document.querySelector('.languageEnglish').textContent = "englisch";
+    document.querySelector('.languageGerman').textContent = "deutsch";
     document.querySelector('.dialogHome').textContent = "startseite";
     document.querySelector('.dialogAboutMe').textContent = "über mich";
     document.querySelector('.dialogContact').textContent = "kontakt";
@@ -1116,11 +1183,15 @@ if (chosenLanguage === "German") {
     document.querySelector('.headerLanguageButton').textContent = "Sprache";
 
     document.querySelector('.contactHeader').innerHTML = 'Kontaktieren Sie<br> mich für weitere<br>Informationen';
-    document.querySelector('.contactPageNameField').textContent = "Name:";
-    document.querySelector('.contactPageEmailField').textContent = "E-Mail";
-    document.querySelector('.contactPageMessageField').textContent = "Nachricht:";
+    
+    document.querySelector('.contactPageNameField').innerHTML ='Name:<input type="text" id="name" name="name" placeholder="Ihr Vor-/Nachname" required>';
+
+    document.querySelector('.contactPageEmailField').innerHTML = 'E-Mail:<input type="email" id="email" name="email" placeholder="Ihre E-Mail-Adresse" required>';
+
+    document.querySelector('.contactPageMessageField').innerHTML = 'Ihre Nachricht:<textarea id="message" name="message" rows="4" placeholder="Ihre Nachricht" required></textarea>';
+
     document.querySelector('.submitButton').textContent = "Senden";
-  
+    
     document.querySelector('.contactInformationHeader1').textContent = "Kontakt Information:";
   
     document.querySelector('.contactInformationHeader2').textContent = "Qualifikation:";
@@ -1135,6 +1206,15 @@ if (chosenLanguage === "German") {
   }
 
 } else if (chosenLanguage === "English") {
+  if (window.innerWidth <= 1150) {
+  document.querySelector('.footerButtonsArea').style.marginTop = '30%';
+  document.querySelector('.footerHr').style.marginTop = '25%';
+}
+
+if(window.innerWidth > 450 && window.innerWidth < 1150) {
+  document.querySelector('.phoneNumber').style.marginTop = "25%";
+}
+
   document.querySelector('.footerHeader').innerHTML = '<img src="Pictures/abdullahSögütBackgroundImage1.jpg" class="abdullahfooterIcon">Your Future, my Expertise.';
   document.querySelector('.clockHeader').textContent = "Local Time";
   document.querySelector('.footerHome').innerHTML = '<a href="homepage.html">Home</a>';
@@ -1194,10 +1274,14 @@ if (chosenLanguage === "German") {
     document.querySelector('.aboutMePageIntroductoryHeader5').textContent = "Conclusion";
     document.querySelector('.aboutMePageIntroductoryText5').textContent = "Therefore laying the foundation to develop projects, many of which I share on my GitHub . Examples include this portfolio site, which was created using only HTML, CSS, and Vanilla JavaScript.";
     document.querySelector('.aboutMePageIntroductoryText6').innerHTML = 'Check Out My GitHub <img src="Pictures/Degrees/gitHubIcon.svg" class="gitHubIcon">';
+    
+    document.querySelector('.degreesHeader').textContent = "Degrees:";
     document.querySelector('.universityDuration').innerHTML = "INDUSTRIAL ENGINEERING – UNIVERSITY BREMEN<br>2015 – 2021"
     document.querySelector('.schoolTitle').textContent = "HIGH SCHOOL DIPLOMA";
     document.querySelector('.schoolDuration').innerHTML = "ALEXANDER VON HUMBOLDT HIGH SCHOOL BREMEN<br>2014 – 2015</p>";
 
+    
+    document.querySelector('.workExperienceHeader').style.marginTop = "0";
     document.querySelector('.workExperienceHeader').textContent = 'Work Experience:';      
 
     document.querySelector('.work1Title').textContent = 'WEB DESIGN & Private Software Engineer';
@@ -1243,6 +1327,10 @@ if (chosenLanguage === "German") {
     document.querySelector('.work6DescriptionEnumeration2').textContent = 'Handling written correspondence and emails';
     document.querySelector('.work6DescriptionEnumeration3').textContent = 'Data entry and address qualification in the Invitel program';
     document.querySelector('.work6DescriptionEnumeration4').textContent = 'Telephone consulting and sales';
+
+    if(window.innerWidth > 450 && window.innerWidth < 1150) {
+    document.querySelector('#container7').style.height = "350vw";
+    }
   }
   else if (window.location.href.endsWith('/contact.html')) {
     document.querySelector('#dialogHeadlineLanguage').textContent = "Select Your Language";
@@ -1258,9 +1346,13 @@ if (chosenLanguage === "German") {
     document.querySelector('.headerLanguageButton').textContent = "Language";
 
     document.querySelector('.contactHeader').innerHTML = 'Get in Touch for<br>further<br>information';
-    document.querySelector('.contactPageNameField').textContent = "Name:";
-    document.querySelector('.contactPageEmailField').textContent = "E-Mail";
-    document.querySelector('.contactPageMessageField').textContent = "Message:";
+
+    document.querySelector('.contactPageNameField').innerHTML ='Name:<input type="text" id="name" name="name" placeholder="Please write your name" required>';
+
+    document.querySelector('.contactPageEmailField').innerHTML = 'E-Mail:<input type="email" id="email" name="email" placeholder="Please write your E-Mail address" required>';
+
+    document.querySelector('.contactPageMessageField').innerHTML = 'Message:<textarea id="message" name="message" rows="4" placeholder="Please write your message" required></textarea>';
+
     document.querySelector('.submitButton').textContent = "Send";
 
     document.querySelector('.contactInformationHeader1').textContent = "Contact Information:";

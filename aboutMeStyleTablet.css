@@ -72,7 +72,7 @@
 .fourthElementContainer,
 .fifthElementContainer,
 .sixthElementContainer {
-    height: 66.917vw;
+    height: 75vw;
     margin: 0% 0 5% 5%;
 }
 
@@ -210,7 +210,7 @@
     margin: 50% auto 50% auto;
     background-image: linear-gradient(black 0px, lightGrey 0%);
     opacity: black;
-    height: 79%;
+    height: 82%;
     width: 0.2vw;
     transition: all ease 1s;
     z-index: 998;
@@ -221,7 +221,7 @@
     margin: 50% auto 50% auto;
     background-image: linear-gradient(rgb(0, 183, 0) 0px, lightGrey 0%);
     opacity: black;
-    height: 79%;
+    height: 82%;
     width: 0.2vw;
     transition: all ease 1s;
     z-index: 998;

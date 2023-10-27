@@ -643,7 +643,7 @@ body {
     z-index: 99999999;
     position: absolute;
     bottom: -3%;
-    left: 30%;
+    left: 10%;
     width: 7.5vw;
     height: 7.5vw;
     border-radius: 7.5vw;
@@ -660,7 +660,7 @@ body {
     z-index: 99999;
     position: absolute;
     bottom: -3%;
-    right: 30%;
+    right: 10%;
     width: 7.5vw;
     height: 7.5vw;
     border-radius: 7.5vw;

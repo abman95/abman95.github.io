@@ -118,7 +118,7 @@
 .abdullahfooterIconAndfooterHeader {
     height: 15.6vw;
     display: flex;
-    margin: 10% 0 0 10%;
+    margin: 0% 7% 0 7%;
 }
 
 .abdullahfooterIcon {
@@ -132,7 +132,7 @@
 .footerHeader { 
     text-shadow: 0 0px 1vh rgba(0, 0, 0, 0.1);
     color: white;
-    font-size: 10vh;
+    font-size: 9vh;
     font-family: Roboto-Thin;
 }
 
@@ -143,11 +143,12 @@
     justify-content: center;
     display: flex;
     flex-direction: column;
-    gap: 5vw;
-    height: 15.6vw;
+    gap: 10vw;
+    height: 35.6vw;
 }
 
 .phoneNumber {
+    margin-top: 25%;
     cursor: pointer;
     width: 80vw;
     height: 15vw;
