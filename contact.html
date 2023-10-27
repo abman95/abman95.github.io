@@ -30,10 +30,11 @@
                           <img src="Pictures/Projects/dialogCloseButton.svg" id="dialogCloseButton" class="dialogCloseButton">
                         </div>
                         <hr class="dialogHeaderHr">
-                          <div id="dialogHeaderListing">
+                        <div id="dialogHeaderListing">
                             <a href="homepage.html"><li style="margin-top: -10px;" class="dialogHome">home</li></a>
                             <a href="aboutMe.html"><li style="margin-top: -10px;" class="dialogAboutMe">about me</li></a>
                             <a href="contact.html"><li style="margin-top: -10px;" class="dialogContact">contact</li></a>
+                            <li style="margin-top: -10px;" class="dialogLanguageButton">Language</li>
                           </div>
                           <hr class="dialogHeaderHr">
                           <!-- <h2 class="dialogMotivationalTextHeader">words to live by:</h2> -->
@@ -59,32 +60,50 @@
 
 
 
+            <dialog id="headerFixedMenuLanguage" class="headerFixedMenuLanguage">
+                <form method ="dialog">
+                  <div id="dialogHeaderLanguage">
+                  <h1 id="dialogHeadlineLanguage">Select Your Language</h1>
+                  <img src="Pictures/Projects/dialogCloseButton.svg" id="dialogCloseButtonLanguage" class="dialogCloseButtonLanguage">
+                </div>
+                <hr class="dialogHeaderHrLanguage">
+                  <div id="dialogHeaderListingLanguage">
+                    <li style="margin-top: -10px;" class="languageEnglish">english</li>
+                    <li style="margin-top: -10px;" class="languageGerman">german</li>
+                  </div>
+                  <hr class="dialogHeaderHr">
+                </form>
+              </dialog>
+
+
+
 
 
 
         <section class="container" id="container1">
             <div class="header">
                 <a href="homepage.html"><img src="Pictures/Abdullah Sögüt-logos/Abdullah Sögüt-logos_white.png" class="portfolioIcon"></a>
-                 <ul class="headerHeading">
-                     <li style="margin-top: -10px;" class="mobileMenuButton">Menu</li>
-                     <a href="homepage.html" class="headerHome"><li style="margin-top: -10px;">Home</li></a>
-                     <a href="aboutMe.html" class="headerAboutMe"><li style="margin-top: -10px;">About Me</li></a>
-                     <a href="contact.html" class="headerContact"><li style="margin-top: -10px;" >Contact</li></a>
-                 </ul>
+                <ul class="headerHeading">
+                    <li style="margin-top: -10px;" class="mobileMenuButton">Menu</li>
+                    <a href="homepage.html" class="headerHome"><li>Home</li></a>
+                    <a href="aboutMe.html" class="headerAboutMe"><li>About Me</li></a>
+                    <a href="contact.html" class="headerContact"><li>Contact</li></a>
+                    <li class="headerLanguageButton">Language</li>
+                </ul>
              </div>
                 <h1 class="contactHeader">Get in Touch for<br>further<br>information:</h1>
                 <div class="contact-form">
                     <form action="send_email.php" method="POST">
                         <hr class="hr">
-                        <label for="name">Name:
+                        <label for="name" class="contactPageNameField">Name:
                             <input type="text" id="name" name="name" placeholder="Please write your name" required>
                         </label>
                         <hr class="hr">
-                        <label for="email">E-Mail:
+                        <label for="email" class="contactPageEmailField">E-Mail:
                             <input type="email" id="email" name="email" placeholder="Please write your E-Mail address" required>
                         </label>
                         <hr class="hr">
-                        <label for="message">Message:
+                        <label for="message" class="contactPageMessageField">Message:
                             <textarea id="message" name="message" rows="4" placeholder="Please write your message" required></textarea>
                         </label>
                         <hr class="hr">
@@ -108,7 +127,7 @@
                     <li>Microsoft Word</li>
                     <li>Microsoft Excel</li>
                     <li>Microsoft Powerpoint</li>
-                    <li>Graphic Design</li>
+                    <li class="contactInformationListing2Number4">Graphic Design</li>
                     <li>Microsoft Dynamics</li>
                     <li>PV SOL Premium</li>
                     <li>Wordpress</li>
@@ -117,11 +136,10 @@
                 </ul>
                 <h2 class="contactInformationHeader3">Hobbies:</h2>
                 <ul class="contactInformationListing3">
-                    <li>Reading</li>
-                    <li>Running</li>
-                    <li>Fitness</li>
-                    <li>Further education in the field of</li>
-                    <li>General knowledge</li>
+                    <li class="contactInformationListing3Number1">Reading</li>
+                    <li class="contactInformationListing3Number2">Fitness</li>
+                    <li class="contactInformationListing3Number3">Further education in the field of</li>
+                    <li class="contactInformationListing3Number4">General knowledge</li>
                 </ul>
             </div>
 
@@ -138,7 +156,7 @@
     <footer class="container" id="footer">
         <div class="abdullahfooterIconAndfooterHeader">
                 
-                <h1 class="footerHeader"><img src="Pictures/abdullahSögütBackgroundImage1.jpg" class="abdullahfooterIcon">Perfect for your Team!</h1>
+                <h1 class="footerHeader"><img src="Pictures/abdullahSögütBackgroundImage1.jpg" class="abdullahfooterIcon">Your Future, my Expertise.</h1>
             </div>
             <div class="footerButtonsArea">
                 <a href="tel:01731905742"><button class="phoneNumber">0173/190574</button></a>
@@ -159,5 +177,6 @@
             </div>
         </footer>
             <script src="contactScript.js"></script>
+            <script src="languageScript.js"></script>
         </body>
     </html>

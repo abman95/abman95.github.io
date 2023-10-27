@@ -174,65 +174,6 @@ headerFixedMenu.addEventListener("click", function outsideClickHandler(event) {
 
 
 
-  function dialogPageTextAnimation(className) {
-    const element = document.querySelector(`.${className}`);
-    const dialogTexts = {
-      dialogHome: ["HOME", "home"],
-      dialogAboutMe: ["ABOUT ME", "about me"],
-      dialogContact: ["CONTACT", "contact"]
-    };
-    let index = 0;
-    let text;
-    let animationDirection = "forward";
-    let animationTextTimeout;
-  
-    element.addEventListener('mousemove', function() {
-      animationDirection = "forward";
-      clearTimeout(animationTextTimeout);
-      animateText(dialogTexts[className][0]);
-    });
-
-    element.addEventListener('mouseenter', function() {
-      animationDirection = "forward";
-      clearTimeout(animationTextTimeout);
-      animateText(dialogTexts[className][0]);
-    });
-  
-    element.addEventListener('mouseout', function() {
-      animationDirection = "backward";
-      clearTimeout(animationTextTimeout);
-      animateText(dialogTexts[className][1]);
-    });
-
-    element.addEventListener('mouseleave', function() {
-      animationDirection = "backward";
-      clearTimeout(animationTextTimeout);
-      animateText(dialogTexts[className][1]);
-    });
-  
-    function animateText(targetText) {
-      if (text !== targetText) {
-        text = targetText;
-        index = 0;
-        element.textContent = "";
-      }
-      if (index < text.length) {
-        element.textContent += text[index];
-        index++;
-        animationTextTimeout = setTimeout(() => {
-          animateText(targetText);
-        }, 100);
-      }
-    }
-  }
-  
-  // Verwende die Funktion für deine Elemente
-  dialogPageTextAnimation("dialogHome");
-  dialogPageTextAnimation("dialogAboutMe");
-  dialogPageTextAnimation("dialogContact")
-
-
-
 
 
 

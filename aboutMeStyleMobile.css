@@ -69,7 +69,7 @@
     .container1ContainerHeader {
         margin: 7% 0 5% 5%;
         font: 12vw Roboto-Regular;
-        width: 100%;
+        width: 90%;
     }
     
     
@@ -249,7 +249,7 @@
         margin-block-start: 0em;
         margin-block-end: 0em;
         margin-left: 10vw;
-        font: 12vw Roboto-Regular;
+        font: 11vw Roboto-Regular;
         color: black;
         width: 35vw;
         transition: all ease 1s;
@@ -313,7 +313,7 @@
         margin-block-start: 0em;
         margin-block-end: 0em;
         margin-left: 10vw;
-        font: 6.6vw Roboto-Light;
+        font: 6vw Roboto-Light;
         color: black;
         width: 70vw;
         transition: all ease 1s;

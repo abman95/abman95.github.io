@@ -638,15 +638,15 @@ body {
 .prevButton {
     color: rgba(198, 198, 198, 0.247);
     transition: all ease .5s;
-    font: 12vw Roboto-Regular;
+    font: 25vw Roboto-Regular;
     cursor: auto;
     z-index: 99999999;
     position: absolute;
     bottom: -3%;
     left: 30%;
-    width: 3.5vw;
-    height: 3.5vw;
-    border-radius: 3.5vw;
+    width: 7.5vw;
+    height: 7.5vw;
+    border-radius: 7.5vw;
     /* background-color: rgba(198, 198, 198, 0.247); */
     background: none;
     border-style: none;
@@ -655,15 +655,15 @@ body {
 .nextButton {
     color: wheat;
     transition: all ease .5s;
-    font: 12vw Roboto-Regular;
+    font: 25vw Roboto-Regular;
     cursor: pointer;
     z-index: 99999;
     position: absolute;
     bottom: -3%;
     right: 30%;
-    width: 3.5vw;
-    height: 3.5vw;
-    border-radius: 3.5vw;
+    width: 7.5vw;
+    height: 7.5vw;
+    border-radius: 7.5vw;
     /* background-color: wheat; */
     background: none;
     border-style: none;

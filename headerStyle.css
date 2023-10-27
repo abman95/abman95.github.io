@@ -137,6 +137,7 @@ body {
 .headerHeading a {
     text-decoration: none;
     color: white;
+    font-size: 2.5vh;
 }
 
 .headerHeading li {
@@ -145,13 +146,6 @@ body {
     font-size: 2.5vh;
     color: white;
     display: flex;
-}
-
-.headerHeading li:hover {
-    transition: all ease 0.3s;
-    font-size: 2.7vh;
-    filter: invert(0.2);
-    transform: scale(1.04);
 }
 
 .portfolioIcon {
@@ -375,11 +369,11 @@ dialog::-webkit-scrollbar-track {
 
 
 #dialogHeaderListing {
-  margin-top: 10%;
+  margin-top: 5%;
   margin-left: 20%;
   display: flex;
   flex-direction: column;
-  row-gap: 4vw;
+  row-gap: 3vw;
 }
 
 #dialogHeaderListing a {
@@ -401,7 +395,8 @@ dialog::-webkit-scrollbar-track {
 
 .dialogHome, 
 .dialogAboutMe,
-.dialogContact {
+.dialogContact,
+.dialogLanguageButton {
   list-style: none;
   border-bottom: 0.13vw solid transparent;
   transition: border-bottom 0.5s ease;
@@ -409,12 +404,15 @@ dialog::-webkit-scrollbar-track {
 
 .dialogHome:hover,
 .dialogAboutMe:hover,
-.dialogContact:hover {
+.dialogContact:hover,
+.dialogLanguageButton:hover {
 list-style: none;
 border-bottom: 0.13vw solid rgb(255, 255, 255);
 }
 
-
+.dialogLanguageButton{
+  cursor: pointer;
+}
 
 
 
@@ -446,5 +444,144 @@ border-bottom: 0.13vw solid rgb(255, 255, 255);
 
 .dialogMotivationalText p:hover {
 font-size: 2.3vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.headerFixedMenuLanguage {
+  cursor: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #999 #f1f1f1;
+  position: fixed;
+  border: none;
+  top: 0;
+  right: 0;
+  background-color: #1C1D20;
+  width: 35vw;
+  height: 100vh;
+  transition: all 2.5s;
+  user-select: none;
+  font-family: Roboto-Regular;
+  font-size: 20px;
+  animation: dialogPop .7s ease-in-out forwards;
+  outline: none;
+  overflow: hidden;
+  margin-top: 0%;
+  margin-bottom: 0px;
+  margin-right: 0%;
+}
+
+.headerFixedMenuLanguage:-internal-dialog-in-top-layer {
+  max-width: 100% ;
+  max-height: 100%;
+}
+
+.headerFixedMenuLanguage.closed {
+  animation: dialogClose 0.3s ease-in-out forwards;
+}
+
+
+.headerFixedMenuLanguage::backdrop {
+  transition: all ease .5s;
+  user-select: none;
+}
+
+.dialogCloseButtonLanguage {
+  cursor: pointer;
+  width: 2.6vw;
+  height: 2.6vw;
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  transition: all ease 1s;
+  filter: invert(1);
+}
+
+
+.dialogCloseButtonLanguage:hover {
+  filter: invert(0.5);
+  transition: all ease 1s;
+  transform: scale(1.07);
+}
+
+
+#dialogHeaderLanguage {
+/* Top und Sticky machen HeaderElemente Sticky */
+  display: flex;
+  width: 65.76vw;
+  height: 13.39vh;
+  z-index: 10;
+}
+
+#dialogHeadlineLanguage {
+  text-shadow:  0 0 0.65vw rgba(0, 0, 0, 0.1);;
+  color: white;
+  font: 1vw Roboto-Thin;
+  margin-left: 10.5%;
+  margin-top: 10%;
+}
+
+.dialogHeaderHrLanguage {
+  margin-top: 9%;
+  width: 60%;
+  border: rgba(255, 255, 255, 0.537) solid .1vh;
+  box-sizing: border-box;
+}
+
+
+
+#dialogHeaderListingLanguage {
+  margin-top: 10%;
+  margin-left: 20%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10vw;
+}
+
+#dialogHeaderListingLanguage a {
+  text-decoration: none;
+  color: white;
+}
+
+#dialogHeaderListingLanguage a:focus {
+  outline: none;
+}
+
+#dialogHeaderListingLanguage li {
+  width: 74.5%;
+  z-index: 20;
+  transition: all ease 0.3s;
+  font-size: 8vh;
+  color: white;
+}
+
+.languageGerman, 
+.languageEnglish {
+  cursor: pointer;
+  list-style: none;
+  border-bottom: 0.13vw solid transparent;
+  transition: border-bottom 0.5s ease;
+}
+
+.languageGerman:hover,
+.languageEnglish:hover {
+list-style: none;
+border-bottom: 0.13vw solid rgb(255, 255, 255);
 }
 }

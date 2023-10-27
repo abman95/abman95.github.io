@@ -602,10 +602,13 @@
     font: 2.3vw Roboto-Thin;
 }
 
+#projectImageSlider2ImagesAfterPseudoDiv {
+--pseudo-Content: "click to try me";
+}
 
 #projectImageSlider2ImagesAfterPseudoDiv::before {
     cursor: pointer;
-    content: "click to try me";
+    content: var(--pseudo-Content);
     background-color: rgba(0, 0, 0, 0.411);
     width: 100%;
     height: 100%;
