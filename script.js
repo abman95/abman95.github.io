@@ -16,7 +16,6 @@ const aboutMeTextElements = document.querySelector('.aboutMeText');
 
 const projectOnePicture = document.querySelector('.projectOnePicture');
 const projectOneName = document.querySelector('.projectOneName');
-const projectOneDescription = document.querySelector('.projectOneDescription');
 const aboutMeButton = document.querySelector('.aboutMeButton');
 const aboutMeButtonBorder = document.querySelector('.aboutMeButtonBorder');
 

@@ -4,6 +4,7 @@ const dialogCloseButtonLanguage = document.querySelector('.dialogCloseButtonLang
 const languageEnglish = document.querySelector('.languageEnglish');
 const languageGerman = document.querySelector('.languageGerman');
 const dialogLanguageButton = document.querySelector('.dialogLanguageButton');
+const projectOneDescription = document.querySelector('.projectOneDescription');
 
 
 
@@ -424,6 +425,9 @@ languageEnglish.addEventListener('click', function () {
       document.querySelector('.dialogLanguageButton').textContent = "language";
       document.querySelector('.headerLanguageButton').textContent = "Language";
 
+      if (window.innerWidth <= 450) {
+        document.querySelector('.contactHeader').style.marginTop = "285vw";
+      }
       document.querySelector('.contactHeader').innerHTML = 'Get in Touch for<br>further<br>information';
 
       document.querySelector('.contactPageNameField').innerHTML ='Name:<input type="text" id="name" name="name" placeholder="Please write your name" required>';
@@ -608,6 +612,10 @@ else if (window.location.href.endsWith('/aboutMe.html')) {
     document.querySelector('.headerAboutMe').textContent = "Über Mich";
     document.querySelector('.headerContact').textContent = "Kontakt";
     document.querySelector('.headerLanguageButton').textContent = "Sprache";
+
+    if (window.innerWidth <= 450) {
+      document.querySelector('.contactHeader').style.marginTop = "265vw";
+    }
 
     document.querySelector('.contactHeader').innerHTML = 'Kontaktieren Sie<br> mich für weitere<br>Informationen';
     
@@ -1182,6 +1190,9 @@ if (chosenLanguage === "German") {
     document.querySelector('.headerContact').textContent = "Kontakt";
     document.querySelector('.headerLanguageButton').textContent = "Sprache";
 
+    if (window.innerWidth <= 450) {
+      document.querySelector('.contactHeader').style.marginTop = "265vw";
+    }
     document.querySelector('.contactHeader').innerHTML = 'Kontaktieren Sie<br> mich für weitere<br>Informationen';
     
     document.querySelector('.contactPageNameField').innerHTML ='Name:<input type="text" id="name" name="name" placeholder="Ihr Vor-/Nachname" required>';
@@ -1345,6 +1356,9 @@ if(window.innerWidth > 450 && window.innerWidth < 1150) {
     document.querySelector('.dialogLanguageButton').textContent = "language";
     document.querySelector('.headerLanguageButton').textContent = "Language";
 
+    if (window.innerWidth <= 450) {
+      document.querySelector('.contactHeader').style.marginTop = "285vw";
+    }
     document.querySelector('.contactHeader').innerHTML = 'Get in Touch for<br>further<br>information';
 
     document.querySelector('.contactPageNameField').innerHTML ='Name:<input type="text" id="name" name="name" placeholder="Please write your name" required>';
