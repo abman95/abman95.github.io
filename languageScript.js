@@ -26,6 +26,7 @@ dialogCloseButtonLanguage.addEventListener("click", function outsideClickHandler
     document.body.style.overflow = 'auto';
     document.body.style.overflowX = 'hidden';
       setTimeout(function() {
+        document.querySelector('.headerFixedBackground').style.transform = `translate(0px, 0px)`;
         headerFixedMenuLanguage.close();
         headerFixedMenuLanguage.classList.remove("closed");
         document.body.style.overflow = 'auto';
@@ -44,6 +45,7 @@ dialogCloseButtonLanguage.addEventListener("click", function outsideClickHandler
       document.body.style.overflow = 'auto';
       document.body.style.overflowX = 'hidden';
       setTimeout(function() {
+        document.querySelector('.headerFixedBackground').style.transform = `translate(0px, 0px)`;
         headerFixedMenuLanguage.close();
         headerFixedMenuLanguage.classList.remove("closed");
         document.body.style.overflow = 'auto';
@@ -363,7 +365,7 @@ languageEnglish.addEventListener('click', function () {
     document.querySelector('.schoolTitle').textContent = "HIGH SCHOOL DIPLOMA";
     document.querySelector('.schoolDuration').innerHTML = "ALEXANDER VON HUMBOLDT HIGH SCHOOL BREMEN<br>2014 – 2015</p>";
   
-    document.querySelector('.workExperienceHeader').style.marginTop = "5vw";
+    document.querySelector('.workExperienceHeader').style.marginTop = "7vw";
     document.querySelector('.workExperienceHeader').textContent = 'Work Experience:';
 
     document.querySelector('.work1Title').textContent = 'WEB DESIGN & Private Software Engineer';
@@ -475,7 +477,7 @@ languageGerman.addEventListener('click', function () {
 }
 
 if(window.innerWidth > 450 && window.innerWidth < 1150) {
-  document.querySelector('.phoneNumber').style.marginTop = "0%";
+  document.querySelector('.phoneNumber').style.marginTop = "10%";
 }
     document.querySelector('.footerHeader').innerHTML = '<img src="Pictures/abdullahSögütBackgroundImage1.jpg" class="abdullahfooterIcon">Ihre Zukunft, meine Expertise.';
     document.querySelector('.clockHeader').textContent = "Lokale Zeit";
@@ -503,7 +505,7 @@ if (window.location.href.endsWith('/homepage.html')) {
     document.querySelector('.headerLanguageButton').textContent = "Sprache";
     document.querySelector('.locatedInCountryText').textContent = "Ansässig in Deutschland";
     document.querySelector('.aboutMeButtonHeader').textContent = "Vielseitige Expertise mit Fachkenntnissen in Webdesign, Unternehmertum, Marketing, Logistik und Kundenservice, bereit, die Fähigkeiten Ihres Teams zu erweitern.";
-    document.querySelector('.projectOneDescription').textContent = "Ich bin erfahrener Webdesigner und Softwareentwickler mit Expertise in WordPress, HTML, CSS und JavaScript. Mein Hintergrund umfasst Unternehmertum, Marketing, Logistik und Kundenservice, was mich zu einer wertvollen Ergänzung für Ihr Team macht. Entdecken Sie heute mein Portfolio!";
+    document.querySelector('.projectOneDescription').textContent = "Ich bin erfahrener Webdesigner und Softwareentwickler mit Expertise in WordPress, HTML, CSS und JavaScript. Mein Hintergrund in Unternehmertum, Marketing, Logistik und Kundenservice bereichert Ihr Team. Entdecken Sie heute mein Portfolio!";
     document.querySelector('.aboutMeButton').textContent = "Über Mich";
     document.querySelector('.hrHeader').textContent = "Projekte";
     document.querySelector('.projectSlider').textContent = "Projekte:";
@@ -549,7 +551,7 @@ else if (window.location.href.endsWith('/aboutMe.html')) {
     document.querySelector('.schoolTitle').textContent = "ABITUR - ALLGEMEINE HOCHSCHULREIFE";
     document.querySelector('.schoolDuration').innerHTML = "ALEXANDER VON HUMBOLDT GYMNASIUM BREMEN<br>2014 – 2015</p>";
 
-    document.querySelector('.workExperienceHeader').style.marginTop = "15vw";
+    document.querySelector('.workExperienceHeader').style.marginTop = "17.5vw";
     document.querySelector('.workExperienceHeader').textContent = 'Berufserfahrung:';
 
     document.querySelector('.work1Title').textContent = 'WEBDESIGN & Private Software Engineer';
@@ -614,7 +616,7 @@ else if (window.location.href.endsWith('/aboutMe.html')) {
     document.querySelector('.headerLanguageButton').textContent = "Sprache";
 
     if (window.innerWidth <= 450) {
-      document.querySelector('.contactHeader').style.marginTop = "265vw";
+      document.querySelector('.contactHeader').style.marginTop = "275vw";
     }
 
     document.querySelector('.contactHeader').innerHTML = 'Kontaktieren Sie<br> mich für weitere<br>Informationen';
@@ -659,7 +661,7 @@ if (window.location.href.endsWith('/homepage.html')) {
 if (chosenLanguage === "English") {
     container1Heading = "I am an experienced Web Designer and Private Software Engineer with expertise in WordPress, HTML, CSS, and JavaScript. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!"
 } else if (chosenLanguage === "German") {
-    container1Heading = "Ich bin erfahrener Webdesigner und Softwareentwickler mit Expertise in WordPress, HTML, CSS und JavaScript. Mein Hintergrund umfasst Unternehmertum, Marketing, Logistik und Kundenservice, was mich zu einer wertvollen Ergänzung für Ihr Team macht. Entdecken Sie heute mein Portfolio!"
+    container1Heading = "Ich bin erfahrener Webdesigner und Softwareentwickler mit Expertise in WordPress, HTML, CSS und JavaScript. Mein Hintergrund in Unternehmertum, Marketing, Logistik und Kundenservice bereichert Ihr Team. Entdecken Sie heute mein Portfolio!"
 }
 
 let i = 0;
@@ -1051,7 +1053,7 @@ if (chosenLanguage === "German") {
   }
 
   if(window.innerWidth > 450 && window.innerWidth < 1150) {
-    document.querySelector('.phoneNumber').style.marginTop = "0%";
+    document.querySelector('.phoneNumber').style.marginTop = "10%";
   }
 
   document.querySelector('.footerHeader').innerHTML = '<img src="Pictures/abdullahSögütBackgroundImage1.jpg" class="abdullahfooterIcon">Ihre Zukunft, meine Expertise.';
@@ -1126,7 +1128,7 @@ if (chosenLanguage === "German") {
     document.querySelector('.schoolTitle').textContent = "ABITUR - ALLGEMEINE HOCHSCHULREIFE";
     document.querySelector('.schoolDuration').innerHTML = "ALEXANDER VON HUMBOLDT GYMNASIUM BREMEN<br>2014 – 2015</p>";
     
-    document.querySelector('.workExperienceHeader').style.marginTop = "15vw";
+    document.querySelector('.workExperienceHeader').style.marginTop = "17.5vw";
     document.querySelector('.workExperienceHeader').textContent = 'Berufserfahrung:';
 
     document.querySelector('.work1Title').textContent = 'WEBDESIGN & Private Software Engineer';
@@ -1191,7 +1193,7 @@ if (chosenLanguage === "German") {
     document.querySelector('.headerLanguageButton').textContent = "Sprache";
 
     if (window.innerWidth <= 450) {
-      document.querySelector('.contactHeader').style.marginTop = "265vw";
+      document.querySelector('.contactHeader').style.marginTop = "275vw";
     }
     document.querySelector('.contactHeader').innerHTML = 'Kontaktieren Sie<br> mich für weitere<br>Informationen';
     
@@ -1292,7 +1294,7 @@ if(window.innerWidth > 450 && window.innerWidth < 1150) {
     document.querySelector('.schoolDuration').innerHTML = "ALEXANDER VON HUMBOLDT HIGH SCHOOL BREMEN<br>2014 – 2015</p>";
 
     
-    document.querySelector('.workExperienceHeader').style.marginTop = "5vw";
+    document.querySelector('.workExperienceHeader').style.marginTop = "7vw";
     document.querySelector('.workExperienceHeader').textContent = 'Work Experience:';      
 
     document.querySelector('.work1Title').textContent = 'WEB DESIGN & Private Software Engineer';

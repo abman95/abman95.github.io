@@ -86,6 +86,7 @@ headerFixedBackground.addEventListener('click', function() {
 dialogCloseButton.addEventListener("click", function outsideClickHandler(event) {
   headerFixedMenu.classList.add("closed");
   setTimeout(function() {
+    document.querySelector('.headerFixedBackground').style.transform = `translate(0px, 0px)`;
     headerFixedMenu.close();
     headerFixedMenu.classList.remove("closed");
     document.body.style.overflow = 'auto';
@@ -123,6 +124,7 @@ headerFixedMenu.addEventListener("click", function outsideClickHandler(event) {
       document.body.style.overflow = 'auto';
       document.body.style.overflowX = 'hidden';
       setTimeout(function() {
+        document.querySelector('.headerFixedBackground').style.transform = `translate(0px, 0px)`;
         headerFixedMenu.close();
         headerFixedMenu.classList.remove("closed");
         document.body.style.overflow = 'auto';
