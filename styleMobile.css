@@ -649,11 +649,9 @@ body {
     cursor: auto;
     z-index: 99999999;
     position: absolute;
-    bottom: -3%;
-    left: 5%;
-    width: 3.5vw;
-    height: 3.5vw;
-    border-radius: 3.5vw;
+    bottom: -10%;
+    left: 10%;
+
     /* background-color: rgba(198, 198, 198, 0.247); */
     background: none;
     border-style: none;
@@ -666,11 +664,8 @@ body {
     cursor: pointer;
     z-index: 99999;
     position: absolute;
-    bottom: -3%;
-    right: 5%;
-    width: 3.5vw;
-    height: 3.5vw;
-    border-radius: 3.5vw;
+    bottom: -10%;
+    right: 20%;
     /* background-color: wheat; */
     background: none;
     border-style: none;
