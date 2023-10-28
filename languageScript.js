@@ -207,12 +207,20 @@ function addInteractiveAnimationOnLocatedInGermany(className) {
 
         if (dontPullMeDialogCount === 1) {
           if (chosenLanguage === "English") {
+            if(window.innerWidth < 1150) {
+              dialogHeadline.textContent = "Please don't click me.";
+            } else {
             dialogHeadline.textContent = "Please don't pull me.";
-            dontPullMeDialogCloseButton.textContent = "Got It!";
-          } else if (chosenLanguage === "German") {
-            dialogHeadline.textContent = "Bitte zieh mich nicht.";
-            dontPullMeDialogCloseButton.textContent = "Verstanden!";
           }
+          dontPullMeDialogCloseButton.textContent = "Got It!";
+          } else if (chosenLanguage === "German") {
+            if(window.innerWidth < 1150) {
+            dialogHeadline.textContent = "Bitte klick mich nicht.";
+          } else {
+            dialogHeadline.textContent = "Bitte zieh mich nicht.";
+          }
+          dontPullMeDialogCloseButton.textContent = "Verstanden!";
+        }
           dontPullMeDialog.showModal();
       } else if (dontPullMeDialogCount === 2) {
         if (chosenLanguage === "English") {
