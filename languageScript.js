@@ -365,7 +365,9 @@ languageEnglish.addEventListener('click', function () {
     document.querySelector('.schoolTitle').textContent = "HIGH SCHOOL DIPLOMA";
     document.querySelector('.schoolDuration').innerHTML = "ALEXANDER VON HUMBOLDT HIGH SCHOOL BREMEN<br>2014 – 2015</p>";
   
-    document.querySelector('.workExperienceHeader').style.marginTop = "7vw";
+    if(window.innerWidth > 450 && window.innerWidth < 1150) {
+      document.querySelector('.workExperienceHeader').style.marginTop = "7vw";
+  }
     document.querySelector('.workExperienceHeader').textContent = 'Work Experience:';
 
     document.querySelector('.work1Title').textContent = 'WEB DESIGN & Private Software Engineer';
@@ -551,7 +553,9 @@ else if (window.location.href.endsWith('/aboutMe.html')) {
     document.querySelector('.schoolTitle').textContent = "ABITUR - ALLGEMEINE HOCHSCHULREIFE";
     document.querySelector('.schoolDuration').innerHTML = "ALEXANDER VON HUMBOLDT GYMNASIUM BREMEN<br>2014 – 2015</p>";
 
+if(window.innerWidth > 450 && window.innerWidth < 1150) {
     document.querySelector('.workExperienceHeader').style.marginTop = "17.5vw";
+}
     document.querySelector('.workExperienceHeader').textContent = 'Berufserfahrung:';
 
     document.querySelector('.work1Title').textContent = 'WEBDESIGN & Private Software Engineer';
@@ -616,7 +620,7 @@ else if (window.location.href.endsWith('/aboutMe.html')) {
     document.querySelector('.headerLanguageButton').textContent = "Sprache";
 
     if (window.innerWidth <= 450) {
-      document.querySelector('.contactHeader').style.marginTop = "275vw";
+      document.querySelector('.contactHeader').style.marginTop = "271vw";
     }
 
     document.querySelector('.contactHeader').innerHTML = 'Kontaktieren Sie<br> mich für weitere<br>Informationen';
@@ -1128,7 +1132,9 @@ if (chosenLanguage === "German") {
     document.querySelector('.schoolTitle').textContent = "ABITUR - ALLGEMEINE HOCHSCHULREIFE";
     document.querySelector('.schoolDuration').innerHTML = "ALEXANDER VON HUMBOLDT GYMNASIUM BREMEN<br>2014 – 2015</p>";
     
-    document.querySelector('.workExperienceHeader').style.marginTop = "17.5vw";
+    if(window.innerWidth > 450 && window.innerWidth < 1150) {
+      document.querySelector('.workExperienceHeader').style.marginTop = "17.5vw";
+  }
     document.querySelector('.workExperienceHeader').textContent = 'Berufserfahrung:';
 
     document.querySelector('.work1Title').textContent = 'WEBDESIGN & Private Software Engineer';
@@ -1193,7 +1199,7 @@ if (chosenLanguage === "German") {
     document.querySelector('.headerLanguageButton').textContent = "Sprache";
 
     if (window.innerWidth <= 450) {
-      document.querySelector('.contactHeader').style.marginTop = "275vw";
+      document.querySelector('.contactHeader').style.marginTop = "271vw";
     }
     document.querySelector('.contactHeader').innerHTML = 'Kontaktieren Sie<br> mich für weitere<br>Informationen';
     
@@ -1293,8 +1299,9 @@ if(window.innerWidth > 450 && window.innerWidth < 1150) {
     document.querySelector('.schoolTitle').textContent = "HIGH SCHOOL DIPLOMA";
     document.querySelector('.schoolDuration').innerHTML = "ALEXANDER VON HUMBOLDT HIGH SCHOOL BREMEN<br>2014 – 2015</p>";
 
-    
-    document.querySelector('.workExperienceHeader').style.marginTop = "7vw";
+    if(window.innerWidth > 450 && window.innerWidth < 1150) {
+      document.querySelector('.workExperienceHeader').style.marginTop = "7vw";
+  }
     document.querySelector('.workExperienceHeader').textContent = 'Work Experience:';      
 
     document.querySelector('.work1Title').textContent = 'WEB DESIGN & Private Software Engineer';

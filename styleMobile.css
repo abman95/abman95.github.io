@@ -357,6 +357,7 @@ body {
 
 
 .projectOneDescription {
+    margin-bottom: 0;
     top: 44%;
     left: 8%;
     position: absolute;
@@ -398,7 +399,7 @@ body {
 
 .aboutMeButtonHeader {
   text-align: center;
-  height: 100%;
+  height: 10%;
   width: 80%;
   position: absolute;
   top: 36%;
@@ -428,10 +429,16 @@ body {
   }
 
 .hrHeader {
+    margin-top: 0;
+    z-index: 9999;
     font: 3.8vw Roboto-Thin;
-    color: black;
+    color: rgba(0, 0, 0, 0.53);
     margin-left: 15%;
-    margin-bottom: -20%;
+}
+
+.hrOfHeader {
+  border: 0.01vw solid rgba(0, 0, 0, 0.233);
+  width: 85%;
 }
 
 
@@ -638,12 +645,12 @@ body {
 .prevButton {
     color: rgba(198, 198, 198, 0.247);
     transition: all ease .5s;
-    font: 12vw Roboto-Regular;
+    font: 24vw Roboto-Regular;
     cursor: auto;
     z-index: 99999999;
     position: absolute;
     bottom: -3%;
-    left: 30%;
+    left: 5%;
     width: 3.5vw;
     height: 3.5vw;
     border-radius: 3.5vw;
@@ -655,12 +662,12 @@ body {
 .nextButton {
     color: wheat;
     transition: all ease .5s;
-    font: 12vw Roboto-Regular;
+    font: 24vw Roboto-Regular;
     cursor: pointer;
     z-index: 99999;
     position: absolute;
     bottom: -3%;
-    right: 30%;
+    right: 5%;
     width: 3.5vw;
     height: 3.5vw;
     border-radius: 3.5vw;
