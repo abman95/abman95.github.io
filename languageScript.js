@@ -280,11 +280,16 @@ addInteractiveAnimationOnLocatedInGermany('locatedInContainerBackground');
 
 
 
+let container1Heading = "I am an experienced Web Designer and Private Software Engineer with expertise in WordPress, HTML, CSS, and JavaScript. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!";
+let i = 0;
+
+
 
 
 languageEnglish.addEventListener('click', function () {
     chosenLanguage = "English";
 
+      
     if (window.innerWidth >= 1150) {
       document.querySelector('.languageEnglish').textContent = "english";
       document.querySelector('.languageGerman').textContent = "german";
@@ -327,10 +332,74 @@ languageEnglish.addEventListener('click', function () {
     document.querySelector('.projectSlider').textContent = "Projects:";
     document.querySelector('.projectImageSlider1ButtonContainerBackgroundText').textContent = "Projects";
 
-    document.querySelector('.projectOneDescription').textContent = "I am an experienced Web Designer and Private Software Engineer with expertise in WordPress, HTML, CSS, and JavaScript. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!";
-    document.querySelector('.projectImageSlider2ImagesProjectDescription').textContent = "My biggest project, which I worked on after 3 1/2 months of intensive learning in JavaScript, CSS, and HTML, is my MP3 player. This MP3 player is a powerful and user-friendly application. It allows you to play MP3 files, fast-forward and rewind, enable auto-play, and enjoy shuffle playback. With its media library list, you can easily switch between your songs in the playlist, upload them, and enjoy";
-    
+    container1Heading = "I am an experienced Web Designer and Private Software Engineer with expertise in WordPress, HTML, CSS, and JavaScript. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!";
+    i = 0;
+    document.querySelector('.projectOneDescription').textContent = "";
     document.querySelector('#projectImageSlider2ImagesAfterPseudoDiv').style.setProperty("--pseudo-Content", '"click to try me"');
+
+
+
+    projectListSelector("mp3");
+    projectListSelector("typing");
+    projectListSelector("toDo");
+    projectListSelector("timer");
+    projectListSelector("clock");
+    projectListSelector("keyGen");
+
+
+
+
+    const projectImageSlider1Header = document.querySelector('.projectImageSlider1Header');
+    const projectImageSlider2ImagesProjectDescription = document.querySelector('.projectImageSlider2ImagesProjectDescription');
+
+    const projectImageSlider1HeaderTextContent = projectImageSlider1Header.textContent;
+
+    let projectText = getProjectHeader(projectImageSlider1HeaderTextContent);
+    let getProjectTextContent = getProjectText(projectText);
+
+    projectImageSlider2ImagesProjectDescription.textContent = getProjectTextContent;
+
+
+
+
+    function getProjectHeader(className) {
+      switch (className) {
+        case "MP3 Player":
+          return "mp3";
+        case "Typing Speed App":
+          return "typing";
+        case "To Do App":
+          return "toDo";
+        case "Timer":
+          return "timer";
+        case "Clock":
+          return "clock";
+        case "Key Generator":
+          return "keyGen";
+        default:
+          return "";  
+      }
+    }
+  
+  
+    function getProjectText(className) {
+      switch (className) {
+        case "mp3":
+              return "My biggest project, which I worked on after 3 1/2 months of intensive learning in JavaScript, CSS, and HTML, is my MP3 player. This MP3 player is a powerful and user-friendly application. It allows you to play MP3 files, fast-forward and rewind, enable auto-play and enjoy shuffle playback. With its media library list, you can easily switch between your songs in the playlist, upload them, and enjoy.";
+        case "typing":
+              return "My Typing Speed App, developed after 2 1/2 months of learning JavaScript, CSS, and HTML, lets you test and improve your typing skills. It provides accurate speed and accuracy metrics, helping you become a faster and more precise typist.";
+        case "toDo":
+              return "My ToDo App is a simple and efficient task manager. Designed after 2 months of learning JavaScript, CSS, and HTML, it helps you organize your tasks, set priorities, and stay productive with ease.";
+        case "timer":
+              return "My Timer App, created after 1 1/2 months of mastering JavaScript, CSS, and HTML, offers precise timing capabilities. Use it for various purposes, from cooking to workouts, with reliability and accuracy.";
+        case "clock":
+              return "My Clock App is a straightforward timekeeping tool, crafted after 1 months of JavaScript, CSS, and HTML learning. It displays the time accurately, keeping you informed at a glance.";
+        case "keyGen":
+              return "My KeyGenerator Tool, born after 3 months of studying JavaScript, CSS, and HTML, generates secure and random keys for various purposes. Enhance your security with ease using this efficient utility.";
+        default:
+              return "";  
+      }
+      }
   }
 
 
@@ -466,6 +535,7 @@ languageEnglish.addEventListener('click', function () {
 languageGerman.addEventListener('click', function () {
     chosenLanguage = "German";
 
+
     if (window.innerWidth >= 1150) {
       document.querySelector('.languageEnglish').textContent = "englisch";
       document.querySelector('.languageGerman').textContent = "deutsch";
@@ -507,14 +577,80 @@ if (window.location.href.endsWith('/homepage.html')) {
     document.querySelector('.headerLanguageButton').textContent = "Sprache";
     document.querySelector('.locatedInCountryText').textContent = "Ansässig in Deutschland";
     document.querySelector('.aboutMeButtonHeader').textContent = "Vielseitige Expertise mit Fachkenntnissen in Webdesign, Unternehmertum, Marketing, Logistik und Kundenservice, bereit, die Fähigkeiten Ihres Teams zu erweitern.";
-    document.querySelector('.projectOneDescription').textContent = "Ich bin erfahrener Webdesigner und Softwareentwickler mit Expertise in WordPress, HTML, CSS und JavaScript. Mein Hintergrund in Unternehmertum, Marketing, Logistik und Kundenservice bereichert Ihr Team. Entdecken Sie heute mein Portfolio!";
+   
+    container1Heading = "Ich bin erfahrener Webdesigner und Softwareentwickler mit Expertise in WordPress, HTML, CSS und JavaScript. Mein Hintergrund in Unternehmertum, Marketing, Logistik und Kundenservice bereichert Ihr Team. Entdecken Sie heute mein Portfolio!";
+    i = 0;
+    document.querySelector('.projectOneDescription').textContent = "";
+
     document.querySelector('.aboutMeButton').textContent = "Über Mich";
     document.querySelector('.hrHeader').textContent = "Projekte";
     document.querySelector('.projectSlider').textContent = "Projekte:";
     document.querySelector('.projectImageSlider1ButtonContainerBackgroundText').textContent = "Projekte";
-    document.querySelector('.projectImageSlider2ImagesProjectDescription').textContent = "Mein größtes Projekt, an dem ich nach 3 1/2 Monaten intensiven Lernens in JavaScript, CSS und HTML gearbeitet habe, ist mein MP3-Player. Dieser MP3-Player ist eine leistungsstarke und benutzerfreundliche Anwendung. Sie ermöglicht das Abspielen von MP3-Dateien, Vor- und Zurückspulen, das Aktivieren der automatischen Wiedergabe und das Genießen des Zufallsspielmodus. Mit seiner Mediathek-Liste können Sie einfach zwischen Ihren Liedern in der Wiedergabeliste wechseln, sie hochladen und genießen.";
 
     document.querySelector('#projectImageSlider2ImagesAfterPseudoDiv').style.setProperty("--pseudo-Content", '"zum testen klicken"');
+
+
+    projectListSelector("mp3");
+    projectListSelector("typing");
+    projectListSelector("toDo");
+    projectListSelector("timer");
+    projectListSelector("clock");
+    projectListSelector("keyGen");
+
+
+
+
+    const projectImageSlider1Header = document.querySelector('.projectImageSlider1Header');
+    const projectImageSlider2ImagesProjectDescription = document.querySelector('.projectImageSlider2ImagesProjectDescription');
+
+    const projectImageSlider1HeaderTextContent = projectImageSlider1Header.textContent;
+
+    let projectText = getProjectHeader(projectImageSlider1HeaderTextContent);
+    let getProjectTextContent = getProjectText(projectText);
+
+    projectImageSlider2ImagesProjectDescription.textContent = getProjectTextContent;
+
+
+
+
+    function getProjectHeader(className) {
+      switch (className) {
+        case "MP3 Player":
+          return "mp3";
+        case "Typing Speed App":
+          return "typing";
+        case "To Do App":
+          return "toDo";
+        case "Timer":
+          return "timer";
+        case "Clock":
+          return "clock";
+        case "Key Generator":
+          return "keyGen";
+        default:
+          return "";  
+      }
+    }
+  
+  
+    function getProjectText(className) {
+      switch (className) {
+        case "mp3":
+              return "Mein größtes Projekt, an dem ich nach 3 1/2 Monaten intensiven Lernens in JavaScript, CSS und HTML gearbeitet habe, ist mein MP3-Player. Dieser MP3-Player ist eine leistungsstarke und benutzerfreundliche Anwendung. Sie ermöglicht das Abspielen von MP3-Dateien, Vor- und Zurückspulen, das Aktivieren der automatischen Wiedergabe und das Genießen des Zufallsspielmodus. Mit seiner Mediathek-Liste können Sie einfach zwischen Ihren Liedern in der Wiedergabeliste wechseln, sie hochladen und genießen.";
+        case "typing":
+              return "Meine Typing Speed App, entwickelt nach 2 1/2 Monaten des Lernens von JavaScript, CSS und HTML, ermöglicht es Ihnen, Ihre Schreibfähigkeiten zu testen und zu verbessern. Sie bietet genaue Geschwindigkeits- und Genauigkeitsmetriken, die Ihnen helfen, ein schnellerer und präziserer Tipper zu werden.";
+        case "toDo":
+              return "Meine ToDo-App ist ein einfaches und effizientes Aufgabenmanagement-Tool. Entwickelt nach 2 Monaten des Lernens von JavaScript, CSS und HTML, hilft es Ihnen, Ihre Aufgaben zu organisieren, Prioritäten zu setzen und produktiv zu bleiben.";
+        case "timer":
+              return "Meine Timer-App, erstellt nach 1 1/2 Monaten des intensiven Lernens von JavaScript, CSS und HTML, bietet präzise Zeitmessfunktionen. Verwenden Sie sie für verschiedene Zwecke, vom Kochen bis zum Training, mit Zuverlässigkeit und Genauigkeit.";
+        case "clock":
+              return "Meine Uhren-App ist ein einfaches Zeitmessungstool, das nach 1 Monat des Lernens von JavaScript, CSS und HTML entwickelt wurde. Sie zeigt die Zeit genau an und hält Sie auf einen Blick informiert.";
+        case "keyGen":
+              return "Mein KeyGenerator-Tool, entstanden nach 3 Monaten des Studiums von JavaScript, CSS und HTML, generiert sichere und zufällige Schlüssel für verschiedene Zwecke. Verbessern Sie Ihre Sicherheit mühelos mit diesem effizienten Dienstprogramm.";
+          default:
+              return "";  
+      }
+    }
   }
 
 
@@ -660,15 +796,7 @@ if(window.innerWidth > 450 && window.innerWidth < 1150) {
 
 
 
-if (window.location.href.endsWith('/homepage.html')) {
-    let container1Heading;
-if (chosenLanguage === "English") {
-    container1Heading = "I am an experienced Web Designer and Private Software Engineer with expertise in WordPress, HTML, CSS, and JavaScript. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!";
-} else if (chosenLanguage === "German") {
-    container1Heading = "Ich bin erfahrener Webdesigner und Softwareentwickler mit Expertise in WordPress, HTML, CSS und JavaScript. Mein Hintergrund in Unternehmertum, Marketing, Logistik und Kundenservice bereichert Ihr Team. Entdecken Sie heute mein Portfolio!";
-}
 
-let i = 0;
 
 function addLetterHeadingContainer1() {
   return new Promise(resolve => {
@@ -700,7 +828,7 @@ function handleIntersection(entries) {
    }
  })
 }
-  
+
   const sectionElements = document.querySelectorAll('.container');
   
 
@@ -711,7 +839,7 @@ function handleIntersection(entries) {
   sectionElements.forEach(section => {
     observer.observe(section);
   });
-}
+
 
 
 
@@ -1093,8 +1221,6 @@ if (chosenLanguage === "German") {
     document.querySelector('.projectImageSlider2ImagesProjectDescription').textContent = "Mein größtes Projekt, an dem ich nach 3 1/2 Monaten intensiven Lernens in JavaScript, CSS und HTML gearbeitet habe, ist mein MP3-Player. Dieser MP3-Player ist eine leistungsstarke und benutzerfreundliche Anwendung. Sie ermöglicht das Abspielen von MP3-Dateien, Vor- und Zurückspulen, das Aktivieren der automatischen Wiedergabe und das Genießen des Zufallsspielmodus. Mit seiner Mediathek-Liste können Sie einfach zwischen Ihren Liedern in der Wiedergabeliste wechseln, sie hochladen und genießen.";
   
     document.querySelector('#projectImageSlider2ImagesAfterPseudoDiv').style.setProperty("--pseudo-Content", '"zum testen klicken"');
-
-    document.querySelector('.projectOneDescription').textContent = "Ich bin erfahrener Webdesigner und Softwareentwickler mit Expertise in WordPress, HTML, CSS und JavaScript. Mein Hintergrund in Unternehmertum, Marketing, Logistik und Kundenservice bereichert Ihr Team. Entdecken Sie heute mein Portfolio!";
   }
 
   else if (window.location.href.endsWith('/aboutMe.html')) {
@@ -1262,8 +1388,6 @@ if(window.innerWidth > 450 && window.innerWidth < 1150) {
     document.querySelector('.projectImageSlider2ImagesProjectDescription').textContent = "My biggest project, which I worked on after 3 1/2 months of intensive learning in JavaScript, CSS, and HTML, is my MP3 player. This MP3 player is a powerful and user-friendly application. It allows you to play MP3 files, fast-forward and rewind, enable auto-play, and enjoy shuffle playback. With its media library list, you can easily switch between your songs in the playlist, upload them, and enjoy";
     
     document.querySelector('#projectImageSlider2ImagesAfterPseudoDiv').style.setProperty("--pseudo-Content", '"click to try me"');
-
-    document.querySelector('.projectOneDescription').textContent = "I am an experienced Web Designer and Private Software Engineer with expertise in WordPress, HTML, CSS, and JavaScript. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!";
   }
 
 
