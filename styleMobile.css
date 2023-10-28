@@ -650,7 +650,7 @@ body {
     z-index: 99999999;
     position: absolute;
     bottom: -10%;
-    left: 10%;
+    left: 20%;
 
     /* background-color: rgba(198, 198, 198, 0.247); */
     background: none;
@@ -665,7 +665,7 @@ body {
     z-index: 99999;
     position: absolute;
     bottom: -10%;
-    right: 20%;
+    left: 60%;
     /* background-color: wheat; */
     background: none;
     border-style: none;

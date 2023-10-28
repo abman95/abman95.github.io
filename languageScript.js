@@ -663,9 +663,9 @@ if(window.innerWidth > 450 && window.innerWidth < 1150) {
 if (window.location.href.endsWith('/homepage.html')) {
     let container1Heading;
 if (chosenLanguage === "English") {
-    container1Heading = "I am an experienced Web Designer and Private Software Engineer with expertise in WordPress, HTML, CSS, and JavaScript. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!"
+    container1Heading = "I am an experienced Web Designer and Private Software Engineer with expertise in WordPress, HTML, CSS, and JavaScript. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!";
 } else if (chosenLanguage === "German") {
-    container1Heading = "Ich bin erfahrener Webdesigner und Softwareentwickler mit Expertise in WordPress, HTML, CSS und JavaScript. Mein Hintergrund in Unternehmertum, Marketing, Logistik und Kundenservice bereichert Ihr Team. Entdecken Sie heute mein Portfolio!"
+    container1Heading = "Ich bin erfahrener Webdesigner und Softwareentwickler mit Expertise in WordPress, HTML, CSS und JavaScript. Mein Hintergrund in Unternehmertum, Marketing, Logistik und Kundenservice bereichert Ihr Team. Entdecken Sie heute mein Portfolio!";
 }
 
 let i = 0;
@@ -1094,7 +1094,7 @@ if (chosenLanguage === "German") {
   
     document.querySelector('#projectImageSlider2ImagesAfterPseudoDiv').style.setProperty("--pseudo-Content", '"zum testen klicken"');
 
-    document.querySelector('.projectOneDescription').textContent = container1Heading;
+    document.querySelector('.projectOneDescription').textContent = "Ich bin erfahrener Webdesigner und Softwareentwickler mit Expertise in WordPress, HTML, CSS und JavaScript. Mein Hintergrund in Unternehmertum, Marketing, Logistik und Kundenservice bereichert Ihr Team. Entdecken Sie heute mein Portfolio!";
   }
 
   else if (window.location.href.endsWith('/aboutMe.html')) {
@@ -1263,7 +1263,7 @@ if(window.innerWidth > 450 && window.innerWidth < 1150) {
     
     document.querySelector('#projectImageSlider2ImagesAfterPseudoDiv').style.setProperty("--pseudo-Content", '"click to try me"');
 
-    document.querySelector('.projectOneDescription').textContent = container1Heading;
+    document.querySelector('.projectOneDescription').textContent = "I am an experienced Web Designer and Private Software Engineer with expertise in WordPress, HTML, CSS, and JavaScript. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!";
   }
 
 
