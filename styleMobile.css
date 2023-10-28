@@ -650,7 +650,7 @@ body {
     z-index: 99999999;
     position: absolute;
     bottom: -10%;
-    left: 15%;
+    left: 0%;
     height: fit-content;
     width: fit-content;
     /* background-color: rgba(198, 198, 198, 0.247); */
@@ -666,7 +666,7 @@ body {
     z-index: 99999;
     position: absolute;
     bottom: -10%;
-    left: 50%;
+    left: 40%;
     height: fit-content;
     width: fit-content;
     /* background-color: wheat; */
