@@ -283,7 +283,7 @@ addInteractiveAnimationOnLocatedInGermany('locatedInContainerBackground');
 
 let container1Heading = localStorage.getItem("container1Heading");
 
-if(container1Heading === "") {
+if (container1Heading === undefined || container1Heading === null || container1Heading === "") {
 container1Heading = "I am an experienced Web Designer and Private Software Engineer with expertise in WordPress, HTML, CSS, and JavaScript. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!";
 }
 
@@ -349,7 +349,7 @@ languageEnglish.addEventListener('click', function () {
       addLetterHeadingContainer1()
     }
     document.querySelector('.projectOneDescription').textContent = "";
-    
+
     document.querySelector('#projectImageSlider2ImagesAfterPseudoDiv').style.setProperty("--pseudo-Content", '"click to try me"');
 
     document.querySelector('#dialogHeadlineProjects').textContent = "Projects";
