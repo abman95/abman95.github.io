@@ -299,7 +299,7 @@ body {
         font-family: Roboto-Thin;
         font-size: 9vw;
         color: white;
-        text-shadow: 2px 2px 4px black;
+        text-shadow: 0.05vw 0.05vw 0.1vw black;
     }
 
 
