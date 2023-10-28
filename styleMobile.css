@@ -649,8 +649,8 @@ body {
     cursor: auto;
     z-index: 99999999;
     position: absolute;
-    bottom: -10%;
-    left: 0%;
+    bottom: -18%;
+    left: 5%;
     height: fit-content;
     width: fit-content;
     /* background-color: rgba(198, 198, 198, 0.247); */
@@ -665,8 +665,8 @@ body {
     cursor: pointer;
     z-index: 99999;
     position: absolute;
-    bottom: -10%;
-    left: 40%;
+    bottom: -18%;
+    left: 45%;
     height: fit-content;
     width: fit-content;
     /* background-color: wheat; */

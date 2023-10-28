@@ -280,8 +280,15 @@ addInteractiveAnimationOnLocatedInGermany('locatedInContainerBackground');
 
 
 
-let container1Heading = "I am an experienced Web Designer and Private Software Engineer with expertise in WordPress, HTML, CSS, and JavaScript. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!";
+
+let container1Heading = localStorage.getItem("container1Heading");
+
+if(chosenLanguage !== "English" && chosenLanguage !== "German") {
+container1Heading = "I am an experienced Web Designer and Private Software Engineer with expertise in WordPress, HTML, CSS, and JavaScript. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!";
+}
+
 let i = 0;
+
 
 
 
@@ -333,9 +340,12 @@ languageEnglish.addEventListener('click', function () {
     document.querySelector('.projectImageSlider1ButtonContainerBackgroundText').textContent = "Projects";
 
     container1Heading = "I am an experienced Web Designer and Private Software Engineer with expertise in WordPress, HTML, CSS, and JavaScript. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!";
+    localStorage.setItem("container1Heading", container1Heading);
     i = 0;
     document.querySelector('.projectOneDescription').textContent = "";
     document.querySelector('#projectImageSlider2ImagesAfterPseudoDiv').style.setProperty("--pseudo-Content", '"click to try me"');
+
+    document.querySelector('#dialogHeadlineProjects').textContent = "Projects";
 
 
 
@@ -579,6 +589,7 @@ if (window.location.href.endsWith('/homepage.html')) {
     document.querySelector('.aboutMeButtonHeader').textContent = "Vielseitige Expertise mit Fachkenntnissen in Webdesign, Unternehmertum, Marketing, Logistik und Kundenservice, bereit, die Fähigkeiten Ihres Teams zu erweitern.";
    
     container1Heading = "Ich bin erfahrener Webdesigner und Softwareentwickler mit Expertise in WordPress, HTML, CSS und JavaScript. Mein Hintergrund in Unternehmertum, Marketing, Logistik und Kundenservice bereichert Ihr Team. Entdecken Sie heute mein Portfolio!";
+    localStorage.setItem("container1Heading", container1Heading);
     i = 0;
     document.querySelector('.projectOneDescription').textContent = "";
 
@@ -588,6 +599,8 @@ if (window.location.href.endsWith('/homepage.html')) {
     document.querySelector('.projectImageSlider1ButtonContainerBackgroundText').textContent = "Projekte";
 
     document.querySelector('#projectImageSlider2ImagesAfterPseudoDiv').style.setProperty("--pseudo-Content", '"zum testen klicken"');
+
+    document.querySelector('#dialogHeadlineProjects').textContent = "Projekte";
 
 
     projectListSelector("mp3");
@@ -1221,6 +1234,8 @@ if (chosenLanguage === "German") {
     document.querySelector('.projectImageSlider2ImagesProjectDescription').textContent = "Mein größtes Projekt, an dem ich nach 3 1/2 Monaten intensiven Lernens in JavaScript, CSS und HTML gearbeitet habe, ist mein MP3-Player. Dieser MP3-Player ist eine leistungsstarke und benutzerfreundliche Anwendung. Sie ermöglicht das Abspielen von MP3-Dateien, Vor- und Zurückspulen, das Aktivieren der automatischen Wiedergabe und das Genießen des Zufallsspielmodus. Mit seiner Mediathek-Liste können Sie einfach zwischen Ihren Liedern in der Wiedergabeliste wechseln, sie hochladen und genießen.";
   
     document.querySelector('#projectImageSlider2ImagesAfterPseudoDiv').style.setProperty("--pseudo-Content", '"zum testen klicken"');
+
+    document.querySelector('#dialogHeadlineProjects').textContent = "Projekte";
   }
 
   else if (window.location.href.endsWith('/aboutMe.html')) {
@@ -1388,6 +1403,8 @@ if(window.innerWidth > 450 && window.innerWidth < 1150) {
     document.querySelector('.projectImageSlider2ImagesProjectDescription').textContent = "My biggest project, which I worked on after 3 1/2 months of intensive learning in JavaScript, CSS, and HTML, is my MP3 player. This MP3 player is a powerful and user-friendly application. It allows you to play MP3 files, fast-forward and rewind, enable auto-play, and enjoy shuffle playback. With its media library list, you can easily switch between your songs in the playlist, upload them, and enjoy";
     
     document.querySelector('#projectImageSlider2ImagesAfterPseudoDiv').style.setProperty("--pseudo-Content", '"click to try me"');
+
+    document.querySelector('#dialogHeadlineProjects').textContent = "Projects";
   }
 
 
