@@ -283,7 +283,7 @@ addInteractiveAnimationOnLocatedInGermany('locatedInContainerBackground');
 
 let container1Heading = localStorage.getItem("container1Heading");
 
-if(chosenLanguage !== "English" && chosenLanguage !== "German") {
+if(container1Heading === "") {
 container1Heading = "I am an experienced Web Designer and Private Software Engineer with expertise in WordPress, HTML, CSS, and JavaScript. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!";
 }
 
@@ -296,7 +296,9 @@ let i = 0;
 languageEnglish.addEventListener('click', function () {
     chosenLanguage = "English";
 
-      
+    container1Heading = "I am an experienced Web Designer and Private Software Engineer with expertise in WordPress, HTML, CSS, and JavaScript. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!";
+    localStorage.setItem("container1Heading", container1Heading);
+
     if (window.innerWidth >= 1150) {
       document.querySelector('.languageEnglish').textContent = "english";
       document.querySelector('.languageGerman').textContent = "german";
@@ -339,10 +341,15 @@ languageEnglish.addEventListener('click', function () {
     document.querySelector('.projectSlider').textContent = "Projects:";
     document.querySelector('.projectImageSlider1ButtonContainerBackgroundText').textContent = "Projects";
 
-    container1Heading = "I am an experienced Web Designer and Private Software Engineer with expertise in WordPress, HTML, CSS, and JavaScript. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!";
-    localStorage.setItem("container1Heading", container1Heading);
+
     i = 0;
+    const container2Rect = document.querySelector('#container2').getBoundingClientRect();
+    if(container2Rect.top < 100) {
+      i = -1;
+      addLetterHeadingContainer1()
+    }
     document.querySelector('.projectOneDescription').textContent = "";
+    
     document.querySelector('#projectImageSlider2ImagesAfterPseudoDiv').style.setProperty("--pseudo-Content", '"click to try me"');
 
     document.querySelector('#dialogHeadlineProjects').textContent = "Projects";
@@ -546,6 +553,9 @@ languageGerman.addEventListener('click', function () {
     chosenLanguage = "German";
 
 
+    container1Heading = "Ich bin erfahrener Webdesigner und Softwareentwickler mit Expertise in WordPress, HTML, CSS und JavaScript. Mein Hintergrund in Unternehmertum, Marketing, Logistik und Kundenservice bereichert Ihr Team. Entdecken Sie heute mein Portfolio!";
+    localStorage.setItem("container1Heading", container1Heading);
+
     if (window.innerWidth >= 1150) {
       document.querySelector('.languageEnglish').textContent = "englisch";
       document.querySelector('.languageGerman').textContent = "deutsch";
@@ -588,9 +598,13 @@ if (window.location.href.endsWith('/homepage.html')) {
     document.querySelector('.locatedInCountryText').textContent = "Ansässig in Deutschland";
     document.querySelector('.aboutMeButtonHeader').textContent = "Vielseitige Expertise mit Fachkenntnissen in Webdesign, Unternehmertum, Marketing, Logistik und Kundenservice, bereit, die Fähigkeiten Ihres Teams zu erweitern.";
    
-    container1Heading = "Ich bin erfahrener Webdesigner und Softwareentwickler mit Expertise in WordPress, HTML, CSS und JavaScript. Mein Hintergrund in Unternehmertum, Marketing, Logistik und Kundenservice bereichert Ihr Team. Entdecken Sie heute mein Portfolio!";
-    localStorage.setItem("container1Heading", container1Heading);
+
     i = 0;
+    const container2Rect = document.querySelector('#container2').getBoundingClientRect();
+    if(container2Rect.top < 100) {
+      i = -1;
+      addLetterHeadingContainer1()
+    }
     document.querySelector('.projectOneDescription').textContent = "";
 
     document.querySelector('.aboutMeButton').textContent = "Über Mich";
