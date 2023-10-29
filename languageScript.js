@@ -164,7 +164,7 @@ let chosenLanguage = localStorage.getItem("chosenLanguage");
 
 
 
-if (window.location.href.endsWith('/homepage.html')) {
+if (window.location.href.includes('/homepage.html')) {
 function addInteractiveAnimationOnLocatedInGermany(className) {
   const element = document.querySelector(`.${className}`);
   const elementWidth = element.getBoundingClientRect().width;
@@ -291,8 +291,12 @@ addInteractiveAnimationOnLocatedInGermany('locatedInContainerBackground');
 
 let container1Heading = localStorage.getItem("container1Heading");
 
-if (container1Heading === undefined || container1Heading === null || container1Heading === "") {
+if (chosenLanguage === "English"){
 container1Heading = "I am an experienced Web Designer and Private Software Engineer with expertise in WordPress, HTML, CSS, and JavaScript. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!";
+} else if (chosenLanguage === "German") {
+  container1Heading = "Ich bin erfahrener Webdesigner und Softwareentwickler mit Expertise in WordPress, HTML, CSS und JavaScript. Mein Hintergrund in Unternehmertum, Marketing, Logistik und Kundenservice bereichert Ihr Team. Entdecken Sie heute mein Portfolio!";
+} else if (container1Heading === undefined || container1Heading === null || container1Heading === "") {
+  container1Heading = "I am an experienced Web Designer and Private Software Engineer with expertise in WordPress, HTML, CSS, and JavaScript. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!";
 }
 
 let i = 0;
@@ -328,7 +332,7 @@ languageEnglish.addEventListener('click', function () {
     document.querySelector('.footerAboutMe').innerHTML = '<a href="aboutMe.html">About Me</a>';
     document.querySelector('.footerContact').innerHTML = '<a href="contact.html">Contact</a>';
     
-    if (window.location.href.endsWith('/homepage.html')) {
+    if (window.location.href.includes('/homepage.html')) {
     document.querySelector('.jobDegreeText').textContent = "Industrial Engineer";
     document.querySelector('.dontPullMeDialogCloseButton').textContent = "Industrial Engineer";
     document.querySelector('.dialogHome').textContent = "home";
@@ -430,7 +434,7 @@ languageEnglish.addEventListener('click', function () {
 
 
 
-    else if (window.location.href.endsWith('/aboutMe.html')) {
+    else if (window.location.href.includes('/aboutMe.html')) {
     document.querySelector('#dialogHeadlineLanguage').textContent = "Select Your Language";
     document.querySelector('.headerHome').textContent = "Home";
     document.querySelector('.headerAboutMe').textContent = "About Me";
@@ -512,7 +516,7 @@ languageEnglish.addEventListener('click', function () {
       document.querySelector('#container7').style.height = "350vw";
     }
     }
-    else if (window.location.href.endsWith('/contact.html')) {
+    else if (window.location.href.includes('/contact.html')) {
       document.querySelector('#dialogHeadlineLanguage').textContent = "Select Your Language";
       document.querySelector('.headerHome').textContent = "Home";
       document.querySelector('.headerAboutMe').textContent = "About Me";
@@ -586,7 +590,7 @@ if(window.innerWidth > 450 && window.innerWidth < 1150) {
     document.querySelector('.footerContact').innerHTML = '<a href="contact.html">Kontakt</a>';
 
 
-if (window.location.href.endsWith('/homepage.html')) {
+if (window.location.href.includes('/homepage.html')) {
     if (window.innerWidth <= 1150) {
     document.querySelector('.jobDegreeText').textContent = "Wirtschafts ingenieur";
     } else {
@@ -690,7 +694,7 @@ if (window.location.href.endsWith('/homepage.html')) {
 
 
 
-else if (window.location.href.endsWith('/aboutMe.html')) {
+else if (window.location.href.includes('/aboutMe.html')) {
     document.querySelector('#dialogHeadlineLanguage').textContent = "Wähle deine Sprache";
 
     document.querySelector('.dialogHome').textContent = "startseite";
@@ -778,7 +782,7 @@ if(window.innerWidth > 450 && window.innerWidth < 1150) {
     }
   }
 
-  else if (window.location.href.endsWith('/contact.html')) {
+  else if (window.location.href.includes('/contact.html')) {
     document.querySelector('#dialogHeadlineLanguage').textContent = "Wähle deine Sprache";
 
     document.querySelector('.dialogHome').textContent = "startseite";
@@ -879,7 +883,7 @@ function handleIntersection(entries) {
 
 
 let projectPath = localStorage.getItem("projectPath");
-if (window.location.href.endsWith('/homepage.html')) {
+if (window.location.href.includes('/homepage.html')) {
 function projectListSelector(className) {
   const element = document.querySelector(`.${className}`);
   const nameOfClass = className;
@@ -1229,7 +1233,7 @@ if (chosenLanguage === "German") {
   document.querySelector('.footerAboutMe').innerHTML = '<a href="aboutMe.html">Über Mich</a>';
   document.querySelector('.footerContact').innerHTML = '<a href="contact.html">Kontakt</a>';
   
-  if (window.location.href.endsWith('/homepage.html')) {
+  if (window.location.href.includes('/homepage.html')) {
     if (window.innerWidth <= 1150) {
     document.querySelector('.jobDegreeText').textContent = "Wirtschafts ingenieur";
     } else {
@@ -1260,7 +1264,7 @@ if (chosenLanguage === "German") {
     document.querySelector('#dialogHeadlineProjects').textContent = "Projekte";
   }
 
-  else if (window.location.href.endsWith('/aboutMe.html')) {
+  else if (window.location.href.includes('/aboutMe.html')) {
     document.querySelector('#dialogHeadlineLanguage').textContent = "Wähle deine Sprache";
     document.querySelector('.dialogHome').textContent = "startseite";
     document.querySelector('.dialogAboutMe').textContent = "über mich";
@@ -1348,7 +1352,7 @@ if (chosenLanguage === "German") {
     document.querySelector('#container7').style.height = "365vw";
     }
   }
-  else if (window.location.href.endsWith('/contact.html')) {
+  else if (window.location.href.includes('/contact.html')) {
     document.querySelector('#dialogHeadlineLanguage').textContent = "Wähle deine Sprache";
     document.querySelector('.languageEnglish').textContent = "englisch";
     document.querySelector('.languageGerman').textContent = "deutsch";
@@ -1402,7 +1406,7 @@ if(window.innerWidth > 450 && window.innerWidth < 1150) {
   document.querySelector('.footerHome').innerHTML = '<a href="homepage.html">Home</a>';
   document.querySelector('.footerAboutMe').innerHTML = '<a href="aboutMe.html">About Me</a>';
   document.querySelector('.footerContact').innerHTML = '<a href="contact.html">Contact</a>';
-  if (window.location.href.endsWith('/homepage.html')) {
+  if (window.location.href.includes('/homepage.html')) {
     document.querySelector('.jobDegreeText').textContent = "Industrial Engineer";
     document.querySelector('.dontPullMeDialogCloseButton').textContent = "Industrial Engineer";
     document.querySelector('.dialogHome').textContent = "home";
@@ -1431,7 +1435,7 @@ if(window.innerWidth > 450 && window.innerWidth < 1150) {
 
 
 
-  else if (window.location.href.endsWith('/aboutMe.html')) {
+  else if (window.location.href.includes('/aboutMe.html')) {
     document.querySelector('#dialogHeadlineLanguage').textContent = "Select Your Language";
     document.querySelector('.dialogHome').textContent = "home";
     document.querySelector('.dialogAboutMe').textContent = "about me";
@@ -1515,7 +1519,7 @@ if(window.innerWidth > 450 && window.innerWidth < 1150) {
     document.querySelector('#container7').style.height = "350vw";
     }
   }
-  else if (window.location.href.endsWith('/contact.html')) {
+  else if (window.location.href.includes('/contact.html')) {
     document.querySelector('#dialogHeadlineLanguage').textContent = "Select Your Language";
     document.querySelector('.languageEnglish').textContent = "English";
     document.querySelector('.languageGerman').textContent = "German";

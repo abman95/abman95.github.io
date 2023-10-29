@@ -7,17 +7,17 @@ if (!projectNameReturnPortfolioSite) {
 const returnPortfolioSite = document.querySelector('.returnPortfolioSite');
 
 returnPortfolioSite.addEventListener('click', () => {
-  if (window.location.href.endsWith('/mp3Index.html')) {
+  if (window.location.href.includes('/mp3Index.html')) {
     projectNameReturnPortfolioSite = "mp3";
-  } else if (window.location.href.endsWith('/typingIndex.html')) {
+  } else if (window.location.href.includes('/typingIndex.html')) {
     projectNameReturnPortfolioSite = "typing";
-  } else if (window.location.href.endsWith('/toDoIndex.html')) {
+  } else if (window.location.href.includes('/toDoIndex.html')) {
     projectNameReturnPortfolioSite = "toDo";
-  } else if (window.location.href.endsWith('/timerIndex.html')) {
+  } else if (window.location.href.includes('/timerIndex.html')) {
     projectNameReturnPortfolioSite = "timer";
-  } else if (window.location.href.endsWith('/clockIndex.html')) {
+  } else if (window.location.href.includes('/clockIndex.html')) {
     projectNameReturnPortfolioSite = "clock";
-  } else if (window.location.href.endsWith('/keyGenIndex.html')) {
+  } else if (window.location.href.includes('/keyGenIndex.html')) {
     projectNameReturnPortfolioSite = "keyGen";
   }
 
