@@ -954,37 +954,37 @@ function projectListSelector(className) {
       case "mp3":
         if (chosenLanguage === "German") {
             return "Mein größtes Projekt, an dem ich nach 3 1/2 Monaten intensiven Lernens in JavaScript, CSS und HTML gearbeitet habe, ist mein MP3-Player. Dieser MP3-Player ist eine leistungsstarke und benutzerfreundliche Anwendung. Sie ermöglicht das Abspielen von MP3-Dateien, Vor- und Zurückspulen, das Aktivieren der automatischen Wiedergabe und das Genießen des Zufallsspielmodus. Mit seiner Mediathek-Liste können Sie einfach zwischen Ihren Liedern in der Wiedergabeliste wechseln, sie hochladen und genießen.";
-        } else if (chosenLanguage === "English") {
+        } else if (chosenLanguage === "English" || chosenLanguage === undefined || chosenLanguage === null || chosenLanguage === "") {
             return "My biggest project, which I worked on after 3 1/2 months of intensive learning in JavaScript, CSS, and HTML, is my MP3 player. This MP3 player is a powerful and user-friendly application. It allows you to play MP3 files, fast-forward and rewind, enable auto-play and enjoy shuffle playback. With its media library list, you can easily switch between your songs in the playlist, upload them, and enjoy.";
         }
       case "typing":
         if (chosenLanguage === "German") {
             return "Meine Typing Speed App, entwickelt nach 2 1/2 Monaten des Lernens von JavaScript, CSS und HTML, ermöglicht es Ihnen, Ihre Schreibfähigkeiten zu testen und zu verbessern. Sie bietet genaue Geschwindigkeits- und Genauigkeitsmetriken, die Ihnen helfen, ein schnellerer und präziserer Tipper zu werden.";
-          } else if (chosenLanguage === "English") {
+          } else if (chosenLanguage === "English" || chosenLanguage === undefined || chosenLanguage === null || chosenLanguage === "") {
             return "My Typing Speed App, developed after 2 1/2 months of learning JavaScript, CSS, and HTML, lets you test and improve your typing skills. It provides accurate speed and accuracy metrics, helping you become a faster and more precise typist.";
           }
       case "toDo":
         if (chosenLanguage === "German") {
             return "Meine ToDo-App ist ein einfaches und effizientes Aufgabenmanagement-Tool. Entwickelt nach 2 Monaten des Lernens von JavaScript, CSS und HTML, hilft es Ihnen, Ihre Aufgaben zu organisieren, Prioritäten zu setzen und produktiv zu bleiben.";
-          } else if (chosenLanguage === "English") {
+        } else if (chosenLanguage === "English" || chosenLanguage === undefined || chosenLanguage === null || chosenLanguage === "") {
             return "My ToDo App is a simple and efficient task manager. Designed after 2 months of learning JavaScript, CSS, and HTML, it helps you organize your tasks, set priorities, and stay productive with ease.";
           }        
       case "timer":
         if (chosenLanguage === "German") {
             return "Meine Timer-App, erstellt nach 1 1/2 Monaten des intensiven Lernens von JavaScript, CSS und HTML, bietet präzise Zeitmessfunktionen. Verwenden Sie sie für verschiedene Zwecke, vom Kochen bis zum Training, mit Zuverlässigkeit und Genauigkeit.";
-          } else if (chosenLanguage === "English") {
+        } else if (chosenLanguage === "English" || chosenLanguage === undefined || chosenLanguage === null || chosenLanguage === "") {
             return "My Timer App, created after 1 1/2 months of mastering JavaScript, CSS, and HTML, offers precise timing capabilities. Use it for various purposes, from cooking to workouts, with reliability and accuracy.";
           }
       case "clock":
         if (chosenLanguage === "German") {
             return "Meine Uhren-App ist ein einfaches Zeitmessungstool, das nach 1 Monat des Lernens von JavaScript, CSS und HTML entwickelt wurde. Sie zeigt die Zeit genau an und hält Sie auf einen Blick informiert.";
-          } else if (chosenLanguage === "English") {
+        } else if (chosenLanguage === "English" || chosenLanguage === undefined || chosenLanguage === null || chosenLanguage === "") {
             return "My Clock App is a straightforward timekeeping tool, crafted after 1 months of JavaScript, CSS, and HTML learning. It displays the time accurately, keeping you informed at a glance.";
           }
       case "keyGen":
         if (chosenLanguage === "German") {
             return "Mein KeyGenerator-Tool, entstanden nach 3 Monaten des Studiums von JavaScript, CSS und HTML, generiert sichere und zufällige Schlüssel für verschiedene Zwecke. Verbessern Sie Ihre Sicherheit mühelos mit diesem effizienten Dienstprogramm.";
-          } else if (chosenLanguage === "English") {
+        } else if (chosenLanguage === "English" || chosenLanguage === undefined || chosenLanguage === null || chosenLanguage === "") {
             return "My KeyGenerator Tool, born after 3 months of studying JavaScript, CSS, and HTML, generates secure and random keys for various purposes. Enhance your security with ease using this efficient utility.";
           }
         default:
