@@ -206,7 +206,14 @@ function addInteractiveAnimationOnLocatedInGermany(className) {
       element.style.transform = 'translate(0, 0)';
 
         if (dontPullMeDialogCount === 1) {
-          if (chosenLanguage === "English") {
+          if (chosenLanguage === undefined || chosenLanguage === null || chosenLanguage === "") {
+            if(window.innerWidth < 1150) {
+              dialogHeadline.textContent = "Please don't click me.";
+            } else {
+            dialogHeadline.textContent = "Please don't pull me.";
+          }
+          dontPullMeDialogCloseButton.textContent = "Got It!";
+          } else if (chosenLanguage === "English") {
             if(window.innerWidth < 1150) {
               dialogHeadline.textContent = "Please don't click me.";
             } else {
@@ -223,7 +230,10 @@ function addInteractiveAnimationOnLocatedInGermany(className) {
         }
           dontPullMeDialog.showModal();
       } else if (dontPullMeDialogCount === 2) {
-        if (chosenLanguage === "English") {
+        if (chosenLanguage === undefined || chosenLanguage === null || chosenLanguage === "") {
+          dialogHeadline.textContent = "Seriously Stop.";
+          dontPullMeDialogCloseButton.textContent = "Okay";
+        } else if (chosenLanguage === "English") {
           dialogHeadline.textContent = "Seriously Stop.";
           dontPullMeDialogCloseButton.textContent = "Okay";
         } else if (chosenLanguage === "German") {
@@ -232,7 +242,10 @@ function addInteractiveAnimationOnLocatedInGermany(className) {
         }
           dontPullMeDialog.showModal();
       } else if (dontPullMeDialogCount === 3) {
-        if (chosenLanguage === "English") {
+        if (chosenLanguage === undefined || chosenLanguage === null || chosenLanguage === "") {
+          dialogHeadline.textContent = "You asked for it";
+          dontPullMeDialogCloseButton.textContent = "...";
+      } else if (chosenLanguage === "English") {
         dialogHeadline.textContent = "You asked for it";
         dontPullMeDialogCloseButton.textContent = "...";
       } else if (chosenLanguage === "German") {
@@ -254,7 +267,10 @@ function addInteractiveAnimationOnLocatedInGermany(className) {
           link.click();
         },2000);
       } else if (dontPullMeDialogCount === 4) {
-        if (chosenLanguage === "English") {
+        if (chosenLanguage === undefined || chosenLanguage === null || chosenLanguage === "") {
+          dialogHeadline.textContent = `Now tell me "YOU ARE HIRED!"!`;
+          dontPullMeDialogCloseButton.textContent = "calling...";
+        } else if (chosenLanguage === "English") {
           dialogHeadline.textContent = `Now tell me "YOU ARE HIRED!"!`;
           dontPullMeDialogCloseButton.textContent = "calling...";
         } else if (chosenLanguage === "German") {
@@ -268,7 +284,9 @@ function addInteractiveAnimationOnLocatedInGermany(className) {
 
           callingAbdullah.href = "tel:01731905742";
           callingAbdullah.click();
-          if (chosenLanguage === "English") {
+          if (chosenLanguage === undefined || chosenLanguage === null || chosenLanguage === "") {
+            dontPullMeDialogCloseButton.textContent = "close...";
+          } else if (chosenLanguage === "English") {
           dontPullMeDialogCloseButton.textContent = "close...";
         } else if (chosenLanguage === "German") {
           dontPullMeDialogCloseButton.textContent = "schließen...";
