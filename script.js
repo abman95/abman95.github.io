@@ -452,7 +452,7 @@ addInteractiveAnimation('keyGen');
 
     const projectSliderRect = projectSlider.getBoundingClientRect();
   
-    console.log(container3Rect.top);
+
 
   
   

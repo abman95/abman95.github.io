@@ -476,10 +476,6 @@ function degreeSlider(className) {
     const elementRect = element.getBoundingClientRect();
     const windowHeight = window.innerHeight;
   
-    console.log(elementRect.top);
-    console.log(elementRect.bottom);
-    console.log(windowHeight/2);
-  
       if (elementRect.top < windowHeight/2 && elementRect.bottom > windowHeight/2) {
         elementLogo.style.opacity = `1`;
         element.style.transform = `translateX(0vw)`;
@@ -495,10 +491,6 @@ if (window.innerWidth > 450 && window.innerWidth <= 1250) {
   document.addEventListener("scroll", ()=> {
     const elementRect = element.getBoundingClientRect();
     const windowHeight = window.innerHeight;
-  
-    console.log(elementRect.top);
-    console.log(elementRect.bottom);
-    console.log(windowHeight/2);
   
       if (elementRect.top < windowHeight/2 && elementRect.bottom > windowHeight/2) {
         elementLogo.style.opacity = `1`;
@@ -540,25 +532,6 @@ degreeSlider('university');
 //   // if (windowHeight/2 )
 
 // });
-
-
-
-
-
-document.addEventListener('scroll', function() {
-  const container5Rect = container5.getBoundingClientRect();
-  const footerRect = footer.getBoundingClientRect();
-  const windowHeight = window.innerHeight;
-
-  const distanceFromBottom4 = Math.min(0, (container5Rect.bottom - windowHeight));
-  const distanceFromBottom = Math.min(0, (footerRect.top - windowHeight));
-
-  
-  fixedImage.style.setProperty('--scroll-padding', 1+distanceFromBottom4*-1 + 'px');
-  fixedImage.style.transition = "auto";
-});
-
-
 
 
 

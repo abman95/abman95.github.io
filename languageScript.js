@@ -1002,7 +1002,6 @@ function projectListSelector(className) {
     new Promise(resolve => {
       projectPath = `${nameOfClass}Index.html`;
       localStorage.setItem("projectPath", projectPath);
-      console.log(projectPath);
 
       computedStyle = window.getComputedStyle(projectImageSlider2);
       transformValue = computedStyle.getPropertyValue('transform');      
@@ -1035,7 +1034,6 @@ function projectListSelector(className) {
         }, 500);
       });
     }).then(() => {
-      console.log(translateXInVw);
       if (window.innerWidth <= 1150) {
       if (translateXInVw > 85 && translateXInVw < 95) {
         projectImageSlider2Images1.style.opacity = `1`;
