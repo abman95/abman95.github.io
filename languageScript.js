@@ -310,11 +310,11 @@ addInteractiveAnimationOnLocatedInGermany('locatedInContainerBackground');
 let container1Heading = localStorage.getItem("container1Heading");
 
 if (chosenLanguage === "English"){
-container1Heading = "I am an experienced Web Designer and Private Software Engineer with expertise in WordPress, HTML, CSS, JavaScript, React, NodeJS, ExpressJS, SQL and PHP. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!";
+container1Heading = "I am an experienced Web Designer and Software Engineer with expertise in WordPress, HTML, CSS, JavaScript, React, NodeJS, ExpressJS, SQL and PHP. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!";
 } else if (chosenLanguage === "German") {
   container1Heading = "Ich bin erfahrener Webdesigner und Softwareentwickler mit Expertise in WordPress, HTML, CSS, JavaScript, React, NodeJS, ExpressJS, SQL und PHP. Mein Hintergrund in Unternehmertum, Marketing, Logistik und Kundenservice bereichert Ihr Team. Entdecken Sie heute mein Portfolio!";
 } else if (container1Heading === undefined || container1Heading === null || container1Heading === "") {
-  container1Heading = "I am an experienced Web Designer and Private Software Engineer with expertise in WordPress, HTML, CSS, JavaScript, React, NodeJS, ExpressJS, SQL and PHP. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!";
+  container1Heading = "I am an experienced Web Designer and Software Engineer with expertise in WordPress, HTML, CSS, JavaScript, React, NodeJS, ExpressJS, SQL and PHP. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!";
 }
 
 let i = 0;
@@ -326,7 +326,7 @@ let i = 0;
 languageEnglish.addEventListener('click', function () {
     chosenLanguage = "English";
 
-    container1Heading = "I am an experienced Web Designer and Private Software Engineer with expertise in WordPress, HTML, CSS, JavaScript, React, NodeJS, ExpressJS, SQL and PHP. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!";
+    container1Heading = "I am an experienced Web Designer and Software Engineer with expertise in WordPress, HTML, CSS, JavaScript, React, NodeJS, ExpressJS, SQL and PHP. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!";
     localStorage.setItem("container1Heading", container1Heading);
 
     if (window.innerWidth >= 1150) {
@@ -351,6 +351,9 @@ languageEnglish.addEventListener('click', function () {
     document.querySelector('.footerContact').innerHTML = '<a href="contact.html">Contact</a>';
     
     if (window.location.href.includes('/homepage.html')) {
+      if (window.innerWidth <= 450) {
+        document.querySelector('#container2').style.height = "230vw";
+      }
     document.querySelector('.jobDegreeText').textContent = "Industrial Engineer";
     document.querySelector('.dontPullMeDialogCloseButton').textContent = "Industrial Engineer";
     document.querySelector('.dialogHome').textContent = "home";
@@ -613,6 +616,9 @@ if (window.location.href.includes('/homepage.html')) {
     document.querySelector('.jobDegreeText').textContent = "Wirtschafts ingenieur";
     } else {
       document.querySelector('.jobDegreeText').textContent = "Wirtschaftsingenieur";
+    }
+    if (window.innerWidth <= 450) {
+      document.querySelector('#container2').style.height = "220vw";
     }
     document.querySelector('.dontPullMeDialogCloseButton').textContent = "Wirtschaftsingenieur";
     document.querySelector('.dialogHome').textContent = "startseite";
@@ -1255,6 +1261,9 @@ if (chosenLanguage === "German") {
     } else {
       document.querySelector('.jobDegreeText').textContent = "Wirtschaftsingenieur";
     }
+    if (window.innerWidth <= 450) {
+      document.querySelector('#container2').style.height = "220vw";
+    }
     document.querySelector('.dontPullMeDialogCloseButton').textContent = "Wirtschaftsingenieur";
     document.querySelector('.dialogHome').textContent = "startseite";
     document.querySelector('.dialogAboutMe').textContent = "über mich";
@@ -1423,6 +1432,9 @@ if(window.innerWidth > 450 && window.innerWidth < 1150) {
   document.querySelector('.footerAboutMe').innerHTML = '<a href="aboutMe.html">About Me</a>';
   document.querySelector('.footerContact').innerHTML = '<a href="contact.html">Contact</a>';
   if (window.location.href.includes('/homepage.html')) {
+    if (window.innerWidth <= 450) {
+      document.querySelector('#container2').style.height = "230vw";
+    }
     document.querySelector('.jobDegreeText').textContent = "Industrial Engineer";
     document.querySelector('.dontPullMeDialogCloseButton').textContent = "Industrial Engineer";
     document.querySelector('.dialogHome').textContent = "home";
