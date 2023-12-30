@@ -310,11 +310,11 @@ addInteractiveAnimationOnLocatedInGermany('locatedInContainerBackground');
 let container1Heading = localStorage.getItem("container1Heading");
 
 if (chosenLanguage === "English"){
-container1Heading = "I am an experienced Web Designer and Private Software Engineer with expertise in WordPress, HTML, CSS, and JavaScript. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!";
+container1Heading = "I am an experienced Web Designer and Private Software Engineer with expertise in WordPress, HTML, CSS, JavaScript, React, NodeJS, ExpressJS, SQL and PHP. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!";
 } else if (chosenLanguage === "German") {
-  container1Heading = "Ich bin erfahrener Webdesigner und Softwareentwickler mit Expertise in WordPress, HTML, CSS und JavaScript. Mein Hintergrund in Unternehmertum, Marketing, Logistik und Kundenservice bereichert Ihr Team. Entdecken Sie heute mein Portfolio!";
+  container1Heading = "Ich bin erfahrener Webdesigner und Softwareentwickler mit Expertise in WordPress, HTML, CSS, JavaScript, React, NodeJS, ExpressJS, SQL und PHP. Mein Hintergrund in Unternehmertum, Marketing, Logistik und Kundenservice bereichert Ihr Team. Entdecken Sie heute mein Portfolio!";
 } else if (container1Heading === undefined || container1Heading === null || container1Heading === "") {
-  container1Heading = "I am an experienced Web Designer and Private Software Engineer with expertise in WordPress, HTML, CSS, and JavaScript. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!";
+  container1Heading = "I am an experienced Web Designer and Private Software Engineer with expertise in WordPress, HTML, CSS, JavaScript, React, NodeJS, ExpressJS, SQL and PHP. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!";
 }
 
 let i = 0;
@@ -326,7 +326,7 @@ let i = 0;
 languageEnglish.addEventListener('click', function () {
     chosenLanguage = "English";
 
-    container1Heading = "I am an experienced Web Designer and Private Software Engineer with expertise in WordPress, HTML, CSS, and JavaScript. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!";
+    container1Heading = "I am an experienced Web Designer and Private Software Engineer with expertise in WordPress, HTML, CSS, JavaScript, React, NodeJS, ExpressJS, SQL and PHP. My diverse background includes entrepreneurship, marketing, logistics, and customer service, making me a valuable asset for your team. Explore my portfolio today!";
     localStorage.setItem("container1Heading", container1Heading);
 
     if (window.innerWidth >= 1150) {
@@ -583,7 +583,7 @@ languageGerman.addEventListener('click', function () {
     chosenLanguage = "German";
 
 
-    container1Heading = "Ich bin erfahrener Webdesigner und Softwareentwickler mit Expertise in WordPress, HTML, CSS und JavaScript. Mein Hintergrund in Unternehmertum, Marketing, Logistik und Kundenservice bereichert Ihr Team. Entdecken Sie heute mein Portfolio!";
+    container1Heading = "Ich bin erfahrener Webdesigner und Softwareentwickler mit Expertise in WordPress, HTML, CSS, JavaScript, React, NodeJS, ExpressJS, SQL und PHP. Mein Hintergrund in Unternehmertum, Marketing, Logistik und Kundenservice bereichert Ihr Team. Entdecken Sie heute mein Portfolio!";
     localStorage.setItem("container1Heading", container1Heading);
 
     if (window.innerWidth >= 1150) {
