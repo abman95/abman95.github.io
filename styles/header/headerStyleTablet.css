@@ -226,7 +226,7 @@ body {
 
 
 .headerFixed {
-  background-image: url(Bilder/menue.png);
+  background-image: url(../../images/menuIcon/menu.png);
   background-size: cover;
   height: 5vw;
   width: 5vw;
