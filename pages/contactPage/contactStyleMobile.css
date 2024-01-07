@@ -1,0 +1,222 @@
+@media screen and (max-width: 450px) {
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url(../../fonts/Roboto/Roboto-Bold.ttf);
+  }
+
+  @font-face {
+    font-family: 'Roboto-Medium';
+    src: url(../../fonts/Roboto/Roboto-Medium.ttf);
+  }
+
+  @font-face {
+    font-family: 'Roboto-Regular';
+    src: url(../../fonts/Roboto/Roboto-Regular.ttf);
+  }
+  @font-face {
+    font-family: 'Roboto-Light';
+    src: url(../../fonts/Roboto/Roboto-Light.ttf);
+  }
+
+  @font-face {
+    font-family: 'Roboto-Thin';
+    src: url(../../fonts/Roboto/Roboto-Thin.ttf);
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  
+    html, body {
+    width: 100vw;
+    overflow-x:hidden;   
+  } 
+
+  body {
+    font-family: Roboto-Regular;
+}
+
+.hr {
+    margin: 5vw 0 5vw 0;
+    width: 90vw;
+    border-color: rgba(0, 0, 0, 0.66);
+}
+
+#container1 {
+    overflow: hidden;
+    height: 625vw;
+    width: 100vw;
+    background-color:black}
+
+.contactHeader {
+    margin-top: 285vw;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+
+    color: #fff;
+    font: 14vw Roboto-Regular;
+}
+
+.contact-form {
+    position: absolute;
+    top: 225%;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    color: white;
+}
+
+label {
+    font: 14vw Roboto-Thin;
+    display: block;
+    margin-bottom: 3vw;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    font: 5vw Roboto-Thin;
+    color: white;
+    background-color: transparent;
+    width: 90vw;
+    margin-bottom: 4vw;
+    border: none;
+    resize: none;
+    outline: none;
+}
+
+.submitButton {
+    bottom: -65vw;
+    right: 16vw;
+    position: absolute;
+    cursor: pointer;
+    font: 9vw Roboto-Thin;
+    color: white;
+    width: 60vw;
+    height: 60vw;
+    border-radius: 60vw;
+    background-color: rgb(21, 21, 21);
+    border: none;
+    transition: all ease 1s;
+}
+
+.submitButton:hover {
+    background-color: #131313;
+}
+
+
+
+
+
+.contactInformationContainer {
+  top: 14%;
+  left: 20%;
+  right: 20%;
+  position: absolute;
+  background-image: url(../../images/abdullahSögütImages/abdullahSögütBackgroundImage4.jpg);
+  width: 60vw;
+  height: 60vw;
+  border-radius: 60vw;
+  background-size: cover;
+  background-position: center;
+}
+
+.contactPictureHeader {
+  white-space: nowrap;
+  top: 46%;
+  left: 5%;
+  right: 5%;
+  position: absolute;
+  font: 13vw Roboto-Bold;
+  color: white;
+}
+
+.contactInformationHeader1 {
+  white-space: nowrap;
+  top: 60%;
+  left: 4%;
+  right: 4%;
+  position: absolute;
+  font: 10vw Roboto-Regular;
+  color: white;
+}
+
+.contactInformationListing1 {
+  white-space: nowrap;
+  top: 70%;
+  left: 5%;
+  right: 5%;
+  position: absolute;
+  font: 5vw Roboto-Thin;
+  outline: none !important;
+  text-decoration: none !important;
+  color: white !important;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+
+.contactInformationListing1 a {
+  color: white;
+  text-decoration: none;
+  }
+
+.contactInformationHeader2 {
+  white-space: nowrap;
+  top: 90%;
+  left: 4%;
+  right: 4%;
+  position: absolute;
+  font: 10vw Roboto-Regular;
+  color: white;
+}
+
+.contactInformationListing2 {
+  white-space: nowrap;
+  top: 100%;
+  left: 5%;
+  right: 5%;
+  position: absolute;
+  font: 5vw Roboto-Thin;
+  color: white;
+
+
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+.contactInformationHeader3 {
+  white-space: nowrap;
+  top: 142%;
+  left: 4%;
+  right: 4%;
+  position: absolute;
+  font: 10vw Roboto-Regular;
+  color: white;
+}
+
+.contactInformationListing3 {
+  white-space: nowrap;
+  top: 152%;
+  left: 5%;
+  right: 5%;
+  position: absolute;
+  font: 5vw Roboto-Thin;
+  color: white;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+}

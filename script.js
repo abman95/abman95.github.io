@@ -292,35 +292,6 @@ dontPullMeDialog.addEventListener("click", function outsideClickHandler(event) {
 
 
 
-
-
-
-/*
-const projectImageSlider1ButtonContainerBackground = document.querySelector('.projectImageSlider1ButtonContainerBackground');
-const projectImageSlider1ButtonListing = document.querySelector('.projectImageSlider1ButtonListing');
-let isClick = false;
-
-projectImageSlider1ButtonContainerBackground.addEventListener('click', () => {
-  if (!isClick) {
-    projectImageSlider1ButtonListing.style.transition = "transform 0.5s ease, height 0.5s ease, width 0.5s ease";
-    projectImageSlider1ButtonListing.style.display = "flex";
-    projectImageSlider1ButtonListing.classList.add('active');
-    projectImageSlider1ButtonListing.style.transform = " rotateX(0deg) translateY(0%)";
-    projectImageSlider1ButtonListing.style.transformOrigin = "top";
-  
-  } else {
-    projectImageSlider1ButtonListing.style.transition = "transform 0.5s ease, height 0.5s ease, width 0.5s ease";
-    projectImageSlider1ButtonListing.style.display = "flex";
-    projectImageSlider1ButtonListing.classList.remove('active');
-    projectImageSlider1ButtonListing.style.transform = "rotateX(-90deg) translateY(0%)";
-    projectImageSlider1ButtonListing.style.transformOrigin = "top";
-  }
-  isClick = !isClick;
-});
-*/
-
-
-
 const projectImageSlider1ButtonContainerBackground = document.querySelector('.projectImageSlider1ButtonContainerBackground');
 const projectImageSlider1ButtonListingNew = document.querySelector('.projectImageSlider1ButtonListingNew');
 const dialogCloseButtonProjects = document.querySelector('.dialogCloseButtonProjects');
@@ -392,7 +363,6 @@ document.addEventListener('scroll', function() {
   const footerRect = document.querySelector('#footer').getBoundingClientRect();
   const windowHeight = window.innerHeight;
   const windowWidth = window.innerWidth;
-  // projectSlider.style.transformOrigin = `${(container3Rect.right/2)-(windowWidth*0.004)}px`;
 
   const distanceFromTop = container3Rect.top;     
   const distanceFromBottom1 = Math.min(1, (distanceFromTop/5));
@@ -419,11 +389,11 @@ document.addEventListener('scroll', function() {
     
     if (scaledValue > 100) {
       projectImageSlider1.style.opacity = `${container3ContentOpacity}`;
-      // projectImageSlider1.classList.add('show');
+
       projectSlider.style.color = `black`;
     } else if (scaledValue < 100) {
       projectImageSlider1.style.opacity = `${container3ContentOpacity}`;
-      // projectImageSlider1.classList.remove('show');
+
       projectSlider.style.color = `black`;
     }
     if(footerRect.top >= 600) {
@@ -431,15 +401,6 @@ document.addEventListener('scroll', function() {
   }
 });
 
-
-/*
-addInteractiveAnimation('mp3');
-addInteractiveAnimation('typing');
-addInteractiveAnimation('toDo');
-addInteractiveAnimation('timer');
-addInteractiveAnimation('clock');
-addInteractiveAnimation('keyGen');
-*/
 
 
 
@@ -637,7 +598,7 @@ addInteractiveAnimation('keyGen');
           sliders.style.transform = `translate(${translateCount}vw, 0%)`;
           if (translateXInVw > 45 && translateXInVw < 51) {
             prevButton.style.cursor = "pointer";
-            // prevButton.style.backgroundColor = "wheat";
+
             prevButton.style.color = "wheat";
             sliders.children[1].style.opacity = `1`;
             sliders.children[1].style.transform = `scale(1)`;
@@ -646,7 +607,7 @@ addInteractiveAnimation('keyGen');
             sliders.children[2].style.opacity = `1`;
             sliders.children[2].style.transform = `scale(1)`;
             sliders.children[1].style.opacity = `0`;
-            // nextButton.style.backgroundColor = "rgba(198, 198, 198, 0.247)";
+
             nextButton.style.color = "rgba(198, 198, 198, 0.247)";
             nextButton.style.cursor = "auto";
           }
@@ -673,7 +634,7 @@ addInteractiveAnimation('keyGen');
     sliders.style.transform = `translate(${translateCountMobile}vw, 0%)`;
     if (translateXInVw > -5 && translateXInVw < 5) {
       prevButton.style.cursor = "auto";
-      // prevButton.style.backgroundColor = "rgba(198, 198, 198, 0.247)";
+
       prevButton.style.color = "rgba(198, 198, 198, 0.247)";
       sliders.children[1].style.opacity = `.5`;
       sliders.children[1].style.transform = `scale(.5)`;
@@ -682,7 +643,7 @@ addInteractiveAnimation('keyGen');
       sliders.children[2].style.opacity = `.5`;
       sliders.children[2].style.transform = `scale(.5)`;
       sliders.children[1].style.opacity = `1`;
-      // nextButton.style.backgroundColor = "wheat";
+
       nextButton.style.color = "wheat";
       nextButton.style.cursor = "pointer";
     }
@@ -697,7 +658,7 @@ addInteractiveAnimation('keyGen');
       sliders.style.transform = `translate(${translateCount}vw, 0%)`;
       if (translateXInVw > -5 && translateXInVw < 5) {
         prevButton.style.cursor = "auto";
-        // prevButton.style.backgroundColor = "rgba(198, 198, 198, 0.247)";
+
         prevButton.style.color = "rgba(198, 198, 198, 0.247)";
         sliders.children[1].style.opacity = `.5`;
         sliders.children[1].style.transform = `scale(.5)`;
@@ -706,7 +667,7 @@ addInteractiveAnimation('keyGen');
         sliders.children[2].style.opacity = `.5`;
         sliders.children[2].style.transform = `scale(.5)`;
         sliders.children[1].style.opacity = `1`;
-        // nextButton.style.backgroundColor = "wheat";
+
         nextButton.style.color = "wheat";
         nextButton.style.cursor = "pointer";
       }
@@ -717,58 +678,6 @@ addInteractiveAnimation('keyGen');
 
         nextButton.addEventListener("click", nextImage);
     });
-
-
-
-
-
-
-
-
-
-  
-/*
-  let projectImageSlider1ButtonContainerBackgroundRect;
-  let projectImageSlider1ButtonContainerBackgroundCenterX;
-  let projectImageSlider1ButtonContainerBackgroundCenterY;
-  let projectImageSlider1ButtonContainerBackgroundMoveX;
-  let projectImageSlider1ButtonContainerBackgroundMoveY;
-  
-  projectImageSlider1ButtonContainerBackground.addEventListener('mousemove', function(e) {
-    projectImageSlider1ButtonContainerBackgroundRect = projectImageSlider1ButtonContainerBackground.getBoundingClientRect();
-    projectImageSlider1ButtonContainerBackgroundCenterX = projectImageSlider1ButtonContainerBackgroundRect.left + projectImageSlider1ButtonContainerBackgroundRect.width / 2;
-    projectImageSlider1ButtonContainerBackgroundCenterY = projectImageSlider1ButtonContainerBackgroundRect.top + projectImageSlider1ButtonContainerBackgroundRect.height / 2;
-  
-    projectImageSlider1ButtonContainerBackgroundMoveX = (e.clientX - projectImageSlider1ButtonContainerBackgroundCenterX);
-    projectImageSlider1ButtonContainerBackgroundMoveY = (e.clientY - projectImageSlider1ButtonContainerBackgroundCenterY);
-  
-    if (isClick) {
-    projectImageSlider1ButtonListing.style.transition = 'transform 0.3s ease';
-    projectImageSlider1ButtonListing.style.transform = `translate(${projectImageSlider1ButtonContainerBackgroundMoveX}px, ${projectImageSlider1ButtonContainerBackgroundMoveY}px)`;
-    }
-    projectImageSlider1ButtonContainerBackground.style.transition = 'transform 0.3s ease';
-    projectImageSlider1ButtonContainerBackground.style.transform = `translate(${projectImageSlider1ButtonContainerBackgroundMoveX}px, ${projectImageSlider1ButtonContainerBackgroundMoveY}px)`;
-  });
-projectImageSlider1ButtonContainerBackground.addEventListener('mouseout', function() {
-  if (isClick) {
-    projectImageSlider1ButtonListing.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
-    projectImageSlider1ButtonListing.style.transform = `translate(${(projectImageSlider1ButtonContainerBackgroundMoveX * -1)*0.5}px, ${(projectImageSlider1ButtonContainerBackgroundMoveY * -1)*0.5}px)`;
-  }
-  
-  projectImageSlider1ButtonContainerBackground.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
-  projectImageSlider1ButtonContainerBackground.style.transform = `translate(${(projectImageSlider1ButtonContainerBackgroundMoveX * -1)*0.5}px, ${(projectImageSlider1ButtonContainerBackgroundMoveY * -1)*0.5}px)`;
-
-  setTimeout(() => {
-    if (isClick) {
-      projectImageSlider1ButtonListing.style.transition = 'transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55)';
-      projectImageSlider1ButtonListing.style.transform = 'translate(0, 0)';
-    }
-    
-    projectImageSlider1ButtonContainerBackground.style.transition = 'transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55)';
-    projectImageSlider1ButtonContainerBackground.style.transform = 'translate(0, 0)';
-  }, 200);
-});
-*/
 
 
 function getTime() {
