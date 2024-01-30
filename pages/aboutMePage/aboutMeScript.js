@@ -372,7 +372,7 @@ document.addEventListener('scroll', function() {
 
 
 aboutMePageIntroductoryHeader6.addEventListener('click', function () {
-  const pdfFilePath = '../../cv/CV - Abdullah Sögüt.pdf';
+  const pdfFilePath = '../../CV/CV - Abdullah Sögüt.pdf';
 
   const link = document.createElement('a');
   link.href = pdfFilePath;
