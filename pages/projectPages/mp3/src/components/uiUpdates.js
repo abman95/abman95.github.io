@@ -132,7 +132,7 @@ export function handlePreviousSongClick() {
 }
 
 export function updatePlayPauseButton() {
-  const iconSrc = state.audio.paused ? "./assets/images/PlayButton2.svg" : "./assets/images/PauseButton.svg";
+  const iconSrc = state.audio.paused ? "./assets/images/playButton2.svg" : "./assets/images/PauseButton.svg";
   elements.pausePlayButton.setAttribute("src", iconSrc);
 }
 
