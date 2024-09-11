@@ -1,69 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Musik Player</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mp3Style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="../backToPortfolio/backToPortfolioStyle.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
 </head>
 <body>
     <div class="returnPortfolioSite">&lsaquo; back</div>
-    <label for="input" class="inputLabel">
-      <input type="file" id="input" accept=".mp3, .wav" multiple/>
-        <img src="Wallpaper/AddSongButton.svg" id="inputButton">
+    <label for="fileInput" class="file-input-label">
+        <input type="file" id="fileInput" accept=".mp3, .wav" multiple />
+        <img src="./assets/images/AddSongButton.svg" id="addSongButton" alt="Add Song Button">
         <h2></h2>
-        <ul id="fileListBeta">
+        <ul id="playlist">
         </ul>
-      </label>    
-    <div id="container">
-        <div id="links">
-        <div id="song"></div>
+    </label>    
+    <div id="playerContainer">
+        <div id="playerControls">
+            <div id="currentSong"></div>
         </div>
-        <div id="rechts">
-          <img src="Wallpaper/dialogButton2.svg" onclick="fileList.showModal()" class="dialogButton"></img>
-          <dialog id="fileList" class="fileList">
-            <form method ="dialog">
-              <div id="dialogHeader">
-              <h1 id="dialogHeadline">MP3 Liste</h1>
-              <img src="Wallpaper/dialogCloseButton.svg" id="dialogCloseButton" class="dialogCloseButton">
+        <div id="dialogSection">
+            <img src="./assets/images/dialogButton2.svg" class="dialog-button" alt="Dialog Button">
+            <dialog id="fileListDialog" class="file-list-dialog">
+                <form method="dialog">
+                    <div id="dialogHeader">
+                        <h1 id="dialogTitle">MP3 Liste</h1>
+                        <img src="./assets/images/dialogCloseButton.svg" id="dialogCloseButton" class="dialog-close-button" alt="Close Dialog">
+                    </div>
+                    <span id="fileListContent"></span>
+                </form>
+            </dialog>
+            <div id="artistName">Unbekannter Artist</div>
+            <div id="albumName">Unbekanntes Album</div>
+            <div id="songTitle">Unbekannter Titel</div>
+            <div id="testElement"></div>
+            <img id="rewindButton" src="./assets/images/tenSecondRewindButton.svg" class="control-button" alt="Rewind">
+            <img id="backButton" src="./assets/images/BackButton.svg" class="control-button" alt="Back">
+            <img id="stopButton" src="./assets/images/playButton2.svg" class="control-button" alt="Stop">
+            <img id="forwardButton" src="./assets/images/ForwardButton.svg" class="control-button" alt="Forward">
+            <img id="fastForwardButton" src="./assets/images/tenSecondForwardButton.svg" class="control-button" alt="Fast Forward">
+            <br>
+            <div id="shuffleAutoplayControls">
+                <div id="shuffleAutoplayLeft">
+                    <div id="autoPlayControl" class="auto-play-control">
+                        <img src="./assets/images/autoplayButtonOff.svg" id="autoPlayIcon" class="auto-play-icon" alt="Auto Play">
+                    </div>
+                </div>
+                <div id="shuffleAutoplayRight">
+                    <div id="randomSongControl" class="random-song-control">
+                        <img src="./assets/images/unshuffleButton2.svg" id="randomSongIcon" class="random-song-icon" alt="Random Song">
+                    </div>
+                </div>
             </div>
-              <span id="fileListAuflistung"></span>
-            </form>
-          </dialog>
-        <div id="artist">Unbekannter Artist</div>
-        <div id="album">Unbekanntes Album</div>
-        <div id="name">Unbekannter Titel</div>
-        <div id="test"></div>
-        <img id="zuruckspulen" src="Wallpaper/tenSecondRewindButton.svg" class="zuruckspulen">  
-        <img id="zuruck" src="Wallpaper/BackButton.svg">
-        <img id="stopp" src="Wallpaper/playButton2.svg">
-        <img id="weiter" src="Wallpaper/ForwardButton.svg">
-        <img id="vorspulen" src="Wallpaper/tenSecondForwardButton.svg"> 
-        <br>
-        <div id="shuffleAndAutoplayButtonContainer">
-          <div id="shuffleAndAutoplayButtonContainerLeft">
-          <div id="autoPlayButton" class="autoPlayButton">
-          <img src="Wallpaper/autoplayButtonOff.svg" id="autoPlayButtonImage" class="autoPlayButtonImage">
-      </div>
+            <div id="timeControls">
+                <br>
+                <br>
+                <br>
+                <span id="currentTime">0:00</span>
+                <input type="range" min="0" max="100" value="0" id="progressSlider">
+                <span id="totalTime">0:00</span>
+            </div>
+        </div>
     </div>
-      <div id="shuffleAndAutoplayButtonContainerRight">
-      <div id="randomSongBackground" class="randomSongBackground">
-        <img src="Wallpaper/unshuffleButton2.svg" id="randomSong" class="randomSong">
-      </div>
-    </div>
-  </div>
-  <div>
-    <br>
-    <br>
-    <br>
-        <span id="anfang">0:00</span>
-        <input type="range" min="0" max="100" value="0" id="slider">
-        <span id="ende">0:00</span>
-    </div>
-    <script src="mp3Script.js"></script>
+    <script type="module" src="src/main.js"></script>
     <script src="../backToPortfolio/backToPortfolioScript.js"></script>
 </body>
 </html>
