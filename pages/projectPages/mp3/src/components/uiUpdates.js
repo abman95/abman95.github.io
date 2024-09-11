@@ -44,7 +44,7 @@ function updateAlbumArt(pictureData) {
     elements.playerContainer.style.setProperty("--background-image", albumArt);
     elements.currentSongCover.style.backgroundImage = albumArt;
   } else {
-    const defaultCover = "url('../../assets/images/defaultSongCover.jpg')";
+    const defaultCover = "url('./assets/images/defaultSongCover.jpg')";
     elements.playerContainer.style.setProperty("--background-image", defaultCover);
     elements.currentSongCover.style.backgroundImage = defaultCover;
   }
@@ -93,12 +93,12 @@ function createFileListItem(file, index) {
         const base64String = arrayBufferToBase64(data);
         albumArt.style.backgroundImage = `url(data:${format};base64,${base64String})`;
       } else {
-        albumArt.style.backgroundImage = "url('../../assets/images/defaultSongCover.jpg')";
+        albumArt.style.backgroundImage = "url('./assets/images/defaultSongCover.jpg')";
       }
     },
     onError: function(error) {
       titleText.textContent = `${file.name} - ${index}`;
-      albumArt.style.backgroundImage = "url('../../assets/images/defaultSongCover.jpg')";
+      albumArt.style.backgroundImage = "url('./assets/images/defaultSongCover.jpg')";
     }
   });
 
@@ -132,7 +132,7 @@ export function handlePreviousSongClick() {
 }
 
 export function updatePlayPauseButton() {
-  const iconSrc = state.audio.paused ? "../../assets/images/PlayButton2.svg" : "../../assets/images/PauseButton.svg";
+  const iconSrc = state.audio.paused ? "./assets/images/PlayButton2.svg" : "./assets/images/PauseButton.svg";
   elements.pausePlayButton.setAttribute("src", iconSrc);
 }
 
@@ -142,13 +142,13 @@ export function updateAutoPlayButton() {
     elements.autoPlayIcon.classList.remove("autoPlayButtonImage");
     elements.autoPlayButton.classList.add("autoPlayButtonOn");
     elements.autoPlayIcon.classList.add("autoPlayButtonImageOn");
-    elements.autoPlayIcon.setAttribute("src", "../../assets/images/autoplayButtonOn.svg");
+    elements.autoPlayIcon.setAttribute("src", "./assets/images/autoplayButtonOn.svg");
   } else {
     elements.autoPlayButton.classList.remove("autoPlayButtonOn");
     elements.autoPlayIcon.classList.remove("autoPlayButtonImageOn");
     elements.autoPlayButton.classList.add("autoPlayButton");
     elements.autoPlayIcon.classList.add("autoPlayButtonImage");
-    elements.autoPlayIcon.setAttribute("src", "../../assets/images/autoplayButtonOff.svg");
+    elements.autoPlayIcon.setAttribute("src", "./assets/images/autoplayButtonOff.svg");
   }
 }
 
@@ -158,12 +158,12 @@ export function updateRandomPlayButton() {
     elements.randomSongButton.classList.remove("randomSongBackground");
     elements.randomSongIcon.classList.add("randomSongOn");
     elements.randomSongButton.classList.add("randomSongBackgroundOn");
-    elements.randomSongIcon.setAttribute("src", "../../assets/images/shuffleButton.svg");
+    elements.randomSongIcon.setAttribute("src", "./assets/images/shuffleButton.svg");
   } else {
     elements.randomSongIcon.classList.remove("randomSongOn");
     elements.randomSongButton.classList.remove("randomSongBackgroundOn");
     elements.randomSongIcon.classList.add("randomSong");
     elements.randomSongButton.classList.add("randomSongBackground");
-    elements.randomSongIcon.setAttribute("src", "../../assets/images/unshuffleButton2.svg");
+    elements.randomSongIcon.setAttribute("src", "./assets/images/unshuffleButton2.svg");
   }
 }

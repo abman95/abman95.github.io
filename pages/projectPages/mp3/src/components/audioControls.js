@@ -19,7 +19,7 @@ export function playNextSong() {
   } else if (state.isRandomEnabled) {
     playRandomSong();
   }
-  animateButtonPreviousNextSong(elements.nextSongButton, "../../assets/images/ForwardButtonDouble.svg", "../../assets/images/ForwardButton.svg");
+  animateButtonPreviousNextSong(elements.nextSongButton, "./assets/images/ForwardButtonDouble.svg", "./assets/images/ForwardButton.svg");
 }
 
 export function playPreviousSong() {
@@ -28,7 +28,7 @@ export function playPreviousSong() {
   if (state.previousIndices.length >= 1) {
     playNewSong(state.previousIndices.pop(), false);
   }
-  animateButtonPreviousNextSong(elements.previousSongButton, "../../assets/images/BackButtonDouble.svg", "../../assets/images/BackButton.svg");
+  animateButtonPreviousNextSong(elements.previousSongButton, "./assets/images/BackButtonDouble.svg", "./assets/images/BackButton.svg");
 }
 
 export function fastForwardAudio() {
