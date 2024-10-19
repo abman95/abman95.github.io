@@ -1,0 +1,74 @@
+:root {
+    /* background: linear-gradient(to right, white, white, white, rgba(0, 0, 255, 0.075), rgba(255, 0, 0, 0.112), white); */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.826), rgba(0, 0, 0, 0.497)), url(../assets/images/typeWriterImg1.jpg);
+    background-size: cover;
+    align-items: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+#textGenerator {
+    background-color: #ffffffca;
+    box-shadow: 0 0px 10px rgba(0.2, 0.2, 0.2, 0.2);
+    border-radius: 2px;
+    border: 0.5px solid rgba(0, 0, 0, 0.198);
+    user-select: none;
+    padding: 10px;
+    font-size: 20px;
+    height: 300px;
+    width: 800px;
+}
+
+#textEingabe {
+    padding: 10px;
+    box-shadow: 0 0px 10px rgba(0.2, 0.2, 0.2, 0.2);
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.323);
+    font-size: 20px;
+    height: 40px;
+    width: 800px;
+}
+
+#timer {
+    background-color: #ffffffca;
+    box-shadow: 0 0px 10px rgba(0.2, 0.2, 0.2, 0.2);
+    border-radius: 2px;
+    border: 0.5px solid rgba(0, 0, 0, 0.198);
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border: 1px black solid;
+    border-radius: 5px;
+    width: 100px;
+    height: 60px;
+    font-size: 30px;
+}
+
+#notification {
+    text-align: center;
+    font-size: 30px;
+}
+
+.correct {
+   color: lime;
+}
+
+.incorrect {
+    color: red;
+    text-decoration: underline;
+}
+
+button {
+    background-color: #fffffff5;
+    box-shadow: 0 0px 10px rgba(0.2, 0.2, 0.2, 0.2);
+    border-radius: 2px;
+    border: 0.5px solid rgba(0, 0, 0, 0.198);
+    display: block;
+    margin: auto;
+    font-size: 20px;
+    height: 40px;
+    width: 500px;
+}

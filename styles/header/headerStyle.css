@@ -2,26 +2,26 @@
 
 @font-face {
   font-family: 'Roboto-Bold';
-  src: url(fonts/Roboto/Roboto-Bold.ttf);
+  src: url(../../assets/fonts/Roboto/Roboto-Bold.ttf);
 }
 
 @font-face {
   font-family: 'Roboto-Medium';
-  src: url(fonts/Roboto/Roboto-Medium.ttf);
+  src: url(../../assets/fonts/Roboto/Roboto-Medium.ttf);
 }
 
 @font-face {
   font-family: 'Roboto-Regular';
-  src: url(fonts/Roboto/Roboto-Regular.ttf);
+  src: url(../../assets/fonts/Roboto/Roboto-Regular.ttf);
 }
 @font-face {
   font-family: 'Roboto-Light';
-  src: url(fonts/Roboto/Roboto-Light.ttf);
+  src: url(../../assets/fonts/Roboto/Roboto-Light.ttf);
 }
 
 @font-face {
   font-family: 'Roboto-Thin';
-  src: url(fonts/Roboto/Roboto-Thin.ttf);
+  src: url(../../assets/fonts/Roboto/Roboto-Thin.ttf);
 }
 
 
@@ -217,7 +217,7 @@ body {
 
 
 .headerFixed {
-  background-image: url(../../images/menuIcon/menu.png);
+  background-image: url(../../assets/images/menuIcon/menu.png);
   background-size: cover;
   height: 2vw;
   width: 2vw;
