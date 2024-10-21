@@ -1,4 +1,3 @@
-// File: src/js/modules/headerAnimation.js
 export function initializeHeaderAnimation() {
     const header = document.querySelector(".header");
     const headerFixedBackground = document.querySelector(

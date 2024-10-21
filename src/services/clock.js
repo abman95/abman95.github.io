@@ -1,4 +1,3 @@
-// clock.js
 export function setupClock() {
     const digitalTime = document.querySelector("#digitalTime");
 

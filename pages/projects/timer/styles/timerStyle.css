@@ -1,15 +1,15 @@
 @font-face {
-    font-family: 'Graphik1';
+    font-family: "Graphik1";
     src: url(fonts/Graphik-Font-Family/GraphikMedium.otf);
 }
 
 @font-face {
-    font-family: 'Graphik0';
+    font-family: "Graphik0";
     src: url(fonts/Graphik-Font-Family/GraphikLight.otf);
 }
 
 @font-face {
-    font-family: 'Graphik2';
+    font-family: "Graphik2";
     src: url(fonts/Graphik-Font-Family/GraphikRegular.otf);
 }
 
@@ -17,7 +17,7 @@ input:focus,
 select:focus,
 textarea:focus,
 button:focus {
-  outline: none;
+    outline: none;
 }
 
 body {
@@ -27,7 +27,7 @@ body {
     align-items: center;
 }
 
-:root{
+:root {
     height: 100vh;
     align-items: center;
     display: flex;
@@ -35,20 +35,28 @@ body {
 }
 
 :root::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-image: linear-gradient(-340deg, rgba(255, 0, 128, 0.3) 10%, transparent 25%, transparent 55%, rgba(255, 0, 0, 0.3) 0%, rgba(0, 221, 255, 0.3) 75%, transparent 10%);
+    background-image: linear-gradient(
+        -340deg,
+        rgba(255, 0, 128, 0.3) 10%,
+        transparent 25%,
+        transparent 55%,
+        rgba(255, 0, 0, 0.3) 0%,
+        rgba(0, 221, 255, 0.3) 75%,
+        transparent 10%
+    );
     transform: var(--rotation);
-    filter: blur(100px); 
-  } 
+    filter: blur(100px);
+}
 
 body {
-text-align: center;
+    text-align: center;
     padding-left: 20%;
     padding-right: 20%;
 }
@@ -73,19 +81,19 @@ h1 {
     align-items: center;
     order: -1;
 }
-    
+
 #clear {
-   font-family: Graphik2;
-   position: relative;
-   background-color: #ffffffa6;
-   box-shadow: 0 0px 10px rgba(0.2, 0.2, 0.2, 0.2);
-   border-radius: 2px;
-   border: 0.5px solid rgba(0, 0, 0, 0.198);
-   width: 70%;
-   cursor: pointer;
-   height: 35px;
-   z-index: 5;
-   font-size: 20px;
+    font-family: Graphik2;
+    position: relative;
+    background-color: #ffffffa6;
+    box-shadow: 0 0px 10px rgba(0.2, 0.2, 0.2, 0.2);
+    border-radius: 2px;
+    border: 0.5px solid rgba(0, 0, 0, 0.198);
+    width: 70%;
+    cursor: pointer;
+    height: 35px;
+    z-index: 5;
+    font-size: 20px;
 }
 
 #stoppen {

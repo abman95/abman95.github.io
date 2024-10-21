@@ -64,7 +64,7 @@
           "content": "My passion for software development was born during my time as a business manager at an e-commerce company, where I gained extensive experience in web and graphic design using WordPress Elementor. With pride, I have successfully created websites such as:"
         },
         "projects": {
-          "title": "Projects",
+          "title": "Projects:",
           "content": {
             "marccrouch": "\"Marc Crouch\",",
             "mimosakbapizza": "\"Mimosa Kebapizza\",",
@@ -79,7 +79,7 @@
           "content": "When I reached the limits of WordPress Elementor, my curiosity for programming was ignited. With enthusiasm, I delved deep into the world of HTML, CSS, JavaScript, React, NodeJS, ExpressJS, SQL and PHP to implement additional functionalities and expand my technical skills."
         },
         "conclusion": {
-          "title": "Conclusion",
+          "title": "Conclusion", 
           "content": "Therefore laying the foundation to develop projects, many of which I share on my GitHub. Examples include this portfolio site, which was created using only HTML, CSS, and Vanilla JavaScript."
         },
         "cv": "Download CV",

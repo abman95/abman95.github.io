@@ -1,6 +1,7 @@
-import { easterEggTranslations } from "../../../utils/languageContentUpdater.js";
+import { loadTranslations } from "../../../utils/languageContentUpdater.js";
 
 let chosenLanguage = localStorage.getItem("chosenLanguage");
+let easterEggTranslations;
 
 export function chosenLanguageUpdater(languageUpdate) {
     chosenLanguage = languageUpdate;
@@ -21,20 +22,23 @@ export function addInteractiveAnimationOnLocatedInGermany() {
         ".dontPullMeDialogCloseButton",
     );
 
-    function setDialogContent(count) {
+    async function setDialogContent(count) {
         if (count >= 5) return;
-
+        easterEggTranslations = await loadTranslations();
         const lang =
-            chosenLanguage in easterEggTranslations
+            chosenLanguage in easterEggTranslations.easterEggTranslations
                 ? chosenLanguage
                 : "undefined";
-        const content = easterEggTranslations[lang][count];
+        const content =
+            easterEggTranslations.easterEggTranslations[lang][count];
 
         if (count === 1 && window.innerWidth < 1150) {
             dialogHeadline.textContent =
                 lang === "German"
-                    ? easterEggTranslations["German"][0].headline
-                    : easterEggTranslations["English"][0].headline;
+                    ? easterEggTranslations.easterEggTranslations["German"][0]
+                          .headline
+                    : easterEggTranslations.easterEggTranslations["English"][0]
+                          .headline;
         } else {
             dialogHeadline.textContent = content.headline;
         }
@@ -62,8 +66,9 @@ export function addInteractiveAnimationOnLocatedInGermany() {
         }
     }
 
-    function handleMouseUp() {
+    async function handleMouseUp() {
         if (isMouseDown) {
+            easterEggTranslations = await loadTranslations();
             isMouseDown = false;
             dontPullMeDialogCount++;
             element.style.transition =
@@ -88,8 +93,12 @@ export function addInteractiveAnimationOnLocatedInGermany() {
                     callingAbdullah.click();
                     dontPullMeDialogCloseButton.textContent =
                         chosenLanguage === "German"
-                            ? easterEggTranslations["German"][5].closeButton
-                            : easterEggTranslations["English"][5].closeButton;
+                            ? easterEggTranslations.easterEggTranslations[
+                                  "German"
+                              ][5].closeButton
+                            : easterEggTranslations.easterEggTranslations[
+                                  "English"
+                              ][5].closeButton;
                 }, 2000);
             }
 

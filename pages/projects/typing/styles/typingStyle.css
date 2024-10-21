@@ -1,6 +1,9 @@
 :root {
-    /* background: linear-gradient(to right, white, white, white, rgba(0, 0, 255, 0.075), rgba(255, 0, 0, 0.112), white); */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.826), rgba(0, 0, 0, 0.497)), url(../assets/images/typeWriterImg1.jpg);
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0.826),
+            rgba(0, 0, 0, 0.497)
+        ),
+        url(../assets/images/typeWriterImg1.jpg);
     background-size: cover;
     align-items: center;
     height: 100vh;
@@ -53,7 +56,7 @@
 }
 
 .correct {
-   color: lime;
+    color: lime;
 }
 
 .incorrect {

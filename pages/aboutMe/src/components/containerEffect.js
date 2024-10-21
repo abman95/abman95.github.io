@@ -1,4 +1,3 @@
-// components/containerEffect.js
 export class ContainerEffect {
     constructor(className) {
         this.element = document.querySelector(`.${className}`);

@@ -1,4 +1,3 @@
-// utils/eventSetup.js
 export function setupEventListeners() {
     const container1 = document.querySelector(".container1Container");
     const fixedImage = document.querySelector(".fixed-image");

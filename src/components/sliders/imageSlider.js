@@ -1,4 +1,3 @@
-// File: src/js/modules/imageSlider.js
 const sliders = document.querySelector(".projectImageSlider2");
 const prevButton = document.querySelector(".prevButton");
 const nextButton = document.querySelector(".nextButton");

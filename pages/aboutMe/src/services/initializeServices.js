@@ -1,4 +1,3 @@
-// services/initializeServices.js
 import { ContainerEffect } from "../components/containerEffect.js";
 import { ScrollService } from "./scrollService.js";
 import { LinkService } from "./linkService.js";

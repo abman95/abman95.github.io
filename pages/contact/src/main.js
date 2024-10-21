@@ -1,4 +1,3 @@
-// main.js
 import { setupClock } from "../../../src/services/clock.js";
 import { initializeHeaderAnimation } from "../../../src/components/headerAnimation.js";
 import { initializeMobileMenu } from "../../../src/components/navigation/mobileMenu.js";

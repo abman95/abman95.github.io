@@ -1,50 +1,47 @@
 @media screen and (max-width: 450px) {
+    @font-face {
+        font-family: "Roboto-Bold";
+        src: url(../../fonts/Roboto/Roboto-Bold.ttf);
+    }
 
     @font-face {
-        font-family: 'Roboto-Bold';
-        src: url(../../fonts/Roboto/Roboto-Bold.ttf);
-      }
-    
-      @font-face {
-        font-family: 'Roboto-Medium';
+        font-family: "Roboto-Medium";
         src: url(../../fonts/Roboto/Roboto-Medium.ttf);
-      }
-    
-      @font-face {
-        font-family: 'Roboto-Regular';
+    }
+
+    @font-face {
+        font-family: "Roboto-Regular";
         src: url(../../fonts/Roboto/Roboto-Regular.ttf);
-      }
-      @font-face {
-        font-family: 'Roboto-Light';
+    }
+    @font-face {
+        font-family: "Roboto-Light";
         src: url(../../fonts/Roboto/Roboto-Light.ttf);
-      }
-    
-      @font-face {
-        font-family: 'Roboto-Thin';
+    }
+
+    @font-face {
+        font-family: "Roboto-Thin";
         src: url(../../fonts/Roboto/Roboto-Thin.ttf);
-      }
-    
-    
-    
-      body {
+    }
+
+    body {
         margin: 0;
         padding: 0;
         width: 100%;
-      }
-      
-        html, body {
+    }
+
+    html,
+    body {
         width: 100vw;
-        overflow-x:hidden;   
-      } 
-    
-    
+        overflow-x: hidden;
+    }
+
     #container1 {
         overflow: hidden;
         background-size: cover;
         width: 100dvw;
         background-color: black;
     }
-    
+
     .container1Container {
         transform: translateY(2rem);
         opacity: 0;
@@ -60,20 +57,18 @@
         width: 90vw;
         margin: 0% auto 0 auto;
     }
-    
+
     .container1Container.show {
         transform: translateY(0rem);
         opacity: 1;
     }
-    
+
     .container1ContainerHeader {
         margin: 7% 0 5% 5%;
         font: 12vw Roboto-Regular;
         width: 90%;
     }
-    
-    
-    
+
     .firstElementContainer,
     .secondElementContainer,
     .thirdElementContainer,
@@ -87,13 +82,12 @@
         height: 130vw;
         margin: 0% 0 5% 5%;
     }
-    
+
     .seventhElementContainer {
         height: 10vw;
         margin: 0% 0 25% 5%;
     }
-    
-    
+
     .firstElement,
     .secondElement,
     .thirdElement,
@@ -109,7 +103,7 @@
         z-index: 999;
         position: relative;
     }
-    
+
     .seventhElement {
         opacity: 0.16;
         width: 7vw;
@@ -119,7 +113,7 @@
         z-index: 999;
         position: relative;
     }
-    
+
     .firstElement.show,
     .secondElement.show,
     .thirdElement.show,
@@ -128,30 +122,28 @@
     .sixthElement.show {
         opacity: 1;
     }
-    
+
     .seventhElement.show {
         background-color: rgb(0, 183, 0);
         animation: scaleAppearance 0.5s ease;
         opacity: 1;
     }
-    
+
     @keyframes scaleAppearance {
         0% {
-          transform: scale(1);
-          opacity: 1;
+            transform: scale(1);
+            opacity: 1;
         }
         50% {
-          transform: scale(1.2);
-          opacity: 1;
+            transform: scale(1.2);
+            opacity: 1;
         }
         100% {
-          transform: scale(1);
-          opacity: 1;
+            transform: scale(1);
+            opacity: 1;
         }
-      }
-    
-    
-    
+    }
+
     .firstElement::after,
     .secondElement::after,
     .thirdElement::after,
@@ -169,7 +161,7 @@
         width: 100%;
         height: 100%;
     }
-    
+
     .seventhElement::after {
         color: white;
         font: 3vw Roboto-Regular;
@@ -182,36 +174,35 @@
         width: 100%;
         height: 100%;
     }
-    
-    
+
     .firstElement::after {
-        content: '01';
+        content: "01";
     }
-    
+
     .secondElement::after {
-        content: '02';
+        content: "02";
     }
-    
+
     .thirdElement::after {
-        content: '03';
+        content: "03";
     }
-    
+
     .fourthElement::after {
-        content: '04';
+        content: "04";
     }
-    
+
     .fifthElement::after {
-        content: '05';
+        content: "05";
     }
-    
+
     .sixthElement::after {
-        content: '06';
+        content: "06";
     }
-    
+
     .seventhElement::after {
-        content: '07';
+        content: "07";
     }
-    
+
     .firstElementLine,
     .secondElementLine,
     .thirdElementLine,
@@ -222,12 +213,11 @@
         background-image: linear-gradient(black 0px, lightGrey 0%);
         opacity: black;
         height: 84%;
-        width: .3vw;
+        width: 0.3vw;
         transition: all ease 1s;
         z-index: 998;
     }
-    
-    
+
     .sixthElementLine {
         margin: 50% auto 50% auto;
         background-image: linear-gradient(rgb(0, 183, 0) 0px, lightGrey 0%);
@@ -237,10 +227,7 @@
         transition: all ease 1s;
         z-index: 998;
     }
-    
-    
-    
-    
+
     .aboutMePageIntroductoryHeader,
     .aboutMePageIntroductoryHeader1,
     .aboutMePageIntroductoryHeader2,
@@ -259,8 +246,7 @@
         transition: all ease 1s;
         z-index: 999;
     }
-    
-    
+
     .aboutMePageIntroductoryHeader6 {
         cursor: pointer;
         background-color: white;
@@ -283,8 +269,7 @@
         transition: all ease 1s;
         z-index: 999;
     }
-    
-    
+
     .aboutMePageIntroductoryHeader.show,
     .aboutMePageIntroductoryHeader1.show,
     .aboutMePageIntroductoryHeader2.show,
@@ -294,17 +279,17 @@
         transform: translateY(0rem);
         opacity: 1;
     }
-    
+
     .aboutMePageIntroductoryHeader6.show {
         transform: translateY(0rem);
         opacity: 1;
     }
-    
+
     .aboutMePageIntroductoryHeader6:hover {
         color: rgba(0, 0, 0, 0.437);
         box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.384);
     }
-    
+
     .aboutMePageIntroductoryText,
     .aboutMePageIntroductoryText1,
     .aboutMePageIntroductoryText2,
@@ -323,9 +308,7 @@
         transition: all ease 1s;
         z-index: 999;
     }
-    
-    
-    
+
     .aboutMePageIntroductoryText3 a {
         list-style: none;
         color: black;
@@ -333,11 +316,11 @@
         border-bottom: 2px solid transparent;
         transition: border-bottom 0.5s ease;
     }
-    
+
     .aboutMePageIntroductoryText3 a:hover {
         border-bottom: 2px solid black;
     }
-    
+
     .aboutMePageIntroductoryText5 strong a {
         list-style-type: none;
         color: black;
@@ -345,25 +328,23 @@
         border-bottom: 2px solid transparent;
         transition: border-bottom 0.5s ease;
     }
-    
+
     .aboutMePageIntroductoryText5 a:hover {
         border-bottom: 2px solid black;
     }
-    
-    
-    
-    
+
     .seventhElementCVGit {
         width: 80vw;
         display: flex;
     }
-    
-    .cVIcon, .gitHubIcon {
+
+    .cVIcon,
+    .gitHubIcon {
         margin-left: 2vw;
         width: 5vw;
         height: 10vw;
     }
-    
+
     .aboutMePageIntroductoryText6 {
         cursor: pointer;
         background-color: rgba(0, 183, 0, 0.538);
@@ -386,7 +367,7 @@
         transition: all ease 1s;
         z-index: 999;
     }
-    
+
     .aboutMePageIntroductoryText.show,
     .aboutMePageIntroductoryText1.show,
     .aboutMePageIntroductoryText2.show,
@@ -396,22 +377,18 @@
         transform: translateY(0rem);
         opacity: 1;
     }
-    
+
     .aboutMePageIntroductoryText6.show {
         transform: translateY(0rem);
         opacity: 1;
     }
-    
+
     .aboutMePageIntroductoryText6:hover {
         background-color: rgba(0, 183, 0, 0.848);
         box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.384);
     }
-    
-    
-    
-    
-    
-    /**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+    /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/ /**/
     .fixed-image {
         transform: translateY(2rem);
         opacity: 0;
@@ -427,22 +404,18 @@
         margin-bottom: var(--scroll-padding);
         z-index: -1;
     }
-    
-    .fixed-image.show{
+
+    .fixed-image.show {
         transform: translateY(0rem);
         opacity: 1;
     }
-    
-    
-    
-    
 
     .degrees {
         margin-top: 0%;
         width: 100dvw;
         height: fit-content;
     }
-    
+
     .degreesHR {
         margin: 0 0 0 5%;
         border: rgba(255, 255, 255, 0.516) solid 0.001vw;
@@ -452,23 +425,23 @@
         align-items: center;
         width: 90%;
     }
-    
+
     .degreesHeader {
         margin-bottom: 5%;
         margin-left: 5%;
         font: 12vw Roboto-Regular;
         color: white;
-
     }
-    
-    .school, .university {
+
+    .school,
+    .university {
         display: flex;
         flex-direction: row;
         align-items: center;
 
         transform: translateX(-29.375vw);
     }
-    
+
     .schoolLogo,
     .universityLogo {
         transition: all ease 1s;
@@ -481,69 +454,52 @@
         height: 20.976vw;
         width: 29.375vw;
     }
-    
-    
-    .schoolTitle, .universityTitle {
+
+    .schoolTitle,
+    .universityTitle {
         margin-top: 0;
         margin-bottom: 0;
         font: 8vw Roboto-Bold;
         color: white;
     }
-    
-    .schoolDuration, .universityDuration {
+
+    .schoolDuration,
+    .universityDuration {
         font: 4vw Roboto-Thin;
         color: white;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     /*
     linear-gradient(rgb(17, 14, 17) 0%, rgb(11, 7, 11) 100%);
     transform: perspective(1200px) translateX(0px) translateY(270.944px) scale(1) rotate(0deg) rotateX(0deg) rotateY(0deg) translateZ(0px);
     */
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     .workExperience {
         width: 100%;
         height: 180vw;
     }
-    
-    
+
     .workExperienceHeader {
         margin-left: 5%;
         font: 12vw Roboto-Thin;
         color: white;
     }
-    
+
     .workExperienceGridBox {
         margin-top: -5%;
         margin-left: 5%;
         margin-right: 5%;
         display: grid;
         gap: 5vw;
-        grid-template-areas: 
-        "work1"
-        "work2"
-        "work3"
-        "work4"
-        "work5"
-        "work6";
+        grid-template-areas:
+            "work1"
+            "work2"
+            "work3"
+            "work4"
+            "work5"
+            "work6";
     }
-    
+
     .work1,
     .work2,
     .work3,
@@ -557,8 +513,7 @@
         background: linear-gradient(rgb(33, 33, 33) 0%, rgb(10, 10, 10) 100%);
         position: relative;
     }
-    
-    
+
     .work1:hover::before,
     .work2:hover::before,
     .work3:hover::before,
@@ -568,19 +523,20 @@
         opacity: 1;
         z-index: 99999;
     }
-    
+
     .work1::before,
     .work2::before,
     .work3::before,
     .work4::before,
     .work5::before,
     .work6::before {
-        background: radial-gradient(52.08vw circle at 
-        var(--mouse-x) var(--mouse-y), rgba(175, 175, 175, 0.145), 
-        transparent 40%
+        background: radial-gradient(
+            52.08vw circle at var(--mouse-x) var(--mouse-y),
+            rgba(175, 175, 175, 0.145),
+            transparent 40%
         );
         border-radius: inherit;
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         top: 0;
@@ -590,47 +546,45 @@
         transition: opacity 500ms;
         z-index: 99999;
     }
-    
-    
-      .work1 {
+
+    .work1 {
         grid-area: work1;
-      }
-      .work2 {
+    }
+    .work2 {
         grid-area: work2;
-      }
-      .work3 {
+    }
+    .work3 {
         grid-area: work3;
-      }
-      .work4 {
+    }
+    .work4 {
         grid-area: work4;
-      }
-      .work5 {
+    }
+    .work5 {
         grid-area: work5;
-      }
-      .work6 {
+    }
+    .work6 {
         grid-area: work6;
-      }
-    
-      
-    .work1Title, 
-    .work2Title, 
-    .work3Title, 
-    .work4Title, 
-    .work5Title, 
-    .work6Title, 
+    }
+
+    .work1Title,
+    .work2Title,
+    .work3Title,
+    .work4Title,
+    .work5Title,
+    .work6Title,
     .work7Title {
         font: 6vw Roboto-Bold;
         color: white;
         margin-bottom: 10%;
         margin-top: -5%;
     }
-    
-    .work1Description, 
-    .work2Description, 
-    .work3Description, 
-    .work4Description, 
-    .work5Description, 
-    .work6Description, 
+
+    .work1Description,
+    .work2Description,
+    .work3Description,
+    .work4Description,
+    .work5Description,
+    .work6Description,
     .work7Description {
         outline: none !important;
         color: white !important;
@@ -640,12 +594,12 @@
         color: white;
     }
 
-    .work1Description:focus, 
-    .work2Description:focus, 
-    .work3Description:focus, 
-    .work4Description:focus, 
-    .work5Description:focus, 
-    .work6Description:focus, 
+    .work1Description:focus,
+    .work2Description:focus,
+    .work3Description:focus,
+    .work4Description:focus,
+    .work5Description:focus,
+    .work6Description:focus,
     .work7Description:focus {
         outline: none !important;
         color: white !important;
@@ -654,13 +608,13 @@
         font: 5vw Roboto-Thin;
         color: white;
     }
-    
-    .work1DescriptionEnumeration, 
-    .work2DescriptionEnumeration, 
-    .work3DescriptionEnumeration, 
-    .work4DescriptionEnumeration, 
-    .work5DescriptionEnumeration, 
-    .work6DescriptionEnumeration, 
+
+    .work1DescriptionEnumeration,
+    .work2DescriptionEnumeration,
+    .work3DescriptionEnumeration,
+    .work4DescriptionEnumeration,
+    .work5DescriptionEnumeration,
+    .work6DescriptionEnumeration,
     .work7DescriptionEnumeration {
         outline: none !important;
         text-decoration: none !important;
@@ -670,15 +624,14 @@
         justify-content: space-between;
         padding: 0.716vw;
     }
-    
-      
-      .work1DescriptionEnumeration:focus, 
-      .work2DescriptionEnumeration:focus, 
-      .work3DescriptionEnumeration:focus, 
-      .work4DescriptionEnumeration:focus, 
-      .work5DescriptionEnumeration:focus, 
-      .work6DescriptionEnumeration:focus, 
-      .work7DescriptionEnumeration:focus {
+
+    .work1DescriptionEnumeration:focus,
+    .work2DescriptionEnumeration:focus,
+    .work3DescriptionEnumeration:focus,
+    .work4DescriptionEnumeration:focus,
+    .work5DescriptionEnumeration:focus,
+    .work6DescriptionEnumeration:focus,
+    .work7DescriptionEnumeration:focus {
         outline: none !important;
         text-decoration: none !important;
         color: white !important;
@@ -686,23 +639,10 @@
         color: white;
         justify-content: space-between;
         padding: 0.716vw;
-      }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    #container4, #container5 {
+    }
+
+    #container4,
+    #container5 {
         height: 180vw;
         width: 100vw;
         display: flex;
@@ -717,8 +657,7 @@
         display: flex;
         background-color: black;
     }
-    
-    
+
     #container7 {
         margin: 0;
         padding: 0;
@@ -727,4 +666,4 @@
         display: flex;
         background-color: black;
     }
-    }
+}

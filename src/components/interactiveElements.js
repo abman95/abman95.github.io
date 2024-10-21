@@ -1,4 +1,3 @@
-// File: src/js/modules/interactiveElements.js
 export function initializeInteractiveElements(array) {
     let elements = array;
 

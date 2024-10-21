@@ -1,4 +1,3 @@
-// File: src/js/main.js
 import { initializeHeaderAnimation } from "./components/headerAnimation.js";
 import { initializeMobileMenu } from "./components/navigation/mobileMenu.js";
 import { initializeInteractiveElements } from "./components/interactiveElements.js";

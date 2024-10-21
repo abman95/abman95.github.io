@@ -1,4 +1,3 @@
-//src\content\projectContent.js
 export const PROJECT_HEADERS = {
     mp3: "MP3 Player",
     typing: "Typing Speed App",

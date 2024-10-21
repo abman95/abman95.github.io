@@ -1,4 +1,3 @@
-// File: src/js/modules/projectModal.js
 export function initializeProjectModal() {
     const projectImageSlider1ButtonContainerBackground = document.querySelector(
         ".projectImageSlider1ButtonContainerBackground",

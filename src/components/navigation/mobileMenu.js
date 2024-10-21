@@ -1,5 +1,6 @@
-// File: src/js/modules/mobileMenu.js
-import { dialogTexts } from "../../../utils/languageContentUpdater.js";
+import { loadTranslations } from "../../../utils/languageContentUpdater.js";
+
+let dialogTexts;
 
 export function initializeMobileMenu() {
     const mobileMenuButton = document.querySelector(".mobileMenuButton");
@@ -95,11 +96,13 @@ class DialogAnimator {
         );
     }
 
-    handleMouseEvent(direction, textIndex) {
+    async handleMouseEvent(direction, textIndex) {
+        dialogTexts = await loadTranslations();
+
         this.animationDirection = direction;
         clearTimeout(this.animationTextTimeout);
         this.animateText(
-            dialogTexts[chosenLanguage][this.className][textIndex],
+            dialogTexts.dialogTexts[chosenLanguage][this.className][textIndex],
         );
     }
 
@@ -120,8 +123,9 @@ class DialogAnimator {
     }
 }
 
-export function changeLanguage(newLanguage) {
-    if (dialogTexts.hasOwnProperty(newLanguage)) {
+export async function changeLanguage(newLanguage) {
+    dialogTexts = await loadTranslations();
+    if (dialogTexts.dialogTexts.hasOwnProperty(newLanguage)) {
         chosenLanguage = newLanguage;
         updateAllDialogs();
     } else {

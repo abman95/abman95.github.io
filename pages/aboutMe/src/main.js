@@ -1,4 +1,3 @@
-// main.js
 import { initializeServices } from "./services/initializeServices.js";
 import { setupEventListeners } from "./utils/eventSetup.js";
 import { setupClock } from "../../../src/services/clock.js";

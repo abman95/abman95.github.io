@@ -1,4 +1,3 @@
-//src\navigation\projectReturnHandler.jssrc\navigation\projectReturnHandler.js
 // Handles the return navigation from project pages to portfolio
 import { projectPages } from "../content/projectContent.js";
 

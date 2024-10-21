@@ -1,11 +1,10 @@
-//src\components\sliders\projectSlider.js
 import { PROJECT_HEADERS } from "../../content/projectContent.js";
-import {
-    PROJECT_DESCRIPTIONS_DE,
-    PROJECT_DESCRIPTIONS_EN,
-} from "../../../utils/languageContentUpdater.js";
+import { loadTranslations } from "../../../utils/languageContentUpdater.js";
 import { updateProjectDescription } from "../../../utils/languageSwitcher.js";
 import { getProjectHeader } from "../../content/projectContent.js";
+
+let PROJECT_DESCRIPTIONS_EN;
+let PROJECT_DESCRIPTIONS_DE;
 
 export class ProjectSlider {
     constructor() {
@@ -146,13 +145,16 @@ export class ProjectSlider {
         this.elements.image3.src = `assets/images/projects/${projectName}/${projectName}Picture1.png`;
     }
 
-    updateContent(projectName) {
+    async updateContent(projectName) {
+        PROJECT_DESCRIPTIONS_EN = await loadTranslations();
+        PROJECT_DESCRIPTIONS_DE = await loadTranslations();
+
         const currentLanguage = this.requireCurrentLanguage();
         this.elements.header.textContent = PROJECT_HEADERS[projectName];
         this.elements.description.textContent =
             currentLanguage === "English"
-                ? PROJECT_DESCRIPTIONS_EN[projectName]
-                : PROJECT_DESCRIPTIONS_DE[projectName];
+                ? PROJECT_DESCRIPTIONS_EN.PROJECT_DESCRIPTIONS_EN[projectName]
+                : PROJECT_DESCRIPTIONS_DE.PROJECT_DESCRIPTIONS_DE[projectName];
     }
 
     updateSliderButtons() {
@@ -193,16 +195,24 @@ const projectImageSlider2 = document.querySelector(".projectImageSlider2");
 let translateXInVw;
 
 if (window.location.href.includes("/homepage.html")) {
-    function getProjectContent(className) {
+    async function getProjectContent(className) {
+        PROJECT_DESCRIPTIONS_EN = await loadTranslations();
+        PROJECT_DESCRIPTIONS_DE = await loadTranslations();
         let chosenLanguage = new ProjectSlider().requireCurrentLanguage();
         if (!chosenLanguage) {
             chosenLanguage = "English";
         }
 
         if (chosenLanguage === "English") {
-            updateProjectDescription(PROJECT_DESCRIPTIONS_EN, className);
+            updateProjectDescription(
+                PROJECT_DESCRIPTIONS_EN.PROJECT_DESCRIPTIONS_EN,
+                className,
+            );
         } else {
-            updateProjectDescription(PROJECT_DESCRIPTIONS_DE, className);
+            updateProjectDescription(
+                PROJECT_DESCRIPTIONS_DE.PROJECT_DESCRIPTIONS_DE,
+                className,
+            );
         }
     }
 

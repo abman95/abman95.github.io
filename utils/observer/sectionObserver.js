@@ -2,22 +2,27 @@ import {
     addLetterHeadingContainer1,
     observerObserved,
 } from "../languageSwitcher.js";
-import { personalIntroduction } from "../languageContentUpdater.js";
+import { loadTranslations } from "../languageContentUpdater.js";
 
 const projectOneDescription = document.querySelector(".projectOneDescription");
+let personalIntroduction;
 
-function handleIntersection(entries) {
+async function handleIntersection(entries) {
+    personalIntroduction = await loadTranslations();
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             if (entry.target.id === "container2") {
-                let chosenLanguage = localStorage.getItem("chosenLanguage");
+                let chosenLanguage =
+                    localStorage.getItem("chosenLanguage") || "English";
 
                 observerObserved();
 
                 setTimeout(() => {
                     projectOneDescription.classList.add("show");
                     addLetterHeadingContainer1(
-                        personalIntroduction[chosenLanguage],
+                        personalIntroduction.personalIntroduction[
+                            chosenLanguage
+                        ],
                         false,
                         true,
                     );

@@ -1,33 +1,34 @@
 @font-face {
-    font-family: 'Graphik1';
+    font-family: "Graphik1";
     src: url(../../../../assets/fonts/Graphik-Font-Family/GraphikMedium.otf);
 }
 
 @font-face {
-    font-family: 'Graphik0';
+    font-family: "Graphik0";
     src: url(../../../../assets/fonts/Graphik-Font-Family/GraphikLight.otf);
 }
 
 @font-face {
-    font-family: 'Graphik2';
+    font-family: "Graphik2";
     src: url(../../../../assets/fonts/Graphik-Font-Family/GraphikRegular.otf);
 }
-
 
 input:focus,
 select:focus,
 textarea:focus,
 button:focus {
-  outline: none;
+    outline: none;
 }
-
-
-
 
 :root {
-    background-image: linear-gradient(to right, rgba(225, 29, 206, 0.47), rgba(38, 6, 251, 0.303),rgba(6, 63, 251, 0.303), rgba(59, 6, 251, 0.303));
+    background-image: linear-gradient(
+        to right,
+        rgba(225, 29, 206, 0.47),
+        rgba(38, 6, 251, 0.303),
+        rgba(6, 63, 251, 0.303),
+        rgba(59, 6, 251, 0.303)
+    );
 }
-
 
 .addcontainer {
     display: flex;
@@ -36,7 +37,7 @@ button:focus {
 }
 
 h1 {
-    text-shadow:  0 0px 10px rgba(0, 0, 0, 0.1);;
+    text-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
     font-size: 40px;
     font-family: Graphik1;
     width: max-content;
@@ -53,20 +54,21 @@ h1 {
     margin: 220px auto auto auto;
     position: relative;
     z-index: 2;
- }
+}
 
- .container:hover::before {
+.container:hover::before {
     opacity: 1;
     z-index: 1;
 }
 
 .container::before {
-    background: radial-gradient(800px circle at 
-    var(--mouse-x) var(--mouse-y), rgba(0, 0, 255, 0.145), 
-    transparent 40%
+    background: radial-gradient(
+        800px circle at var(--mouse-x) var(--mouse-y),
+        rgba(0, 0, 255, 0.145),
+        transparent 40%
     );
     border-radius: inherit;
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -76,8 +78,6 @@ h1 {
     transition: opacity 500ms;
     z-index: 1;
 }
-
-
 
 input::placeholder {
     color: black;
@@ -138,7 +138,7 @@ ul li {
 }
 
 ul li::before {
-    content: '';
+    content: "";
     position: absolute;
     height: 28px;
     width: 28px;
@@ -158,7 +158,6 @@ ul li.checked {
 ul li.checked::before {
     background-image: url(../assets/images/checked.png);
 }
-
 
 ul li .checked {
     color: #555;

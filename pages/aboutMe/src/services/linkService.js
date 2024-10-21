@@ -1,4 +1,3 @@
-// services/LinkService.js
 export class LinkService {
     constructor() {
         this.aboutMeHeader6 = document.querySelector(

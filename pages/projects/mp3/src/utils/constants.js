@@ -6,6 +6,6 @@ export const ROTATION_ANGLE_REWIND = 345;
 export const ROTATION_DURATION = 700;
 export const BUTTON_ANIMATION_DURATION = 1000;
 export const buttonRotationMap = {
-  'fastForwardButton': 0,
-  'rewindButton': 360
+    fastForwardButton: 0,
+    rewindButton: 360,
 };

@@ -1,4 +1,3 @@
-// services/scrollService.js
 export class ScrollService {
     constructor() {
         this.elements = {

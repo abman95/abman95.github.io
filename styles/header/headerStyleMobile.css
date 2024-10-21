@@ -1,72 +1,60 @@
 @media screen and (max-width: 450px) {
+    @font-face {
+        font-family: "Roboto-Bold";
+        src: url(../../assets/fonts/Roboto/Roboto-Bold.ttf);
+    }
 
-  @font-face {
-    font-family: 'Roboto-Bold';
-    src: url(../../assets/fonts/Roboto/Roboto-Bold.ttf);
-  }
-  
-  @font-face {
-    font-family: 'Roboto-Medium';
-    src: url(../../assets/fonts/Roboto/Roboto-Medium.ttf);
-  }
-  
-  @font-face {
-    font-family: 'Roboto-Regular';
-    src: url(../../assets/fonts/Roboto/Roboto-Regular.ttf);
-  }
-  @font-face {
-    font-family: 'Roboto-Light';
-    src: url(../../assets/fonts/Roboto/Roboto-Light.ttf);
-  }
-  
-  @font-face {
-    font-family: 'Roboto-Thin';
-    src: url(../../assets/fonts/Roboto/Roboto-Thin.ttf);
-  }
-  
-  
-  
-  
-  .returnPortfolioSite {
-    position: absolute;
-    top: 10%;
-    left: 0%;
-    width: 20vw;
-    height: 2vw;
-    color: white;
-    font: 1.7vw Roboto-Regular;
-    text-shadow: 0 0 .1vw black;
-    transition: transform ease 1s;
-  }
-  
-  .returnPortfolioSite:hover {
-    transform: translateY(-5px) scale(1.01);
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  :root {
+    @font-face {
+        font-family: "Roboto-Medium";
+        src: url(../../assets/fonts/Roboto/Roboto-Medium.ttf);
+    }
 
-    width: 100vw;
-    height: 100vh;
-    height: auto;
-    scroll-behavior: smooth;
-    transition: all ease 1s;
-  }
-  
-  :root::-webkit-scrollbar {
-    display: none;
-    width: 10px;
-  }
-  * {
-    scrollbar-width: none;
-  }
-  /*
+    @font-face {
+        font-family: "Roboto-Regular";
+        src: url(../../assets/fonts/Roboto/Roboto-Regular.ttf);
+    }
+    @font-face {
+        font-family: "Roboto-Light";
+        src: url(../../assets/fonts/Roboto/Roboto-Light.ttf);
+    }
+
+    @font-face {
+        font-family: "Roboto-Thin";
+        src: url(../../assets/fonts/Roboto/Roboto-Thin.ttf);
+    }
+
+    .returnPortfolioSite {
+        position: absolute;
+        top: 10%;
+        left: 0%;
+        width: 20vw;
+        height: 2vw;
+        color: white;
+        font: 1.7vw Roboto-Regular;
+        text-shadow: 0 0 0.1vw black;
+        transition: transform ease 1s;
+    }
+
+    .returnPortfolioSite:hover {
+        transform: translateY(-5px) scale(1.01);
+    }
+
+    :root {
+        width: 100vw;
+        height: 100vh;
+        height: auto;
+        scroll-behavior: smooth;
+        transition: all ease 1s;
+    }
+
+    :root::-webkit-scrollbar {
+        display: none;
+        width: 10px;
+    }
+    * {
+        scrollbar-width: none;
+    }
+    /*
   :root::-webkit-scrollbar-thumb {
     background-color: #999;
     border-radius: 5px;
@@ -81,130 +69,115 @@
     border-radius: 5px;
   }
   */
-  
-  
-  
-  body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-  
-    html, body {
-    width: 100vw;
-    overflow-x:hidden;   
-  } 
-  
-  
-  
-  .header{
-      overflow-x: hidden;
-      z-index: 9999999;
-      padding: 0;
-      /* position: fixed; */
-      /* box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    html,
+    body {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    .header {
+        overflow-x: hidden;
+        z-index: 9999999;
+        padding: 0;
+        /* position: fixed; */
+        /* box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
       background-color: rgba(0, 0, 0, 0.1);
       border: 1.5px solid rgba(0, 0, 0, 0); */
-      height: 13vh;
-      white-space: nowrap;
-      padding: 0;
-      width: 100%;
-      justify-content: space-between;
-      align-items: center;
-      display: flex;
-  }
+        height: 13vh;
+        white-space: nowrap;
+        padding: 0;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+    }
 
+    .headerHeading {
+        display: flex;
+    }
 
- .headerHeading {
-  display: flex;
-  }
+    .headerHeading > *:nth-child(n + 2) {
+        display: none;
+    }
 
-.headerHeading > *:nth-child(n+2) {
-  display: none;
-}
-
-  /*
+    /*
   .headerHeading > *:nth-child(-n+1) {
   }
   
 */
 
-
-
-.headerHome, 
-.headerAboutMe, 
-.headerContact,
-.headerLanguageButton {
-  display: none;
-}
-  
-
-
-  .mobileMenuButton {
-      margin-left: -45%;
-      list-style: disc;
-      color: white;
-      z-index: 9999999;
-      transition: all ease 0.3s;
-      font: 3vh Roboto-Thin;
-      color: white;
-  }
-
-  .mobileMenuButton:hover {
-    list-style: disc;
-    transition: all ease 0.3s;
-    filter: invert(0.2);
-    transform: scale(1.04);
-}
-
-  .portfolioIcon {
-      margin-top: -15%;
-      margin-left: 15%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 9vw;
-      cursor: pointer;
-      transition: all ease 0.5s;
-      z-index: 9999999;
-  }
-
-  .portfolioIcon:hover {
-      filter: invert(0.2);
-      transform: scale(1.04);
-      cursor: pointer;
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  .headerFixedBackground {
-    overflow-x: hidden;
-    cursor: pointer;
-    display: flex;
-    scale: 0;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15vw;
-    background-image: linear-gradient(black 0%, wheat 0%);
-    position: fixed;
-    right: 4%;
-    top: 5%;
-    height: 15vw;
-    width: 15vw;
-    z-index: 9999999;
+    .headerHome,
+    .headerAboutMe,
+    .headerContact,
+    .headerLanguageButton {
+        display: none;
     }
-  
-  /*
+
+    .mobileMenuButton {
+        margin-left: -45%;
+        list-style: disc;
+        color: white;
+        z-index: 9999999;
+        transition: all ease 0.3s;
+        font: 3vh Roboto-Thin;
+        color: white;
+    }
+
+    .mobileMenuButton:hover {
+        list-style: disc;
+        transition: all ease 0.3s;
+        filter: invert(0.2);
+        transform: scale(1.04);
+    }
+
+    .portfolioIcon {
+        margin-top: -15%;
+        margin-left: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 9vw;
+        cursor: pointer;
+        transition: all ease 0.5s;
+        z-index: 9999999;
+    }
+
+    .portfolioIcon:hover {
+        filter: invert(0.2);
+        transform: scale(1.04);
+        cursor: pointer;
+    }
+
+    .headerFixedBackground {
+        overflow-x: hidden;
+        cursor: pointer;
+        display: flex;
+        scale: 0;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15vw;
+        background-image: linear-gradient(black 0%, wheat 0%);
+        position: fixed;
+        right: 4%;
+        top: 5%;
+        height: 15vw;
+        width: 15vw;
+        z-index: 9999999;
+    }
+
+    /*
   .headerFixedBackground:hover {
     animation: backgroundColorAnimation ease 0.1s forwards;  Add "forwards" to keep the final state
   }
   */
-  /*
+    /*
   @keyframes backgroundColorAnimation {
     0% {
       background-image: linear-gradient(rgb(255, 0, 0) 0%, wheat 0%);
@@ -223,374 +196,341 @@
     }
   }
   */
-  
-  
-  
-  .headerFixed {
-    background-image: url(../../assets/images/menuIcon/menu.png);
-    background-size: cover;
-    height: 7vw;
-    width: 7vw;
-    z-index: 999999;
-  }
-  
-  
-  dialog::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  dialog::-webkit-scrollbar-thumb {
-    background-color: #999;
-    border-radius: 5px;
-  }
-  
-  dialog::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
-  }
-  
-  dialog::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-    border-radius: 5px;
-  }
-  
-  
-  @keyframes dialogPop {
-    from {
-      opacity: 1;
-      transform: translateX(100vw);
+
+    .headerFixed {
+        background-image: url(../../assets/images/menuIcon/menu.png);
+        background-size: cover;
+        height: 7vw;
+        width: 7vw;
+        z-index: 999999;
     }
-    to {
-      transform: scale(1);
-      transform: translateX(0vw);
-      opacity: 1;
+
+    dialog::-webkit-scrollbar {
+        width: 10px;
     }
-  }
-  
-  
-  @keyframes dialogClose {
-    from {
-      opacity: 1;
-      transform: translateX(0vw);
+
+    dialog::-webkit-scrollbar-thumb {
+        background-color: #999;
+        border-radius: 5px;
     }
-    to {
-          transform: scale(1);
-      transform: translateX(100vw);
-      opacity: 1;
+
+    dialog::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
     }
-  }
-  
-  
-  .dialogButton {
-    cursor: pointer;
-    position: fixed;
-    display: flex;
-    width: 1.63vw;
-    margin: -3.91vw 0 0 2.28vw;
-    transition: all ease 1s;
-    z-index: 99999;
-  }
-  
-  .dialogButton:hover {
-    transform: scale(1.06);
-    filter: brightness(1) invert(0.3);
-  }
-  
-  
-  .headerFixedMenu {
-    padding: 0;
-    cursor: auto;
-    scrollbar-width: thin;
-    scrollbar-color: #999 #f1f1f1;
-    position: fixed;
-    border: none;
-    top: 0;
-    right: 0;
-    background-color: #1C1D20;
-    width: 100vw;
-    height: 100vh;
-    transition: all 2.5s;
-    user-select: none;
-    font-family: Roboto-Regular;
-    font-size: 20px;
-    animation: dialogPop .7s ease-in-out forwards;
-    outline: none;
-    overflow: hidden;
-    margin-top: 0%;
-    margin-bottom: 0px;
-    margin-right: 0%;
-  }
-  
-  .headerFixedMenu:-internal-dialog-in-top-layer {
-    max-width: 100% ;
-    max-height: 100%;
-  }
-  
-  .headerFixedMenu.closed {
-    animation: dialogClose 0.3s ease-in-out forwards;
-  }
-  
-  
-  .headerFixedMenu::backdrop {
-    transition: all ease .5s;
-    user-select: none;
-  }
-  
-  .dialogCloseButton {
-    cursor: pointer;
-    width: 10vw;
-    height: 10vw;
-    position: fixed;
-    top: 5%;
-    right: 5%;
-    transition: all ease 1s;
-    filter: invert(1);
-  }
-  
-  
-  .dialogCloseButton:hover {
-    filter: invert(0.5);
-    transition: all ease 1s;
-    transform: scale(1.07);
-  }
-  
-  
-  #dialogHeader {
-    display: flex;
-    width: 65.76vw;
-    height: 13.39vh;
-    z-index: 10;
-  }
-  
-  #dialogHeadline {
-    text-shadow:  0 0 0.65vw rgba(0, 0, 0, 0.1);;
-    color: white;
-    font: 5vw Roboto-Thin;
-    margin-left: 16%;
-    margin-top: 35%;
-  }
-  
-  .dialogHeaderHr {
-    margin-left: 10%;
-    margin-top: 9%;
-    width: 80%;
-    border: rgba(255, 255, 255, 0.537) solid .1vh;
-    box-sizing: border-box;
-  }
-  
-  
-  
-  #dialogHeaderListing {
-    margin-top: 10%;
-    margin-left: 20%;
-    display: flex;
-    flex-direction: column;
-    row-gap: 13vw;
-  }
-  
-  #dialogHeaderListing a {
-    text-decoration: none;
-    color: white;
-  }
-  
-  #dialogHeaderListing a:focus {
-    outline: none;
-  }
-  
-  #dialogHeaderListing li {
-    white-space: nowrap;
-    width: 90%;
-    z-index: 20;
-    transition: all ease 0.3s;
-    font-size: 14vw;
-    color: white;
-  }
-  
-  .dialogHome, 
-  .dialogAboutMe,
-  .dialogContact,
-  .dialogLanguageButton {
-    list-style: none;
-    border-bottom: 0.13vw solid transparent;
-    transition: border-bottom 0.5s ease;
-  }
-  
-  .dialogHome:hover,
-  .dialogAboutMe:hover,
-  .dialogContact:hover,
-  .dialogLanguageButton:hover {
-  list-style: none;
-  border-bottom: 0.13vw solid rgb(255, 255, 255);
-  }
-  
-  .dialogLanguageButton{
-    cursor: pointer;
-  }
-  
-  
-  
-  
-  .dialogMotivationalTextHeader {
-    margin-left: 20%;
-    margin-top: 5%;
-    font: 5.5vw Roboto-Regular;
-    gap: 3vw;
-    color: white;
-    text-decoration: underline;
-  }
-  
-  
-  .dialogMotivationalText {
-    margin-left: 0%;
-    margin-top: -8%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    gap: 1vw;
-    height: 23.6vw;
-  }
-  
-  .dialogMotivationalText p {
-    color: white;
-    font: 4vw Roboto-Thin;
-    transition: all ease 1s;
-  }
-  
-  .dialogMotivationalText p:hover {
-  font-size: 4.1vw;
-  }
 
+    dialog::-webkit-scrollbar-track {
+        background-color: #f1f1f1;
+        border-radius: 5px;
+    }
 
+    @keyframes dialogPop {
+        from {
+            opacity: 1;
+            transform: translateX(100vw);
+        }
+        to {
+            transform: scale(1);
+            transform: translateX(0vw);
+            opacity: 1;
+        }
+    }
 
+    @keyframes dialogClose {
+        from {
+            opacity: 1;
+            transform: translateX(0vw);
+        }
+        to {
+            transform: scale(1);
+            transform: translateX(100vw);
+            opacity: 1;
+        }
+    }
 
+    .dialogButton {
+        cursor: pointer;
+        position: fixed;
+        display: flex;
+        width: 1.63vw;
+        margin: -3.91vw 0 0 2.28vw;
+        transition: all ease 1s;
+        z-index: 99999;
+    }
 
+    .dialogButton:hover {
+        transform: scale(1.06);
+        filter: brightness(1) invert(0.3);
+    }
 
+    .headerFixedMenu {
+        padding: 0;
+        cursor: auto;
+        scrollbar-width: thin;
+        scrollbar-color: #999 #f1f1f1;
+        position: fixed;
+        border: none;
+        top: 0;
+        right: 0;
+        background-color: #1c1d20;
+        width: 100vw;
+        height: 100vh;
+        transition: all 2.5s;
+        user-select: none;
+        font-family: Roboto-Regular;
+        font-size: 20px;
+        animation: dialogPop 0.7s ease-in-out forwards;
+        outline: none;
+        overflow: hidden;
+        margin-top: 0%;
+        margin-bottom: 0px;
+        margin-right: 0%;
+    }
 
+    .headerFixedMenu:-internal-dialog-in-top-layer {
+        max-width: 100%;
+        max-height: 100%;
+    }
 
-  .headerFixedMenuLanguage {
-    padding: 0;
-    cursor: auto;
-    scrollbar-width: thin;
-    scrollbar-color: #999 #f1f1f1;
-    position: fixed;
-    border: none;
-    top: 0;
-    right: 0;
-    background-color: #1C1D20;
-    width: 100vw;
-    height: 100vh;
-    transition: all 2.5s;
-    user-select: none;
-    font-family: Roboto-Regular;
-    font-size: 20px;
-    animation: dialogPop .7s ease-in-out forwards;
-    outline: none;
-    overflow: hidden;
-    margin-top: 0%;
-    margin-bottom: 0px;
-    margin-right: 0%;
-  }
-  
-  .headerFixedMenuLanguage:-internal-dialog-in-top-layer {
-    max-width: 100% ;
-    max-height: 100%;
-  }
-  
-  .headerFixedMenuLanguage.closed {
-    animation: dialogClose 0.3s ease-in-out forwards;
-  }
-  
-  
-  .headerFixedMenuLanguage::backdrop {
-    transition: all ease .5s;
-    user-select: none;
-  }
-  
-  .dialogCloseButtonLanguage {
-    cursor: pointer;
-    width: 10vw;
-    height: 10vw;
-    position: fixed;
-    top: 5%;
-    right: 5%;
-    transition: all ease 1s;
-    filter: invert(1);
-  }
-  
-  
-  .dialogCloseButtonLanguage:hover {
-    filter: invert(0.5);
-    transition: all ease 1s;
-    transform: scale(1.07);
-  }
-  
-  
-  #dialogHeaderLanguage {
-    display: flex;
-    width: 65.76vw;
-    height: 13.39vh;
-    z-index: 10;
-  }
-  
-  #dialogHeadlineLanguage {
-    text-shadow:  0 0 0.65vw rgba(0, 0, 0, 0.1);;
-    color: white;
-    font: 5vw Roboto-Thin;
-    margin-left: 31%;
-    margin-top: 35%;
-    white-space: nowrap;
-  }
-  
-  .dialogHeaderHrLanguage {
-    margin-left: 15%;
-    margin-top: 9%;
-    width: 80%;
-    border: rgba(255, 255, 255, 0.537) solid .1vh;
-    box-sizing: border-box;
-  }
-  
-  
-  
-  #dialogHeaderListingLanguage {
-    margin-top: 10%;
-    margin-left: 20%;
-    display: flex;
-    flex-direction: column;
-    row-gap: 20vw;
-  }
-  
-  #dialogHeaderListingLanguage a {
-    text-decoration: none;
-    color: white;
-  }
-  
-  #dialogHeaderListingLanguage a:focus {
-    outline: none;
-  }
-  
-  #dialogHeaderListingLanguage li {
-    width: 90%;
-    z-index: 20;
-    transition: all ease 0.3s;
-    font-size: 14vw;
-    color: white;
-  }
-  
-  .languageGerman, 
-  .languageEnglish {
-    cursor: pointer;
-    list-style: none;
-    border-bottom: 0.13vw solid transparent;
-    transition: border-bottom 0.5s ease;
-  }
-  
-  .languageGerman:hover,
-  .languageEnglish:hover {
-  list-style: none;
-  border-bottom: 0.13vw solid rgb(255, 255, 255);
-  }
+    .headerFixedMenu.closed {
+        animation: dialogClose 0.3s ease-in-out forwards;
+    }
+
+    .headerFixedMenu::backdrop {
+        transition: all ease 0.5s;
+        user-select: none;
+    }
+
+    .dialogCloseButton {
+        cursor: pointer;
+        width: 10vw;
+        height: 10vw;
+        position: fixed;
+        top: 5%;
+        right: 5%;
+        transition: all ease 1s;
+        filter: invert(1);
+    }
+
+    .dialogCloseButton:hover {
+        filter: invert(0.5);
+        transition: all ease 1s;
+        transform: scale(1.07);
+    }
+
+    #dialogHeader {
+        display: flex;
+        width: 65.76vw;
+        height: 13.39vh;
+        z-index: 10;
+    }
+
+    #dialogHeadline {
+        text-shadow: 0 0 0.65vw rgba(0, 0, 0, 0.1);
+        color: white;
+        font: 5vw Roboto-Thin;
+        margin-left: 16%;
+        margin-top: 35%;
+    }
+
+    .dialogHeaderHr {
+        margin-left: 10%;
+        margin-top: 9%;
+        width: 80%;
+        border: rgba(255, 255, 255, 0.537) solid 0.1vh;
+        box-sizing: border-box;
+    }
+
+    #dialogHeaderListing {
+        margin-top: 10%;
+        margin-left: 20%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 13vw;
+    }
+
+    #dialogHeaderListing a {
+        text-decoration: none;
+        color: white;
+    }
+
+    #dialogHeaderListing a:focus {
+        outline: none;
+    }
+
+    #dialogHeaderListing li {
+        white-space: nowrap;
+        width: 90%;
+        z-index: 20;
+        transition: all ease 0.3s;
+        font-size: 14vw;
+        color: white;
+    }
+
+    .dialogHome,
+    .dialogAboutMe,
+    .dialogContact,
+    .dialogLanguageButton {
+        list-style: none;
+        border-bottom: 0.13vw solid transparent;
+        transition: border-bottom 0.5s ease;
+    }
+
+    .dialogHome:hover,
+    .dialogAboutMe:hover,
+    .dialogContact:hover,
+    .dialogLanguageButton:hover {
+        list-style: none;
+        border-bottom: 0.13vw solid rgb(255, 255, 255);
+    }
+
+    .dialogLanguageButton {
+        cursor: pointer;
+    }
+
+    .dialogMotivationalTextHeader {
+        margin-left: 20%;
+        margin-top: 5%;
+        font: 5.5vw Roboto-Regular;
+        gap: 3vw;
+        color: white;
+        text-decoration: underline;
+    }
+
+    .dialogMotivationalText {
+        margin-left: 0%;
+        margin-top: -8%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        gap: 1vw;
+        height: 23.6vw;
+    }
+
+    .dialogMotivationalText p {
+        color: white;
+        font: 4vw Roboto-Thin;
+        transition: all ease 1s;
+    }
+
+    .dialogMotivationalText p:hover {
+        font-size: 4.1vw;
+    }
+
+    .headerFixedMenuLanguage {
+        padding: 0;
+        cursor: auto;
+        scrollbar-width: thin;
+        scrollbar-color: #999 #f1f1f1;
+        position: fixed;
+        border: none;
+        top: 0;
+        right: 0;
+        background-color: #1c1d20;
+        width: 100vw;
+        height: 100vh;
+        transition: all 2.5s;
+        user-select: none;
+        font-family: Roboto-Regular;
+        font-size: 20px;
+        animation: dialogPop 0.7s ease-in-out forwards;
+        outline: none;
+        overflow: hidden;
+        margin-top: 0%;
+        margin-bottom: 0px;
+        margin-right: 0%;
+    }
+
+    .headerFixedMenuLanguage:-internal-dialog-in-top-layer {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .headerFixedMenuLanguage.closed {
+        animation: dialogClose 0.3s ease-in-out forwards;
+    }
+
+    .headerFixedMenuLanguage::backdrop {
+        transition: all ease 0.5s;
+        user-select: none;
+    }
+
+    .dialogCloseButtonLanguage {
+        cursor: pointer;
+        width: 10vw;
+        height: 10vw;
+        position: fixed;
+        top: 5%;
+        right: 5%;
+        transition: all ease 1s;
+        filter: invert(1);
+    }
+
+    .dialogCloseButtonLanguage:hover {
+        filter: invert(0.5);
+        transition: all ease 1s;
+        transform: scale(1.07);
+    }
+
+    #dialogHeaderLanguage {
+        display: flex;
+        width: 65.76vw;
+        height: 13.39vh;
+        z-index: 10;
+    }
+
+    #dialogHeadlineLanguage {
+        text-shadow: 0 0 0.65vw rgba(0, 0, 0, 0.1);
+        color: white;
+        font: 5vw Roboto-Thin;
+        margin-left: 31%;
+        margin-top: 35%;
+        white-space: nowrap;
+    }
+
+    .dialogHeaderHrLanguage {
+        margin-left: 15%;
+        margin-top: 9%;
+        width: 80%;
+        border: rgba(255, 255, 255, 0.537) solid 0.1vh;
+        box-sizing: border-box;
+    }
+
+    #dialogHeaderListingLanguage {
+        margin-top: 10%;
+        margin-left: 20%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20vw;
+    }
+
+    #dialogHeaderListingLanguage a {
+        text-decoration: none;
+        color: white;
+    }
+
+    #dialogHeaderListingLanguage a:focus {
+        outline: none;
+    }
+
+    #dialogHeaderListingLanguage li {
+        width: 90%;
+        z-index: 20;
+        transition: all ease 0.3s;
+        font-size: 14vw;
+        color: white;
+    }
+
+    .languageGerman,
+    .languageEnglish {
+        cursor: pointer;
+        list-style: none;
+        border-bottom: 0.13vw solid transparent;
+        transition: border-bottom 0.5s ease;
+    }
+
+    .languageGerman:hover,
+    .languageEnglish:hover {
+        list-style: none;
+        border-bottom: 0.13vw solid rgb(255, 255, 255);
+    }
 }
-
-
-
-
-
