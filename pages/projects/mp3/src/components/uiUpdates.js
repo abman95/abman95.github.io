@@ -47,7 +47,7 @@ function updateAlbumArt(pictureData) {
         );
         elements.currentSongCover.style.backgroundImage = albumArt;
     } else {
-        const defaultCover = "url('./assets/images/defaultSongCover.jpg')";
+        const defaultCover = "url('../assets/images/defaultSongCover.jpg');";
         elements.playerContainer.style.setProperty(
             "--background-image",
             defaultCover,
@@ -100,13 +100,13 @@ function createFileListItem(file, index) {
                 albumArt.style.backgroundImage = `url(data:${format};base64,${base64String})`;
             } else {
                 albumArt.style.backgroundImage =
-                    "url('./assets/images/defaultSongCover.jpg')";
+                    "url('../assets/images/defaultSongCover.jpg');";
             }
         },
         onError: function () {
             titleText.textContent = `${file.name} - ${index}`;
             albumArt.style.backgroundImage =
-                "url('./assets/images/defaultSongCover.jpg')";
+                "url('../assets/images/defaultSongCover.jpg');";
         },
     });
 

@@ -28,7 +28,9 @@ export function playRandomSong() {
 export function toggleAutoPlay() {
     state.isAutoPlayEnabled = !state.isAutoPlayEnabled;
     updateAutoPlayButton();
-    state.audio.paused && handleSongEnd();
+    state.audio.paused &&
+        state.audio.duration === state.audio.currentTime &&
+        handleSongEnd();
 }
 
 export function toggleRandomPlay() {
@@ -60,3 +62,48 @@ export function handleSongEnd() {
         updatePlayPauseButton();
     }
 }
+
+const sampleFiles = [
+    "Adrián Berenguer - Discipline.mp3",
+    "Analaska - A New Beginning.mp3",
+    "Ardie Son - Wayfarer.mp3",
+    "Aves - Sparks.mp3",
+    "BalloonPlanet - Face the Future.mp3",
+    "Brianna Tam - Into the Storm.mp3",
+    "Carmel Quartet - Air on the G String.mp3",
+    "Cosmonkey - Bubbles Drop.mp3",
+    "Cosmonkey - Hotkeys.mp3",
+    "Evgeny Bardyuzha - Love Drunk.mp3",
+    "Flint - Beautiful Chaos.mp3",
+    "Jessie Reid - Time Goes By.mp3",
+    "Letra - Elevate.mp3",
+    "Naama Zafran - Earth.mp3",
+    "Richard Farrell - Soul Swingin.mp3",
+    "Romeo - Uncharted Lands.mp3",
+    "Steven Beddall - Haymaker.mp3",
+    "Wheres LuLu - God Damn.mp3",
+    "Yehezkel Raz - Ballerino.mp3",
+    "ZISO - Rage Money Power.mp3",
+];
+
+async function loadSampleFiles() {
+    const files = await Promise.all(
+        sampleFiles.map(async (filename) => {
+            const response = await fetch(`./assets/samplemp3/${filename}`);
+            const blob = await response.blob();
+            return new File([blob], filename, { type: "audio/mp3" });
+        }),
+    );
+
+    const event = {
+        target: {
+            files: files,
+        },
+    };
+
+    handleFileInputChange(event);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    loadSampleFiles();
+});
