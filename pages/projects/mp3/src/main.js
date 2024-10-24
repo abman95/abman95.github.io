@@ -11,6 +11,9 @@ import {
     fastForwardAudio,
     rewindAudio,
     togglePlayPause,
+    handleTouchStart,
+    handleTouchMove,
+    handleTouchEnd,
 } from "./components/audioControls.js";
 import {
     toggleAutoPlay,
@@ -23,6 +26,9 @@ elements.fileListButton.addEventListener("click", showFileListDialog);
 elements.dialogCloseButton.addEventListener("click", closeFileListDialog);
 document.addEventListener("click", handleClickOutsideFileListDialog);
 elements.slider.addEventListener("input", handleSliderInput);
+elements.slider.addEventListener("touchstart", handleTouchStart);
+elements.slider.addEventListener("touchmove", handleTouchMove);
+elements.slider.addEventListener("touchend", handleTouchEnd);
 elements.nextSongButton.addEventListener("click", playNextSong);
 elements.previousSongButton.addEventListener("click", playPreviousSong);
 elements.previousSongButton.addEventListener("click", handlePreviousSongClick);

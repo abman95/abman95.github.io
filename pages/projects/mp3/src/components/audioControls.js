@@ -20,6 +20,32 @@ export function handleSliderInput() {
     state.audio.currentTime = inputTime;
 }
 
+function calculateSliderValue(touch, slider) {
+    const sliderRect = slider.getBoundingClientRect();
+    const touchX = touch.clientX - sliderRect.left;
+    const newValue = (touchX / sliderRect.width) * slider.max;
+
+    return Math.min(Math.max(newValue, slider.min), slider.max);
+}
+
+function updateSliderAndAudio(touch, slider, audioProperty) {
+    if (!touch) return;
+    const value = calculateSliderValue(touch, slider);
+    slider.value = value;
+    state.audio[audioProperty] = value;
+}
+
+export function handleTouchStart(e) {
+    e.preventDefault();
+}
+
+export function handleTouchMove(e) {
+    updateSliderAndAudio(e.touches[0], elements.slider, "currentTime");
+}
+
+export function handleTouchEnd(e) {
+    updateSliderAndAudio(e.touches[0], elements.slider, "duration");
+}
 export function playNextSong() {
     if (
         state.isRandomEnabled === false &&

@@ -75,8 +75,13 @@ function createFileListItem(file, index) {
     container.style.transition = "all ease 0.5s";
 
     const albumArt = document.createElement("img");
-    albumArt.style.height = "150px";
-    albumArt.style.width = "150px";
+    if (window.innerWidth <= 450) {
+        albumArt.style.height = "25vw";
+        albumArt.style.width = "25vw";
+    } else {
+        albumArt.style.height = "10vw";
+        albumArt.style.width = "10vw";
+    }
     albumArt.style.backgroundSize = "cover";
 
     const titleText = document.createElement("p");

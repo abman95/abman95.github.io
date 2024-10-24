@@ -1,4 +1,4 @@
-@media screen and (min-width: 450px) {
+@media screen and (max-width: 450px) {
     @font-face {
         font-family: "Graphik1";
         src: url(../assets/fonts/Graphik-Font-Family/GraphikMedium.otf);
@@ -16,21 +16,24 @@
 
     @font-face {
         font-family: "Roboto-Thin";
-        src: url(../assets/fonts/Roboto/Roboto-Thin.ttf);
+        src: url(../../../../assets/fonts/Roboto/Roboto-Thin.ttf);
     }
 
     .returnPortfolioSite {
+        z-index: 999;
         cursor: pointer;
         position: absolute;
-        top: 10%;
+        top: 2%;
         left: 2%;
-        width: 5vw;
-        height: 5vw;
-        color: black;
-        font: 1.5vw Roboto-Thin;
+        width: 6vw;
+        height: 12vh;
+        color: rgba(0, 0, 0, 0.656);
+        font: 4vw Roboto-Thin;
+        writing-mode: vertical-rl; /* Vertikale Ausrichtung von rechts nach links */
+        text-orientation: upright;
         transition: transform ease 1s;
-        background-color: wheat;
-        border-radius: 5vw;
+        background-color: rgba(245, 222, 179, 0.74);
+        border-radius: 12vw;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -48,8 +51,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
-        width: auto;
+        height: 100%;
+        width: 100%;
         text-align: center;
         overflow: hidden;
     }
@@ -59,10 +62,11 @@
     }
 
     #addSongButton {
-        top: 80px;
-        left: 730px;
-        width: 60px;
-        height: 60px;
+        position: absolute;
+        bottom: 40%;
+        right: 4%;
+        width: 8vw;
+        height: 8vw;
         cursor: pointer;
         transition: 0.25s all ease;
         filter: brightness(0) invert(1);
@@ -74,28 +78,28 @@
     }
 
     #playerContainer {
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 50px;
-        display: grid;
-        grid-template-areas: "playerControls dialogSection";
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100vw;
         transition: 1s all ease;
     }
 
     #playerContainer::before {
+        top: 0%;
         content: "";
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
+        position: fixed;
+        height: 100%;
+        width: 100%;
         background-image: var(
             --background-image,
             url(../assets/images/defaultSongCover.jpg)
         );
         background-size: cover;
-        filter: blur(50px);
+        filter: blur(3vw);
         transform: scale(1.2);
-        overflow: hidden;
         z-index: -1;
         transition: 1s all ease;
     }
@@ -105,19 +109,18 @@
     }
 
     #playerControls {
-        padding-top: 20px;
-        padding-left: 150px;
-        grid-area: playerControls;
+        display: flex;
+        width: 100%;
+        justify-content: center;
     }
 
     #currentSong {
         background-image: url("../assets/images/defaultSongCover.jpg");
         background-size: cover;
         z-index: 1;
-        margin-top: 20px;
-        height: 400px;
-        width: 400px;
-        margin-bottom: 20px;
+        height: 40vh;
+        width: 40vh;
+        margin-bottom: 2vh;
         box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.022);
         background-position: center;
         background-size: cover;
@@ -128,30 +131,8 @@
         box-shadow: 0 0px 10px rgba(0.2, 0.2, 0.2, 0.2);
         background-color: rgba(0, 0, 0, 0.11);
         border: 0.5px solid rgba(0, 0, 0, 0.198);
-        border-radius: 10px;
-        width: 500px;
-        height: 320px;
-        padding-top: 100px;
-        grid-area: dialogSection;
-        margin-top: 30px;
-    }
-
-    dialog::-webkit-scrollbar {
-        width: 10px;
-    }
-
-    dialog::-webkit-scrollbar-thumb {
-        background-color: #999;
-        border-radius: 5px;
-    }
-
-    dialog::-webkit-scrollbar-thumb:hover {
-        background-color: #555;
-    }
-
-    dialog::-webkit-scrollbar-track {
-        background-color: #f1f1f1;
-        border-radius: 5px;
+        width: 100vw;
+        height: 39vh;
     }
 
     @keyframes dialogPop {
@@ -176,16 +157,19 @@
 
     .dialog-button {
         cursor: pointer;
-        position: fixed;
         display: flex;
-        width: 25px;
-        margin: -60px 0px 0px 35px;
+        width: 7vw;
+        margin: 4vw 0 0 5vw;
         transition: all ease 1s;
     }
 
     .dialog-button:hover {
         transform: scale(1.06);
         filter: brightness(1) invert(0.3);
+    }
+
+    #fileListDialog {
+        position: fixed;
     }
 
     dialog {
@@ -196,12 +180,12 @@
         border: 0.5px solid rgba(0, 0, 0, 0.198);
         background-color: #f2f2f2fc;
         border-radius: 5px;
-        width: 1000px;
-        height: 600px;
+        width: 95%;
+        height: 95vh;
         transition: all 2.5s;
         user-select: none;
         font-family: Graphik2;
-        font-size: 20px;
+        font-size: 4vw;
         animation: dialogPop 0.3s ease-in-out forwards;
     }
 
@@ -215,14 +199,14 @@
     }
 
     .dialog-close-button {
-        width: 40px;
-        height: 40px;
-        position: fixed;
-        position: sticky;
-        margin-top: 25px;
-        margin-right: 20px;
+        width: 9vw;
+        height: 9vw;
+        position: absolute;
+        top: 24%;
+        left: 5%;
         transition: all ease 1s;
         filter: invert(0.2);
+        z-index: 9999;
     }
 
     .dialog-close-button:hover {
@@ -232,70 +216,61 @@
     }
 
     #dialogHeader {
-        top: -20px;
         position: sticky;
-        display: flex;
-        width: 1010px;
-        height: 100px;
+        top: -3%;
+        width: 100%;
+        height: 18vw;
         z-index: 10;
         background-color: #f2f2f2fc;
     }
 
     #dialogTitle {
-        flex-basis: 99%;
-        text-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
-        font-size: 30px;
+        padding-top: 5%;
+        text-shadow: 0 0px 1vw rgba(0, 0, 0, 0.1);
+        font-size: 8vw;
         font-family: Graphik1;
-        padding-top: 50px;
-        margin-left: 80px;
-        margin-top: -20px;
-        vertical-align: middle;
-        text-align: center;
     }
 
     #artistName {
         font-family: Graphik1;
-        margin-top: -10px;
-        margin-bottom: 0;
+        margin-top: -4vh;
         color: white;
         text-shadow: 0.5px 0.5px 0.5px black;
-        font-size: 35px;
-        font-weight: 800;
+        font-size: 6.5vw;
         transition: all ease 0.4s;
     }
 
     #albumName {
         font-family: Graphik0;
-        margin-bottom: 3px;
+        margin-top: 0.5vh;
         color: white;
         text-shadow: 0.5px 0.5px 0.5px black;
-        font-size: 15px;
+        font-size: 4vw;
         transition: all ease 1s;
     }
 
     #songTitle {
         font-family: Graphik2;
-        margin-top: 3px;
+        margin-top: 0.5vh;
         color: white;
         text-shadow: 0.5px 0.5px 0.5px black;
-        font-size: 25px;
+        font-size: 5.5vw;
         transition: all ease 0.4s;
     }
 
     #testElement {
-        padding-top: 10px;
-        font-size: 15px;
+        padding-top: 1vh;
+        font-size: 3vw;
         font-family: Graphik0;
     }
 
     #rewindButton {
         background-size: cover;
-        margin-top: 15px;
-        margin-right: 25px;
+        margin: 0 8vw 0 0;
         z-index: 1;
         cursor: pointer;
-        width: 25px;
-        height: 25px;
+        width: 7vw;
+        height: 7vw;
         filter: brightness(0) invert(1);
         user-select: none;
         transition: all ease 0.15s;
@@ -303,47 +278,46 @@
     }
 
     #backButton {
+        margin-bottom: -0.15vh;
         background-size: cover;
-        margin-top: 15px;
         z-index: 1;
         cursor: pointer;
-        width: 40px;
-        height: 40px;
+        width: 11vw;
+        height: 11vw;
         filter: brightness(0) invert(1);
         user-select: none;
     }
 
     #stopButton {
         transition: src 0.5s ease;
-        margin: 30px 40px 0px 60px;
+        margin: 2vh 10vw 0 12.5vw;
         color: white;
         z-index: 1;
-        width: 40px;
-        height: 40px;
+        width: 10vw;
+        height: 10vw;
         cursor: pointer;
         filter: brightness(0) invert(1);
         user-select: none;
     }
 
     #forwardButton {
+        margin-bottom: -0.3vh;
         background-size: cover;
-        margin-top: 15px;
         z-index: 1;
         cursor: pointer;
-        width: 40px;
-        height: 40px;
+        width: 11vw;
+        height: 11vw;
         filter: brightness(1) invert(1);
         user-select: none;
     }
 
     #fastForwardButton {
         background-size: cover;
-        margin-top: 15px;
-        margin-left: 25px;
+        margin-left: 8vw;
         z-index: 1;
         cursor: pointer;
-        width: 25px;
-        height: 25px;
+        width: 7vw;
+        height: 7vw;
         filter: brightness(1) invert(1);
         user-select: none;
         transition: all ease 0.15s;
@@ -352,21 +326,20 @@
 
     #shuffleAutoplayControls {
         display: flex;
+        margin-top: 4%;
     }
 
     #shuffleAutoplayLeft {
-        flex-basis: 50%;
+        flex-basis: auto;
+        margin: auto 4% auto auto;
     }
 
     .auto-play-control {
-        position: fixed;
         box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
         border: 0.5px solid rgba(0, 0, 0, 0.198);
-        margin: 25px 0px 0 30px;
-        display: inline-block;
         border-radius: 5px;
-        width: 70px;
-        height: 42px;
+        width: 18vw;
+        height: 5.3vh;
         cursor: pointer;
         transition: all ease 0.4s;
         user-select: none;
@@ -374,15 +347,12 @@
     }
 
     .autoPlayButtonOn {
-        position: fixed;
         box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
         background-color: rgba(255, 255, 255, 0.563);
         border: 0.5px solid rgba(0, 0, 0, 0);
-        margin: 25px 0px 0 30px;
-        display: inline-block;
         border-radius: 5px;
-        width: 70px;
-        height: 42px;
+        width: 18vw;
+        height: 5.3vh;
         cursor: pointer;
         transition: all ease 0.4s;
         z-index: 10;
@@ -390,38 +360,34 @@
     }
 
     .auto-play-icon {
-        position: fixed;
-        display: inline-block;
-        width: 35px;
-        margin: 7px 0px 0 -16px;
+        height: 100%;
+        vertical-align: middle;
+        width: 8vw;
         filter: invert(1);
         transition: all ease 0.4s;
         z-index: 8;
     }
 
     .autoPlayButtonImageOn {
-        position: fixed;
-        display: inline-block;
-        width: 35px;
-        margin: 7px 0px 0 -16px;
+        height: 100%;
+        vertical-align: middle;
+        width: 8vw;
         z-index: 8;
         transition: all ease 0.4s;
         filter: invert(1);
     }
 
     #shuffleAutoplayRight {
-        flex-basis: 50%;
+        flex-basis: auto;
+        margin: auto auto auto 4%;
     }
 
     .random-song-control {
-        position: fixed;
         box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
         border: 0.5px solid rgba(0, 0, 0, 0.198);
-        margin: 25px 0px 0 -100px;
-        display: inline-block;
         border-radius: 5px;
-        width: 70px;
-        height: 42px;
+        width: 18vw;
+        height: 5.3vh;
         cursor: pointer;
         z-index: 10;
         transition: all ease 0.4s;
@@ -429,15 +395,12 @@
     }
 
     .randomSongBackgroundOn {
-        position: fixed;
         box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
         background-color: rgba(255, 255, 255, 0.563);
         border: 0.5px solid rgba(0, 0, 0, 0);
-        margin: 25px 0px 0 -100px;
-        display: inline-block;
         border-radius: 5px;
-        width: 70px;
-        height: 42px;
+        width: 18vw;
+        height: 5.3vh;
         cursor: pointer;
         transition: all ease 0.4s;
         z-index: 10;
@@ -445,65 +408,68 @@
     }
 
     #randomSongIcon {
-        position: fixed;
+        height: 100%;
+        vertical-align: middle;
         filter: invert(1);
-        display: inline-block;
-        margin: 8px 0px 0 -12px;
-        width: 25px;
+        width: 6vw;
         z-index: 8;
         transition: all ease 0.4s;
         user-select: none;
     }
 
     #randomSongOn {
-        position: fixed;
+        height: 100%;
+        vertical-align: middle;
         filter: invert(1);
-        display: inline-block;
-        margin: 8px 0px 0 -12px;
-        width: 25px;
+        width: 6vw;
         transition: all ease 0.4s;
         z-index: 8;
-
         user-select: none;
     }
 
+    br {
+        display: none;
+    }
+
     #currentTime {
-        margin: 60px 0px 0px 2px;
-        position: fixed;
+        position: absolute;
+        left: 5%;
+        bottom: 3%;
         font-family: Graphik0;
-        font-size: 15px;
+        font-size: 4vw;
         color: white;
         text-shadow: 0.5px 0.5px 0.5px black;
         cursor: pointer;
     }
 
     input[type="range"] {
+        margin-top: 3vh;
         cursor: pointer;
         overflow: hidden;
-        width: 80px;
+        width: 3vw;
         -webkit-appearance: none;
         background-color: rgba(128, 128, 128, 0.667);
     }
 
     input[type="range"]::-webkit-slider-thumb {
-        width: 10px;
+        width: 3vw;
         -webkit-appearance: none;
-        height: 10px;
+        height: 1vh;
         background: #ffffff;
-        box-shadow: -200px 0 0 200px #ffffffaf;
+        box-shadow: -51vw 0 0 51vw #ffffffaf;
     }
 
     #progressSlider {
-        width: 350px;
-        margin-top: 40px;
+        width: 90vw;
         cursor: pointer;
     }
 
     #totalTime {
-        margin: 60px 0 0 -35px;
-        position: fixed;
+        position: absolute;
+        right: 5%;
+        bottom: 3%;
         font-family: Graphik0;
-        font-size: 15px;
+        font-size: 4vw;
         color: white;
         text-shadow: 0.5px 0.5px 0.5px black;
         cursor: pointer;
