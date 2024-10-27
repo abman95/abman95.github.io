@@ -8,6 +8,9 @@ package-lock.json
 # TypeScript config files
 tsconfig.json
 
+# Webstorm config files
+.idea/
+
 # Prettier configuration
 .prettierrc.json
 
