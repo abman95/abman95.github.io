@@ -29,10 +29,8 @@ export function handleMP3ImageSwipe(event) {
         if (deltaX > 0) {
             playPreviousSong();
             handlePreviousSongClick();
-            console.log("Swipe von links nach rechts erkannt!");
         } else {
             playNextSong();
-            console.log("Swipe von rechts nach links erkannt!");
         }
     }
 }
