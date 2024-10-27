@@ -22,4 +22,5 @@ export const elements = {
     rewindButton: document.getElementById("rewindButton"),
     fastForwardButton: document.getElementById("fastForwardButton"),
     pausePlayButton: document.getElementById("stopButton"),
+    touchSongSlider: document.querySelector("#currentSong"),
 };

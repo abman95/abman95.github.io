@@ -11,7 +11,31 @@ import {
     buttonRotationMap,
 } from "../utils/constants.js";
 import { playNewSong, playRandomSong } from "../services/playlistManagement.js";
-import { updatePlayPauseButton } from "./uiUpdates.js";
+import { updatePlayPauseButton, handlePreviousSongClick } from "./uiUpdates.js";
+
+let startX = 0;
+let endX = 0;
+
+export function handleMP3ImageTouchStart(event) {
+    startX = event.touches[0].clientX;
+}
+
+export function handleMP3ImageSwipe(event) {
+    endX = event.changedTouches[0].clientX;
+
+    const deltaX = endX - startX;
+
+    if (Math.abs(deltaX) > 50) {
+        if (deltaX > 0) {
+            playPreviousSong();
+            handlePreviousSongClick();
+            console.log("Swipe von links nach rechts erkannt!");
+        } else {
+            playNextSong();
+            console.log("Swipe von rechts nach links erkannt!");
+        }
+    }
+}
 
 export function handleSliderInput() {
     const currentSliderValue = this.value;

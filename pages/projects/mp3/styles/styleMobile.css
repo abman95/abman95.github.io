@@ -55,6 +55,7 @@
         width: 100%;
         text-align: center;
         overflow: hidden;
+        user-select: none;
     }
 
     #fileInput {
@@ -231,6 +232,14 @@
         font-family: Graphik1;
     }
 
+    div[data-index] img {
+        flex-basis: 30%;
+    }
+
+    div[data-index] p {
+        flex-basis: 70%;
+    }
+
     #artistName {
         font-family: Graphik1;
         margin-top: -4vh;
@@ -290,7 +299,7 @@
 
     #stopButton {
         transition: src 0.5s ease;
-        margin: 2vh 10vw 0 12.5vw;
+        margin: 2vh 9vw 0 10vw;
         color: white;
         z-index: 1;
         width: 10vw;

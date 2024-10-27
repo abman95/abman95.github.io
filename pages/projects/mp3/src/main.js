@@ -14,6 +14,8 @@ import {
     handleTouchStart,
     handleTouchMove,
     handleTouchEnd,
+    handleMP3ImageTouchStart,
+    handleMP3ImageSwipe,
 } from "./components/audioControls.js";
 import {
     toggleAutoPlay,
@@ -39,3 +41,10 @@ elements.fileInput.addEventListener("click", () => togglePlayPause(false));
 elements.fastForwardButton.addEventListener("click", fastForwardAudio);
 elements.rewindButton.addEventListener("click", rewindAudio);
 elements.pausePlayButton.addEventListener("click", togglePlayPause);
+document.addEventListener("click", handleTouchStart);
+elements.touchSongSlider.addEventListener("touchstart", (e) =>
+    handleMP3ImageTouchStart(e),
+);
+elements.touchSongSlider.addEventListener("touchend", (e) =>
+    handleMP3ImageSwipe(e),
+);
