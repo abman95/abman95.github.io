@@ -83,6 +83,7 @@ export function addInteractiveAnimationOnLocatedInGermany() {
                     dontPullMeDialog.close();
                     const link = document.createElement("a");
                     link.href = "assets/cv/CV - Abdullah Sögüt.pdf";
+                    link.rel = "noopener noreferrer";
                     link.target = "_blank";
                     link.click();
                 }, 2000);

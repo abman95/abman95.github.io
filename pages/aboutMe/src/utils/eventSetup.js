@@ -25,6 +25,7 @@ function setupDegreeSlider(className) {
                 : "https://www.uni-bremen.de/studium/orientieren-bewerben/studienangebot/dbs/study/37?cHash=f8eb16fab1eaff34019a0981e1a48214";
 
         degreeLink.href = degreeLinkPath;
+        degreeLink.rel = "noopener noreferrer";
         degreeLink.target = "_blank";
         degreeLink.click();
     });

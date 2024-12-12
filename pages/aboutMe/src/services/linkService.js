@@ -19,6 +19,7 @@ export class LinkService {
 
             const link = document.createElement("a");
             link.href = pdfFilePath;
+            link.rel = "noopener noreferrer";
             link.target = "_blank";
             link.download = "Abdullah_Sogut_CV.pdf";
 
@@ -32,8 +33,8 @@ export class LinkService {
 
             const link = document.createElement("a");
             link.href = gitHubPath;
+            link.rel = "noopener noreferrer";
             link.target = "_blank";
-
             link.click();
         });
     }
