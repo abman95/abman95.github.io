@@ -652,7 +652,8 @@
     .toDo,
     .timer,
     .clock,
-    .keyGen {
+    .keyGen,
+    .eyesightTest {
         width: 100%;
         cursor: pointer;
         list-style: none;
@@ -665,7 +666,8 @@
     .toDo:hover,
     .timer:hover,
     .clock:hover,
-    .keyGen:hover {
+    .keyGen:hover,
+    .eyesightTest:hover {
         list-style: disc;
     }
 }

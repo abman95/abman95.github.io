@@ -5,6 +5,7 @@ export const PROJECT_HEADERS = {
     timer: "Timer",
     clock: "Clock",
     keyGen: "Key Generator",
+    eyesightTest: "Eyesight Test",
 };
 
 export function getProjectHeader(className) {
@@ -21,6 +22,8 @@ export function getProjectHeader(className) {
             return "clock";
         case "Key Generator":
             return "keyGen";
+        case "Eyesight Test":
+            return "eyesightTest";
         default:
             return "";
     }
@@ -33,4 +36,5 @@ export const projectPages = {
     "timerIndex.html": "timer",
     "clockIndex.html": "clock",
     "keyGenIndex.html": "keyGen",
+    "eyesightTestIndex": "eyesightTest",
 };

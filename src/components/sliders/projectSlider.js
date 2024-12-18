@@ -296,7 +296,7 @@ if (window.location.href.includes("/homepage.html")) {
         element.addEventListener("click", () => handleProjectClick(className));
     }
 
-    ["mp3", "typing", "toDo", "timer", "clock", "keyGen"].forEach(
+    ["mp3", "typing", "toDo", "timer", "clock", "keyGen", "eyesightTest"].forEach(
         projectListSelector,
     );
 }

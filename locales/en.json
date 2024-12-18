@@ -239,6 +239,11 @@
         "header": "Key Generator",
         "listName": "KeyGen",
         "description": "My KeyGenerator Tool, born after 3 months of studying JavaScript, CSS, and HTML, generates secure and random keys for various purposes. Enhance your security with ease using this efficient utility."
+      },
+      "eyesightTest": {
+        "header": "Eyesight Test",
+        "listName": "EyesightTest",
+        "description": "The EyeSight Test App is an interactive React project designed to test and improve vision focus. It features automatic input focus, visual feedback animations, and increasing difficulty with smaller font sizes. User preferences like theme and font size are saved in localStorage for a personalized experience. The app offers a smooth and engaging platform for eyesight testing."
       }
     },
     "easterEgg": {

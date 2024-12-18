@@ -93,6 +93,7 @@ export async function loadTranslations() {
         timer: `${translations.projects.timer.description}`,
         clock: `${translations.projects.clock.description}`,
         keyGen: `${translations.projects.keyGenerator.description}`,
+        eyesightTest: `${translations.projects.eyesightTest.description}`
     };
 
     const PROJECT_DESCRIPTIONS_DE = {
@@ -102,6 +103,7 @@ export async function loadTranslations() {
         timer: `${translations.projects.timer.description}`,
         clock: `${translations.projects.clock.description}`,
         keyGen: `${translations.projects.keyGenerator.description}`,
+        eyesightTest: `${translations.projects.eyesightTest.description}`
     };
 
     const easterEggTranslations = {

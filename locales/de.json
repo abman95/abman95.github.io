@@ -240,6 +240,11 @@
         "header": "Key Generator",
         "listName": "KeyGen",
         "description": "Mein KeyGenerator-Tool, entstanden nach 3 Monaten des Studiums von JavaScript, CSS und HTML, generiert sichere und zufällige Schlüssel für verschiedene Zwecke. Verbessern Sie Ihre Sicherheit mühelos mit diesem effizienten Dienstprogramm."
+      },
+      "eyesightTest": {
+        "header": "Eyesight Test",
+        "listName": "EyesightTest",
+        "description": "Die EyeSight Test App ist ein interaktives React-Projekt zur Prüfung und Verbesserung der Sehkraft. Es bietet automatische Fokussierung, visuelle Feedback-Animationen und einen ansteigenden Schwierigkeitsgrad mit kleinerer Schrift. Benutzerpräferenzen wie Theme und Schriftgröße werden in localStorage gespeichert. Die App bietet eine einfache und ansprechende Plattform zur Sehkraftprüfung."
       }
     },
     "easterEgg": {
