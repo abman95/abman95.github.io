@@ -113,7 +113,7 @@ export class ProjectSlider {
     updateProjectContent(projectName) {
         if (!this.validateElements()) return;
 
-        const isMobile = window.innerWidth <= 450;
+        const isMobile = window.innerWidth <= 1200;
         const translateValue = isMobile ? "-90vw" : "-50vw";
 
         this.resetOpacity();
@@ -242,7 +242,7 @@ if (window.location.href.includes("/homepage.html")) {
         }).then(() => {
             updateProjectView(className);
             setTimeout(() => {
-                if (window.innerWidth <= 1150) {
+                if (window.innerWidth <= 1200) {
                     if (translateXInVw > 85 && translateXInVw < 95) {
                         projectImageSlider2Images1.style.opacity = `1`;
                         projectImageSlider2Images2.style.opacity = `1`;

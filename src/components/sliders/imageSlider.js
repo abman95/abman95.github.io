@@ -6,7 +6,7 @@ let translateCountMobile = 90;
 
 export function initializeImageSlider() {
     function initializeSliderPosition() {
-        if (window.innerWidth <= 1150) {
+        if (window.innerWidth <= 1200) {
             setTimeout(() => {
                 setSliderPositionMobile();
             }, 1000);
@@ -45,7 +45,7 @@ function setSliderPositionDesktop() {
 
 function nextImage() {
     let translateXInVw = Math.floor(getTranslateX(sliders));
-    if (window.innerWidth <= 1150) {
+    if (window.innerWidth <= 1200) {
         handleNextImageMobile(translateXInVw);
     } else {
         handleNextImageDesktop(translateXInVw);
@@ -54,7 +54,7 @@ function nextImage() {
 
 function prevImage() {
     let translateXInVw = getTranslateX(sliders);
-    if (window.innerWidth <= 1150) {
+    if (window.innerWidth <= 1200) {
         handlePrevImageMobile(translateXInVw);
     } else {
         handlePrevImageDesktop(translateXInVw);
@@ -111,10 +111,10 @@ function handlePrevImageDesktop(translateXInVw) {
 
 function updateSliderOnNext(translateXInVw) {
     if (
-        (window.innerWidth <= 1150 &&
+        (window.innerWidth <= 1200 &&
             translateXInVw > 85 &&
             translateXInVw < 91) ||
-        (window.innerWidth > 1150 && translateXInVw > 45 && translateXInVw < 51)
+        (window.innerWidth > 1200 && translateXInVw > 45 && translateXInVw < 51)
     ) {
         updateButtonStyles(prevButton, null);
         updateSliderChildren(sliders, 1, 0);
@@ -129,10 +129,10 @@ function updateSliderOnPrev(translateXInVw) {
         updateButtonStyles(null, prevButton);
         updateSliderChildren(sliders, 1, 0, 0.5, true);
     } else if (
-        (window.innerWidth <= 1150 &&
+        (window.innerWidth <= 1200 &&
             translateXInVw < -85 &&
             translateXInVw > -91) ||
-        (window.innerWidth > 1150 &&
+        (window.innerWidth > 1200 &&
             translateXInVw < -45 &&
             translateXInVw > -51)
     ) {

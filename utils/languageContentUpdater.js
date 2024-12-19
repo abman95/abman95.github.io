@@ -495,7 +495,7 @@ function updateGermanAboutMe(translations) {
         `${translations.navigation.contact.standard}`;
     document.querySelector(".headerLanguageButton").textContent =
         `${translations.navigation.language.standard}`;
-    if (window.innerWidth <= 1150) {
+    if (window.innerWidth <= 1200) {
         document.querySelector(".container1ContainerHeader").innerHTML =
             `${translations.aboutMe.pageTitle}`;
     } else {
@@ -536,7 +536,7 @@ function updateGermanAboutMe(translations) {
     document.querySelector(".schoolDuration").innerHTML =
         `${translations.aboutMe.education.degree2.diplomaDescription}`;
 
-    if (window.innerWidth > 450 && window.innerWidth < 1150) {
+    if (window.innerWidth > 450 && window.innerWidth < 1200) {
         document.querySelector(".workExperienceHeader").style.marginTop =
             "17.5vw";
     }

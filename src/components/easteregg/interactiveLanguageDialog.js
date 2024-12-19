@@ -32,7 +32,7 @@ export function addInteractiveAnimationOnLocatedInGermany() {
         const content =
             easterEggTranslations.easterEggTranslations[lang][count];
 
-        if (count === 1 && window.innerWidth < 1150) {
+        if (count === 1 && window.innerWidth < 1200) {
             dialogHeadline.textContent =
                 lang === "German"
                     ? easterEggTranslations.easterEggTranslations["German"][0]
