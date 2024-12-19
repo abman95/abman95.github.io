@@ -622,7 +622,7 @@ transform: perspective(1200px) translateX(0px) translateY(270.944px) scale(1) ro
     }
 
     #container7 {
-        height: 355vw;
+        height: 345vw;
         width: 100vw;
         display: flex;
         background-color: black;
