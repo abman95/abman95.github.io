@@ -696,7 +696,7 @@
         width: 10vw;
         height: 10vw;
         position: fixed;
-        top: 5%;
+        top: 1.5%;
         right: 15%;
         transition: all ease 1s;
         filter: invert(1);
@@ -711,7 +711,7 @@
     #dialogHeaderProjects {
         display: flex;
         width: 65.76vw;
-        height: 25vw;
+        height: 15vw;
         z-index: 10;
     }
 
@@ -720,7 +720,7 @@
         color: white;
         font: 5vw Roboto-Thin;
         margin-left: 15%;
-        margin-top: 20%;
+        margin-top: 10%;
     }
 
     .dialogHeaderHrProjects {
