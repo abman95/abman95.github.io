@@ -591,10 +591,10 @@
 
     .dialogCloseButtonProjects {
         cursor: pointer;
-        width: 6vw;
-        height: 6vw;
+        width: 5vw;
+        height: 5vw;
         position: absolute;
-        top: 5%;
+        top: 1.5%;
         left: 80%;
         transition: all ease 1s;
         filter: invert(1);
@@ -610,7 +610,7 @@
     #dialogHeaderProjects {
         display: flex;
         width: 65.76vw;
-        height: 13.39vh;
+        height: 5.39vh;
         z-index: 10;
     }
 
@@ -619,7 +619,7 @@
         color: white;
         font: 2vw Roboto-Thin;
         margin-left: 4%;
-        margin-top: 20%;
+        margin-top: 5%;
     }
 
     .dialogHeaderHrProjects {

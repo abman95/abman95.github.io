@@ -310,7 +310,7 @@
         /* Top und Sticky machen HeaderElemente Sticky */
         display: flex;
         width: 85vw;
-        height: 13.39vh;
+        height: 9.39vh;
         z-index: 10;
     }
 
@@ -319,7 +319,7 @@
         color: white;
         font: 2.5vw Roboto-Thin;
         margin-left: 7%;
-        margin-top: 15%;
+        margin-top: 14%;
     }
 
     .dialogHeaderHr {
@@ -460,7 +460,7 @@
     #dialogHeaderLanguage {
         display: flex;
         width: 85vw;
-        height: 13.39vh;
+        height: 9.39vh;
         z-index: 10;
     }
 
@@ -469,10 +469,11 @@
         color: white;
         font: 2.5vw Roboto-Thin;
         margin-left: 7%;
-        margin-top: 25%;
+        margin-top: 14%;
     }
 
     .dialogHeaderHrLanguage {
+        margin-top: 9%;
         width: 80%;
         border: rgba(255, 255, 255, 0.537) solid 0.1vh;
         box-sizing: border-box;

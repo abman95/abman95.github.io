@@ -346,9 +346,9 @@ async function updateEnglishHomepage(translations) {
 async function updateGermanHomepage(translations) {
     const translation = await loadTranslations();
     document.querySelector(".jobDegreeText").textContent =
-        `${translations.general.professionalTitle.professionalTitleTogether}`;
+        `${translations.general.professionalTitle.professionalTitle}`;
     document.querySelector(".dontPullMeDialogCloseButton").textContent =
-        `${translations.general.professionalTitle.professionalTitleTogether}`;
+        `${translations.general.professionalTitle.professionalTitle}`;
     document.querySelector(".locatedInCountryText").textContent =
         `${translations.general.location}`;
     document.querySelector(".aboutMeButtonHeader").textContent =
@@ -413,6 +413,7 @@ function updateEnglishAboutMe(translations) {
         `${translations.aboutMe.education.degree2.diplomaTitle}`;
     document.querySelector(".schoolDuration").innerHTML =
         `${translations.aboutMe.education.degree2.diplomaDescription}`;
+
     document.querySelector(".workExperienceHeader").textContent =
         `${translations.aboutMe.workExperience.title}`;
     document.querySelector(".work1Title").textContent =
@@ -425,6 +426,9 @@ function updateEnglishAboutMe(translations) {
         `${translations.aboutMe.workExperience.jobs[0].responsibilities[1]}`;
     document.querySelector(".work1DescriptionEnumeration3").textContent =
         `${translations.aboutMe.workExperience.jobs[0].responsibilities[2]}`;
+    document.querySelector(".work1DescriptionEnumeration4").textContent =
+        `${translations.aboutMe.workExperience.jobs[0].responsibilities[3]}`;
+
     document.querySelector(".work2Title").textContent =
         `${translations.aboutMe.workExperience.jobs[1].title}`;
     document.querySelector(".work2Description").textContent =
@@ -433,26 +437,16 @@ function updateEnglishAboutMe(translations) {
         `${translations.aboutMe.workExperience.jobs[1].responsibilities[0]}`;
     document.querySelector(".work2DescriptionEnumeration2").textContent =
         `${translations.aboutMe.workExperience.jobs[1].responsibilities[1]}`;
-    document.querySelector(".work2DescriptionEnumeration3").textContent =
-        `${translations.aboutMe.workExperience.jobs[1].responsibilities[2]}`;
-    document.querySelector(".work2DescriptionEnumeration4").textContent =
-        `${translations.aboutMe.workExperience.jobs[1].responsibilities[3]}`;
-    document.querySelector(".work2DescriptionEnumeration5").textContent =
-        `${translations.aboutMe.workExperience.jobs[1].responsibilities[4]}`;
-    document.querySelector(".work2DescriptionEnumeration6").textContent =
-        `${translations.aboutMe.workExperience.jobs[1].responsibilities[5]}`;
-    document.querySelector(".work2DescriptionEnumeration7").textContent =
-        `${translations.aboutMe.workExperience.jobs[1].responsibilities[6]}`;
-    document.querySelector(".work2DescriptionEnumeration8").textContent =
-        `${translations.aboutMe.workExperience.jobs[1].responsibilities[7]}`;
+
+
     document.querySelector(".work3Title").textContent =
         `${translations.aboutMe.workExperience.jobs[2].title}`;
     document.querySelector(".work3Description").textContent =
         `${translations.aboutMe.workExperience.jobs[2].company}`;
     document.querySelector(".work3DescriptionEnumeration1").textContent =
         `${translations.aboutMe.workExperience.jobs[2].responsibilities[0]}`;
-    document.querySelector(".work3DescriptionEnumeration2").textContent =
-        `${translations.aboutMe.workExperience.jobs[2].responsibilities[1]}`;
+
+
     document.querySelector(".work4Title").textContent =
         `${translations.aboutMe.workExperience.jobs[3].title}`;
     document.querySelector(".work4Description").textContent =
@@ -463,22 +457,25 @@ function updateEnglishAboutMe(translations) {
         `${translations.aboutMe.workExperience.jobs[3].responsibilities[1]}`;
     document.querySelector(".work4DescriptionEnumeration3").textContent =
         `${translations.aboutMe.workExperience.jobs[3].responsibilities[2]}`;
+    document.querySelector(".work4DescriptionEnumeration4").textContent =
+        `${translations.aboutMe.workExperience.jobs[3].responsibilities[3]}`;
+    document.querySelector(".work4DescriptionEnumeration5").textContent =
+        `${translations.aboutMe.workExperience.jobs[3].responsibilities[4]}`;
+    document.querySelector(".work4DescriptionEnumeration6").textContent =
+        `${translations.aboutMe.workExperience.jobs[3].responsibilities[5]}`;
+    document.querySelector(".work4DescriptionEnumeration7").textContent =
+        `${translations.aboutMe.workExperience.jobs[3].responsibilities[6]}`;
+    document.querySelector(".work4DescriptionEnumeration8").textContent =
+        `${translations.aboutMe.workExperience.jobs[3].responsibilities[7]}`;   
+
     document.querySelector(".work5Title").textContent =
         `${translations.aboutMe.workExperience.jobs[4].title}`;
     document.querySelector(".work5Description").textContent =
         `${translations.aboutMe.workExperience.jobs[4].company}`;
     document.querySelector(".work5DescriptionEnumeration1").textContent =
         `${translations.aboutMe.workExperience.jobs[4].responsibilities[0]}`;
-    document.querySelector(".work5DescriptionEnumeration2").textContent =
-        `${translations.aboutMe.workExperience.jobs[4].responsibilities[1]}`;
-    document.querySelector(".work5DescriptionEnumeration3").textContent =
-        `${translations.aboutMe.workExperience.jobs[4].responsibilities[2]}`;
-    document.querySelector(".work5DescriptionEnumeration4").textContent =
-        `${translations.aboutMe.workExperience.jobs[4].responsibilities[3]}`;
-    document.querySelector(".work5DescriptionEnumeration5").textContent =
-        `${translations.aboutMe.workExperience.jobs[4].responsibilities[4]}`;
-    document.querySelector(".work5DescriptionEnumeration6").textContent =
-        `${translations.aboutMe.workExperience.jobs[4].responsibilities[5]}`;
+        
+
     document.querySelector(".work6Title").textContent =
         `${translations.aboutMe.workExperience.jobs[5].title}`;
     document.querySelector(".work6Description").textContent =
@@ -487,10 +484,6 @@ function updateEnglishAboutMe(translations) {
         `${translations.aboutMe.workExperience.jobs[5].responsibilities[0]}`;
     document.querySelector(".work6DescriptionEnumeration2").textContent =
         `${translations.aboutMe.workExperience.jobs[5].responsibilities[1]}`;
-    document.querySelector(".work6DescriptionEnumeration3").textContent =
-        `${translations.aboutMe.workExperience.jobs[5].responsibilities[2]}`;
-    document.querySelector(".work6DescriptionEnumeration4").textContent =
-        `${translations.aboutMe.workExperience.jobs[5].responsibilities[3]}`;
 }
 
 function updateGermanAboutMe(translations) {
@@ -560,6 +553,8 @@ function updateGermanAboutMe(translations) {
         `${translations.aboutMe.workExperience.jobs[0].responsibilities[1]}`;
     document.querySelector(".work1DescriptionEnumeration3").textContent =
         `${translations.aboutMe.workExperience.jobs[0].responsibilities[2]}`;
+    document.querySelector(".work1DescriptionEnumeration4").textContent =
+        `${translations.aboutMe.workExperience.jobs[0].responsibilities[3]}`;
 
     document.querySelector(".work2Title").textContent =
         `${translations.aboutMe.workExperience.jobs[1].title}`;
@@ -569,18 +564,6 @@ function updateGermanAboutMe(translations) {
         `${translations.aboutMe.workExperience.jobs[1].responsibilities[0]}`;
     document.querySelector(".work2DescriptionEnumeration2").textContent =
         `${translations.aboutMe.workExperience.jobs[1].responsibilities[1]}`;
-    document.querySelector(".work2DescriptionEnumeration3").textContent =
-        `${translations.aboutMe.workExperience.jobs[1].responsibilities[2]}`;
-    document.querySelector(".work2DescriptionEnumeration4").textContent =
-        `${translations.aboutMe.workExperience.jobs[1].responsibilities[3]}`;
-    document.querySelector(".work2DescriptionEnumeration5").textContent =
-        `${translations.aboutMe.workExperience.jobs[1].responsibilities[4]}`;
-    document.querySelector(".work2DescriptionEnumeration6").textContent =
-        `${translations.aboutMe.workExperience.jobs[1].responsibilities[5]}`;
-    document.querySelector(".work2DescriptionEnumeration7").textContent =
-        `${translations.aboutMe.workExperience.jobs[1].responsibilities[6]}`;
-    document.querySelector(".work2DescriptionEnumeration8").textContent =
-        `${translations.aboutMe.workExperience.jobs[1].responsibilities[7]}`;
 
     document.querySelector(".work3Title").textContent =
         `${translations.aboutMe.workExperience.jobs[2].title}`;
@@ -588,8 +571,6 @@ function updateGermanAboutMe(translations) {
         `${translations.aboutMe.workExperience.jobs[2].company}`;
     document.querySelector(".work3DescriptionEnumeration1").textContent =
         `${translations.aboutMe.workExperience.jobs[2].responsibilities[0]}`;
-    document.querySelector(".work3DescriptionEnumeration2").textContent =
-        `${translations.aboutMe.workExperience.jobs[2].responsibilities[1]}`;
 
     document.querySelector(".work4Title").textContent =
         `${translations.aboutMe.workExperience.jobs[3].title}`;
@@ -601,6 +582,16 @@ function updateGermanAboutMe(translations) {
         `${translations.aboutMe.workExperience.jobs[3].responsibilities[1]}`;
     document.querySelector(".work4DescriptionEnumeration3").textContent =
         `${translations.aboutMe.workExperience.jobs[3].responsibilities[2]}`;
+    document.querySelector(".work4DescriptionEnumeration4").textContent =
+        `${translations.aboutMe.workExperience.jobs[3].responsibilities[3]}`;
+    document.querySelector(".work4DescriptionEnumeration5").textContent =
+        `${translations.aboutMe.workExperience.jobs[3].responsibilities[4]}`;
+    document.querySelector(".work4DescriptionEnumeration6").textContent =
+        `${translations.aboutMe.workExperience.jobs[3].responsibilities[5]}`;
+    document.querySelector(".work4DescriptionEnumeration7").textContent =
+        `${translations.aboutMe.workExperience.jobs[3].responsibilities[6]}`;
+    document.querySelector(".work4DescriptionEnumeration8").textContent =
+        `${translations.aboutMe.workExperience.jobs[3].responsibilities[7]}`;    
 
     document.querySelector(".work5Title").textContent =
         `${translations.aboutMe.workExperience.jobs[4].title}`;
@@ -608,16 +599,6 @@ function updateGermanAboutMe(translations) {
         `${translations.aboutMe.workExperience.jobs[4].company}`;
     document.querySelector(".work5DescriptionEnumeration1").textContent =
         `${translations.aboutMe.workExperience.jobs[4].responsibilities[0]}`;
-    document.querySelector(".work5DescriptionEnumeration2").textContent =
-        `${translations.aboutMe.workExperience.jobs[4].responsibilities[1]}`;
-    document.querySelector(".work5DescriptionEnumeration3").textContent =
-        `${translations.aboutMe.workExperience.jobs[4].responsibilities[2]}`;
-    document.querySelector(".work5DescriptionEnumeration4").textContent =
-        `${translations.aboutMe.workExperience.jobs[4].responsibilities[3]}`;
-    document.querySelector(".work5DescriptionEnumeration5").textContent =
-        `${translations.aboutMe.workExperience.jobs[4].responsibilities[4]}`;
-    document.querySelector(".work5DescriptionEnumeration6").textContent =
-        `${translations.aboutMe.workExperience.jobs[4].responsibilities[5]}`;
 
     document.querySelector(".work6Title").textContent =
         `${translations.aboutMe.workExperience.jobs[5].title}`;
@@ -627,10 +608,6 @@ function updateGermanAboutMe(translations) {
         `${translations.aboutMe.workExperience.jobs[5].responsibilities[0]}`;
     document.querySelector(".work6DescriptionEnumeration2").textContent =
         `${translations.aboutMe.workExperience.jobs[5].responsibilities[1]}`;
-    document.querySelector(".work6DescriptionEnumeration3").textContent =
-        `${translations.aboutMe.workExperience.jobs[5].responsibilities[2]}`;
-    document.querySelector(".work6DescriptionEnumeration4").textContent =
-        `${translations.aboutMe.workExperience.jobs[5].responsibilities[3]}`;
 }
 
 function updateEnglishContact(translations) {

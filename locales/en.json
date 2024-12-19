@@ -53,7 +53,7 @@
       "sections": {
         "introduction": {
           "title": "Introduction",
-          "content": "Hello! My name is Abdullah Sögüt. I am 28 years old and was born in Bremen, Germany."
+          "content": "Hello! My name is Abdullah Sögüt. I am 29 years old and was born in Bremen, Germany."
         },
         "aspiration": {
           "title": "Aspiration",
@@ -100,72 +100,64 @@
         "title": "Work Experience:",
         "jobs": [
           {
+            "title": "Software Developer",
+            "company": "Conwin Technologies GmbH | 05/2024 —",
+            "responsibilities": [
+              "Further development and improvement of ERP software using PowerBuilder 7 and PowerScript.",
+              "Working with SQL, e.g., creating and adapting queries for data integration and reports.",
+              "Automation of business processes through SQL-supported forms in PowerBuilder, dynamically providing data for evaluations, invoices, and delivery notes.",
+              "Setup and maintenance of ERP systems on servers and clients."
+            ]
+          },
+          {
+            "title": "Portfolio Website – Self-Development",
+            "company": "HTML – CSS – Vanilla JavaScript",
+            "responsibilities": [
+              "Development of this personal portfolio website with interactive elements showcasing my projects.",
+              "GitHub \"https://github.com/abman95\"."
+            ]
+          },
+          {
             "title": "WEB DESIGN & Private Software Engineer",
             "company": "Self-Employed | 10/2022 -",
             "responsibilities": [
-              "Building websites, shop pages using WordPress",
-              "Functionality enhancements using HTML, CSS, PHP, JavaScript",
-              "GitHub: Abman95"
+              "Design and maintenance of websites and e-commerce platforms using WordPress, complemented by custom extensions using HTML, CSS, PHP, and JavaScript."
             ]
           },
           {
             "title": "PARTNER OF SOGEKING GBR",
-            "company": "Sogeking GbR Bremen | 07/2017 -",
+            "company": "Sogeking GbR Bremen | 07/2017 to 10/2024",
             "responsibilities": [
-              "Import and trade of goods -> EBAY, Amazon & website",
-              "Patent and trademark applications",
-              "Web Designing",
-              "Marketing -> Keeping statistics, Online Marketing",
-              "Image editing",
-              "Logistics -> Organization & planning",
-              "Tax registration -> Accounting & bureaucracy",
-              "Customer service"
-            ]
-          },
-          {
-            "title": "SALES REPRESENTATIVE FOR SOLAR SALES",
-            "company": "Energiekonzepte Mitteldeutschland GmbH | 05/2021 until 09/2022",
-            "responsibilities": [
-              "Consultation, planning, organization, and economic calculations of photovoltaic systems",
-              "PV SOL Premium economic calculation"
+              "Expansion of online trade through various sales platforms – Amazon, EBAY, website.",
+              "Management of trademark and patent protection.",
+              "Creation of appealing website for user-friendly experience.",
+              "Implementation of data-driven marketing strategies for increased revenue.",
+              "Creation/editing of image and video material for professional and attractive product presentations.",
+              "Optimization of delivery processes for smooth shipping.",
+              "Independent handling of accounting and tax matters.",
+              "Focus on customer service for sustainable customer base."
             ]
           },
           {
             "title": "FIELD WORKER FOR 2LOCATE",
             "company": "2locate GmbH | 11/2020 until 11/2021",
             "responsibilities": [
-              "Lead acquisition",
-              "Door-to-Door sales",
-              "Planning, consultation, and organization of customer appointments and contract appointments"
-            ]
-          },
-          {
-            "title": "ACCOUNTING & MARKETING & RETURNS FOR THE ONLINE PHARMACY EURAPON",
-            "company": "Eurapon Pharmahandel GmbH | 06/2018 until 05/2019",
-            "responsibilities": [
-              "Processing of collection cases/dunning cases",
-              "Checking and processing account reconciliations",
-              "Processing returns & creating credit notes",
-              "Handling customer emails",
-              "Picking of goods",
-              "Product data maintenance in the marketing department"
+              "Acquisition of new customers and maintenance of existing customers through individual consultation and need-based solutions."
             ]
           },
           {
             "title": "CUSTOMER ADVISOR FOR DEUTSCHE TELEKOM",
             "company": "Simon & Focken Bremen GmbH | 09/2017 until 03/2018",
             "responsibilities": [
-              "Processing inbound and outbound calls",
-              "Handling written correspondence and emails",
-              "Data entry and address qualification in the Invitel program",
-              "Telephone consulting and sales"
+              "Individual consultation and support for Telekom customers with inquiries and concerns.",
+              "Focus on quick solutions and high customer satisfaction."
             ]
           }
         ]
       }
     },
     "contact": {
-      "title": "Get in Touch for<br>further<br>information",
+      "title": "Get in Touch for<br>further<br>information:",
       "form": {
         "name": {
           "label": "Name:",

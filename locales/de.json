@@ -39,8 +39,7 @@
       "localTime": "Lokale Zeit",
       "location": "Ansässig in Deutschland",
       "professionalTitle": {
-        "professionalTitleTogether": "Wirtschaftsingenieur",
-        "professionalTitleSeparated": "Wirtschafts ingenieur"
+        "professionalTitle": "Wirtschafts\u00adingenieur"
       },
       "shortDescription": "Vielseitige Expertise mit Fachkenntnissen in Webdesign, Unternehmertum, Marketing, Logistik und Kundenservice, bereit, die Fähigkeiten Ihres Teams zu erweitern.",
       "extendedDescription": "Ich bin erfahrener Webdesigner und Softwareentwickler mit Expertise in WordPress, HTML, CSS, JavaScript, React, NodeJS, ExpressJS, SQL und PHP. Mein Hintergrund in Unternehmertum, Marketing, Logistik und Kundenservice bereichert Ihr Team. Entdecken Sie heute mein Portfolio!",
@@ -51,11 +50,11 @@
       "slogan": "Ihre Zukunft, meine Expertise."
     },
     "aboutMe": {
-      "pageTitle": "Von Business zu Code<br>Meine Reise in der Softwareentwicklung und im kreativen Webdesign",
+      "pageTitle": "Von Business zu Code<br>Meine Reise in der Software-Entwicklung und im kreativen Webdesign",
       "sections": {
         "introduction": {
           "title": "Einleitung",
-          "content": "Hallo! Mein Name ist Abdullah Sögüt. Ich bin 27 Jahre alt und bin in Bremen, Deutschland geboren."
+          "content": "Hallo! Mein Name ist Abdullah Sögüt. Ich bin 29 Jahre alt und bin in Bremen, Deutschland geboren."
         },
         "aspiration": {
           "title": "Ambition",
@@ -102,65 +101,57 @@
         "title": "Berufserfahrung:",
         "jobs": [
           {
+            "title": "Software-Entwickler",
+            "company": "Conwin Technologies GmbH | 05/2024 —",
+            "responsibilities": [
+              "Weiterentwicklung und Verbesserung der ERP-Software mit PowerBuilder 7 und PowerScript.",
+              "Arbeit mit SQL, z. B. Erstellung und Anpassung von Abfragen für Datenintegration und Berichte.",
+              "Automatisierung von Geschäftsabläufen durch SQL gestützte Formulare in PowerBuilder, die Daten dynamisch für Auswertungen, Rechnungen und Lieferscheine bereitstellen.",
+              "Einrichtung und Pflege von ERP-Systemen auf Servern und Clients."
+            ]
+          },
+          {
+            "title": "Portfolio-Seite – Eigenentwicklung",
+            "company": "HTML – CSS – Vanilla JavaScript",
+            "responsibilities": [
+              "Entwicklung dieser persönlichen Portfolio-Webseite mit interaktiven Elementen, die meine Projekte präsentieren.",
+              "GitHub “https://github.com/abman95”."
+            ]
+          },
+          {
             "title": "WEBDESIGN & Private Software Engineer",
             "company": "Selbstständig | 10/2022 -",
             "responsibilities": [
-              "Aufbau von Internetpräsenz, Shop Seiten über Wordpress",
-              "Funktionsergänzungen über HTML, CSS, PHP, JavaScript",
-              "GitHub: Abman95"
+              "Gestaltung und Pflege von Webseiten und E-Commerce-Plattformen mit WordPress, ergänzt durch individuelle Erweiterungen mit HTML, CSS, PHP und JavaScript."
             ]
           },
           {
             "title": "GESELLSCHAFTER DER SOGEKING GBR",
-            "company": "Sogeking GbR Bremen | 07/2017 -",
+            "company": "Sogeking GbR Bremen | 07/2017 bis 10/2024",
             "responsibilities": [
-              "Import und Handel von Waren -> EBAY, Amazon & Webseite",
-              "Patentanmeldung & Markenanmeldung",
-              "Web Designing",
-              "Marketing -> Statistiken führen, Online Marketing",
-              "Bildbearbeitung",
-              "Logistik -> Organisierung & Planung",
-              "Steuererfassung -> Buchhaltung & Bürokratie",
-              "Kundenservice"
-            ]
-          },
-          {
-            "title": "HANDELSVERTRETER FÜR SOLARVERTRIEB",
-            "company": "Energiekonzepte Mitteldeutschland GmbH | 05/2021 bis 09/2022",
-            "responsibilities": [
-              "Beratung, Planung, Organisation und Wirtschaftlichkeitsrechnungen von Photovoltaikanlagen",
-              "PV SOL Premium Wirtschaftlichkeitsrechnung"
+              "Ausbau des Online-Handels durch diverse Verkaufsplattformen – Amazon, EBAY, Webseite.",
+              "Betreuung von Marken- und Patentschutz.",
+              "Erstellung ansprechender Webseite, für benutzerfreundliche Nutzererfahrung.",
+              "Einsatz datenbasierter Marketing-Strategien für höhere Umsätze.",
+              "Erstellung/Bearbeitung von Bild- und Videomaterial für professionelle und ansprechende Produktpräsentationen.",
+              "Optimierung von Lieferabläufen für reibungslosen Versand.",
+              "Buchhaltung und Steuerfragen eigenständig bearbeitet.",
+              "Fokus auf Kundenservice, für nachhaltigen Kundenstamm."
             ]
           },
           {
             "title": "AUSSENDIENST ARBEITER DER 2LOCATE",
             "company": "2locate GmbH | 11/2020 bis 11/2021",
             "responsibilities": [
-              "Leadakquise",
-              "Door2Door Vertrieb",
-              "Planung, Beratung und Organisation von Kundenterminen sowie Vertragsterminen"
-            ]
-          },
-          {
-            "title": "BUCHHALTUNG & MARKETING & RETOUREN DER ONLINE APOTHEKE EURAPON",
-            "company": "Eurapon Pharmahandel GmbH | 06/2018 bis 05/2019",
-            "responsibilities": [
-              "Bearbeitung von Inkassofällen/Mahnfällen",
-              "Kontoabstimmungen überprüfen und bearbeiten",
-              "Bearbeitung von Rückläufern & Erstellung von Gutschriften",
-              "Abarbeitung von Kundenmails",
-              "Kommissionierung von Waren",
-              "Produktdatenpflege im Marketingbereich"
+              "Gewinnung neuer Kunden und Pflege von Bestandskunden durch individuelle Beratung und bedarfsorientierte Lösungen."
             ]
           },
           {
             "title": "KUNDENBERATER DER DEUTSCHEN TELEKOM",
             "company": "Simon & Focken Bremen GmbH | 09/2017 bis 03/2018",
             "responsibilities": [
-              "Bearbeitung von In- und Outboundcalls",
-              "Bearbeitung von Schriftverkehr und E-Mails",
-              "Datenerfassung und Adressqualifizierung im Programm Invitel",
-              "Telefonberatung und Vertrieb"
+              "Individuelle Beratung und Unterstützung von Telekom Kunden bei Anfragen und Anliegen.",
+              "Fokus auf schnelle Lösungen und hohe Kundenzufriedenheit."
             ]
           }
         ]
@@ -214,7 +205,7 @@
       "mp3Player": {
         "header": "MP3 Player",
         "listName": "MP3",
-        "description": "Mein größtes Projekt, an dem ich nach 3 1/2 Monaten intensiven Lernens in JavaScript, CSS und HTML gearbeitet habe, ist mein MP3-Player. Dieser MP3-Player ist eine leistungsstarke und benutzerfreundliche Anwendung. Sie ermöglicht das Abspielen von MP3-Dateien, Vor- und Zurückspulen, das Aktivieren der automatischen Wiedergabe und das Genießen des Zufallsspielmodus. Mit seiner Mediathek-Liste können Sie einfach zwischen Ihren Liedern in der Wiedergabeliste wechseln, sie hochladen und genießen."
+        "description": "Mein größtes Projekt nach 3 1/2 Monaten intensiven Lernens in JavaScript, CSS und HTML ist mein MP3-Player. Diese benutzerfreundliche Anwendung ermöglicht das Abspielen von MP3-Dateien, Vor- und Zurückspulen, automatische Wiedergabe und Zufallsspielmodus. Mit der Mediathek-Liste können Sie einfach zwischen Liedern wechseln, sie hochladen und genießen."
       },
       "typingSpeed": {
         "header": "Typing Speed App",
