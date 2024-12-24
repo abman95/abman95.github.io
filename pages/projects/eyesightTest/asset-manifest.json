@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/pages/projects/eyesightTest/static/css/main.754ebb54.css",
-    "main.js": "/pages/projects/eyesightTest/static/js/main.609b7b8f.js",
+    "main.css": "/pages/projects/eyesightTest/static/css/main.54f891ee.css",
+    "main.js": "/pages/projects/eyesightTest/static/js/main.a556f49b.js",
     "eyesightTestIndex.html": "/pages/projects/eyesightTest/eyesightTestIndex.html",
-    "main.754ebb54.css.map": "/pages/projects/eyesightTest/static/css/main.754ebb54.css.map",
-    "main.609b7b8f.js.map": "/pages/projects/eyesightTest/static/js/main.609b7b8f.js.map"
+    "main.54f891ee.css.map": "/pages/projects/eyesightTest/static/css/main.54f891ee.css.map",
+    "main.a556f49b.js.map": "/pages/projects/eyesightTest/static/js/main.a556f49b.js.map"
   },
   "entrypoints": [
-    "/pages/projects/eyesightTest/static/css/main.754ebb54.css",
-    "/pages/projects/eyesightTest/static/js/main.609b7b8f.js"
+    "/pages/projects/eyesightTest/static/css/main.54f891ee.css",
+    "/pages/projects/eyesightTest/static/js/main.a556f49b.js"
   ]
 }
